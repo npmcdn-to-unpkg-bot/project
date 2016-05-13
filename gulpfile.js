@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
 // 文件刷新
 gulp.task('livereload', function() {
-  gulp.src('1*/*.html')
+  gulp.src('1*/**/*.html')
       .pipe(livereload());
 });
 //JS压缩
@@ -40,5 +40,6 @@ gulp.task('rename', function () {
 //监听
 gulp.task('watch', function() {
   livereload.listen(); //要在这里调用listen()方法
-  gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload','minify-js']);
+  // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
+  gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['livereload']);
 });

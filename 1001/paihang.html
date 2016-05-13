@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>mobile</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/index.css">
+	
+</head>
+<body>
+<div class="main">
+	<div class="paihang">
+		<div class="img"><img src="images/paihang.jpg" alt=""></div>
+		<div class="content">
+			<div id="wrapper">
+				<div class="wrapperinner">
+					<ul class="hd">
+						<li>昵称</li>
+						<li>名次</li>
+						<li>鼓掌数</li>
+					</ul>
+					<dl class="bd">
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>
+						<dd class="clearfix">
+							<i>1</i>
+							<ul>
+								<li>张三</li>
+								<li>2</li>
+								<li>111</li>
+							</ul>
+						</dd>				
+					</dl>
+
+					<div class="load" style="display: none;">
+						<div class="loader" ><span></span><span></span><span></span><span></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tip">
+		本活动最终解释权归开发商所有
+	</div>
+</div>
+
+<!-- 已结束 -->
+<div class="jiesu">
+	活动已结束
+</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/iscroll-master/build/iscroll.js"></script>
+
+<script>
+	function resize(){
+		$(".content").css({
+			height : $(".content").width() * 1.4
+		})
+	}
+
+	$(function(){
+		resize();
+
+		var myScroll;
+		myScroll = new IScroll('#wrapper', { mouseWheel: true });
+		document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+		myScroll.on("scrollStart",function(){
+			if( this.y  == this.maxScrollY || this.y < this.maxScrollY){
+				$(".load").show();
+				this.refresh();
+			}
+		})
+
+		myScroll.on("scrollEnd",function(){
+			//ajax 请求
+			$(".load").hide();
+			this.refresh();
+		})
+	})
+
+	$(window).resize(function(){
+		resize();
+	})
+
+	
+
+</script>
+</body>
+</html>

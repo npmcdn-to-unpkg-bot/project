@@ -1,12 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="m">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>mobile</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
 	<link rel="stylesheet" href="src/index.css">
-	<script src="src/index.js"></script>
+	
 </head>
 <body>
-		this is my gulp
+<div class="main">
+	<img src="images/shouye.jpg" alt="">
+
+	<!-- <div class="btn">
+		<div class="btn01 fl"></div>
+		<div class="btn02 fr"></div>
+	</div> -->
+
+	<div class="newbtn">
+		<div class="w33">
+			<span class="anniu i001" style="display: none;"></span>
+			<span class="anniu gameover"></span>
+		</div>
+		<div class="w33">
+			<a href=""><span class="anniu i002"></span></a>
+		</div>
+		<div class="w33">
+			<a href=""><span class="anniu i003"></span></a>
+		</div>
+	</div>
+
+</div>
+
+<!-- 遮罩 -->
+<div class="zhezhao"></div>
+<!-- 分享 -->
+<div class="share"><img src="images/fenxiang.png" alt=""></div>
+
+<!-- 用户信息 -->
+<!-- 用户信息 -->
+<div class="userDialog">
+	<img src="images/ziliao.png" alt="">
+	<p class="username"><input type="text" placeholder="请输入姓名"></p>
+	<p class="usertel"><input type="number" placeholder="请输入电话"></p>
+
+
+	<div class="btntijiao"></div>
+</div>
+
+<!-- 已结束 -->
+<div class="jiesu">
+	活动已结束
+</div>
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+
+<script>
+
+	function autosize(){
+		$(".userDialog").css({
+			height : $(".userDialog").width()*0.85,
+			marginTop : $(".userDialog").width()*0.425*-1
+		})
+	}
+
+
+	$(function(){
+		autosize();
+		$(".zhezhao")[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$(".zhezhao").hide();
+			$(".share").hide();
+			$(".userDialog").hide();
+		})
+		$(".zhezhao")[0].addEventListener("touchend",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		})
+		$(".zhezhao")[0].addEventListener("touchmove",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		})
+
+		$(".anniu.i001").on("click",function(){
+			$(".zhezhao").show();
+			$(".share").show();
+		})
+
+		$(".anniu.gameover").on("click",function(){
+			$(".zhezhao").show();
+			$(".userDialog").show();
+		})
+	})
+
+	$(window).resize(function(){
+	  autosize();
+	});
+</script>
+
+
 </body>
 </html>

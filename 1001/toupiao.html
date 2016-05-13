@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>mobile</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/index.css">
+	
+</head>
+<body>
+<audio src="images/4491.wav" id="audio" hidden="hidden"></audio>
+<div class="main">
+	<div class="info">
+		<div class="img"><img src="images/toupiao.png" alt=""></div>
+
+		<div class="userpic"><img src="images/pic.jpg" alt=""></div>
+		<div class="username">习大大</div>
+		<div class="level">
+			<p>11</p>
+			<p>22</p>
+			<p>33</p>
+		</div>
+
+		<div class="btn">
+			<div class="btn01 fl"></div>
+			<div class="btn02 fr"></div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 已结束 -->
+<div class="jiesu">
+	活动已结束
+</div>
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script>
+	window.onload=function(){
+		document.getElementsByClassName("btn01")[0].onclick=function(){
+			document.getElementById("audio").play();
+		}
+	}
+</script>
+
+</body>
+</html>

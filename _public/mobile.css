@@ -1,0 +1,30 @@
+/*
+**********************
+* made in 饭饭
+* 2016-05-12
+**********************
+*/
+
+/*标签基本样式*/
+body{
+	background-color: #fff;
+	font-size: 0;
+	line-height: 0;
+}
+img{max-width: 100%;}
+i{font-style: normal;}
+/*主体样式*/
+.main{
+	min-width: 300px;
+	max-width: 600px;
+	margin: 0 auto;
+	font-size: 12px;
+	line-height: 1.2em;
+	position: relative;
+}
+
+/*常用样式*/
+.fl{float:left;}
+.fr{float:right;}
+
+

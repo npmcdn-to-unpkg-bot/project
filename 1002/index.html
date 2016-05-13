@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>微楼盘</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/Swiper-3.3.1/dist/css/swiper.min.css">
+	<link rel="stylesheet" href="../_public/animate.css-master/animate.min.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+
+<div class="loading">
+    <div class="spinner"></div>
+</div>
+
+
+<div class="main" style="visibility:hidden;">
+	<!-- Swiper 3D轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(images/img01.jpg);"></div>
+            <div class="swiper-slide" style="background-image:url(images/img02.jpg);"></div>
+            <div class="swiper-slide" style="background-image:url(images/img03.jpg);"></div>
+            <div class="swiper-slide" style="background-image:url(images/img04.jpg);"></div>
+        </div>
+        <!-- Add Pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+    <div class="content">
+    	
+    	<div class="level1 clearfix">
+    		<div class="lump1 fl"></div>
+    		<div class="lump2 fl">
+    			<div class="sale animated infinite"></div>
+    		</div>
+    		<div class="lump3 fl">
+    			<div class="star animated infinite"></div>
+    		</div>
+    	</div>
+    	<div class="level2 clearfix">
+    		<div class="lump4 fl">
+    			
+    			<div class="color" style="width: 63%;height: 52%;position: absolute;top: 26%;left: 10%;font-size: 0;line-height: 0;">
+    			</div>
+
+    		</div>
+    		<div class="lump5 fl">
+    			<div class="top"></div>
+    			<ul>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    				<li>
+    					<div class="one"></div><div class="two"></div>
+    				</li>
+    			</ul>
+    		</div>
+    	</div>
+    
+
+	<div class="bottom">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	</div>
+
+</div>
+
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/Swiper-3.3.1/dist/js/swiper.jquery.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+
+changeRainbow({
+	element : $(".color"),
+	time : 1000,
+	widthList : [2,2,2,2,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4,5,5,5,7,7,9,9],
+	colorList : ['#000000','#9addfd','#db231a','#fff500','#e8f77b','#8bc9e0','#0390da','#ad2b7c','#48307e']
+})
+
+function autosieze(){
+    autoHeight({element : $(".swiper-container"),scale : 0.5})
+    autoHeight({element : $(".content"),scale : 1.17})
+    autoHeight({element : $(".lump1"),scale : 0.9})
+    autoHeight({element : $(".lump2"),scale : 0.5,refer : $(".lump1")})
+    autoHeight({element : $(".lump3"),scale : 0.5,refer : $(".lump1")})
+    autoHeight({element : $(".lump4"),scale : 0.9})
+    autoHeight({element : $(".lump5"),scale : 0.9})
+    autoHeight({element : $(".lump5 .top"),scale : 0.29})
+    autoHeight({element : $(".bottom span"),scale : 1})
+    var swiper = new Swiper('.swiper-container', {
+        // pagination: '.swiper-pagination',
+        effect: 'cube',
+        grabCursor: true,
+        loop : true,
+        autoplay : 3000,
+        speed : 1000,
+        cube: {
+            shadow: false,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+        }
+    })
+}
+$(function(){
+    autosieze();
+	// 初始化
+	
+})
+
+$(window).resize(function(){
+    autosieze();
+});
+</script>
+<script>
+	
+	var aLi = document.getElementsByClassName('lump5')[0].querySelectorAll('li');
+	// document.body.onclick=function(){
+	// 	for(var i=0,e;e=aLi[i++];){
+	// 		e.classList.toggle('trun');
+	// 	}
+	// }
+	
+	setInterval(function(){
+		for(var i=0,e;e=aLi[i++];){
+			e.classList.toggle('trun');
+		}
+		$(".lump5 .top")[0].classList.toggle('on');
+	},5000)
+
+
+	window.setTimeout(function(){
+		$('.loading').fadeOut(1000);
+
+		setTimeout(function(){
+
+			$(".main").css("visibility","visible");
+
+			$(".lump1").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      					$(this).removeClass('bounceInDown animated');
+    				});
+			$(".lump2").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      					$(this).removeClass('bounceInDown animated');
+    				});
+			$(".lump3").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      					$(this).removeClass('bounceInDown animated');
+    				});
+			$(".lump4").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      					$(this).removeClass('bounceInDown animated');
+    				});
+			$(".lump5").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      					$(this).removeClass('bounceInDown animated');
+    				});
+			$(".swiper-container").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      					$(this).removeClass('bounceInDown animated');
+    				});
+			$(".bottom").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      					$(this).removeClass('bounceInDown animated');
+    				});
+		},300)
+	},100)
+
+
+</script>
+</body>
+</html>
