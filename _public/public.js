@@ -8,12 +8,32 @@
 
 
 
+
+//	清除默认触摸事件  传入的为DOM 对象
+function defaultEvent(event){
+	if(event === undefined) return;
+	event.addEventListener("touchstart",function(e){
+		e.preventDefault();
+		e.stopPropagation();
+	})
+	event.addEventListener("touchend",function(e){
+		e.preventDefault();
+		e.stopPropagation();
+	})
+	event.addEventListener("touchmove",function(e){
+		e.preventDefault();
+		e.stopPropagation();
+	})
+}
+
 // 自动调整元素高度
 /*
 * params.element 元素名
 * params.scale 高度/宽度
 * params.marginTop 上外边距 居中可写为-0.5
 * params.refer 参照元素
+* autoHeight({element : $(".lump1"),scale : 0.9})
+* autoHeight({element : $(".lump2"),scale : 0.5,refer : $(".lump1")})
 */
 function autoHeight(params,callback){
 	if(params.element === undefined){
@@ -58,6 +78,9 @@ function autoHeight(params,callback){
 * params.time 时间间隔
 */
 function changeRainbow(params,callback){
+	//todo 对象合并
+	// var settings = $.extend({},defaults,params);
+
 	if(params.element === undefined ){
 		console.log('please input element');
 		return;
@@ -76,9 +99,11 @@ function changeRainbow(params,callback){
 	var length = widthList.length;
 	//宽度打乱
 	widthList=shuffle(widthList);
+	var str=[];
 	for (var i=0; i<length;i++){
-		$this.append('<span></span>')
+		str.push('<span></span>');
 	}
+	$this.append(str.join(''));
 	$this.find("span").each(function(index, el) {
 		$(this).css({
 			display : "inline-block",

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>微楼盘</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+    <link rel="stylesheet" href="../_public/animate.css-master/animate.min.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+
+<div class="loading" style="display:none;">
+    <div class="spinner"></div>
+</div>
+
+
+<div class="main" >
+    <img src="images/bg.jpg" alt="">
+    <div class="circlelogo"></div>
+    <div class="circle animated infinite turn">
+        <div class="circlelist circle01"></div>
+        <div class="circlelist circle02"></div>
+        <div class="circlelist circle03"></div>
+        <div class="circlelist circle04"></div>
+        <div class="circlelist circle05"></div>
+        <div class="circlelist circle06"></div>
+        <div class="circlelist circle07"></div>
+        <div class="circlelist circle08"></div>
+        <div class="circlelist circlelink">
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+        </div>
+
+    </div>
+    
+</div>
+
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+function autosize(){
+    autoHeight({element : $(".circle"),scale : 1,marginTop:-0.5})
+    autoHeight({element : $(".circlelogo"),scale : 1,marginTop:-0.5})
+}
+
+$(function(){
+    autosize();
+})
+$(window).resize(function() {
+    autosize();
+});
+</script>
+</body>
+</html>
