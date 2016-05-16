@@ -7,20 +7,29 @@
 */
 
 
+// animate.css 
+/*
+* animated($(".lump1"),'bounceInDown animated');
+*/
+function animated(element,animate){
+	element.addClass(animate).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+		// $(this).removeClass(animate);
+	});
+}
 
 
-//	清除默认触摸事件  传入的为DOM 对象
-function defaultEvent(event){
-	if(event === undefined) return;
-	event.addEventListener("touchstart",function(e){
+// 清除默认触摸事件  传入的为DOM 对象
+function defaultEvent(element){
+	if(element === undefined) return;
+	element.addEventListener("touchstart",function(e){
 		e.preventDefault();
 		e.stopPropagation();
 	})
-	event.addEventListener("touchend",function(e){
+	element.addEventListener("touchend",function(e){
 		e.preventDefault();
 		e.stopPropagation();
 	})
-	event.addEventListener("touchmove",function(e){
+	element.addEventListener("touchmove",function(e){
 		e.preventDefault();
 		e.stopPropagation();
 	})

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>表白墙</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+
+<div class="loading" style="display:none;">
+    <div class="spinner"></div>
+</div>
+
+<div class="main">
+    <div class="head">
+        <img src="images/head.jpg" alt="">
+        <div class="search">
+            <input type="text" placeholder="输入姓名或微信号"><i class="iconsearch"></i>
+        </div>
+    </div>
+    <div class="btn01"></div>  <!-- 初始状态 -->
+    <div class="btn02" style="display:none;"></div>
+
+    <!-- 瀑布流 -->
+    <div class="grid">
+        <div class="grid-item">
+            <div class="title">
+                <img src="images/top.jpg" alt="">
+                <div class="username">李媛媛</div>
+            </div>
+            <div class="info">
+                我喜欢的样子你都有
+            </div>
+            <div class="bottom clearfix">
+                <div class="left fl">
+                    <p>大古</p>
+                    <span>1213票</span>
+                </div>
+                <div class="right fr">
+                    <div class="love"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="title">
+                <img src="images/top.jpg" alt="">
+                <div class="username">李媛媛</div>
+            </div>
+            <div class="info">
+                我喜欢的样子你都有我喜欢的样子你都有我喜欢的样子你都有我喜欢的样子你都有
+            </div>
+            <div class="bottom clearfix">
+                <div class="left fl">
+                    <p>大古</p>
+                    <span>1213票</span>
+                </div>
+                <div class="right fr">
+                    <div class="love on"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="title">
+                <img src="images/top.jpg" alt="">
+                <div class="username">李媛媛</div>
+            </div>
+            <div class="info">
+                我喜欢的样子你都有
+            </div>
+            <div class="bottom clearfix">
+                <div class="left fl">
+                    <p>大古</p>
+                    <span>1213票</span>
+                </div>
+                <div class="right fr">
+                    <div class="love"></div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="title">
+                <img src="images/top.jpg" alt="">
+                <div class="username">李媛媛</div>
+            </div>
+            <div class="info">
+                我喜欢的样子你都有我喜欢的样子你都有
+            </div>
+            <div class="bottom clearfix">
+                <div class="left fl">
+                    <p>大古</p>
+                    <span>1213票</span>
+                </div>
+                <div class="right fr">
+                    <div class="love"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/masonry-master/dist/masonry.pkgd.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+function autosize(){
+    // autoHeight({element : $(".circlelogo"),scale : 1,marginTop:-0.5})
+}
+
+$(function(){
+    $('.loading').fadeOut(1000);
+    autosize();
+
+    $('.grid').masonry({
+      // options
+      // gutter:10, //Adds horizontal space between item elements.
+      percentPosition: true,
+      itemSelector: '.grid-item'
+    });
+
+})
+$(window).resize(function() {
+    autosize();
+});
+</script>
+</body>
+</html>

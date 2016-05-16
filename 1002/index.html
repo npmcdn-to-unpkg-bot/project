@@ -164,36 +164,19 @@ $(window).resize(function(){
 
 	window.setTimeout(function(){
 		$('.loading').fadeOut(1000);
-
 		setTimeout(function(){
-
 			$(".main").css("visibility","visible");
+            animated($(".lump1"),'bounceInDown animated');
+            animated($(".lump2"),'bounceInDown animated');
+            animated($(".lump3"),'bounceInDown animated');
+            animated($(".lump4"),'bounceInDown animated');
+            animated($(".lump5"),'bounceInDown animated');
+            animated($(".swiper-container"),'bounceInDown animated');
+            animated($(".bottom"),'bounceInDown animated');
 
-			$(".lump1").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      					$(this).removeClass('bounceInDown animated');
-    				});
-			$(".lump2").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      					$(this).removeClass('bounceInDown animated');
-    				});
-			$(".lump3").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      					$(this).removeClass('bounceInDown animated');
-    				});
-			$(".lump4").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      					$(this).removeClass('bounceInDown animated');
-    				});
-			$(".lump5").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      					$(this).removeClass('bounceInDown animated');
-    				});
-			$(".swiper-container").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      					$(this).removeClass('bounceInDown animated');
-    				});
-			$(".bottom").addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      					$(this).removeClass('bounceInDown animated');
-    				});
 		},300)
+
 	},100)
-
-
 </script>
 </body>
 </html>
