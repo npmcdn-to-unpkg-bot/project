@@ -30,16 +30,16 @@ body{
 .game span.i5.on{background: url(../images/101/5.jpg); background-size: 200%;}
 .game span.i6{background: url(../images/101/6-1.jpg); background-size: 200%;}
 .game span.i6.on{background: url(../images/101/6.jpg); background-size: 200%;}
-.game span:nth-of-type(1){
+.game span:nth-of-type(1),.game span.on:nth-of-type(1){
 	background-position: 0 0;
 }
-.game span:nth-of-type(2){
+.game span:nth-of-type(2),.game span.on:nth-of-type(2){
 	background-position: 100% 0;
 }
-.game span:nth-of-type(3){
+.game span:nth-of-type(3),.game span.on:nth-of-type(3){
 	background-position: 0 100%;
 }
-.game span:nth-of-type(4){
+.game span:nth-of-type(4),.game span.on:nth-of-type(4){
 	background-position: 100% 100%;
 }
 
@@ -86,7 +86,7 @@ body{
 	background-color: #fff;
 	display: none;
 }
-.user p{text-align: center;font-size: 18px;color: #000;}
+.user p{text-align: center;font-size: 18px;color: #000;line-height: 1.6em;}
 .user p .close{width: 26px;height: 21px;margin-top: 10px;margin-right: 10px;}
 .user p i{color: #e95412;}
 .user table{width: 80%;margin: 20px auto;}
