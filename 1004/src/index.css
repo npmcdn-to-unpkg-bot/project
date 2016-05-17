@@ -41,16 +41,26 @@ body{
 
 .grid{
   width: 97%;
-  margin: 0 auto;
+  margin: 0 auto 20px;
 }
 .grid-item{
-  background-color: #fff;
   width: 48%;
   margin: 0 1% 5px;
-  border-top:10px solid transparent;
-  border-bottom:10px solid transparent;
-  -webkit-border-image:url(../images/border.jpg) 17 0 repeat; 
-  border-image:url(../images/border.jpg) 17 0 repeat;
+  background: url(../images/btop.jpg) top left no-repeat,url(../images/bbottom.jpg) bottom left no-repeat;
+  background-size: contain;
+  background-color: #fff;
+}
+
+.grid-item .info{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    padding-bottom: 5px;
+}
+.grid-item-first .info{
+    -webkit-line-clamp:1;
 }
 .grid-item .title{
   width: 86%;
@@ -87,4 +97,16 @@ body{
 .love:active{
   -webkit-transform: scale(0.8);
   transform: scale(0.9);
+}
+
+#share{
+  position: fixed;
+  z-index: 901;
+  background: url(../images/share.png) center no-repeat;
+  background-size: contain;
+  left:0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
 }

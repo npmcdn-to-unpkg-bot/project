@@ -1,0 +1,329 @@
+body{
+  background-color: #fef2e4;
+}
+.main{
+	background: url(../images/animate/bg.png) center no-repeat;
+	background-size: contain;
+}
+.animate01{
+	position: absolute;
+	background: url(../images/animate/1_03.png) center no-repeat;
+	background-size: contain;
+	width: 21%;
+	top: 19%;
+    left: 8%;
+}
+.animate02{
+	position: absolute;
+	background: url(../images/animate/1_04.png) center no-repeat;
+	background-size: contain;
+	width: 16.4%;
+	top: 19%;
+    left:30%;
+    animation-delay:0.5s;
+	-webkit-animation-delay:0.5s;
+}
+.animate03{
+	position: absolute;
+	background: url(../images/animate/1_05.png) center no-repeat;
+	background-size: contain;
+	width: 16%;
+	top: 18%;
+    left: 46%;
+    animation-delay:1s;
+	-webkit-animation-delay:1s;
+}
+.animate04{
+	position: absolute;
+	background: url(../images/animate/1_06.png) center no-repeat;
+	background-size: contain;
+	width: 28.4%;
+	top: 19%;
+    left: 60%;
+    animation-delay:1.5s;
+	-webkit-animation-delay:1.5s;
+}
+.animate05{
+	position: absolute;
+	background: url(../images/animate/1_08.png) center no-repeat;
+	background-size: contain;
+	width: 82%;
+	top: 26%;
+    left: 6%;
+    animation-delay:2s;
+	-webkit-animation-delay:2s;
+}
+.animate06{
+	position: absolute;
+	background: url(../images/animate/1_10.png) center no-repeat;
+	background-size: contain;
+	width: 33.33%;
+	top: 66%;
+    left: 1%;
+    animation-delay:2.5s;
+	-webkit-animation-delay:2.5s;
+}
+.animate07{
+	position: absolute;
+	background: url(../images/animate/1_13.png) center no-repeat;
+	background-size: contain;
+	width: 90.6%;
+	top: 73%;
+    left: 1%;
+    animation-delay:3s;
+	-webkit-animation-delay:3s;
+}
+.animate08{
+	position: absolute;
+	background: url(../images/animate/presents.png) center no-repeat;
+	background-size: contain;
+	width: 24%;
+	top: 72%;
+    left: 62%;
+    animation-delay:3.5s;
+	-webkit-animation-delay:3.5s;
+}
+.animate09{
+	position: absolute;
+	background: url(../images/animate/canyu.png) center no-repeat;
+	background-size: contain;
+	width: 39%;
+	top: 90%;
+    left: 29%;
+    animation-delay:4s;
+	-webkit-animation-delay:4s;
+}
+.animate10{
+	position: absolute;
+	background: url(../images/animate/xin1.png) center no-repeat;
+	background-size: contain;
+	width: 6.4%;
+	top: 55%;
+    left: 82%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-animation-name: love;
+  	animation-name: love;
+  	-webkit-animation-duration: 3s;
+  	animation-duration: 3s;
+  	-webkit-animation-iteration-count: infinite;
+  	animation-iteration-count: infinite;
+  	-webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+.animate11{
+	position: absolute;
+	background: url(../images/animate/xin2.png) center no-repeat;
+	background-size: contain;
+	width: 4.5%;
+	top: 55.5%;
+    left: 84%;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-animation-name: love2;
+  	animation-name: love2;
+  	-webkit-animation-duration: 3s;
+  	animation-duration: 3s;
+  	-webkit-animation-iteration-count: infinite;
+  	animation-iteration-count: infinite;
+  	-webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    animation-delay:400ms;
+	-webkit-animation-delay:400ms;
+}
+
+@-webkit-keyframes love {
+  from {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    top: 55%;
+    left: 82%;
+  }
+
+  20% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    top: 53%;
+    left: 80%;
+  }
+
+  40% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.6;
+    top: 51%;
+    left: 79%;
+  }
+
+  60% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.7;
+    top: 49%;
+    left: 78%;
+  }
+
+  80% {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+    opacity: 0.9;
+    top: 45%;
+    left: 77%;
+  }
+
+  to {
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    opacity: 0;
+    top: 43%;
+    left: 77%;
+  }
+}
+
+@keyframes love {
+   from {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    top: 55%;
+    left: 82%;
+  }
+
+  20% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    top: 53%;
+    left: 80%;
+  }
+
+  40% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0.6;
+    top: 51%;
+    left: 79%;
+  }
+
+  60% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.7;
+    top: 49%;
+    left: 78%;
+  }
+
+  80% {
+    -webkit-transform: scale(.8);
+    transform: scale(.8);
+    opacity: 0.9;
+    top: 45%;
+    left: 77%;
+  }
+
+  to {
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    opacity: 0;
+    top: 43%;
+    left: 77%;
+  }
+}
+
+@-webkit-keyframes love2 {
+  from {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    top: 55%;
+    left: 82%;
+  }
+
+  20% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    top: 53%;
+    left: 84%;
+  }
+
+  40% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0.6;
+    top: 51%;
+    left: 85%;
+  }
+
+  60% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.7;
+    top: 49%;
+    left: 86%;
+  }
+
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.9;
+    top: 45%;
+    left: 87%;
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0;
+    top: 43%;
+    left: 87%;
+  }
+}
+
+@keyframes love2 {
+   from {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    top: 55%;
+    left: 82%;
+  }
+
+  20% {
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
+    top: 53%;
+    left: 84%;
+  }
+
+  40% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+    opacity: 0.6;
+    top: 51%;
+    left: 85%;
+  }
+
+  60% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0.7;
+    top: 49%;
+    left: 86%;
+  }
+
+  80% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.9;
+    top: 45%;
+    left: 87%;
+  }
+
+  to {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    opacity: 0;
+    top: 43%;
+    left: 87%;
+  }
+}

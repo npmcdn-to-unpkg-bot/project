@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>拼图</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+	<div class="main">
+		<div class="qipao"></div>
+		<div class="game">
+			<span class="i1 on"></span>
+			<span class="i1"></span>
+			<span class="i1 "></span>
+			<span class="i1 on"></span>
+		</div>
+
+		<div class="btn1">ta已拼齐3块拼图</div>
+
+		<div class="lst">
+			<p>0个好友帮你拼出了第1块拼图</p>
+			<p>0个好友帮你拼出了第2块拼图</p>
+			<p>0个好友帮你拼出了第3块拼图</p>
+			<p>0个好友帮你拼出了第4块拼图</p>
+		</div>
+
+		
+		<div class="btnGroup2">
+			<div class="btn4 fl"></div>
+			<div class="btn5 fl"></div>
+			<a href="" class="btn3 fr"></a>
+		</div>
+	</div>
+
+
+
+	<!-- 遮罩 -->
+	<div id="shade"></div>
+	<div class="wancheng"><img src="images/wancheng.png" alt=""></div>
+
+	
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script>
+	function resizeContent(){
+		autoHeight({element : $(".main"),scale : 1.6})
+		autoHeight({element : $(".game"),scale : 0.738})
+	}
+
+	$(function(){
+		resizeContent();
+
+		$(".btn4")[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$("#shade").show();
+			$(".wancheng").show();
+		})
+
+		//遮罩
+		
+		$("#shade")[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$("#shade").hide();
+			$(".wancheng").hide();
+		})
+
+	})
+	$(window).resize(function(){
+		resizeContent();
+	})
+</script>
+</body>
+</html>

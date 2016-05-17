@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>首页-帮忙</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+    <link rel="stylesheet" href="../_public/animate.css-master/animate.min.css">
+	<link rel="stylesheet" href="src/welcome.css">
+</head>
+<body>
+
+
+<div class="loading" style="display:none;">
+    <div class="spinner"></div>
+</div>
+
+<div class="main">
+    <div class="animate01"></div>
+    <div class="animate02"></div>
+    <div class="animate03"></div>
+    <div class="animate04"></div>
+    <div class="animate05"></div>
+    <div class="animate06"></div>
+    <div class="animate07"></div>
+    <div class="animate08"></div>
+    <div class="animate09"></div>
+    <div class="animate10"></div>
+    <div class="animate11"></div>
+</div>
+
+
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+function autosize(){
+    // autoHeight({element : $(".circlelogo"),scale : 1,marginTop:-0.5})
+    autoHeight({element : $(".main"),scale : 1.77})
+    autoHeight({element : $(".animate01"),scale : 0.64})
+    autoHeight({element : $(".animate02"),scale : 0.82})
+    autoHeight({element : $(".animate03"),scale : 0.85})
+    autoHeight({element : $(".animate04"),scale : 0.478})
+    autoHeight({element : $(".animate05"),scale : 0.508})
+    autoHeight({element : $(".animate06"),scale : 0.427})
+    autoHeight({element : $(".animate07"),scale : 0.28})
+    autoHeight({element : $(".animate08"),scale : 0.714})
+    autoHeight({element : $(".animate09"),scale : 0.288})
+    autoHeight({element : $(".animate10"),scale : 0.77})
+    autoHeight({element : $(".animate11"),scale : 0.85})
+
+    animated($(".animate01"),'bounceInDown animated');
+    animated($(".animate02"),'bounceInDown animated');
+    animated($(".animate03"),'bounceInDown animated');
+    animated($(".animate04"),'bounceInDown animated');
+    animated($(".animate05"),'rollIn animated');
+    animated($(".animate06"),'fadeInLeft animated');
+    animated($(".animate07"),'fadeInLeft animated');
+    animated($(".animate08"),'zoomIn animated');
+    animated($(".animate09"),'bounceInUp animated');
+
+    
+}
+
+$(function(){
+    $('.loading').fadeOut(1000);
+    autosize();
+
+})
+$(window).resize(function() {
+    autosize();
+});
+</script>
+</body>
+</html>

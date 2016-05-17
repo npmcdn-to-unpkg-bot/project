@@ -12,10 +12,12 @@
 </head>
 <body>
 
+
 <div class="loading" style="display:none;">
     <div class="spinner"></div>
 </div>
-
+<!-- 分享 -->
+<div id="share"></div>
 <div class="main">
     <div class="head">
         <img src="images/head.jpg" alt="">
@@ -28,13 +30,13 @@
 
     <!-- 瀑布流 -->
     <div class="grid">
-        <div class="grid-item">
+        <div class="grid-item grid-item-first">
             <div class="title">
                 <img src="images/top.jpg" alt="">
                 <div class="username">李媛媛</div>
             </div>
             <div class="info">
-                我喜欢的样子你都有
+                我喜欢的样子你都有我喜欢的样子你都有我喜欢的样子你都有
             </div>
             <div class="bottom clearfix">
                 <div class="left fl">
@@ -127,6 +129,13 @@ $(function(){
       percentPosition: true,
       itemSelector: '.grid-item'
     });
+    $(".love").on("click",function(){
+        if($(this).hasClass('on')) return;
+        $(this).addClass('on');
+    })
+    $(".btn02").on("click",function(){
+        $("#share").show();
+    })
 
 })
 $(window).resize(function() {

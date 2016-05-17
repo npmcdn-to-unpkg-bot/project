@@ -1,0 +1,46 @@
+body{
+  background-color: #fff4e8;
+}
+.main{
+	background: url(../images/user.jpg) top center no-repeat;
+	background-size: contain;
+}
+.add{
+	width: 80%;
+	margin: 34% auto 5%;
+	font-size: 15px;
+	color: #323232;
+	background: url(../images/borderTop.png) top left no-repeat,url(../images/borderBottom.png) bottom left no-repeat;
+	background-size: contain;
+	background-color: #fdfdfd;
+	padding: 40px 20px;
+	font-size: 15px;
+	color: #000;
+}
+.add .to{padding: 20px 0;}
+.add .detail{padding: 20px 0;}
+.add .detail p{text-indent: 2em;color: #c1265f;line-height: 1.2em;}
+.add .by{padding: 20px 0;}
+
+.bottom{
+  width: 100%;
+  margin: 0 auto 10px;
+}
+.bottom span{font-size: 15px;color: #c1265f;} 
+.love{width: 46px;height: 36px;display: inline-block;background: url(../images/loveStart.png) center no-repeat;background-size: contain;-webkit-transition: all 300ms;transition: all 300ms; }
+.love.on{background: url(../images/love.png) center no-repeat;background-size: contain;}
+.love:active{
+  -webkit-transform: scale(0.8);
+  transform: scale(0.9);
+}
+
+.back{
+	width: 150px;
+	height: 43px;
+	display: block;
+	margin: 0 auto;
+	background: url(../images/back.png) center no-repeat;
+	background-size: contain;
+	border: none;
+	outline: none;
+}

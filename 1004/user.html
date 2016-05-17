@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>表白墙</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/user.css">
+</head>
+<body>
+
+
+<div class="loading" style="display:none;">
+    <div class="spinner"></div>
+</div>
+
+<div class="main">
+    <div class="add">
+        <div class="to">to：<span>李媛媛</span></div>
+        <div class="detail">
+            想说：
+            <p>我喜欢的样子你你</p>
+        </div>
+        <div class="by">
+            姓名/微信号：大古
+        </div>
+        <div class="bottom clearfix">
+            <div class="left fl">
+                <span>1213票</span>
+            </div>
+            <div class="right fr">
+                <div class="love"></div>
+            </div>
+        </div>
+    </div>
+    <a href="" class="back"></a>
+    
+</div>
+
+
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+function autosize(){
+    // autoHeight({element : $(".circlelogo"),scale : 1,marginTop:-0.5})
+}
+
+$(function(){
+    $('.loading').fadeOut(1000);
+    autosize();
+
+    $(".love").on("click",function(){
+        if($(this).hasClass('on')) return;
+        $(this).addClass('on');
+    })
+
+})
+$(window).resize(function() {
+    autosize();
+});
+</script>
+</body>
+</html>

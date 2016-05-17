@@ -6,14 +6,17 @@
 * 基于JQ编写
 */
 
-
+// 初始化
+$(function(){
+	defaultEvent($("#shade")[0]); //清除遮罩层事件autoHeight
+})
 // animate.css 
 /*
 * animated($(".lump1"),'bounceInDown animated');
 */
 function animated(element,animate){
 	element.addClass(animate).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-		// $(this).removeClass(animate);
+		$(this).removeClass(animate);
 	});
 }
 
@@ -62,15 +65,28 @@ function autoHeight(params,callback){
 	
 	if(refer === undefined){
 		var width = parseInt($this.width());
-		$this.css({
-			height : parseInt(width*scale),
-			marginTop : parseInt(width*scale*marginTop) + "px"
-		})
+		if(marginTop == 0){
+			$this.css({
+				height : parseInt(width*scale)
+			})
+		}else{
+			$this.css({
+				height : parseInt(width*scale),
+				marginTop : parseInt(width*scale*marginTop) + "px"
+			})
+		}
 	}else{
-		$this.css({
-			height : parseInt(refer.height())*scale,
-			marginTop : parseInt(refer.height())*scale*marginTop + "px"
-		})
+		if(marginTop == 0 ){
+			$this.css({
+				height : parseInt(refer.height())*scale
+			})
+		}else{
+			$this.css({
+				height : parseInt(refer.height())*scale,
+				marginTop : parseInt(refer.height())*scale*marginTop + "px"
+			})
+		}
+		
 	}
 	//回调
 	//回调

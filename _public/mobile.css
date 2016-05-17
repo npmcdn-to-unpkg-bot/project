@@ -30,6 +30,17 @@ i{font-style: normal;}
 
 
 
+/*遮罩*/
+#shade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  z-index: 900;
+  display: none;
+}
 
 /*加载*/
 .loading{ position:fixed; z-index:10000; width:100%; height:100%;left: 0;top: 0;background-color: #000; }

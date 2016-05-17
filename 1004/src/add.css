@@ -1,0 +1,42 @@
+body{
+  background-color: #fff4e8;
+}
+.main{
+	background: url(../images/add.jpg) top center no-repeat;
+	background-size: contain;
+}
+.add{
+	width: 80%;
+	margin: 34% auto 5%;
+	font-size: 15px;
+	color: #323232;
+}
+.add .to{background-color: #fff;margin-bottom: 5px;padding: 15px 5%;}
+.add p{float: left;line-height: 20px;}
+.add .detail{background-color: #fff;margin-bottom: 5px;padding: 15px 5%;}
+.add .by{background-color: #fff;margin-bottom: 5px;padding: 15px 5%;}
+*::-webkit-input-placeholder{color: #7c7c7c;}
+.add textarea{height: 200px;resize: none;width: 100%;border: none;outline: none;text-indent: 2em;}
+input{border: none;outline: none;height: 20px;}
+.submit{
+	width: 150px;
+	height: 43px;
+	display: block;
+	margin: 0 auto;
+	background: url(../images/submit.png) center no-repeat;
+	background-size: contain;
+	border: none;
+	outline: none;
+}
+.save{
+	width: 150px;
+	height: 43px;
+	display: block;
+	margin: 0 auto;
+	background: url(../images/save.png) center no-repeat;
+	background-size: contain;
+	border: none;
+	outline: none;
+}
+.bottom{position: relative;}
+.cancel{position: absolute;bottom: 5px; right: 17%;font-size: 15px;color: #323232;text-decoration: underline;}
