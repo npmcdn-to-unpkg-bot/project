@@ -94,7 +94,7 @@
 }
 .pageSearch .content .lst .left{
 	float: left;
-	width: 90%;
+	width: 76%;
 }
 .pageSearch .content .lst .left .title{
 	color: #333;
@@ -109,6 +109,17 @@
 	display: block;
 	float: left;
 	margin-right: 0.48rem;
+}
+.pageSearch .content .lst .left .xiaozi span:last-child{margin-right: 0;}
+.pageSearch .content .lst .right{
+	
+}
+.pageSearch .content .lst .right i{
+	float: right;
+	margin-top: 0.3rem;
+}
+.pageSearch .content .lst .right .iconPhone{
+	margin-left: 0.4rem;
 }
 .pageSearch .content .lst:last-child{
 	border-bottom:none; 

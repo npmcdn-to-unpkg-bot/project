@@ -77,10 +77,10 @@ header a{color: #fff;}
 .iconHuakuai{width: 1.49rem;height: 0.69rem;display: inline-block; background: url(../images/icon_huakuai@2x.png) center no-repeat;background-size: contain;}
 .iconHuakuai.active{background: url(../images/icon_unhuakuai@2x.png) center no-repeat;background-size: contain;}
 /*星星*/
-.iconXing{}
-.iconXing.active{}
-
-
+.iconXing{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_shoucang2@2x.png) center no-repeat;background-size: contain; }
+.iconXing.active{ background: url(../images/icon_shoucang2@2x.png) center no-repeat;background-size: contain;}
+/*收藏*/
+.iconPhone{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_dianhua@2x.png) center no-repeat;background-size: contain;}
 
 
 
