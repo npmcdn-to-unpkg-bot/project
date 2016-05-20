@@ -1,0 +1,15 @@
+<MKM version="2.0" imageFileUrl="file:///D:/%e7%8e%8b%e7%92%90/%e5%b7%a6%e9%82%bb%e5%8f%b3%e9%87%8c/%e5%8f%b7%e7%a0%81%e9%80%9a/V1.1/1%e4%b8%bb%e9%a1%b5-%e5%88%86%e4%ba%ab%e9%a1%b5.psd">
+  <Marks>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="145" y="1016" textMaxWidth="100" offsetX="25" offsetY="10" text="size 60x60"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="131" y="1156" textMaxWidth="114" offsetX="25" offsetY="10" text="font 12 #666666"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="407" y="1278" textMaxWidth="111" offsetX="25" offsetY="10" text="font 16 #666666"/>
+    <LengthMark direction="3" color="16711680" length="100" x="300" y="1234"/>
+    <LengthMark direction="3" color="16711680" length="60" x="97" y="1174"/>
+    <LengthMark direction="3" color="16711680" length="30" x="106" y="984"/>
+    <LengthMark direction="3" color="16711680" length="20" x="99" y="1132"/>
+    <LengthMark direction="12" color="16711680" length="60" x="164" y="1072"/>
+    <LengthMark direction="12" color="16711680" length="44" x="0" y="1074"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16250871" offsetX="25" offsetY="10" x="222" y="1211"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16777215" offsetX="25" offsetY="10" x="106" y="1301"/>
+  </Marks>
+</MKM>

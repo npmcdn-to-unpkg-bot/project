@@ -1,0 +1,26 @@
+<MKM version="2.0" imageFileUrl="file:///D:/%e7%8e%8b%e7%92%90/%e5%b7%a6%e9%82%bb%e5%8f%b3%e9%87%8c/%e5%8f%b7%e7%a0%81%e9%80%9a/V1.1/3%e6%9b%b4%e5%a4%9a-%e6%9b%b4%e5%a4%9a%e4%b8%bb%e9%a1%b5%e9%9d%a2.psd">
+  <Marks>
+    <TextMark defaultDirection="9" direction="9" color="255" x="111" y="183" textMaxWidth="100" offsetX="25" offsetY="10" text="size 48x48"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="112" y="305" textMaxWidth="100" offsetX="25" offsetY="10" text="font 14 #333333"/>
+    <LengthMark direction="3" color="16711680" length="52" x="94" y="128"/>
+    <LengthMark direction="3" color="16711680" length="22" x="92" y="276"/>
+    <LengthMark direction="3" color="16711680" length="52" x="90" y="323"/>
+    <LengthMark direction="3" color="16711680" length="22" x="87" y="471"/>
+    <LengthMark direction="3" color="16711680" length="52" x="91" y="519"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="145" y="603" textMaxWidth="105" offsetX="10" offsetY="5" text="size 12 #999999"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16250871" offsetX="25" offsetY="10" x="311" y="621"/>
+    <LengthMark direction="3" color="16711680" length="28" x="61" y="624"/>
+    <LengthMark direction="3" color="16711680" length="28" x="58" y="572"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="112" y="681" textMaxWidth="152" offsetX="25" offsetY="10" text="参考“主页-号码通”页面"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="611"/>
+    <LengthMark direction="12" color="16711680" length="48" x="136" y="228"/>
+    <LengthMark direction="12" color="16711680" length="48" x="279" y="229"/>
+    <LengthMark direction="12" color="16711680" length="38" x="0" y="228"/>
+    <LengthMark direction="12" color="16711680" length="38" x="712" y="229"/>
+    <TextMark defaultDirection="5" direction="5" color="16711680" x="579" y="720" textMaxWidth="100" offsetX="25" offsetY="9" text="size 24x24"/>
+    <LengthMark direction="12" color="16711680" length="30" x="720" y="736"/>
+    <LengthMark direction="12" color="16711680" length="60" x="617" y="721"/>
+    <LengthMark direction="12" color="16711680" length="10" x="311" y="696"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="367" y="685" textMaxWidth="100" offsetX="25" offsetY="10" text="size 28x14"/>
+  </Marks>
+</MKM>

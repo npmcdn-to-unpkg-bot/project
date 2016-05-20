@@ -1,0 +1,26 @@
+<MKM version="2.0" imageFileUrl="file:///D:/%e7%8e%8b%e7%92%90/%e5%b7%a6%e9%82%bb%e5%8f%b3%e9%87%8c/%e5%8f%b7%e7%a0%81%e9%80%9a/V1.1/1%e4%b8%bb%e9%a1%b5-%e5%8f%b7%e7%a0%81%e9%80%9a.psd">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="30" x="48" y="128"/>
+    <LengthMark direction="3" color="16711680" length="36" x="43" y="216"/>
+    <LengthMark direction="3" color="16711680" length="20" x="40" y="276"/>
+    <LengthMark direction="3" color="16711680" length="30" x="109" y="297"/>
+    <LengthMark direction="3" color="16711680" length="28" x="73" y="358"/>
+    <LengthMark direction="3" color="16711680" length="30" x="73" y="413"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="331"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="264"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="443"/>
+    <LengthMark direction="3" color="16711680" length="80" x="467" y="216"/>
+    <LengthMark direction="12" color="16711680" length="30" x="720" y="264"/>
+    <LengthMark direction="12" color="16711680" length="30" x="720" y="382"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="77" y="253" textMaxWidth="120" offsetX="25" offsetY="10" text="font 12 #999999&#xD;加粗"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="154" y="323" textMaxWidth="120" offsetX="25" offsetY="10" text="font 16 #333333"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="213" y="385" textMaxWidth="108" offsetX="25" offsetY="10" text="font 14 #999999"/>
+    <TextMark defaultDirection="9" direction="5" color="16711680" x="686" y="353" textMaxWidth="100" offsetX="26" offsetY="9" text="size 24x24"/>
+    <TextMark defaultDirection="9" direction="5" color="255" x="664" y="253" textMaxWidth="137" offsetX="25" offsetY="10" text="size 32x16"/>
+    <LengthMark direction="12" color="16711680" length="36" x="229" y="401"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16250871" offsetX="25" offsetY="10" x="264" y="147"/>
+    <LengthMark direction="3" color="16711680" length="16" x="688" y="280"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="279" y="444" textMaxWidth="108" offsetX="25" offsetY="10" text="线宽1px #dcdbdb"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="407" y="165" textMaxWidth="182" offsetX="25" offsetY="10" text="搜索框参考“邻里通闲置”页面"/>
+  </Marks>
+</MKM>

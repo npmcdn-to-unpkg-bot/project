@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>首页-报错页</title>
+	<script src="src/rem2.js"></script>
+	<link rel="stylesheet" href="src/reset.css">
+	<link rel="stylesheet" href="src/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+<header>
+	<div class="left fl back">&lt;</div>
+	<span class="middle">报错</span>
+	<div class="right fr">提交</div>
+</header>
+
+<div class="main">
+	<div class="pageError">
+		<div class="lst">电话无人接听 <i class="iconRadio"></i></div>
+		<div class="lst">不服务本小区了 <i class="iconRadio active"></i></div>
+		<div class="lst">号码错了 <i class="iconRadio "></i></div>
+		<div class="lst">
+			其他 <i class="iconRadio "></i>
+			<p>
+				<textarea name="" id="" placeholder="请输入理由"></textarea>
+			</p>
+		</div>
+	</div>
+</div>
+
+
+<script src="src/jquery-2.2.3.min.js"></script>
+<script>
+	$(function(){
+		$('.back').on('click',function(){
+			history.go(-1);
+		})
+	})
+</script>
+</body>
+</html>

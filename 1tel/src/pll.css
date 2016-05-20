@@ -1,0 +1,118 @@
+
+/*编辑页面*/
+.pageEdit{ 
+	border-bottom: solid 1px #dcdbdb;
+	padding-left: 0.4rem;
+	background-color: #fff; 
+ }
+.pageEdit .lst{ 
+	padding-top: 0.53rem;
+	border-bottom: solid 1px #dcdbdb;
+	position: relative;
+}
+.pageEdit .title{
+	font-size: 0.32rem;
+	color: #999;
+	margin-bottom: 0.53rem;
+}
+.pageEdit .lst input{
+	width: 80%;
+	height: 0.6rem;
+	font-size: 0.43rem;
+	color: #333;
+	margin-bottom: 0.27rem;
+	border: none;
+}
+.pageEdit .un{ 
+	border-bottom: none;
+	padding-right: 0.4rem;
+ }
+.pageEdit .lst textarea{
+	width: 100%;
+	font-size: 0.43rem;
+	color: #333;
+	border-color: #dcdbdb;
+	padding: 0.27rem;	
+	resize: none;
+	height: 6em;
+}
+.pageEdit .lst select{
+	width: 100%;
+	font-size: 0.43rem;
+	color: #333;
+	border-color: #dcdbdb;
+	padding: 0.27rem;
+}
+
+
+
+
+
+
+/*新建页面*/
+
+.pageEdit .lst span{
+	font-size: 0.43rem;
+	color: #1bb7ff;
+	float: right;
+	padding-right: 0.4rem;
+	line-height: 0.6rem;
+
+}
+
+.pageEdit .lst .share{
+	font-size: 0.43rem;
+	color: #333;
+	padding-bottom: 0.53rem;
+}
+.pageEdit .lst .iconHuakuai{
+	position: absolute;
+	left: 2rem;
+	top: 0.40rem;
+}
+
+
+
+
+/*搜索页面*/
+
+.pageSearch .tishi{
+	font-size: 0.32rem;
+	line-height: 1.06rem;
+	color: #999;
+	padding-left: 0.4rem;
+}
+.pageSearch .content{
+	 border-bottom: solid 1px #dcdbdb;
+	 border-top: solid 1px #dcdbdb;
+}
+.pageSearch .content .lst{
+	padding: 0.4rem;
+	border-bottom: solid 1px #dcdbdb; 
+	background-color: #fff;
+	overflow: hidden;
+}
+.pageSearch .content .lst .left{
+	float: left;
+	width: 90%;
+}
+.pageSearch .content .lst .left .title{
+	color: #333;
+	font-size: 0.43rem;
+}
+.pageSearch .content .lst .left .xiaozi{
+	color: #999;
+	font-size: 0.37rem;
+	margin-top: 0.37rem;
+}
+.pageSearch .content .lst .left .xiaozi span{
+	display: block;
+	float: left;
+	margin-right: 0.48rem;
+}
+.pageSearch .content .lst:last-child{
+	border-bottom:none; 
+}
+
+
+

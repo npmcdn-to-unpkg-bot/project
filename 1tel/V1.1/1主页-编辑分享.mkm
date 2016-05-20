@@ -1,0 +1,26 @@
+<MKM version="2.0" imageFileUrl="file:///D:/%e7%8e%8b%e7%92%90/%e5%b7%a6%e9%82%bb%e5%8f%b3%e9%87%8c/%e5%8f%b7%e7%a0%81%e9%80%9a/V1.1/1%e4%b8%bb%e9%a1%b5-%e7%bc%96%e8%be%91%e5%88%86%e4%ba%ab.psd">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="40" x="43" y="128"/>
+    <LengthMark direction="3" color="16711680" length="40" x="42" y="188"/>
+    <LengthMark direction="3" color="16711680" length="20" x="76" y="256"/>
+    <LengthMark direction="3" color="16711680" length="40" x="40" y="278"/>
+    <LengthMark direction="3" color="16711680" length="108" x="24" y="339"/>
+    <LengthMark direction="3" color="16711680" length="40" x="83" y="448"/>
+    <LengthMark direction="3" color="16711680" length="40" x="72" y="512"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="660"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="277"/>
+    <LengthMark direction="12" color="16711680" length="30" x="720" y="665"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="98" y="172" textMaxWidth="118" offsetX="25" offsetY="10" text="font 12 #999999"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="130" y="245" textMaxWidth="125" offsetX="25" offsetY="10" text="font 16 #333333"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="176"/>
+    <TextMark defaultDirection="9" direction="9" color="255" x="292" y="553" textMaxWidth="151" offsetX="79" offsetY="30" text="线宽1px #dcdbdb&#xD;文字四周距线框各20px&#xD;font 16 #333333"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="424" y="276" textMaxWidth="121" offsetX="39" offsetY="13" text="线宽1px #dcdbdb"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16250871" offsetX="25" offsetY="10" x="245" y="1213"/>
+    <LengthMark direction="12" color="16711680" length="30" x="689" y="890"/>
+    <LengthMark direction="3" color="16711680" length="30" x="40" y="1055"/>
+    <LengthMark direction="3" color="16711680" length="40" x="42" y="764"/>
+    <LengthMark direction="3" color="16711680" length="40" x="44" y="826"/>
+    <LengthMark direction="3" color="16711680" length="40" x="41" y="926"/>
+    <LengthMark direction="3" color="16711680" length="40" x="41" y="989"/>
+  </Marks>
+</MKM>

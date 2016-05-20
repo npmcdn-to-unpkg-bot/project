@@ -5,7 +5,7 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
 	<meta name="apple-mobile-web-app-capable" content="tes">
 	<meta http-equiv="widow-target" content="_blank">
-	<title>微楼盘</title>
+	<title>加乔微楼书</title>
 	<link rel="stylesheet" href="../_public/reset.css">
 	<link rel="stylesheet" href="../_public/mobile.css">
     <link rel="stylesheet" href="../_public/animate.css-master/animate.min.css">
@@ -21,7 +21,7 @@
 <div class="main" >
     <img src="images/bg.jpg" alt="">
     <div class="circlelogo"></div>
-    <div class="circle animated infinite turn">
+    <div class="circle animated infinite">
         <div class="circlelist circle01"></div>
         <div class="circlelist circle02"></div>
         <div class="circlelist circle03"></div>
@@ -31,20 +31,31 @@
         <div class="circlelist circle07"></div>
         <div class="circlelist circle08"></div>
         <div class="circlelist circlelink">
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+            <a href="javascript:;" class="dialogTel-a" target="_bank"></a> <!-- 预约看房-->
+            <a href="loupangaikuang.html" target="_bank"></a> <!-- 楼盘概况-->
+            <a href="peitao.html" target="_bank"></a> <!-- 配套服务-->
+            <a href="huxing.html" target="_bank"></a> <!-- 户型鉴赏-->
+            <a href="jiaotongquwei.html" target="_bank"></a> <!-- 交通区位-->
+            <a href="xiaoguotu.html" target="_bank"></a> <!-- 效果图展示-->
+            <a href="http://newhouse.hfhouse.com/1400005078/dongtai.html" target="_bank"></a> <!-- 销售动态-->
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI2NDIyNTE1Mw==&mid=100000101&idx=1&sn=b4c654fb21a42fb65cba08ba60aad492#rd" target="_bank"></a> <!-- 一键关注-->
         </div>
 
     </div>
     
 </div>
 
+<div id="shade"></div>
+<div class="dialogTel">
+    <div class="top">
+        请拨打<i>400-887-1216</i> <br>   
+        转<i>10184</i>
+    </div>
+    <div class="bottom clearfix">
+        <span class="fl"><a href="tel:4008871216">拨打</a></span>
+        <span class="fr quxiao">取消</span>
+    </div>
+</div>   
 
 
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
@@ -54,11 +65,33 @@
 function autosize(){
     autoHeight({element : $(".circle"),scale : 1,marginTop:-0.5})
     autoHeight({element : $(".circlelogo"),scale : 1,marginTop:-0.5})
+    autoHeight({element : $(".dialogTel"),scale : 0.53,marginTop:-0.5})
 }
 
 $(function(){
     autosize();
+    $(".main").css({
+        height:parseInt($(window).height())
+    })
+    $(".dialogTel-a").on("click",function(){
+        $("#shade").show();
+        $(".dialogTel").show();
+    })
+    $(".quxiao").on("click",function(){
+        $("#shade").hide();
+        $(".dialogTel").hide();
+    })
+    $(".circle01").addClass('touming');
+    setTimeout(function(){$(".circle02").addClass('touming');},200)
+    setTimeout(function(){$(".circle03").addClass('touming');},400)
+    setTimeout(function(){$(".circle04").addClass('touming');},600)
+    setTimeout(function(){$(".circle05").addClass('touming');},800)
+    setTimeout(function(){$(".circle06").addClass('touming');},1000)
+    setTimeout(function(){$(".circle07").addClass('touming');},1200)
+    setTimeout(function(){$(".circle08").addClass('touming');},1400)
+    // $(".circle").addClass('turn');
 })
+
 $(window).resize(function() {
     autosize();
 });

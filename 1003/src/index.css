@@ -1,9 +1,3 @@
-.main{
-    max-width: 600px;
-    min-width: 300px;
-    margin: 0 auto;
-    position: relative;
-}
 
 .circle{
   position: absolute;
@@ -27,51 +21,73 @@
   width: 100%
 }
 
-.circle01{background: url(../images/circle01.png) center no-repeat;background-size: contain;z-index: 1;}
-.circle02{background: url(../images/circle02.png) center no-repeat;background-size: contain;z-index: 1;}
-.circle03{background: url(../images/circle03.png) center no-repeat;background-size: contain;z-index: 1;}
-.circle04{background: url(../images/circle04.png) center no-repeat;background-size: contain;z-index: 1;}
-.circle05{background: url(../images/circle05.png) center no-repeat;background-size: contain;z-index: 1;}
-.circle06{background: url(../images/circle06.png) center no-repeat;background-size: contain;z-index: 1;}
-.circle07{background: url(../images/circle07.png) center no-repeat;background-size: contain;z-index: 1;}
-.circle08{background: url(../images/circle08.png) center no-repeat;background-size: contain;z-index: 1;}
+.dialogTel{
+  position: fixed;
+  z-index: 910;
+  left: 10%;
+  top: 50%;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 1.5em;
+  text-align: center;
+  display: none;
+}
+.dialogTel .top{
+  padding: 10% 0;
+}
+.dialogTel .top i{color: #5a2284;}
+.dialogTel .bottom{border-top: 1px solid #c7c7c7;position: absolute;width: 100%;bottom: 0;height: 4em;}
+.dialogTel .bottom a{text-decoration: none;}
+.dialogTel .bottom span{width: 50%;border-right: 1px solid #c7c7c7;height: 4em;line-height: 4em;}
+.dialogTel .bottom span:last-child{border-right:none;}
+
+.circle01{background: url(../images/circle01.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
+.circle02{background: url(../images/circle02.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
+.circle03{background: url(../images/circle03.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
+.circle04{background: url(../images/circle04.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
+.circle05{background: url(../images/circle05.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
+.circle06{background: url(../images/circle06.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
+.circle07{background: url(../images/circle07.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
+.circle08{background: url(../images/circle08.png) center no-repeat;background-size: contain;z-index: 1;display: none;}
 .circlelogo{background: url(../images/logo.png) center no-repeat;background-size: contain;z-index: 1;}
 
 .circlelink{
-  background-color: rgba(0,0,0,.3);
+  /*background-color: rgba(0,0,0,.3);*/
   z-index: 5;
 }
 .circlelink a{
-  display: block;
+  display: inline-block;
   position: absolute;
   left: 0;
   top: 0;
-  width: 24%;
-  height: 24%;
-  background-color: red;
-  border-radius: 50%;
+  width: 18%;
+  height: 18%;
+  /*background-color: red;*/
+  /*border-radius: 50%;*/
 }
-.circlelink a:nth-of-type(1){left: 24%;top: 4%;}
-.circlelink a:nth-of-type(2){left: 52%;top: 4%;}
-.circlelink a:nth-of-type(3){left: 73%;top: 24%;}
-.circlelink a:nth-of-type(4){left: 73%;top: 53%;}
-.circlelink a:nth-of-type(5){left: 53%;top: 73%;}
-.circlelink a:nth-of-type(6){left: 23%;top: 73%;}
-.circlelink a:nth-of-type(7){left: 3%;top: 53%;}
-.circlelink a:nth-of-type(8){left: 3%;top: 24%;}
+.circlelink a:nth-of-type(1){left: 27%;top: 6%;}
+.circlelink a:nth-of-type(2){left: 56%;top: 6%;}
+.circlelink a:nth-of-type(3){left: 76%;top: 27%;}
+.circlelink a:nth-of-type(4){left: 77%;top: 55%;}
+.circlelink a:nth-of-type(5){left: 54%;top: 76%;}
+.circlelink a:nth-of-type(6){left: 27%;top: 76%;}
+.circlelink a:nth-of-type(7){left: 5%;top: 55%;}
+.circlelink a:nth-of-type(8){left: 5%;top: 27%;}
 
 
-
-
-
-
-
-
-
-
-
-
-
+.touming {
+    animation: touming 1s;
+    -moz-animation: touming 1s;
+    -webkit-animation: touming 2s;
+    -o-animation: touming 1s;
+    display: block;
+}
+@keyframes touming{0% {opacity:0;} 100% { opacity:1;}}
+@-moz-keyframes touming{0% { opacity:0;} 100% {opacity:1;}}
+@-webkit-keyframes touming {0% { opacity:0;} 100% { opacity:1;}}
+@-o-keyframes touming{0% { opacity:0;} 100% { opacity:1;}}
 
 
 .turn {
@@ -83,152 +99,192 @@
   /*-webkit-animation-direction:alternate; /*是否轮流播放*/
   animation-timing-function: linear;
   -webkit-animation-timing-function: linear;
-  -webkit-animation-duration: 20s;
-  animation-duration: 20s;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes turn {
   0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
   }
   6.25% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
   }
   12.5% {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
   }
   18.75% {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
   }
   25% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
   }
   31.25% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
   }
   37.5% {
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
   }
   43.75% {
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
   }
   50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
   }
   56.25% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
   }
   62.5% {
-    -webkit-transform: rotate(225deg);
-    transform: rotate(225deg);
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
   }
   68.75% {
-    -webkit-transform: rotate(225deg);
-    transform: rotate(225deg);
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
   }
   75% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
   }
   81.25% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
   }
   87.5% {
-    -webkit-transform: rotate(315deg);
-    transform: rotate(315deg);
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
   }
   93.75% {
-    -webkit-transform: rotate(315deg);
-    transform: rotate(315deg);
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate3d(0,0,1,360deg);
+    transform: rotate3d(0,0,1,360deg);
   }
 }
 
 @keyframes turn {
-    0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+  0% {
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
   }
   6.25% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
   }
   12.5% {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
   }
   18.75% {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
   }
   25% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
   }
   31.25% {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
   }
   37.5% {
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
   }
   43.75% {
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
   }
   50% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
   }
   56.25% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
   }
   62.5% {
-    -webkit-transform: rotate(225deg);
-    transform: rotate(225deg);
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
   }
   68.75% {
-    -webkit-transform: rotate(225deg);
-    transform: rotate(225deg);
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
   }
   75% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
   }
   81.25% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
   }
   87.5% {
-    -webkit-transform: rotate(315deg);
-    transform: rotate(315deg);
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
   }
   93.75% {
-    -webkit-transform: rotate(315deg);
-    transform: rotate(315deg);
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+    -webkit-transform: rotate3d(0,0,1,360deg);
+    transform: rotate3d(0,0,1,360deg);
   }
 }
 
+/*列表页*/
+.back{
+  display: inline-block;
+  width: 1.49rem;
+  height: 1.49rem;
+  background: url(../images/back.png) center no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.34rem;
+}
+.list{padding:0 0.12rem;}
+.list p{color: #4c7ad0;font-size: 0.4rem;padding: 0 0.7em;line-height: 1.4em;margin-top: 0.13rem;}
+.list p .title{color: #5a2284;font-size: 0.426rem;line-height: 1.6em;}
 
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-button-next, .swiper-button-prev{
+  top: 93%;
+}

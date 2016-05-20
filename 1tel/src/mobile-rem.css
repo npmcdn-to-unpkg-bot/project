@@ -1,0 +1,164 @@
+/*
+**********************
+* made in 饭饭
+* 2016-05-18
+**********************
+*/
+
+/*标签基本样式*/
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+  background-color: #f7f7f7;
+}
+img{max-width: 100%;}
+i{font-style: normal;}
+input,textarea{outline: none;}
+a:active{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*主体样式*/
+
+.main{
+  max-width: 10rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+header{
+  text-align: center;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 0.3rem;
+  background-color: #42bd41;
+  color: #fff;
+  font-size: 0.48rem;
+}
+header a{color: #fff;}
+
+::-webkit-input-placeholder { /* WebKit browsers */ 
+  color: #999;
+  font-size:0.4rem;
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+  font-size:0.4rem;
+} 
+
+/*常用样式*/
+.fl{float:left;}
+.fr{float:right;}
+.text-center{text-align: center;}
+
+
+/*icon*/
+/*单选按钮*/
+.iconRadio{width:0.53rem;height: 0.53rem;display: inline-block; background: url(../images/icon_weixuanze@2x.png) center no-repeat;background-size: contain;}
+.iconRadio.active{background: url(../images/icon_xuanze@2x.png) center no-repeat;background-size: contain;}
+/*对勾*/
+.iconRight{width:0.53rem;height: 0.37rem;display: inline-block; background: url(../images/right.png) center no-repeat;background-size: contain;}
+/*收藏*/
+.iconStar{width:0.64rem;height: 0.64rem;display: inline-block; background: url(../images/icon_shoucang@2x.png) center no-repeat;background-size: contain;}
+.iconStar.active{ background: url(../images/icon_shoucang2@2x.png) center no-repeat;background-size: contain;}
+/*分享*/
+.iconShare{width:0.64rem;height: 0.64rem;display: inline-block; background: url(../images/icon_fenxiang@2x.png) center no-repeat;background-size: contain;}
+/*报错*/
+.iconError{width:0.64rem;height: 0.64rem;display: inline-block; background: url(../images/icon_baocuo@2x.png) center no-repeat;background-size: contain;}
+/*滑块*/
+.iconHuakuai{width: 1.49rem;height: 0.69rem;display: inline-block; background: url(../images/icon_huakuai@2x.png) center no-repeat;background-size: contain;}
+.iconHuakuai.active{background: url(../images/icon_unhuakuai@2x.png) center no-repeat;background-size: contain;}
+/*星星*/
+.iconXing{}
+.iconXing.active{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*三列等分*/
+.row{width: 100%;}
+.row:after{ content: "."; display: block;height: 0;visibility: hidden;font-size: 0; clear: both; }
+.col3{width: 33.33%;float: left;}
+
+
+
+
+/*遮罩*/
+#shade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  z-index: 900;
+  display: none;
+}
+
+/*加载*/
+.loading{ position:fixed; z-index:10000; width:100%; height:100%;left: 0;top: 0;background-color: #000; }
+.spinner {
+  width: 1.4rem;
+  height: 1.4rem;
+  /*background-color: #f3c48f;*/
+  background:-webkit-gradient(linear, 0 0, 0 100%, from(#fdf2d4), to(#dfb17f));
+  position:absolute;
+  left:50%; top:50%;
+  margin-left:-0.7rem;
+  margin-top:-0.7rem;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+  
+}
+
+@-webkit-keyframes rotateplane {
+  0% { -webkit-transform: perspective(2.2rem) }
+  50% { -webkit-transform: perspective(2.2rem) rotateY(180deg) }
+  100% { -webkit-transform: perspective(2.2rem) rotateY(180deg)  rotateX(180deg)  }
+}
+
+@keyframes rotateplane {
+  0% { 
+    transform: perspective(2.2rem) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(2.2rem) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(2.2rem) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(2.2rem) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(2.2rem) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(2.2rem) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+@-webkit-keyframes rotate360 {
+  0% { -webkit-transform: rotate3d(0,0,1,0) }
+  50% { -webkit-transform: rotate3d(0,0,1,180deg) }
+  100% { -webkit-transform: rotate3d(0,0,1,360deg) }
+}
+
+@keyframes rotate360 {
+  0% { -webkit-transform: rotate3d(0,0,1,0) }
+  50% { -webkit-transform: rotate3d(0,0,1,180deg) }
+  100% { -webkit-transform: rotate3d(0,0,1,360deg) }
+}

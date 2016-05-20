@@ -1,0 +1,18 @@
+<MKM version="2.0" imageFileUrl="file:///D:/%e7%8e%8b%e7%92%90/%e5%b7%a6%e9%82%bb%e5%8f%b3%e9%87%8c/%e5%8f%b7%e7%a0%81%e9%80%9a/V1.1/3%e6%9b%b4%e5%a4%9a-%e7%89%a9%e4%b8%9a%e5%88%86%e7%b1%bb%e9%a1%b5%e9%9d%a2.psd">
+  <Marks>
+    <TextMark defaultDirection="9" direction="9" color="255" x="372" y="165" textMaxWidth="112" offsetX="34" offsetY="19" text="font 16 #333333&#xD;选中 16 #42bd41"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="16250871" offsetX="25" offsetY="10" x="539" y="156"/>
+    <LengthMark direction="3" color="16711680" length="36" x="181" y="128"/>
+    <LengthMark direction="12" color="16711680" length="30" x="0" y="136"/>
+    <LengthMark direction="12" color="16711680" length="230" x="29" y="136"/>
+    <LengthMark direction="12" color="16711680" length="30" x="720" y="152"/>
+    <LengthMark direction="12" color="16711680" length="120" x="85" y="228"/>
+    <LengthMark direction="3" color="16711680" length="4" x="210" y="216"/>
+    <LengthMark direction="3" color="16711680" length="20" x="181" y="196"/>
+    <LengthMark direction="12" color="16711680" length="10" x="281" y="265"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="334" y="256" textMaxWidth="100" offsetX="25" offsetY="10" text="size 28x14"/>
+    <LengthMark direction="12" color="16711680" length="60" x="616" y="293"/>
+    <LengthMark direction="12" color="16711680" length="30" x="720" y="305"/>
+    <TextMark defaultDirection="9" direction="9" color="16711680" x="591" y="271" textMaxWidth="100" offsetX="25" offsetY="10" text="size 24x24"/>
+  </Marks>
+</MKM>
