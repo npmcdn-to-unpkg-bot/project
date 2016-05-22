@@ -35,4 +35,57 @@
 .pageDetail .row .col3{border-right: 1px solid #999;height: 1.17rem;line-height: 1em;}
 .pageDetail .row .col3 i{margin-bottom:0.13rem; }
 .pageDetail .row .col3:last-child{border-right:none;}
-.pageDetail .content{margin-top: 0.4rem;border-top:1px solid #dcdbdb;border-bottom: 1px solid #dcdbdb;background-color: #fff;}
+.pageDetail .content{margin-top: 0.4rem;border-top:1px solid #dcdbdb;border-bottom: 1px solid #dcdbdb;background-color: #fff;padding-left: 0.4rem;}
+.pageDetail .content .top{height: 1.7rem;line-height: 1.7rem; border-bottom: 1px solid #dcdbdb;font-size: 0.426rem;color: #333;}
+.pageDetail .content .top .right{line-height: 2.0rem;}
+.pageDetail .content .top .right i{margin: 0 0.4rem;}
+.pageDetail .content p span{
+	font-size: 0.32rem;
+	line-height: 1em;
+	padding: 0.53rem 0;
+	color: #999;
+	display: inline-block;
+}
+.pageDetail .content p{
+	font-size: 0.426rem;
+	color: #333;
+	border-bottom: 1px solid #dcdbdb;
+	padding-bottom: 0.4rem;
+}
+.pageDetail .content p:last-child{
+	border-bottom:none;
+}
+
+.share{
+	position: fixed;
+	z-index: 910;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #f7f7f7;
+}
+.share .top {
+	padding: 0 0.2rem;
+}
+.share .top span{
+	display: inline-block;
+	margin:0.4rem 0 0.8rem;
+	line-height: 1em;
+	float: left;
+	width: 25%;
+	text-align: center;
+	font-size: 0.32rem;
+	color: #666;
+}
+.share .top span i{
+	margin-bottom: 0.26rem;
+}
+.share .bottom{
+	height: 1.3rem;
+	background-color: #fff;
+	line-height: 1.3rem;
+	text-align: center;
+	font-size: 0.42rem;
+	color: #666;
+}
+

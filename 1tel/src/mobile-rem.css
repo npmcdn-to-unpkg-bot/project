@@ -79,8 +79,18 @@ header a{color: #fff;}
 /*星星*/
 .iconXing{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_shoucang2@2x.png) center no-repeat;background-size: contain; }
 .iconXing.active{ background: url(../images/icon_shoucang2@2x.png) center no-repeat;background-size: contain;}
-/*收藏*/
+/*电话*/
 .iconPhone{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_dianhua@2x.png) center no-repeat;background-size: contain;}
+/*dialog*/
+.iconDialog{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_dialog@2x.png) center no-repeat;background-size: contain;}
+/*短信*/
+.iconDuanxin{width: 1.6rem; height: 1.6rem;display: inline-block; background: url(../images/icon_duanxin@2x.png) center no-repeat;background-size: contain;}
+/*聊天*/
+.iconLiaotian{width: 1.6rem; height: 1.6rem;display: inline-block; background: url(../images/icon_liaotian@2x.png) center no-repeat;background-size: contain;}
+/*友领圈*/
+.iconYoulin{width: 1.6rem; height: 1.6rem;display: inline-block; background: url(../images/icon_youlinquan@2x.png) center no-repeat;background-size: contain;}
+/*更多*/
+.iconMore{width: 1.6rem; height: 1.6rem;display: inline-block; background: url(../images/icon_gengduo_dian@2x.png) center no-repeat;background-size: contain;}
 
 
 
