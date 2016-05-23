@@ -29,7 +29,7 @@
 				<i class="iconStar"></i>
 				<p>收藏</p>
 			</div>
-			<div class="col3">
+			<div class="col3 btnShare">
 				<i class="iconShare"></i>
 				<p>分享</p>
 			</div>
@@ -59,8 +59,8 @@
 		</div>
 	</div>
 </div>
-<div id="shade" style="display:block"></div>
-<div class="main share">
+<div id="shade"></div>
+<div class="share">
 	<div class="top clearfix">
 		<span><i class="iconDuanxin"></i> <br>短信</span>
 		<span><i class="iconLiaotian"></i> <br>聊天</span>
@@ -78,6 +78,17 @@
 	$(function(){
 		$('.back').on('click',function(){
 			history.go(-1);
+		})
+		$('.btnShare').on('click',function(){
+			$('#shade').show();
+			$(".share").slideDown();
+		})
+		$('#shade').on('click',function(){
+			$('#shade').hide();
+			$(".share").slideUp();
+		})
+		$(".iconStar").on("click",function(){
+			$(this).toggleClass('active')
 		})
 	})
 </script>

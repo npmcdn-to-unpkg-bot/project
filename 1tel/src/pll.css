@@ -126,4 +126,48 @@
 }
 
 
+/*收藏此号码的人*/
+.pagePeople{
+	background-color: #fff;
+	border-bottom: solid 1px #dcdbdb;
+	border-top: solid 1px #dcdbdb;
+	margin-top: 0.4rem;
+	padding-left: 0.4rem;
+	overflow: hidden;
+}
+.pagePeople .list{
+	padding-top: 0.21rem;
 
+	overflow: hidden;
+}
+.pagePeople .list .touxiang{
+	width: 1.33rem;
+	height: 1.33rem;
+	border-radius: 0.67rem;
+	background-color: red;
+	overflow: hidden;
+	float: left;
+}
+.pagePeople .list .touxiang img{
+	display: inline-block;
+}
+.pagePeople .list .kuang{
+	padding-left: 0.53rem;
+	padding-right: 0.4rem;
+	padding-bottom: 0.21rem;
+	border-bottom: solid 1px #dcdbdb;
+	overflow: hidden;
+}
+.pagePeople .list span{
+	float: left;
+	color: #333;
+	font-size: 0.4rem;
+	line-height: 1.33rem;
+}
+.pagePeople .list .iconIn{
+	float: right;
+	margin-top: 0.48rem;
+}
+.pagePeople .list:last-child .kuang{
+	border-bottom: none;
+}
