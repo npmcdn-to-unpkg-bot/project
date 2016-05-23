@@ -292,3 +292,30 @@
 .swiper-button-next, .swiper-button-prev{
   top: 93%;
 }
+
+.music{
+  width: 30px;
+  height: 30px;
+  background: url(../images/music.png) center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  z-index: 800;
+}
+.music.on{
+  animation:mymove 2s linear infinite ;
+  -webkit-animation:mymove 2s linear infinite ; /* Safari 和 Chrome */
+}
+
+@keyframes mymove
+{ 
+  0%   {transform: rotate(0);}
+  100%   {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+  0%   {transform: rotate(0);}
+  100%   {transform: rotate(360deg);}
+}

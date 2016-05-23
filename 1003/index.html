@@ -16,7 +16,8 @@
 <div class="loading" style="display:none;">
     <div class="spinner"></div>
 </div>
-
+<div class="music"></div>
+<audio src="images/music_bg.mp3"  id="audio" hidden="hidden" loop="loop" ></audio>
 
 <div class="main" >
     <img src="images/bg.jpg" alt="">
@@ -89,6 +90,16 @@ $(function(){
     setTimeout(function(){$(".circle06").addClass('touming');},1000)
     setTimeout(function(){$(".circle07").addClass('touming');},1200)
     setTimeout(function(){$(".circle08").addClass('touming');$(".circle").addClass('turn');},1400)
+    $(".music").on("click",function(){
+        if($(this).hasClass("on")){
+            $("#audio")[0].pause();
+            $(this).removeClass('on');
+        }else{
+            $("#audio")[0].play();
+            $(this).addClass('on');
+        }
+        
+    })
     
 })
 

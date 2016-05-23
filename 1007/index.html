@@ -57,7 +57,8 @@
 				 [7,'images/i007.jpg'],
 				 [8,'images/i008.jpg']];
 	imglist=imglist.concat(imglist);
-	var timer=null;
+	var timer = null,
+		secondCount = 0;
 	function imgCard(){
 		imglist=shuffle(imglist);
 		var str='';
@@ -84,8 +85,9 @@
 			}
 			if(second == 60.1 && minute == 60.1) alert('有病吧！！！')
 			$('.time').html((minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2));
+			secondCount = parseInt((minute-0.1)*60+(second-0.1));
 			second++;
-		},1001)
+		},1000)
 	}
 
 	function autosize(){
@@ -101,11 +103,15 @@
 			if($('.card.active').length == 2 ){
 				setTimeout(function(){
 					if($('.card.active').eq(0).attr('data-val') === $('.card.active').eq(1).attr('data-val')){
-						$('.card.active').removeClass('active').css('visibility','hidden');
+						$('.card.active').removeClass('active').addClass('hidden').css('visibility','hidden');
+						if($('.card').length == $('.card.hidden').length){
+							clearTimeout(timer);
+							console.log(secondCount);
+						}
 					}else{
 						$('.card.active').removeClass('active card-flipped');
 					}
-				},1000)
+				},700)
 			}
 		})
 
