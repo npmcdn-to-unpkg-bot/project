@@ -18,6 +18,14 @@
 </header>
 
 <div class="main">
+	<div class="search">
+		<span class="cancel">取消</span>
+		<div class="input">
+			<i class="iconSearch"></i>
+			<input type="text" placeholder="请输入搜索内容">
+		</div>
+	</div>
+
 	<div class="pageSearch">
 		<div class="tishi">为您找到相关结果约6个</div>
 		<div class="content">
@@ -30,7 +38,7 @@
 					</div>
 				</div>
 				<div class="right">
-					<i class="iconPhone"></i>
+					<a href=""><i class="iconPhone"></i></a>
 					<i class="iconXing"></i>
 				</div>
 			</div>
@@ -86,6 +94,9 @@
 	$(function(){
 		$('.back').on('click',function(){
 			history.go(-1);
+		})
+		$(".iconXing").on("click",function(){
+			$(this).toggleClass('active')
 		})
 	})
 </script>

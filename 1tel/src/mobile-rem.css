@@ -43,8 +43,12 @@ header{
   background-color: #42bd41;
   color: #fff;
   font-size: 0.48rem;
+  position: relative;
 }
 header a{color: #fff;}
+header .left{
+  position: absolute;
+}
 
 ::-webkit-input-placeholder { /* WebKit browsers */ 
   color: #999;
@@ -77,7 +81,7 @@ header a{color: #fff;}
 .iconHuakuai{width: 1.49rem;height: 0.69rem;display: inline-block; background: url(../images/icon_huakuai@2x.png) center no-repeat;background-size: contain;}
 .iconHuakuai.active{background: url(../images/icon_unhuakuai@2x.png) center no-repeat;background-size: contain;}
 /*星星*/
-.iconXing{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_shoucang2@2x.png) center no-repeat;background-size: contain; }
+.iconXing{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_shoucang@2x.png) center no-repeat;background-size: contain; }
 .iconXing.active{ background: url(../images/icon_shoucang2@2x.png) center no-repeat;background-size: contain;}
 /*电话*/
 .iconPhone{width: 0.64rem; height: 0.64rem;display: inline-block; background: url(../images/icon_dianhua@2x.png) center no-repeat;background-size: contain;}
@@ -91,6 +95,42 @@ header a{color: #fff;}
 .iconYoulin{width: 1.6rem; height: 1.6rem;display: inline-block; background: url(../images/icon_youlinquan@2x.png) center no-repeat;background-size: contain;}
 /*更多*/
 .iconMore{width: 1.6rem; height: 1.6rem;display: inline-block; background: url(../images/icon_gengduo_dian@2x.png) center no-repeat;background-size: contain;}
+/*更多2*/
+.iconMore2{width: 0.85rem; height: 0.426rem;display: inline-block; background: url(../images/icon_gengduo@2x.png) center no-repeat;background-size: contain;}
+/*进入*/
+.iconIn{width: 0.18rem; height: 0.32rem;display: inline-block; background: url(../images/icon_jinru@2x.png) center no-repeat;background-size: contain;}
+/*搜索*/
+.iconSearch{width: 0.32rem; height: 0.32rem;display: inline-block; background: url(../images/icon_seach@2x.png) center no-repeat;background-size: contain;}
+/*new*/
+.iconNew{width: 0.74rem; height: 0.37rem;display: inline-block; background: url(../images/icon_new@2x.png) center no-repeat;background-size: contain;}
+
+/*物业*/
+.iconMoreWuye{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_wuye1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreWuye.active{background: url(../images/icon_wuye@2x.png) center no-repeat;background-size: contain;}
+/*居委会*/
+.iconMoreJvwei{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_juweihui1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreJvwei.active{background: url(../images/icon_juweihui@2x.png) center no-repeat;background-size: contain;}
+/*快递*/
+.iconMoreKuaidi{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_kuaidi1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreKuaidi.active{background: url(../images/icon_kuaidi@2x.png) center no-repeat;background-size: contain;}
+/*定水*/
+.iconMoreDingshui{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_dingshui1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreDingshui.active{background: url(../images/icon_dingshui@2x.png) center no-repeat;background-size: contain;}
+/*废品回收*/
+.iconMoreFeipin{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_huishou1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreFeipin.active{background: url(../images/icon_huishou@2x.png) center no-repeat;background-size: contain;}
+/*开锁换锁*/
+.iconMoreKaisuo{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_kaisuo1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreKaisuo.active{background: url(../images/icon_kaisuo@2x.png) center no-repeat;background-size: contain;}
+/*管道疏通*/
+.iconMoreGuandao{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_guandao1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreGuandao.active{background: url(../images/icon_guandao@2x.png) center no-repeat;background-size: contain;}
+/*家电维修*/
+.iconMoreJiadian{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_weixiu1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreJiadian.active{background: url(../images/icon_weixiu@2x.png) center no-repeat;background-size: contain;}
+/*其他*/
+.iconMoreOther{width: 1.28rem;height: 1.38rem;display: inline-block; background: url(../images/icon_qita1@2x.png) center no-repeat;background-size: contain;}
+.iconMoreOther.active{background: url(../images/icon_qita@2x.png) center no-repeat;background-size: contain;}
 
 
 
@@ -100,8 +140,29 @@ header a{color: #fff;}
 
 
 
-
-
+/*搜索*/
+.search{
+  padding: 0.4rem 0.4rem 0;
+  overflow: hidden;
+  font-size: 0.37rem;
+}
+.search .input{
+  background-color: #fff;
+  height: 0.77rem;
+  border-radius: 5px;
+  position: relative;
+  width: 85%;
+}
+.search .input i{position: absolute;top: .2rem;left: 0.1rem;}
+.search .input input{
+  padding-left: 2em;
+  padding-right: 1em;
+  width: 100%;
+  border:none;
+  height: 100%;
+  outline: none;border-radius: 5px;
+}
+.search span{float: right;font-size: 0.4rem; width: 15%;text-align: center;height: 0.77rem;line-height: 0.77rem;}
 
 
 

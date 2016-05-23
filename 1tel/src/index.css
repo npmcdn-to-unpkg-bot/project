@@ -63,6 +63,7 @@
 	left: 0;
 	width: 100%;
 	background-color: #f7f7f7;
+	display: none;
 }
 .share .top {
 	padding: 0 0.2rem;
@@ -89,3 +90,112 @@
 	color: #666;
 }
 
+
+.lst01 .title{
+	padding-left: 0.4rem;
+	padding-right: 0.4rem;
+	height: 1.06rem;
+	line-height: 1.06rem;
+	font-size: 0.32rem;
+	color: #999;
+	position: relative;
+}
+.lst01 .title .more{
+	position: absolute;
+	right: 0.4rem;
+	bottom: 0.213rem;
+}
+.lst01 ul{background-color: #fff;padding-left: 0.4rem; border-top: 1px solid #dcdbdb;border-bottom: 1px solid #dcdbdb;line-height: 1em;}
+.lst01 ul li{position: relative;padding: 0.4rem 0;border-bottom: 1px solid #dcdbdb;}
+.lst01 ul li:last-child{border-bottom: none;}
+.lst01 ul li h2{font-size: 0.426rem;color: #333;margin-bottom: 0.37rem;}
+.lst01 ul li h3{font-size: 0.37rem;color: #999;}
+.lst01 ul li h3 i{margin-left: 0.48rem;}
+.lst01 ul li .iconPhone{position: absolute;right: 0.4rem;top: 0.5rem;}
+
+.lst02{
+
+}
+.lst02 .content{
+	 border-bottom: solid 1px #dcdbdb;
+	 border-top: solid 1px #dcdbdb;
+	 background-color: #fff;
+	 padding-left: 0.4rem;
+}
+.lst02 .content .lst{
+	padding: 0.4rem;
+	border-bottom: solid 1px #dcdbdb; 
+	background-color: #fff;
+	overflow: hidden;
+}
+.lst02 .content .lst .left{
+	float: left;
+	width: 76%;
+}
+.lst02 .content .lst .left .title{
+	color: #333;
+	font-size: 0.43rem;
+}
+.lst02 .content .lst .left .xiaozi{
+	color: #999;
+	font-size: 0.37rem;
+	margin-top: 0.37rem;
+}
+.lst02 .content .lst .left .xiaozi span{
+	display: block;
+	float: left;
+	margin-right: 0.48rem;
+}
+.lst02 .content .lst .left .xiaozi span:last-child{margin-right: 0;}
+.lst02 .content .lst .right{
+	
+}
+.lst02 .content .lst .right i{
+	float: right;
+	margin-top: 0.3rem;
+}
+.lst02 .content .lst .right .iconPhone{
+	margin-left: 0.4rem;
+}
+.lst02 .content .lst:last-child{
+	border-bottom:none; 
+}
+.lst02top{
+	font-size: 0.426rem;
+	color: #333;
+	line-height: 1em;
+	padding: 0.48rem 0 0.267rem;
+}
+.lst02top.active{
+	font-size: 0.426rem;
+	color: #42bd41;
+}
+.sliderBorder{
+	width: 33.33%;
+	text-align: center;
+	line-height: 0;
+	font-size: 0;
+	position: relative;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;
+	left: 0;
+}
+.sliderBorder span{
+	display: inline-block;
+	width: 40%;
+	background-color: #ff3b30;
+	height: 2px;
+}
+.more2{
+	padding: 0.35rem 0;
+	background-color: #fff;
+	border-bottom: solid 1px #dcdbdb;
+}
+.more2 span{
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding: 0.35rem 0;
+	line-height: 1em;
+}
+.more2 span i{margin-bottom:0.16rem;}

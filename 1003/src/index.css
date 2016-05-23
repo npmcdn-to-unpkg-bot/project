@@ -246,21 +246,25 @@
     transform: rotate3d(0,0,1,360deg);
   }
 }
-
+.width2em{
+  width: 2em;
+  display: inline-block;
+  height: 1em;
+}
 /*列表页*/
 .back{
   display: inline-block;
-  width: 1.49rem;
-  height: 1.49rem;
+  width: 1.80rem;
+  height: 1.80rem;
   background: url(../images/back.png) center no-repeat;
   background-size: contain;
   position: absolute;
   right: 0.1rem;
-  top: 0.34rem;
+  top: 0.14rem;
 }
 .list{padding:0 0.12rem;}
-.list p{color: #4c7ad0;font-size: 0.4rem;padding: 0 0.7em;line-height: 1.4em;margin-top: 0.13rem;}
-.list p .title{color: #5a2284;font-size: 0.426rem;line-height: 1.6em;}
+.list p{color: #4c7ad0;font-size: 0.48rem;padding: 0 0.7em;line-height: 1.4em;margin-top: 0.13rem;}
+.list p .title{color: #5a2284;font-size: 0.5rem;line-height: 1.6em;}
 
 .swiper-container {
     width: 100%;
@@ -287,4 +291,31 @@
 }
 .swiper-button-next, .swiper-button-prev{
   top: 93%;
+}
+
+.music{
+  width: 30px;
+  height: 30px;
+  background: url(../images/music.png) center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  z-index: 800;
+}
+.music.on{
+  animation:mymove 2s linear infinite ;
+  -webkit-animation:mymove 2s linear infinite ; /* Safari 和 Chrome */
+}
+
+@keyframes mymove
+{ 
+  0%   {transform: rotate(0);}
+  100%   {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+  0%   {transform: rotate(0);}
+  100%   {transform: rotate(360deg);}
 }
