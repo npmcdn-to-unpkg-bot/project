@@ -1,116 +1,79 @@
-.csstransforms .cn-wrapper {
-  font-size:1em;
-  width: 8rem;
-  height: 8rem;
-  overflow: hidden;
-  position: fixed;
-  z-index: 10;
-  top: 20%;
-  left: 50%;
-  border-radius: 50%;
-  margin-left: -4rem;
-  /*transform: scale(0.1);*/
-  /*background-color: rgba(255,0,255,0.4);*/
-  transition: all .3s ease;
+body{
+	background: url(../images/demo/bg.png) center no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: hidden;
 }
-/* class applied to the container via JavaScript that will scale the navigation up */
-.csstransforms .opened-nav {
-  border-radius: 50%;
-  transform: scale(1);
+.cn-wrapper{
+	width: 8rem;
+	height: 8rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -4rem;
+	margin-top: -4rem;
+	/*background-color: hsla(0,100%,50%,.3);*/
+	border-radius: 50%;
+	overflow: hidden;
 }
-
-
-.csstransforms .cn-wrapper li {
-  position: absolute;
-  font-size: 1.5em;
-  width: 4rem;
-  height: 3.02rem;
-  transform-origin: 4.1rem 3.1rem;
-  overflow: hidden;
-  left: -0.1rem;
-  top: 0.9rem;
-  transition: border .3s ease;
-  background-color: #4473cd;
-  background-color: hsla(219,67%,49%,.8);
+.cn-wrapper li{
+	position: absolute;
+	width: 8rem;
+	height: 8rem;
+	left: -4.1rem;
+	top: -4.1rem;
+    /*background-color: hsla(243, 78%, 50%, 0.5);*/
+    transform-origin: 101% 101%;
+    overflow: hidden;
 }
-
-.csstransforms .cn-wrapper li a {
-  display: block;
-  font-size: 0.4rem;
-  height: 5.5rem;
-  width: 5rem;
-  position: absolute;
-  /*bottom: -2.23rem;*/
-  top: 0;
-  right: -2rem;
-  border-radius: 50%;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
-  transform: skew(-45deg) rotate(-67.5deg) scale(1);
-  transition: opacity 0.3s, color 0.3s;
+.cn-wrapper li a{
+	position: absolute;
+	text-decoration: none;
+	/*background-color: rgba(255,255,0,.4);*/
+	background: radial-gradient(transparent 30%, hsla(243, 78%, 50%, 0.5) 30%);
+	font-size: 0.4rem;
+	color:#fff;
+	left: 50%;
+	top: 50%;
+	padding-top: 6%;
+	width: 100%;
+	height: 100%;
+	transform: skew(-45deg) rotate(-67.5deg);
+	text-align: center;
 }
-
-.csstransforms .cn-wrapper li a span {
-  font-size: 1.1em;
-  opacity: 0.7;
+.cn-wrapper li a img{width: 12%;margin-top: 0.1rem;}
+.cn-wrapper li:first-child{
+	transform: rotate(0deg) skew(45deg);
 }
-/* for a central angle x, the list items must be skewed by 90-x degrees
-in our case x=40deg so skew angle is 50deg
-items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
-
-.csstransforms .cn-wrapper li:first-child {
-  transform: rotate(0deg) skew(45deg);
+.cn-wrapper li:nth-child(2){
+	transform: rotate(45deg) skew(45deg);
 }
-
-.csstransforms .cn-wrapper li:nth-child(2) {
-  transform: rotate(45deg) skew(45deg);
+.cn-wrapper li:nth-child(3){
+	transform: rotate(90deg) skew(45deg);
 }
-
-.csstransforms .cn-wrapper li:nth-child(3) {
-  transform: rotate(90deg) skew(45deg)
+.cn-wrapper li:nth-child(4){
+	transform: rotate(135deg) skew(45deg);
+}
+.cn-wrapper li:nth-child(5){
+	transform: rotate(180deg) skew(45deg);
+}
+.cn-wrapper li:nth-child(6){
+	transform: rotate(225deg) skew(45deg);
+}
+.cn-wrapper li:nth-child(7){
+	transform: rotate(270deg) skew(45deg);
+}
+.cn-wrapper li:nth-child(8){
+	transform: rotate(315deg) skew(45deg);
 }
 
-.csstransforms .cn-wrapper li:nth-child(4) {
-  transform: rotate(135deg) skew(45deg);
-}
 
-.csstransforms .cn-wrapper li:nth-child(5) {
-  transform: rotate(180deg) skew(45deg);
-}
-.csstransforms .cn-wrapper li:nth-child(6) {
-  transform: rotate(225deg) skew(45deg);
-}
-.csstransforms .cn-wrapper li:nth-child(7) {
-  transform: rotate(270deg) skew(45deg);
-}
-.csstransforms .cn-wrapper li:nth-child(8) {
-  transform: rotate(315deg) skew(45deg);
-}
 
-/*.csstransforms .cn-wrapper li:nth-child(odd) a {
-  background-color: #a11313;
-  background-color: hsla(0, 88%, 63%, 1);
-}*/
 
-/*.csstransforms .cn-wrapper li:nth-child(even) a {
-  background-color: #a61414;
-  background-color: hsla(0, 88%, 65%, 1);
-}
-*/
-/* active style */
-/*.csstransforms .cn-wrapper li.active a {
-  background-color: #b31515;
-  background-color: hsla(0, 88%, 70%, 1);
-}
-*/
-/* hover style */
-/*.csstransforms .cn-wrapper li:not(.active) a:hover,
-.csstransforms .cn-wrapper li:not(.active) a:active,
-.csstransforms .cn-wrapper li:not(.active) a:focus {
-  background-color: #b31515;
-  background-color: hsla(0, 88%, 70%, 1);
-}*/
+
+
+
+
 
 
 
