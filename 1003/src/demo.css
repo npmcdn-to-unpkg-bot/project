@@ -4,10 +4,26 @@ body{
 	background-attachment: fixed;
 	overflow: hidden;
 }
+.cn-wrapper-logo{
+	width: 8rem;
+	height: 8rem;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	margin-left: -4rem;
+	margin-top: -4rem;
+	/*background-color: hsla(0,100%,50%,.3);*/
+	border-radius: 50%;
+	overflow: hidden;
+	background: url(../images/demo/logo.png) center no-repeat;
+	background-size: contain;
+}
 .cn-wrapper{
 	width: 8rem;
 	height: 8rem;
 	position: absolute;
+	z-index: 10;
 	top: 50%;
 	left: 50%;
 	margin-left: -4rem;
