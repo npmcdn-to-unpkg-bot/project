@@ -10,6 +10,20 @@
 $(function(){
 	defaultEvent($("#shade")[0]); //清除遮罩层事件autoHeight
 })
+
+//URL地址解析
+// 调用方法
+// alert(GetQueryString("参数名1"));
+
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+ 
+
+
 // animate.css 
 /*
 * animated($(".lump1"),'bounceInDown animated');

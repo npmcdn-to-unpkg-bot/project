@@ -10,117 +10,99 @@
 	<link rel="stylesheet" href="../_public/reset.css">
 	<link rel="stylesheet" href="../_public/mobile-rem.css">
 	<link rel="stylesheet" href="src/index.css">
+	 <link rel="prefetch" href="game.html"/> 
+	 <link rel="prefetch" href="images/bg.mp3"/> 
 </head>
 <body>
-	<div class="loading" style="display:none;">
-		<div class="spinner"></div>
-	</div>
-	<div class="main">
-		<div class="music on"></div>
-
-		<div class="head">
-			<table>
-				<tbody>
-					<tr>
-						<td rowspan="2">
-							<div class="time">
-								00:00
-							</div>
-						</td>
-						<td>当前分数</td>
-						<td>最高分数</td>
-					</tr>
-					<tr>
-						<td>263</td>
-						<td>300</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-		<div class="content clearfix">
-
-		</div>
-		<div class="bottom">
-			<div class="btn"></div>
+	<div class="loading" >
+		<div class="spinner2">
+			<img src="images/loading/01@2x.png" alt="" class="img1">
+			<img src="images/loading/02@2x.png" alt="" class="img2">
+			<img src="images/loading/03@2x.png" alt="" class="img3">
+			<img src="images/loading/tip@2x.png" alt="" class="img4">
 		</div>
 	</div>
+
+	<!-- 遮罩 -->
+	<div id="shade"></div>
+	
+	<!-- 提示1 -->
+	<img src="images/shareTip@2x.png" alt="" class="shareTip">
+	<!-- 提示2 -->
+	<div class="shareTip2">
+		<div class="close"></div>
+		<div class="content">
+			亲，每天最多只能玩2次哦！<br>赶快邀请您的小伙伴一起来耍吧！
+		</div>
+		<div class="btn01">召唤小伙伴</div>
+		<div class="btn02"><a href="">关注我们</a></div>
+	</div>
+
+
+
+	<div class="main home">
+		<div class="top">
+			<img class="bg" src="images/home-top.png" alt="">
+			<img class="logo" src="images/logo@2x.png" alt="">
+			<img class="guize" src="images/guize@2x.png" alt="">
+		</div>
+		
+		<img class="menghuitongnian " src="images/menghuitongnian@2x.png" alt="">
+		<img class="startBtn" src="images/start@2x.png" alt="">
+		<div class="guizeDialog">
+			<img src="images/guizeImg@2x.png" alt="">
+			<div class="iconClose"> </div>
+			<div class="content">
+				<div class="title">活动时间：</div>
+				<p>5月26号-5月31号</p>
+				<div class="title">活动奖品：</div>
+				<p>一等奖：上海迪斯尼门票2张</p>
+				<p>二等奖：芭比娃娃正装</p>
+				<p>三等奖：童年大礼包</p>
+				<p>幸运奖：俄罗斯方块游戏机</p>
+
+				<div class="title">主办单位：</div>
+				<p>合房网 安房网 星空地产网</p>
+
+				<div class="title">活动规则:</div>
+
+				<p>一、根据游戏分数排名，赢取奖品。游戏花费时间越短，游戏分数越高。</p>
+				<p>二、每个用户每天有1次游戏机会，每天第一次分享到朋友圈可获取1次游戏机会。</p>
+				<p>三、中奖结果于6.1号在微信公众平台予以公布。</p>
+			</div>
+		</div>
+	</div>
+
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
 <script src="../_public/public.js"></script>
 <script src="src/index.js"></script>
 <script>
-	var imglist=[[1,'images/i001.jpg'],
-				 [2,'images/i002.jpg'],
-				 [3,'images/i003.jpg'],
-				 [4,'images/i004.jpg'],
-				 [5,'images/i005.jpg'],
-				 [6,'images/i006.jpg'],
-				 [7,'images/i007.jpg'],
-				 [8,'images/i008.jpg']];
-	imglist=imglist.concat(imglist);
-	var timer = null,
-		secondCount = 0;
-	function imgCard(){
-		imglist=shuffle(imglist);
-		var str='';
-		for(var i=0;i<imglist.length;i++){
-			str+='<div class="lst card" data-val="'+imglist[i][0]+'">'
-				+'<div class="face front">'
-				+'<img src="images/i000.jpg" alt="">'
-				+'</div>'
-				+'<div class="face back">'
-				+'<img src="'+imglist[i][1]+'" alt="">'
-				+'</div>'
-				+'</div>';
-		}
-		$('.content').html(str);
-		autosize();
-	}
-	function timeCount(){
-		var second = 1.1,
-			minute = 0.1;
-		timer=setInterval(function(){
-			if(second == 60.1){
-				minute++;
-				second=0.1;
-			}
-			if(second == 60.1 && minute == 60.1) alert('有病吧！！！')
-			$('.time').html((minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2));
-			secondCount = parseInt((minute-0.1)*60+(second-0.1));
-			second++;
-		},1000)
-	}
-
-	function autosize(){
-		autoHeight({element : $('.content .lst'),scale : 1.0})
-	}
-	$(function(){
-		imgCard();
-		timeCount();
-		$('.content').on('click','.lst',function(){
-			if($(this).hasClass('active')) return;
-			if($('.card.active').length>1) return;
-			$(this).addClass('active card-flipped');
-			if($('.card.active').length == 2 ){
-				setTimeout(function(){
-					if($('.card.active').eq(0).attr('data-val') === $('.card.active').eq(1).attr('data-val')){
-						$('.card.active').removeClass('active').addClass('hidden').css('visibility','hidden');
-						if($('.card').length == $('.card.hidden').length){
-							clearTimeout(timer);
-							console.log(secondCount);
-						}
-					}else{
-						$('.card.active').removeClass('active card-flipped');
-					}
-				},700)
-			}
-		})
-
+	$(".main").css({
+		height:parseInt($(window).height())
 	})
-	$(window).resize(function(event) {
-		/* Act on the event */
-		autosize();
-	});
-
+	$(".guize").on("click",function(){
+		$(".guizeDialog").show();
+	})
+	$(".iconClose").on("click",function(){
+		$(".guizeDialog").hide();
+	})
+	$(".startBtn").on("click",function(){
+		setTimeout(function(){
+			window.location.href="game.html";
+		},500)
+	})
+	$(".btn01").on("click",function(){
+		$("#shade").show();
+		$(".shareTip2").hide();
+		$(".shareTip").show();
+	})
+	$(".close").on("click",function(){
+		$(".shareTip2").hide();
+		$("#shade").hide();
+	})
+	window.onload=function(){
+		$('.loading').fadeOut(1000);
+	}
 </script>
 </body>
 </html>

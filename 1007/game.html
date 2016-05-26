@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>抽奖</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+	<style>
+		#shade{
+			font-size: 2rem;
+			padding-top: 50%;
+			color: #ffd103;
+			text-align: center;
+		}
+	</style>
+	<script>
+		var timer = null,
+			secondCount = 0;
+
+		function timeCount(){
+			var second = 1.1,
+				minute = 0.1;
+			timer=setInterval(function(){
+				if(second == 60.1){
+					minute++;
+					second=0.1;
+				}
+				if(second == 60.1 && minute == 60.1) alert('歇歇吧！！！')
+				document.getElementById('time').innerHTML = (minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2);
+				secondCount = parseInt((minute-0.1)*60+(second-0.1));
+				second++;
+			},1000)
+		}
+		window.onload=function(){
+			var num=3;
+			var time=setInterval(function(){
+				num--;
+				if(num<1){
+					clearTimeout(time);
+					document.getElementById('shade').style.display='none';
+					timeCount();
+					return
+				} 
+				document.getElementById('shade').innerHTML=num;
+			},1000)
+		}
+	</script>
+</head>
+<body>
+	<audio src="images/bg.mp3"  id="audio" hidden="hidden" loop="loop" ></audio>
+
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<div id="shade" style="display:block">
+		3
+	</div>
+	<div class="main game">
+		<div class="music"></div>
+
+		<div class="head">
+			<img class="bg" src="images/2_02.png"  alt="">
+			<img class="guize" src="images/guize@2x.png" alt="">
+			<div class="time" id="time">00:00</div>
+			<div class="score">600s</div>
+			
+		</div>
+		<div class="content clearfix">
+
+		</div>
+		<!-- <div class="bottom">
+			<div class="btn"></div>
+		</div> -->
+	</div>
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+	var imglist=[[1,'images/i001.jpg'],
+				 [2,'images/i002.jpg'],
+				 [3,'images/i003.jpg'],
+				 [4,'images/i004.jpg'],
+				 [5,'images/i005.jpg'],
+				 [6,'images/i006.jpg'],
+				 [7,'images/i007.jpg'],
+				 [8,'images/i008.jpg'],
+				 [9,'images/i009.jpg'],
+				 [10,'images/i010.jpg']];
+	// var imglist=[[1,'images/i001.jpg'],
+	// 			 [1,'images/i002.jpg'],
+	// 			 [1,'images/i003.jpg'],
+	// 			 [1,'images/i004.jpg'],
+	// 			 [1,'images/i005.jpg'],
+	// 			 [1,'images/i006.jpg'],
+	// 			 [1,'images/i007.jpg'],
+	// 			 [1,'images/i008.jpg'],
+	// 			 [1,'images/i009.jpg'],
+	// 			 [1,'images/i010.jpg']];
+	imglist=imglist.concat(imglist);
+
+	function imgCard(){
+		imglist=shuffle(imglist);
+		var str='';
+		for(var i=0;i<imglist.length;i++){
+			str+='<div class="lst card" data-val="'+imglist[i][0]+'">'
+				+'<div class="face front">'
+				+'<img src="images/i000.jpg" alt="">'
+				+'</div>'
+				+'<div class="face back">'
+				+'<img src="'+imglist[i][1]+'" alt="">'
+				+'</div>'
+				+'</div>';
+		}
+		$('.content').html(str);
+		autosize();
+	}
+
+	function autosize(){
+		autoHeight({element : $('.content .lst'),scale : 1.0})
+	}
+	$(function(){
+		imgCard();
+		$('.content').on('click','.lst',function(){
+			if(!$('.music').hasClass('on')){
+				$('.music').addClass('on');
+				$('#audio')[0].play();
+			}	
+			if($(this).hasClass('active')) return;
+			if($('.card.active').length>1) return;
+			$(this).addClass('active card-flipped');
+			if($('.card.active').length == 2 ){
+				setTimeout(function(){
+					if($('.card.active').eq(0).attr('data-val') === $('.card.active').eq(1).attr('data-val')){
+						$('.card.active').removeClass('active').addClass('hidden').css('visibility','hidden');
+						if($('.card').length == $('.card.hidden').length){
+							clearTimeout(timer);
+							console.log(secondCount);
+							setTimeout(function(){
+								window.location.href="gameover.html?score="+secondCount;
+							},1000)
+						}
+					}else{
+						$('.card.active').removeClass('active card-flipped');
+					}
+				},700)
+			}
+		})
+
+	})
+	$(window).resize(function(event) {
+		/* Act on the event */
+		autosize();
+	});
+
+</script>
+</body>
+</html>

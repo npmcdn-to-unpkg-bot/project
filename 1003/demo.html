@@ -13,7 +13,7 @@
 <body class="csstransforms">
 	
 	<div class="cn-wrapper-logo"></div>
-	<div class="cn-wrapper turn" id="cn-wrapper">
+	<div class="cn-wrapper " id="cn-wrapper">
 	    <ul>
 	        <li><a href="javascript:alert('111');"><span>一键关注</span><br><img src="images/demo/1.png" alt=""></a></li>
 	        <li><a href="javascript:alert('222');"><span>预约看房</span><br><img src="images/demo/2.png" alt=""></a></li>
@@ -29,5 +29,10 @@
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
 <script src="../_public/public.js"></script>
 <script src="src/index.js"></script>
+<script>
+	$("body").css({
+		height:parseInt($(window).height())
+	})
+</script>
 </body>
 </html>

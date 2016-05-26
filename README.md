@@ -8,5 +8,5 @@
 # 1007----翻拍抽奖
 
 ## 演示地址
-## http://fanchaoyang.com/h5/1002/
+## http://fanchaoyang.com/project/1002/
 ## 请将后面的数字替换即可
