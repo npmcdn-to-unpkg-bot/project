@@ -31,6 +31,13 @@
 		<div class="btn01">召唤小伙伴</div>
 		<div class="btn02"><a href="">关注我们</a></div>
 	</div>
+	<!-- 提示3 -->
+	<div class="shareTip3">
+		<div class="close"></div>
+		<input type="text" class="username" placeholder="请输入昵称">
+		<input type="text" class="usertel" placeholder="请输入手机号码">
+		<button class="usersubmit">提交</button>
+	</div>
 
 	<div class="main gameover">
 		<img class="gameimg" src="images/gameover@2x.png" alt="">
@@ -58,11 +65,15 @@
 	})
 	$(".close").on("click",function(){
 		$(".shareTip2").hide();
+		$(".shareTip3").hide();
 		$("#shade").hide();
 	})
 	$(function(){
 		var score=GetQueryString('score');
 		$(".scoreIng").html(score+'s');
+		
+		// $("#shade").show();
+		$(".shareTip3").show();
 	})
 
 	// $(".guize").on("click",function(){

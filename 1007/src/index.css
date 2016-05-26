@@ -267,6 +267,31 @@ body{
 
 .shareTip2 .btn02 a{color: #fff;text-decoration:none;}
 
+
+.shareTip3{
+    width: 8.2rem;
+    height: 10.56rem;
+    position: absolute;
+    z-index: 910;
+    left: 50%;
+    top: 50%;
+    margin-left: -4.1rem;
+    margin-top: -5.28rem;
+    text-align: center;
+    background: url(../images/userbg@2x.png) center no-repeat;
+    background-size: contain;
+    display: none;
+}
+.shareTip3 .close{
+    width: 0.84rem;
+    height: 0.84rem;
+    position: absolute;
+    right: 1.5%;
+    top: 1.5%;
+    background: url(../images/chauser@2x.png) center no-repeat;
+    background-size: contain;
+}
+
 .paihang .title{
     width: 58%;
     position: absolute;
@@ -317,4 +342,20 @@ body{
 .spinner2 .img3{width: 0.106rem;height: 0.32rem; position: absolute;top: 1.14rem;left: 1.307rem;-webkit-animation: rotate360clock 1.2s infinite linear;
     animation: rotate360clock 1.2s infinite linear;}
 .spinner2 .img4{width: 3.36rem;height: 0.586rem; position: absolute;bottom: 2rem;left: 0;}
+.shareTip3 input::-webkit-input-placeholder{color: #7c7c7c;}
+.username{font-size: 0.48rem;text-align: center;width: 5.6rem;
+    height: 1.24rem;outline: none;border:2px solid #663204;border-radius: 1rem;margin-top: 40%;color: #663204;font-size: 0.48rem;
+}
+.usertel{font-size: 0.48rem;text-align: center;width: 5.6rem;
+    height: 1.24rem;outline: none;border:2px solid #663204;border-radius: 1rem;margin-top: 10%;color: #663204;font-size: 0.48rem;
+}
+.usersubmit{display: block;width: 4rem;height: 1.2rem;border-radius: 1rem;border:none;background-color: #ffc82f;
+    font-size: 0.56rem;color: #663204;position: absolute;left: 50%;margin-left: -2rem;bottom: 5%;
+    transition: all 300ms;-webkit-transition: all 300ms;outline:none;
+}
+.usersubmit:active{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+}
 
