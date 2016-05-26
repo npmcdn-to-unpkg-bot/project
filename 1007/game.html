@@ -24,17 +24,29 @@
 
 		function timeCount(){
 			var second = 1.1,
-				minute = 0.1;
+				minute = 0.1,
+				msec = 0.1;
 			timer=setInterval(function(){
-				if(second == 60.1){
-					minute++;
-					second=0.1;
+				if(msec == 10.1){
+					if(second == 60.1){
+						minute++;
+						second=0.1;
+						msec = 0.1;
+					}else{
+						second++;
+						msec = 0.1;
+					}
 				}
-				if(second == 60.1 && minute == 60.1) alert('歇歇吧！！！')
-				document.getElementById('time').innerHTML = (minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2);
-				secondCount = parseInt((minute-0.1)*60+(second-0.1));
-				second++;
-			},1000)
+				
+				if(second == 60.1 && minute == 60.1) {
+					alert('歇歇吧！！！');
+					window.location.href="index.html";
+					return;
+				}
+				document.getElementById('time').innerHTML = (minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2)+':'+(msec/10).toString().substr(2,1);
+				secondCount = parseInt((minute-0.1)*60+(second-0.1))+(msec-0.1)/10;
+				msec++;
+			},100)
 		}
 		window.onload=function(){
 			var num=3;
@@ -67,8 +79,8 @@
 		<div class="head">
 			<img class="bg" src="images/2_02.png"  alt="">
 			<img class="guize" src="images/guize@2x.png" alt="">
-			<div class="time" id="time">00:00</div>
-			<div class="score">600s</div>
+			<div class="time" id="time">00:00:0</div>
+			<div class="score">12'12''2</div>
 			
 		</div>
 		<div class="content clearfix">
@@ -82,16 +94,16 @@
 <script src="../_public/public.js"></script>
 <script src="src/index.js"></script>
 <script>
-	var imglist=[[1,'images/i001.jpg'],
-				 [2,'images/i002.jpg'],
-				 [3,'images/i003.jpg'],
-				 [4,'images/i004.jpg'],
-				 [5,'images/i005.jpg'],
-				 [6,'images/i006.jpg'],
-				 [7,'images/i007.jpg'],
-				 [8,'images/i008.jpg'],
-				 [9,'images/i009.jpg'],
-				 [10,'images/i010.jpg']];
+	var imglist=[[1,'images/1.jpg'],
+				 [2,'images/2.jpg'],
+				 [3,'images/3.jpg'],
+				 [4,'images/4.jpg'],
+				 [5,'images/5.jpg'],
+				 [6,'images/6.jpg'],
+				 [7,'images/7.jpg'],
+				 [8,'images/8.png'],
+				 [9,'images/9.jpg'],
+				 [10,'images/10.png']];
 	// var imglist=[[1,'images/i001.jpg'],
 	// 			 [1,'images/i002.jpg'],
 	// 			 [1,'images/i003.jpg'],

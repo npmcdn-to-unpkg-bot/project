@@ -38,7 +38,7 @@ body{
 .game .head table{width: 100%;}
 .game .head table td{text-align: center;vertical-align: middle;}
 .game .head table td:last-child{color: #be4646;}
-.time{width: 2.72rem;height: 0.97rem;background: url(../images/time.png) center no-repeat; background-size: contain;color: #fff;line-height: 0.97rem;padding-left: 1.3rem;position: absolute;right: 2%;bottom: 14%;}
+.time{width: 3.28rem;height: 0.97rem;background: url(../images/time.png) center no-repeat; background-size: contain;color: #fff;line-height: 0.97rem;padding-left: 1.3rem;position: absolute;right: 2%;bottom: 14%;}
 
 .game .head .guize{width:14%;position: absolute;left: 42.2%;top: 16%;}
 .game .head .score{font-size: 0.53rem;color: #be4646; position: absolute;left: 29%;top: 64%;}
@@ -336,10 +336,10 @@ body{
     margin-left: -1.7rem;
     margin-top: -3rem;
 }
-.spinner2 .img1{width: 2.72rem;height: 2.72rem; position: absolute;top: 0;left: 0;-webkit-animation: rotate360 1.2s infinite linear;
+.spinner2 .img1{width: 2.72rem;height: 2.72rem; position: absolute;top: 0;left: 0.34rem;-webkit-animation: rotate360 1.2s infinite linear;
     animation: rotate360 1.2s infinite linear;}
-.spinner2 .img2{width: 1.1rem;height: 1.37rem; position: absolute;top: 0.675rem;left: 0.81rem;}
-.spinner2 .img3{width: 0.106rem;height: 0.32rem; position: absolute;top: 1.14rem;left: 1.307rem;-webkit-animation: rotate360clock 1.2s infinite linear;
+.spinner2 .img2{width: 1.1rem;height: 1.37rem; position: absolute;top: 0.675rem;left: 1.15rem;}
+.spinner2 .img3{width: 0.106rem;height: 0.32rem; position: absolute;top: 1.14rem;left: 1.647rem;-webkit-animation: rotate360clock 1.2s infinite linear;
     animation: rotate360clock 1.2s infinite linear;}
 .spinner2 .img4{width: 3.36rem;height: 0.586rem; position: absolute;bottom: 2rem;left: 0;}
 .shareTip3 input::-webkit-input-placeholder{color: #7c7c7c;line-height: 1.4em;}
