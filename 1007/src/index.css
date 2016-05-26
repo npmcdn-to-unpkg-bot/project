@@ -304,13 +304,13 @@ body{
     top: 2%;
     right: 2%;
 }
-.paihang .table{
+.paihang #wrapper{
     position: absolute;
     width: 80%;
     left: 10%;
     top: 15%;
     bottom: 10%;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 .paihang table{width: 100%;color:#663204;}
 .paihang table .level{
@@ -342,7 +342,7 @@ body{
 .spinner2 .img3{width: 0.106rem;height: 0.32rem; position: absolute;top: 1.14rem;left: 1.307rem;-webkit-animation: rotate360clock 1.2s infinite linear;
     animation: rotate360clock 1.2s infinite linear;}
 .spinner2 .img4{width: 3.36rem;height: 0.586rem; position: absolute;bottom: 2rem;left: 0;}
-.shareTip3 input::-webkit-input-placeholder{color: #7c7c7c;line-height: 1em;}
+.shareTip3 input::-webkit-input-placeholder{color: #7c7c7c;line-height: 1.4em;}
 .username{font-size: 0.48rem;text-align: center;width: 5.6rem;
     height: 1.24rem;outline: none;border:2px solid #663204;border-radius: 1rem;margin-top: 40%;color: #663204;font-size: 0.48rem;
 }
@@ -359,3 +359,65 @@ body{
     -webkit-transform: scale(0.8);
 }
 
+.load{
+    width: 100%;
+    text-align: center;
+    line-height: 1rem;
+    /*background-color: #fff;*/
+}
+.loader {
+    display: inline-block;
+    font-size: 0px;
+    padding: 0px;
+}
+.loader span {
+    vertical-align: middle;
+    border-radius: 100%;
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin: 0 2px;
+    -webkit-animation: loader 0.8s linear infinite alternate;
+    animation: loader 0.8s linear infinite alternate;
+}
+.loader span:nth-child(1) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+    background: rgba(245, 103, 115,0.6);
+}
+.loader span:nth-child(2) {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+    background: rgba(245, 103, 115,0.8);
+}
+.loader span:nth-child(3) {
+    -webkit-animation-delay: -0.26666s;
+    animation-delay: -0.26666s;
+    background: rgba(245, 103, 115,1);
+}
+.loader span:nth-child(4) {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+    background: rgba(245, 103, 115,0.8);
+}
+.loader span:nth-child(5) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+    background: rgba(245, 103, 115,0.4);
+}
+ @keyframes loader {
+     from {
+    transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+    }
+    @-webkit-keyframes loader {
+     from {
+    -webkit-transform: scale(0, 0);
+    }
+    to {
+    -webkit-transform: scale(1, 1);
+    }
+}
