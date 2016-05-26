@@ -342,7 +342,7 @@ body{
 .spinner2 .img3{width: 0.106rem;height: 0.32rem; position: absolute;top: 1.14rem;left: 1.307rem;-webkit-animation: rotate360clock 1.2s infinite linear;
     animation: rotate360clock 1.2s infinite linear;}
 .spinner2 .img4{width: 3.36rem;height: 0.586rem; position: absolute;bottom: 2rem;left: 0;}
-.shareTip3 input::-webkit-input-placeholder{color: #7c7c7c;}
+.shareTip3 input::-webkit-input-placeholder{color: #7c7c7c;line-height: 1em;}
 .username{font-size: 0.48rem;text-align: center;width: 5.6rem;
     height: 1.24rem;outline: none;border:2px solid #663204;border-radius: 1rem;margin-top: 40%;color: #663204;font-size: 0.48rem;
 }
