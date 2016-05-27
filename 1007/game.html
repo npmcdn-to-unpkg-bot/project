@@ -27,7 +27,7 @@
 				minute = 0.1,
 				msec = 0.1;
 			timer=setInterval(function(){
-				if(msec == 10.1){
+				if(msec == 100.1){
 					if(second == 60.1){
 						minute++;
 						second=0.1;
@@ -43,10 +43,10 @@
 					window.location.href="index.html";
 					return;
 				}
-				document.getElementById('time').innerHTML = (minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2)+':'+(msec/10).toString().substr(2,1);
-				secondCount = parseInt((minute-0.1)*60+(second-0.1))+(msec-0.1)/10;
+				document.getElementById('time').innerHTML = (minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2)+':'+(msec/100).toString().substr(2,2);
+				secondCount = parseInt((minute-0.1)*60+(second-0.1))+(msec-0.1)/100;
 				msec++;
-			},100)
+			},10)
 		}
 		window.onload=function(){
 			var num=3;
@@ -79,7 +79,7 @@
 		<div class="head">
 			<img class="bg" src="images/2_02.png"  alt="">
 			<img class="guize" src="images/guize@2x.png" alt="">
-			<div class="time" id="time">00:00:0</div>
+			<div class="time" id="time">00:00:00</div>
 			<div class="score">12'12''2</div>
 			
 		</div>
