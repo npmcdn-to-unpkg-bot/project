@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>抽奖</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<!-- 遮罩层 -->
+	<div id="shade"></div>
+	<img class="share" src="images/share@2x.png" alt="">
+	<!-- 代码部分 -->
+	<div class="main">
+		<div class="game">
+			<div class="lst lst01 active"></div>
+			<div class="lst lst02 "></div>
+			<div class="lst lst03 "></div>
+			<div class="lst lst04 "></div>
+			<div class="lst lst05 "></div>
+			<div class="lst lst06 "></div>
+		</div>
+		<div class="tip">
+			<span>你已成功拼齐3块拼图</span>
+		</div>
+		<div class="level">
+			<p>0个好友帮你拼出了第1块拼图</p>
+			<p>0个好友帮你拼出了第2块拼图</p>
+			<p>1个好友帮你拼出了第3块拼图</p>
+			<p>0个好友帮你拼出了第4块拼图</p>
+		</div>
+
+		<div class="btn01 position01" style="display:none;"></div>
+		<!-- 领奖按钮 -->
+		<div class="btn03 position01" style="display:block;"></div> 
+		<div class="btn02 position02">
+			<a href=""></a>
+		</div>
+
+	</div>
+
+		<div class="user user1">
+		<p class="clearfix"><img class="close fr" src="images/close.jpg" alt=""></p>
+		<p><i>恭喜您</i><br>
+		<i>获得一台</i>清凉小风扇</p>
+		<form action="">
+		<table>
+			<tbody>
+				<tr>
+					<td>姓名：</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>手机：</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button></button></td>
+				</tr>
+			</tbody>
+		</table>
+		</form>
+		<div class="tips">请尽快完善信息并参照活动规则领取奖品</div>
+	</div>
+	<!-- 刮刮乐 -->
+	<div class="user user2" >
+		<p class="clearfix"><img  class="close fr" src="images/close.jpg" alt=""></p>
+		<p><i>恭喜您</i><br>
+		<i>获得一次</i>刮刮领奖<i>机会</i></p>
+
+		<div class="eraserMain">
+		 	恭喜中奖
+		 	<img id="redux" src="images/gua.jpg"  />
+		 </div>
+
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="src/jquery.eraser.js"></script>
+<script src="../_public/public.js"></script>
+<!-- <script src="src/index.js"></script> -->
+<script>
+	function autosize(){
+		autoHeight({element : $(".game"),scale : 0.87})
+		autoHeight({element : $(".tip"),scale : 0.147},function(){
+			$(".tip").css({
+				lineHeight:$(".tip").height()+'px'
+			})
+		})
+		$('.main').css({
+			height:parseInt($(window).height())
+		})
+	}
+
+	$(function(){
+		autosize();
+		var prize=true,
+	    	user=false;
+		$(".btn01")[0].addEventListener("touchstart",function(e){
+			e.stopPropagation();
+			$("#shade").show();
+			$(".share").show();
+		})
+		$(".btn03")[0].addEventListener("touchstart",function(e){
+			e.stopPropagation();
+
+			$("#shade").show();
+			// $(".user1").show();
+			if(!user){
+				$(".user2").show();
+				$('#redux').eraser();
+			}else{
+				$(".user1").show();
+			}
+		})
+
+		$(".eraserMain")[0].addEventListener("touchend",function(e){
+			$('#redux').eraser('clear');
+			if(prize){
+				setTimeout(function(){
+					$(".user2").hide();
+					$(".user1").show();
+					user = true;
+				},2000)
+			}
+		})
+
+		$("#shade")[0].addEventListener("touchstart",function(e){
+			e.stopPropagation();
+			$("#shade").hide();
+			$(".share").hide();
+			$(".user").hide();
+		})
+
+		$(".close").each(function(index, el) {
+			this.addEventListener("touchstart",function(e){
+				e.stopPropagation();
+				$("#shade").hide();
+				$(".share").hide();
+				$(".user").hide();
+			})			
+		});
+
+		
+
+	})
+	$(window).resize(function(event) {
+		/* Act on the event */
+		autosize();
+	});
+</script>
+</body>
+</html>

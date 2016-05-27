@@ -1,0 +1,116 @@
+.main{
+	background: url(../images/bg@2x.png) bottom center no-repeat;
+	background-size: 100% 100%;
+}
+.game{
+	width: 78%;
+	margin: 5% auto 0;
+	position: relative;
+}
+.game .lst{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.game .lst01{background: url(../images/1.png) center no-repeat;background-size: contain;}
+.game .lst02{background: url(../images/2.png) center no-repeat;background-size: contain;}
+.game .lst03{background: url(../images/3.png) center no-repeat;background-size: contain;}
+.game .lst04{background: url(../images/4.png) center no-repeat;background-size: contain;}
+.game .lst05{background: url(../images/5.png) center no-repeat;background-size: contain;}
+.game .lst06{background: url(../images/6.png) center no-repeat;background-size: contain;}
+
+.game .lst01.active{background: url(../images/1-1.png) center no-repeat;background-size: contain;}
+.game .lst02.active{background: url(../images/2-2.png) center no-repeat;background-size: contain;}
+.game .lst03.active{background: url(../images/3-3.png) center no-repeat;background-size: contain;}
+.game .lst04.active{background: url(../images/4-4.png) center no-repeat;background-size: contain;}
+.game .lst05.active{background: url(../images/5-5.png) center no-repeat;background-size: contain;}
+.game .lst06.active{background: url(../images/6-6.png) center no-repeat;background-size: contain;}
+
+.tip{
+	width: 62%;
+	margin: 8% auto 0;
+	background: url(../images/tip@2x.png) center no-repeat;
+	background-size: contain;
+	text-align: center;
+	font-size: 0.426rem;
+   
+}
+.tip span{
+	 background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff451), to(#fbac50));
+    color: transparent;
+    /* -webkit-text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    /*-webkit-text-stroke: 1px #4d3e01;*/
+    /*text-stroke: 1px #4d3e01;*/
+    font-weight: bold;
+}
+.level{
+	margin-top: 7%;
+	text-align: center;
+	font-size: 0.346rem;
+	color: #000;
+	line-height: 2em;
+}
+.btn01{width: 2.21rem;height:0.746rem;background: url(../images/help@2x.png) center no-repeat;background-size: contain; }
+.btn02{width: 2.21rem;height:0.746rem;background: url(../images/guize@2x.png) center no-repeat;background-size: contain; }
+
+.btn03{width: 2.21rem;height:0.746rem;background: url(../images/lingqu@2x.png) center no-repeat;background-size: contain; }
+.btn04{width: 2.21rem;height:0.746rem;background: url(../images/can@2x.png) center no-repeat;background-size: contain; }
+
+.btn05{width: 2.21rem;height:0.746rem;background: url(../images/helpyou@2x.png) center no-repeat;background-size: contain; }
+
+.btn01 a,.btn02 a,.btn03 a,.btn04 a{display: block;width: 100%;height: 100%;}
+.position01{position: absolute;left: 19%;bottom: 20%;}
+.position02{position: absolute;right: 19%;bottom: 20%;}
+
+.position03{position: absolute;left: 12%;bottom: 20%;}
+.position04{position: absolute;left: 39%;bottom: 20%;}
+.position05{position: absolute;right: 12%;bottom: 20%;}
+.share{
+	position: absolute;
+	z-index: 910;
+	right: 3%;
+	top: 2%;
+	width: 5.2rem;
+	height: 3.92rem;
+	display: none;
+}
+.flash{
+	position: absolute;
+	z-index: 910;
+	left: 50%;
+	top: 50%;
+	width: 5.54rem;
+	height: 3.56rem;
+	margin-left: -2.77rem;
+	margin-top:-1.78rem; 
+	display: none;
+	opacity: 0.9;
+}
+
+.user{
+	width: 76%;
+	position: fixed;
+	height: 10rem;
+	left: 12%;
+	top: 50%;
+	margin-top: -5rem;
+	z-index: 902;
+	background-color: #fff;
+	display: none;
+}
+.user p{text-align: center;font-size: 0.48rem;color: #000;line-height: 1.6em;}
+.user p .close{width: 0.69rem;height: 0.56rem;margin-top: 0.26rem;margin-right: 0.26rem;}
+
+.user p i{color: #e95412;}
+.user table{width: 80%;margin: 0.5rem auto;}
+.user table td{height: 1.3rem; line-height: 1.3rem;font-size: 0.48rem;color: #000000;}
+.user table td input{border: 1px solid #000;width: 3.73rem;height:0.8rem;padding-left: 0.26rem;}
+.user table td button{width:2.4rem;height: 0.8rem;border: none;background: url(../images/submit.jpg) center no-repeat;background-size: contain;margin-top: 0.5rem;}
+.user .tips{font-size: 0.346rem;color: #000;text-align: center;line-height: 0.48rem;}
+
+.eraserMain{text-align: center;font-size: 0.48rem;width: 5.3rem;height:0.96rem;line-height: 0.96rem;margin: 2.6rem auto 0; background-color: #fbf6e3;position: relative;}
+#redux{position: absolute;left: 0;top: 0;z-index: 2;width: 100%;height: 100%; }
