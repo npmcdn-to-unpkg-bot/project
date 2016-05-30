@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>效果图展示</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="../_public/Swiper-3.3.1/dist/css/swiper.min.css">
+	<link rel="stylesheet" href="src/list.css">
+</head>
+<body>
+	<div class="iconBack"></div>
+	<div class="main">
+		<img src="images/xiaoguotuzhanshi@2x.png" alt="" class="xiaoguotuzhanshi">
+
+	<!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/xiaoguo1@2x.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/xiaoguo2@2x.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/xiaoguo3@2x.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/xiaoguo4@2x.png" alt=""></div>
+        </div>
+        
+    </div>
+		<!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/Swiper-3.3.1/dist/js/swiper.jquery.min.js"></script>
+<script src="../_public/public.js"></script>
+<!-- <script src="src/index.js"></script> -->
+<script>
+	document.getElementsByClassName('iconBack')[0].addEventListener('touchstart',function(e){
+		history.go(-1);
+	})
+
+	autoHeight({element : $(".swiper-pagination"),scale : 0.05})
+
+	 var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop : true
+    });
+</script>
+</body>
+</html>

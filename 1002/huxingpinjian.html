@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>户型品鉴</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/list.css">
+</head>
+<body>
+	<div class="iconBack"></div>
+	<div class="main">
+		<img src="images/huxingpinjian@2x.png" alt="" class="huxingpinjian">
+
+		<div class="expect">
+			暂无内容，敬请期待
+		</div>
+		
+	</div>
+
+<!-- <script src="../_public/jquery/jquery-2.2.3.min.js"></script> -->
+<!-- <script src="../_public/public.js"></script> -->
+<!-- <script src="src/index.js"></script> -->
+<script>
+	document.getElementsByClassName('iconBack')[0].addEventListener('touchstart',function(e){
+		history.go(-1);
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/*back*/
+.iconBack{width: 1.78rem; height: 1.42rem;display: inline-block; background: url(../images/back@2x.png) center no-repeat;background-size: contain;}
+.iconBack{position: absolute;right: 1%;top: 1%;z-index: 800;}
+.huxingpinjian{width: 32%;display: block;margin: 0.5rem auto 0;}
+.xiaoguotuzhanshi{width: 38.4%;display: block;margin: 0.5rem auto 0;}
+.loupangaikuang{width: 32%;display: block;margin: 0.5rem auto 0;}
+.loupangaikuangpic{width: 100%;margin: 10% auto 3%;}
+p.lst{
+	text-indent: 1em;
+	color: #4dc0e7;
+	font-size: 0.4rem;
+	padding: 0 0.6rem;
+	line-height: 1.5em;
+}
+.expect{
+	width: 100%;
+	margin-top: 50%;
+	text-align: center;
+	color: #000;
+	font-size: 0.53rem;
+}
+
+.swiper-container {
+    width: 100%;
+    height: auto;
+    margin: 10% auto 2%;
+}
+.swiper-wrapper{
+	-webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img{width: 100%;}
+.swiper-pagination{width: 100%;position: relative;}
+.swiper-pagination-bullet{width: 5%;height: 100%;margin: 0 0.1rem;background: none;border:1px solid #4dc0e7;opacity: 1;border-radius:50%;}
+.swiper-pagination-bullet-active{background:#4dc0e7;}
