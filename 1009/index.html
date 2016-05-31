@@ -5,10 +5,11 @@
 	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
 	<meta name="apple-mobile-web-app-capable" content="tes">
 	<meta http-equiv="widow-target" content="_blank">
-	<title>H5</title>
+	<title>碧桂园</title>
 	<script src="../_public/rem.js"></script>
 	<link rel="stylesheet" href="../_public/reset.css">
 	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="../_public/animate.css-master/animate.min.css">
 	<link rel="stylesheet" href="src/index.css">
 </head>
 <body>
@@ -20,26 +21,85 @@
 	<div id="shade"></div>
 	<!-- 代码部分 -->
 	<div class="main">
-		
-
-		<div class="grid">
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
-			<div class="grid-item"></div>
+		<div class="banner">
+			<img src="images/banner@2x.png" alt="">
+			<a href=""><img src="images/guize@2x.png" class="guize" alt=""></a>
 		</div>
+		<div class="search">
+			<input type="text">
+			<i></i>
+		</div>
+		<div class="btnApply"><a href="">我要报名</a></div>
+
+		<div class="applyList">
+			<div class="title">当前您还有<i>５</i>次投票机会</div>
+
+			<div class="grid">
+				<div class="grid-item">
+					<img class="lazy" data-original="images/2.png" src="images/default.jpg" alt="">
+					<div class="tip">
+						<span>205号</span>
+						<i>张华尔</i>一家
+					</div>
+					<div class="bottom">
+						<span>22658票</span>
+						<i class="love">
+							投票
+							
+						</i>
+					</div>
+				</div>
+				<div class="grid-item">
+					<img class="lazy" data-original="images/1.png" src="images/default.jpg" alt="">
+					<div class="tip">
+						<span>205号</span>
+						<i>张华尔</i>一家
+					</div>
+					<div class="bottom">
+						<span>22658票</span>
+						<i class="love">投票</i>
+					</div>
+				</div>
+				<div class="grid-item">
+					<img class="lazy" data-original="images/2.png" src="images/default.jpg" alt="">
+					<div class="tip">
+						<span>205号</span>
+						<i>张华尔</i>一家
+					</div>
+					<div class="bottom">
+						<span>22658票</span>
+						<i class="love">投票</i>
+					</div>
+				</div>
+			</div>
+			<br><br>
+		</div>
+	
 	</div>
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
 <script src="../_public/masonry-master/dist/masonry.pkgd.min.js"></script>
+<script src="../_public/jquery_lazyload/jquery.lazyload.min.js"></script>
 <script src="../_public/public.js"></script>
 <!-- <script src="src/index.js"></script> -->
 <script>
 	$(function(){
+
 		$('.grid').masonry({
 	      // options
 	      // gutter:10, //Adds horizontal space between item elements.
 	      percentPosition: true,
 	      itemSelector: '.grid-item'
 	    });
+
+		$("img.lazy").lazyload({
+			load:function(){
+				$('.grid').masonry('layout');
+			}
+		});
+		$(".love").on("click",function(){
+			$(this).append('<i class="plus animated fadeOutUp">+1</i>')
+		})
+
 
 	})
 	$(window).resize(function(event) {

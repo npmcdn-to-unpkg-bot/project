@@ -1,0 +1,136 @@
+.banner{position: relative;}
+.banner img{width: 100%;}
+.banner .guize{width: 32%;position: absolute;bottom: 8%;left: 31%;}
+
+.search{
+	width: 93%;
+	height: 1.2rem;
+	margin: 3% auto;
+	position: relative;
+	border-radius: 0.4rem;
+	padding: 0.2rem 1.4rem 1em 0.2rem;
+	border:1px solid #c7c7c7;
+}
+.search input{width: 100%;height: 100%;border: none;outline: none;font-size: 0.4rem;border-right:1px solid #c7c7c7;}
+.search i{width: 0.56rem;height: 0.56rem;display: inline-block;position: absolute;right: 0.42rem;top: 0.32rem;background: url(../images/iconfont-fangdajing@2x.png) center no-repeat;background-size: contain;}
+.btnApply{background: #2ca436;width: 45%;margin: 3% auto;height: 1.2rem;line-height: 1.2rem;color: #fff;text-align: center; font-size: 0.48rem;}
+.btnApply a{display: block;color: inherit;text-decoration: none;}
+
+
+.applyList{background: #f6f6f6;}
+.applyList .title{background: #f6f6f6;height: 1rem;line-height: 1rem;text-align: center;color: #e9446d;font-size: 0.37rem;}
+
+.grid{width: 100%;position: relative;}
+.grid-item{margin-bottom: 20px;border-bottom: 2px solid #f2e727; width: 46%;margin-left: 2.6%;padding: 10px;background: #fff;}
+.grid-item img{width: 100%;}
+.grid-item .tip{text-align: right;position: relative;height: 0.6rem;line-height: 0.6rem;margin-top: 10px;margin-bottom: 0.64rem;font-size: 0.4rem;color: #323232;}
+.grid-item .tip span{
+	text-align: left;
+	display: inline-block;
+	background: #2ca436;
+	color: #fff;
+	font-size: 0.4rem;
+	height: 0.6rem;
+	position: absolute;
+	line-height: 0.6rem;
+	left: -10px;
+	top: 0;
+	border-top-right-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+	padding-left: 0.1rem;
+	padding-right: 0.4rem;
+}
+.grid-item .tip i{color: #e9446d;}
+
+.love{display: inline-block;color: #fff; width:1rem;height: 0.89rem;line-height: 0.89rem; background: url(../images/love@2x.png) center no-repeat; background-size: contain;text-align: center; }
+.bottom{position: relative;height: 0.89rem;line-height: 0.89rem;margin-bottom: 10px;}
+
+.bottom .love{position: absolute;right: 0;-webkit-transition: all 0.3s;transition: all 0.3s;}
+.bottom .love:active{-webkit-transform: scale(0.8);transform: scale(0.8);}
+
+.bottom span{font-size: 0.427rem;color: #e9446d;padding-left: 10px;}
+
+.bottom .love .plus{font-size: 0.5rem;color: #e9446d;position: absolute;left: 0.25rem;bottom: 0.25rem;}
+
+
+
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #7c7c7c;
+    line-height: 1.4em;
+}
+
+.userinfo{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 4%;
+	background-color: #fff;
+	font-size: 0.427rem;
+	color: #323232;
+	padding-bottom: 15px;
+}
+.userinfo p{height: 1.6rem;line-height: 1.6rem;}
+.userinfo table{width: 100%;}
+.userinfo table input{width: 100%;padding-left: 1em;height: 90%;border: none;outline: none;}
+.userinfo table td{height: 1.6rem;line-height: 1.6rem; border-bottom: 1px solid #c7c7c7;}
+.userinfo table td:first-child{text-align: center;}
+
+.uploadInput{
+	width: 2.6rem;
+	height: 2.6rem;
+	background: url(../images/upload.png) center no-repeat;
+	background-size: contain;
+	margin: 0 auto;
+}
+.imglist{
+	width: 2.6rem;
+	height: 2.6rem;
+	margin: 0 auto;
+}
+.imgtips{font-size: 0.347rem;color: #323232;text-align: center;line-height: 2rem;}
+
+.userbottom{background-color: #fff;}
+.userbottom .button{width: 4.5rem;height:1.17rem;font-size: 0.48rem; line-height: 1.17rem;text-align: center;display: block;margin: 15px auto 0;color: #fff;background-color: #2ca436;border: none;}
+
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+	position: relative;
+	width: 2.6rem;
+	height: 2.6rem;
+	background: url(images/upload.png) center no-repeat;
+	background-size: contain;
+	margin: 0 auto;
+}
+.webuploader-pick-hover {
+	/*background: #00a2d4;*/
+}
+
+.webuploader-pick-disable {
+	/*opacity: 0.6;
+	pointer-events:none;*/
+}
+
+
+body.guize{
+	background: #2ca436 url(../images/guizebg@2x.png) center center no-repeat;
+	background-size: contain;
+	background-attachment: fixed;
+	padding: 0.44rem;
+	color: #fff;
+}
+body.guize .main{font-size: 0.4rem;line-height: 1.5em;}
+body.guize .title{
+	color: #f2e727;
+}
+body.guize p{text-indent: 1em;}
+body.guize img{width: 50%;}
+
+.back{display: block;background: #fff;color: #2ca436;font-size: 0.48rem;text-align: center;width: 45%;margin: 0 auto;height: 1.14rem;line-height: 1.14rem;text-decoration: none;}
