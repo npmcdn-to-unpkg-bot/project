@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>淮房网助力</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body class="home">
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<!-- 遮罩层 -->
+	<div id="shade"></div>
+	<div class="share"></div>
+	<!-- 代码部分 -->
+	<div class="main">
+		<div class="tip">
+			<div class="lst">
+				<img class="paiming" src="images/paiming@2x.png" alt="">
+				<p>16</p>
+			</div>
+			<div class="lst">
+				<img class="zhuli" src="images/zhuli@2x.png" alt="">
+				<p>227</p>
+			</div>
+		</div>
+
+		<div class="btnzhuli1">助 Tａ一臂之力</div>
+
+		<div class="btnzhuli2">我也领取加油卡</div>
+
+		<a href="" class="guizeLink"> 点击查看活动规则>></a>
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<!-- <script src="src/index.js"></script> -->
+<script>
+
+	$(function(){
+		//
+		$('.main').css({
+			height : parseInt($(window).height())
+		})
+
+		$('#shade')[0].addEventListener('touchstart',function(){
+			$('#shade').hide();
+			$('.share').hide();
+		})
+		
+		$('.btnzhuli1')[0].addEventListener('touchend',function(){
+			if($(this).hasClass('active')) return;
+			$(this).addClass('active').html('恭喜助力成功')
+		})
+	})
+	$(window).resize(function(event) {
+		/* Act on the event */
+	});
+</script>
+</body>
+</html>
