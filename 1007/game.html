@@ -18,51 +18,6 @@
 			text-align: center;
 		}
 	</style>
-	<script>
-		var timer = null,
-			secondCount = 0;
-
-		function timeCount(){
-			var second = 1.1,
-				minute = 0.1,
-				msec = 0.1;
-			timer=setInterval(function(){
-				if(msec == 100.1){
-					if(second == 60.1){
-						minute++;
-						second=0.1;
-						msec = 0.1;
-					}else{
-						second++;
-						msec = 0.1;
-					}
-				}
-				
-				if(second == 60.1 && minute == 60.1) {
-					alert('歇歇吧！！！');
-					window.location.href="index.html";
-					return;
-				}
-				document.getElementById('time').innerHTML = (minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2)+':'+(msec/100).toString().substr(2,2);
-				secondCount = parseInt((minute-0.1)*60+(second-0.1))+(msec-0.1)/100;
-				msec++;
-			},10)
-		}
-		window.onload=function(){
-			var num = 3;
-			document.getElementById('shade').innerHTML=num;
-			var time=setInterval(function(){
-				num--;
-				if(num<1){
-					clearTimeout(time);
-					document.getElementById('shade').style.display='none';
-					timeCount();
-					return
-				} 
-				document.getElementById('shade').innerHTML=num;
-			},1000)
-		}
-	</script>
 </head>
 <body>
 	<audio src="images/bg.mp3"  id="audio" hidden="hidden" loop="loop" ></audio>
@@ -94,10 +49,21 @@
 <script src="../_public/public.js"></script>
 <script src="src/index.js"></script>
 <script>
-	$(function(){
+	window.onload=function(){
+		var num = 3;
 		var str='images/';
-		game.game();
-	})
+		document.getElementById('shade').innerHTML=num;
+		var time=setInterval(function(){
+			num--;
+			if(num<1){
+				clearTimeout(time);
+				document.getElementById('shade').style.display='none';
+				game.game();
+				return
+			} 
+			document.getElementById('shade').innerHTML=num;
+		},1000)
+	}
 	$(window).resize(function(event) {
 		/* Act on the event */
 		autosize();

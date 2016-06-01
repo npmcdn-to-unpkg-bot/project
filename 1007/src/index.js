@@ -25,6 +25,35 @@ var game ={
 		autosize();
 	},
 	game : function(imgStr){
+		var timer = null,
+			secondCount = 0;
+		!function (){
+			var second = 1.1,
+				minute = 0.1,
+				msec = 0.1;
+			timer=setInterval(function(){
+				if(msec == 100.1){
+					if(second == 60.1){
+						minute++;
+						second=0.1;
+						msec = 0.1;
+					}else{
+						second++;
+						msec = 0.1;
+					}
+				}
+				
+				if(second == 60.1 && minute == 60.1) {
+					alert('歇歇吧！！！');
+					window.location.href="index.html";
+					return;
+				}
+				document.getElementById('time').innerHTML = (minute/100).toString().substr(2,2)+':'+(second/100).toString().substr(2,2)+':'+(msec/100).toString().substr(2,2);
+				secondCount = parseInt((minute-0.1)*60+(second-0.1))+(msec-0.1)/100;
+				msec++;
+			},10)
+		}()
+
 		var list=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.png','9.jpg','10.png'];
 		list = list.concat(list);
 		list = shuffle(list);
