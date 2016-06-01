@@ -9,7 +9,8 @@ function autosize(){
 }
 
 var game ={
-	imglist : [[1,'images/1.jpg'],
+	imglist : function(){
+		var list=[[1,'images/1.jpg'],
 			  [2,'images/2.jpg'],
 			  [3,'images/3.jpg'],
 			  [4,'images/4.jpg'],
@@ -18,18 +19,21 @@ var game ={
 			  [7,'images/7.jpg'],
 			  [8,'images/8.png'],
 			  [9,'images/9.jpg'],
-			  [10,'images/10.png']],
+			  [10,'images/10.png']];
+
+		list = list.concat(list);
+		list = shuffle(list);
+		return list
+	},
 	init : function(){
-		this.imglist=this.imglist.concat(this.imglist);
-		this.imglist = shuffle(this.imglist);
 		var str='';
-		for(var i=0;i<this.imglist.length;i++){
+		for(var i=0;i<this.imglist().length;i++){
 			str+='<div class="lst card" >'
 				+'<div class="face front">'
 				+'<img src="images/i000.jpg" alt="">'
 				+'</div>'
 				+'<div class="face back">'
-				+'<img src="'+this.imglist[i][1]+'" alt="">'
+				+'<img src="'+this.imglist()[i][1]+'" alt="">'
 				+'</div>'
 				+'</div>';
 		}
@@ -54,12 +58,12 @@ var game ={
 				$(this).addClass('active card-flipped');
 				if($('.card.active').length == 2 ){
 					setTimeout(function(){
-						if(game.imglist[$('.card.active').eq(0).index()] === game.imglist[$('.card.active').eq(1).index()]){
+						if(game.imglist()[$('.card.active').eq(0).index()] === game.imglist()[$('.card.active').eq(1).index()]){
 							count++;
 							
 							$('.card.active').removeClass('active').css('visibility' , 'hidden');
 							if(count == game.imglist.length*0.5){
-								if(clickCount < game.imglist.length ){
+								if(clickCount < count ){
 									alert('小伙子作弊了吧！');
 									return;
 								}
