@@ -28,7 +28,6 @@ var game ={
 		var list=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.png','9.jpg','10.png'];
 		list = list.concat(list);
 		list = shuffle(list);
-
 		if( imgStr== undefined) imgStr = 'images/';
 		this.init(imgStr,list);
 		var count = 0;
@@ -49,7 +48,6 @@ var game ={
 					setTimeout(function(){
 						if(list[$('.card.active').eq(0).index()] === list[$('.card.active').eq(1).index()]){
 							count++;
-							
 							$('.card.active').removeClass('active').css('visibility' , 'hidden');
 							if(count == list.length*0.5){
 								if(clickCount < count ){
