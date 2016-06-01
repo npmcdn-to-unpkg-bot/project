@@ -9,39 +9,28 @@ function autosize(){
 }
 
 var game ={
-	imglist : function(){
-		var list=[[1,'images/1.jpg'],
-			  [2,'images/2.jpg'],
-			  [3,'images/3.jpg'],
-			  [4,'images/4.jpg'],
-			  [5,'images/5.jpg'],
-			  [6,'images/6.jpg'],
-			  [7,'images/7.jpg'],
-			  [8,'images/8.png'],
-			  [9,'images/9.jpg'],
-			  [10,'images/10.png']];
-
-		list = list.concat(list);
-		list = shuffle(list);
-		return list
-	},
-	init : function(){
+	init : function(imgStr,list){
 		var str='';
-		for(var i=0;i<this.imglist().length;i++){
+		for(var i=0;i<list.length;i++){
 			str+='<div class="lst card" >'
 				+'<div class="face front">'
-				+'<img src="images/i000.jpg" alt="">'
+				+'<img src="'+imgStr+'i000.jpg" alt="">'
 				+'</div>'
 				+'<div class="face back">'
-				+'<img src="'+this.imglist()[i][1]+'" alt="">'
+				+'<img src="'+imgStr+list[i]+'" alt="">'
 				+'</div>'
 				+'</div>';
 		}
 		$('.content').html(str);
 		autosize();
 	},
-	game : function(){
-		this.init();
+	game : function(imgStr){
+		var list=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.png','9.jpg','10.png'];
+		list = list.concat(list);
+		list = shuffle(list);
+
+		if( imgStr== undefined) imgStr = 'images/';
+		this.init(imgStr,list);
 		var count = 0;
 		var clickCount = 0;
 		$('.content .lst').each(function(){
@@ -58,11 +47,11 @@ var game ={
 				$(this).addClass('active card-flipped');
 				if($('.card.active').length == 2 ){
 					setTimeout(function(){
-						if(game.imglist()[$('.card.active').eq(0).index()] === game.imglist()[$('.card.active').eq(1).index()]){
+						if(list[$('.card.active').eq(0).index()] === list[$('.card.active').eq(1).index()]){
 							count++;
 							
 							$('.card.active').removeClass('active').css('visibility' , 'hidden');
-							if(count == game.imglist.length*0.5){
+							if(count == list.length*0.5){
 								if(clickCount < count ){
 									alert('小伙子作弊了吧！');
 									return;
