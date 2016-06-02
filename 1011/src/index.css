@@ -193,3 +193,90 @@ body.guize{
 .guize p.img{text-align: center;}
 .guize p.img{width: 50%;margin: 0 auto;}
 .guize .red{color: #fe0202;}
+
+.cloud{
+	width: 1.06rem;
+	height: 0.58rem;
+	background: url(../images/yun.png) center no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	opacity: 0;
+
+}
+.cloud1{top: 2%;-webkit-animation:cloud 10s linear infinite both;animation:cloud 10s linear infinite both;}
+.cloud2{top: 10%;width: 1.484rem;height:0.81rem;-webkit-animation:cloud 10s linear infinite both 4s;animation:cloud 10s linear infinite both 4s;}
+.cloud3{top: 15%;;width: 1.272;height:0.972rem;-webkit-animation:cloud 10s linear infinite both 8s;animation:cloud 10s linear infinite both 8s;}
+
+.rocket{
+	width: 1rem;
+	height: 1.34rem;
+	background: url(../images/huojian2x.png) center no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 5%;
+	right: 23%;
+	z-index: 50;
+	-webkit-animation:rocket 2s linear infinite both;animation:rocket 2s linear infinite both;
+}
+
+
+@-webkit-keyframes cloud {
+  from {
+  	opacity: 1;
+  	-webkit-transform: translate3d(-2rem,0,0);
+    transform: translate3d(-2rem,0,0);
+  }
+  50%{
+	opacity: 0.7
+  }
+  to {
+  	opacity: 1;
+    -webkit-transform: translate3d(12rem,0,0);
+    transform: translate3d(12rem,0,0);
+  }
+}
+
+@keyframes cloud {
+  from {
+  	opacity: 1;
+  	-webkit-transform: translate3d(-2rem,0,0);
+    transform: translate3d(-2rem,0,0);
+  }
+  50%{
+	opacity: 0.7
+  }
+  to {
+  	opacity: 1;
+    -webkit-transform: translate3d(12rem,0,0);
+    transform: translate3d(12rem,0,0);
+  }
+}
+
+@-webkit-keyframes rocket {
+  from {
+  	-webkit-transform: translate3d(0.2rem,1.5rem,0) scale(0.6);
+    transform: translate3d(0.2rem,1.5rem,0) scale(0.6);
+    opacity: 0;
+  }
+  10%{opacity: 1;}
+  to {
+  	-webkit-transform: translate3d(-1rem,-2rem,0);
+  	transform: translate3d(-1rem,-2rem,0);
+  }
+}
+
+@keyframes rocket {
+  from {
+  	-webkit-transform: translate3d(0.2rem,1.5rem,0) scale(0.6);
+    transform: translate3d(0.2rem,1.5rem,0) scale(0.6);
+    opacity: 0;
+  }
+  10%{opacity: 1;}
+  to {
+  	-webkit-transform: translate3d(-1rem,-2rem,0);
+  	transform: translate3d(-1rem,-2rem,0);
+  }
+}
