@@ -99,6 +99,7 @@ body.home{
 	margin-top: -5.5rem;
 	background: url(../images/userinfo@2x.png) center no-repeat;
 	background-size: contain;
+	display: none;
 }
 .userinfo .close{
 	position: absolute;
@@ -140,5 +141,55 @@ input::-webkit-input-placeholder{
 	background-color: #ffc82f;
 	border-radius: 0.64rem;
 }
-.userinfo button:focus{border:none !important;outline: none !important;}
-.userinfo button:active{border:none !important;outline: none !important;}
+
+.tip{
+	position: fixed;
+	z-index: 910;
+	width: 7.58rem;
+	height: 8.74rem;
+	left: 50%;
+	top: 50%;
+	margin-left: -3.79rem;
+	margin-top: -4.37rem;
+	background: url(../images/tip@2x.png) center no-repeat;
+	background-size: contain;
+	display: none;	
+}
+.tip .close{
+	position: absolute;
+	right: 3%;
+	top: 3%;
+	width: 0.36rem;
+	height: 0.36rem;
+	background: url(../images/close2@2x.png) center no-repeat;
+	background-size: contain;
+}
+.tip{color: #000000;font-size: 0.45rem;line-height: 1.5em;text-align: center;padding-top: 40%;}
+.tip i,.tip a{color: #fe0202;}
+.tip a{font-size: 0.48rem;}
+
+body.guize{
+	background:#ffcc00 url(../images/guizetop@2x.png) top center no-repeat;
+	background-size: contain;	
+	padding: 65% 10% 5% 5%;
+}
+.back{
+	position: absolute;
+	z-index: 800;
+	width: 2.22rem;
+	height: 1.52rem;
+	background: url(../images/back@2x.png) center no-repeat;
+	background-size: contain;
+	right: 1%;
+	top: 0.2rem;
+}
+.guize{
+	color: #000;
+	font-size: 0.427rem;
+	line-height: 1.8em;
+}
+.guize .title{margin-top: 0.8rem;}
+.guize p{padding-left: 1em;}
+.guize p.img{text-align: center;}
+.guize p.img{width: 50%;margin: 0 auto;}
+.guize .red{color: #fe0202;}

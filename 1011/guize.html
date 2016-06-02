@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>淮房网助力</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body class="guize">
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<div class="back"></div>
+	<!-- 遮罩层 -->
+	<div class="main">
+		
+		<div class="title">第一步：关注淮房网微信公众号</div>
+			<p>1、关注“饕街”官方微信（微信搜索饕街或扫二维码关注）</p>
+			<p class="img"><img src="images/erweima@2x.png" alt=""></p>
+			<p>2、关注后，点击底部菜单“签到”或回复关键词“签到”，进入活动页面参与签到</p>
+		<div class="title">第二步：完成签到任务 赢取奖品</div>
+		<p>1、每周累计签到三次，分享给好友一起玩</p>
+		<p>2、成功完成签到后，点击“完善信息”留下您的姓名及电话，即可到指定地点领取属于你的奖品啦！</p>
+
+		<div class="title">活动时间：</div>
+			<p class="red">6月6日-7月3日</p>
+
+		<div class="title">奖品设置：</div>
+			<p class="red">精美随手礼</p>
+
+		<div class="title">奖品领取注意事项：</div>
+			<p>活动结束后，请在<span class="red">7月4日之前</span>，凭参与活动提交的<span class="red">有效身份信息</span>，前往上品领域招商部领取奖品，先到先得，数量有限。</p>
+
+		<div class="title">领取时间：</div>
+			<p>周一至周日8:30-12:00；14:00-17:30</p>
+
+		<div class="title">领取地址：</div>
+			<p>田家庵国庆西路与广场北路交汇处</p>
+
+		<div class="title">咨询电话：</div>
+			<p>0554-6807188</p>
+
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<!-- <script src="src/index.js"></script> -->
+<script>
+
+	$(function(){
+		//
+		$('.back').on('click',function(){
+			history.go(-1)
+		})
+	})
+	$(window).resize(function(event) {
+		/* Act on the event */
+	});
+</script>
+</body>
+</html>

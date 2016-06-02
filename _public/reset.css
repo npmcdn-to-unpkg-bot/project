@@ -139,3 +139,7 @@ input[type=button] {width: auto; overflow: visible;}
 
 /* let's clear some floats */
 .clearfix:after { content: "."; display: block;height: 0;visibility: hidden;font-size: 0; clear: both; }
+* {     
+    -webkit-tap-highlight-color: transparent;  
+    -webkit-appearance: none;  
+}

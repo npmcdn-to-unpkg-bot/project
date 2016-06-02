@@ -17,7 +17,7 @@
 		<div class="spinner"></div>
 	</div>
 	<!-- 遮罩层 -->
-	<div id="shade" style="display:block;"></div>
+	<div id="shade" style="display:none;"></div>
 	<!-- <div class="share"></div> -->
 	<!-- 用户信息 -->
 	<div class="userinfo">
@@ -25,6 +25,15 @@
 		<input type="text" class="username" placeholder="请输入昵称">
 		<input type="text" class="userTel" placeholder="请输入手机号码">
 		<button>提交</button>
+	</div>
+	<!-- 领奖提示 -->
+	<div class="tip">
+		<div class="close"></div>
+		<p>请在<i>6月25日之前</i>，凭参与活</p>
+		<p>动提交的有效身份信息，前往</p>
+		<p>上品领域招商部领取奖品!</p>
+		<p><i>数量有限  先到先得</i></p><br>
+		<p>详情请见<a href="javascript:;">活动规则</a></p>
 	</div>
 	<!-- 代码部分 -->
 	<div class="main">
@@ -61,6 +70,24 @@
 		$('.btnprize1').on('click',function(){
 			$('.game .lst.on').addClass('active').removeClass('on');
 			$(this).addClass('btnprize2').removeClass('btnprize1')
+		})
+		$('.userinfo .close').on('click',function(){
+			$('#shade').hide();
+			$('.userinfo').hide();
+		})
+		
+		$('.tip .close').on('click',function(){
+			$('#shade').hide();
+			$('.tip').hide();
+		})
+		$('.userBtn').on('click',function(){
+			$('#shade').show();
+			$('.userinfo').show();
+		})
+		$('.tip a').on('click',function(){
+			$('.tip').hide();
+			$('#shade').show();
+			$('.userinfo').show();
 		})
 	})
 	$(window).resize(function(event) {
