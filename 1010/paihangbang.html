@@ -19,6 +19,7 @@
 	<!-- 遮罩层 -->
 	<div id="shade"></div>
 	<!-- 代码部分 -->
+	<div class="back"></div>
 	<div class="main">
 		<img src="images/top66@2x.png" class="top66" alt="">
 		<table class="paihang">
@@ -77,6 +78,9 @@
 <script>
 	$(function(){
 		//
+		$('.back').on('click',function(){
+			history.go(-1)
+		})
 	})
 	$(window).resize(function(event) {
 		/* Act on the event */

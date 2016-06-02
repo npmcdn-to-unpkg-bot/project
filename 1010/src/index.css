@@ -167,6 +167,68 @@ body{
 .paihang tr td span.level03{width: 1.04rem;height: 1.04rem;line-height: 1.04rem;background: url(../images/level3.png) center no-repeat;background-size: contain;}
 
 
-.guize img{width: 84%;display: block;margin: 0 auto 4%;}
+.guize img{width: 84%;display: block;margin: 0 auto;}
 .guize p{color: #fff;font-size: 0.427rem;line-height: 1.68em;padding: 0 1em;}
 .guize p.title{color: #fdcf0a;}
+.back{
+	position: absolute;
+	right: 6%;
+	top: 5%;
+	z-index: 800;
+	width: 1.04rem;
+	height: 0.56rem;
+	background: url(../images/back@2x.png) center no-repeat;
+	background-size: contain;
+}
+
+.backlink{ width:3.47rem; height: 1.04rem; line-height: 1.04rem; margin:4% auto; color: #fff;
+ background-color: #ddab66; font-size: 0.53rem; text-align: center; }
+ .rocket{
+ 	width: 1.12rem;
+ 	height: 2.82rem;
+ 	background: url(../images/huojian.png) center no-repeat;
+ 	background-size: contain;
+ 	position: absolute;
+ 	bottom:27%;
+ 	left: 50%;
+ 	margin-left: -0.56rem;
+ 	z-index: 10;
+ 	display: none;
+ }
+ .rocket.active{
+ 	display: block;
+	-webkit-animation:rocket .5s linear;
+	animation:rocket .5s linear;
+	-webkit-animation-fill-mode: both;
+  	animation-fill-mode: both;
+ }
+
+ @-webkit-keyframes rocket {
+  from {
+	opacity: 0;
+  }
+  10% {
+	opacity: 1;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+  }
+  to {
+    -webkit-transform: translate3d(0,-500%,0);
+	transform: translate3d(0,-500%,0);
+  }
+}
+
+@keyframes rocket {
+  from {
+	opacity: 0;
+  }
+  10% {
+	opacity: 1;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+  }
+  to {
+    -webkit-transform: translate3d(0,-500%,0);
+	transform: translate3d(0,-500%,0);
+  }
+}

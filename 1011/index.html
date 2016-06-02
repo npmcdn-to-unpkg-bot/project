@@ -17,29 +17,35 @@
 		<div class="spinner"></div>
 	</div>
 	<!-- 遮罩层 -->
-	<div id="shade"></div>
-	<div class="share"></div>
+	<div id="shade" style="display:block;"></div>
+	<!-- <div class="share"></div> -->
+	<!-- 用户信息 -->
+	<div class="userinfo">
+		<div class="close"></div>
+		<input type="text" class="username" placeholder="请输入昵称">
+		<input type="text" class="userTel" placeholder="请输入手机号码">
+		<button>提交</button>
+	</div>
 	<!-- 代码部分 -->
 	<div class="main">
-		<div class="tip">
-			<div class="lst">
-				<img class="paiming" src="images/paiming@2x.png" alt="">
-				<p>16</p>
-			</div>
-			<div class="lst">
-				<img class="zhuli" src="images/zhuli@2x.png" alt="">
-				<p>227</p>
-			</div>
+		<div class="day"><span>2</span></div>
+		<div class="game">
+			<div class="lst">周一</div>
+			<div class="lst active">周二</div>
+			<div class="lst">周三</div>
+			<div class="lst on">今天</div>
+			<div class="lst">周五</div>
+			<div class="lst">周六</div>
+			<div class="lst">周日</div>
 		</div>
-		
-		<!-- 动画 -->
-		<div class="rocket"></div>
-
-		<div class="btnzhuli1">助 Tａ一臂之力</div>
-
-		<div class="btnzhuli2">我也领取加油卡</div>
-
-		<a href="" class="guizeLink"> 点击查看活动规则>></a>
+		<div class="btnprize btnprize1">
+		</div>
+		<!-- 
+		btnprize1  今日签到
+		btnprize2  已签到
+		btnprize3  领取奖品
+		 -->
+		<div class="userBtn">完善个人信息&gt;&gt;</div>
 	</div>
 
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
@@ -50,18 +56,11 @@
 	$(function(){
 		//
 		$('.main').css({
-			height : parseInt($(window).height())
+			height:parseInt($(window).height())
 		})
-
-		$('#shade')[0].addEventListener('touchstart',function(){
-			$('#shade').hide();
-			$('.share').hide();
-		})
-		
-		$('.btnzhuli1')[0].addEventListener('touchend',function(){
-			if($(this).hasClass('active')) return;
-			$(this).addClass('active').html('恭喜助力成功')
-			$('.rocket').addClass('active');
+		$('.btnprize1').on('click',function(){
+			$('.game .lst.on').addClass('active').removeClass('on');
+			$(this).addClass('btnprize2').removeClass('btnprize1')
 		})
 	})
 	$(window).resize(function(event) {
