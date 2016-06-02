@@ -1,0 +1,103 @@
+@charset "utf-8";
+*{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);font-size:12px;}
+html{font-size:12px;}
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{
+margin: 0;padding: 0;font-weight: normal;}
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;vertical-align: middle;}
+table{border-collapse: collapse;}
+input,textarea{outline: none;}
+textarea{resize:none;overflow: auto;}
+input[type="button"], input[type="submit"], 
+input[type="reset"]{-webkit-appearance: none;}
+textarea {  -webkit-appearance: none;}  
+img,fieldset{ border:0 none; display:block;}
+::-webkit-input-placeholder {color:#999;}
+:-moz-placeholder {color:#999;}
+::-moz-placeholder { color:#999;}
+:-ms-input-placeholder {color:#999;}
+::-webkit-scrollbar{ width: 1px; height:1px;background-color: #fff;}
+input:focus, textarea:focus {outline: none;}
+input[type="submit"], input[type="reset"], input[type="button"], button { -webkit-appearance: none;}
+::-webkit-scrollbar{ width: 1px; height:1px;background-color: #fff;}
+/*----------------------------*/
+
+
+ .box{
+  width:100%;
+  font-family: "Arial";
+  position: relative;
+  background:#fff;
+  background-size: 100% 100%;
+  overflow: hidden;
+ }
+
+ .host{
+ 	height: 42px;
+ 	width: 100%;
+ 	background: #28b4f0;
+ 	position: relative;
+ }
+ .host span{
+ 	position: absolute;
+ 	font-size: 14px;
+ 	line-height: 42px;
+ 	color: #fff;
+ 	right:3%;
+
+ }
+ .right_b{
+ 	position: absolute;
+ 	top:0px;
+ 	line-height: 42px;
+ 	left:3%;
+ 	font-size: 22px;
+ 	color: #fffffd;
+ }
+ .host h2{
+ 	text-align: center;
+ 	line-height: 42px;
+ 	font-size: 16px;
+ 	color: #fff;
+ }
+
+ .center_mou{
+ 	width: 100%;
+ 	overflow-y: auto;
+ 	position: relative;
+ 	background: #f6f6f6;
+ }
+ .bost{
+ 	background:#fff;
+ 	width: 100%;
+ }
+ .c_top{
+ 	height: 80px;
+ 	border-bottom: 1px solid #dddddd;
+ 	line-height: 80px;
+ 	position: relative;
+ }
+  .c_top h2{
+  	font-size: 14px;
+  	color: #050505;
+  	margin-left:18%;
+    color: #323232;
+  }
+ .right_x{
+ 	position: absolute;
+ 	top:0px;
+ 	line-height: 80px;
+ 	right:3%;
+ 	font-size: 22px;
+ 	color: #28b5ed;
+ 	-webkit-transform:rotate(180deg);
+ 	-webkit-transition:all 0.3s linear;
+ }
+ .c_top img{
+  float: left;
+  width: 3rem;
+  margin-top: 1.5rem;
+  margin-left:3%;
+ }

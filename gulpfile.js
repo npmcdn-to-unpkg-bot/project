@@ -15,6 +15,12 @@ gulp.task('livereloadcanvas', function() {
   gulp.src('canvas/*.html')
       .pipe(livereload());
 });
+
+gulp.task('livereloaddefault', function() {
+  gulp.src('default/**/*.html')
+      .pipe(livereload());
+});
+
 //JS压缩
 gulp.task('minify-js', function () {
     gulp.src(['_public/*.js']) // 要压缩的js文件
@@ -53,4 +59,10 @@ gulp.task('canvas', function() {
   livereload.listen(); //要在这里调用listen()方法
   // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
   gulp.watch(['canvas/**','_public/*.css','_public/*.js'], ['livereloadcanvas']);
+});
+
+gulp.task('default', function() {
+  livereload.listen(); //要在这里调用listen()方法
+  // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
+  gulp.watch(['default/**'], ['livereloaddefault']);
 });

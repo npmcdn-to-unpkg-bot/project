@@ -1,0 +1,56 @@
+body{background-color: #fff;}
+.assess-item{margin-left: 5%;border-bottom: 1px solid #dfdfdf;}
+.assess-item.bordernone{border-bottom: none;}
+.assess-item input{border: 1px solid #dfdfdf;border-radius: 3px;}
+.assess-item>p{font-size: 15px;color: #333;line-height: 40px;}
+.assess-item-input{}
+.assess-item-input ul{font-size: 0;}
+.assess-item-input ul>li{
+	display: inline-block;
+	font-size: 15px;
+	width: 23%;
+	margin-right: 1%;
+	margin-bottom: 15px;
+	text-align: center;
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+}
+.assess-item-input ul>li.on{
+	border-color: #ff3100;
+	color: #ff3100;
+}
+.assess-item-radio input{
+	width: 21%;
+}
+.tips{
+	font-size: 12px;
+	color: #ff3100;
+	margin-left: 5%;
+}
+
+/*测试结果*/
+.testInfo{
+	margin-left: 4%;
+	margin-right: 4%;
+	border-bottom: 1px solid #dfdfdf;
+	font-size: 12px;
+	color: #999;
+	padding: 10px 0;
+}
+.testInfoTop{
+	font-size: 15px;
+	line-height: 30px;
+	color: #333;
+}
+.testInfoTip{
+	font-size: 12px;
+	line-height: 30px;
+	color: #999;
+	margin-left: 4%;
+}
+.fontRed{color: #ff3100;}
+.fontBlue{color: #28b4f0;}
+.testInfoNullImage{
+	text-align: center;
+    padding: 50px 0;
+}

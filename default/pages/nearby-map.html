@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-dns-prefetch-control" content="on"/>
+        <link rel="dns-prefetch" href="http://webapi.amap.com"/>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>周边和位置</title>
+        <!-- frozenUI 框架 CSS start-->
+        <link rel="stylesheet" href="../css/frozen.css">
+        <!-- frozenUI 框架 CSS end-->
+        <!-- 扩展 公共css  start-->
+        <link rel="stylesheet" href="../css/public.css">
+        <!-- 扩展 公共css  end-->
+        <!-- 单个页面css  start 可省略-->
+        <link rel="stylesheet" href="../css/pages/map.css">
+
+    </head>
+    <body ontouchstart="">
+        <!-- 头部 start-->
+        <header class="ui-header hf-header">
+            <i class="hf-icon-return" onclick="history.back()"></i>
+            <h1>位置和周边</h1>
+        </header>
+        <!-- 头部 end-->
+
+        <!-- 尾部 start-->
+        <!-- <footer class="ui-footer ui-footer-positive ui-border-b" style="height:45px;">
+            <div class="ui-row-flex ui-whitespace" style="line-height:45px;text-align:center;">
+                <div class="ui-col ui-col">取消商圈</div>
+                <div class="ui-col ui-col">附近</div>
+                <div class="ui-col ui-col">选择</div>
+            </div>
+        </footer> -->
+        <!-- 尾部 end-->
+        <!-- 主体内容 start-->
+        <section class="ui-container">
+            <!-- 地图找房 start-->
+            <div id="findMapBox"></div>
+            <!-- 地图找房 end-->
+
+            <!-- 导航 start-->
+             <ul class="ui-row-flex hf-map-nav">
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-blue"><p>路线</p><p>导航</p></li>
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-grey"><i class="hf-icon-mapbus"></i><div class="map-nav-type">交通</div></li>
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-grey"><i class="hf-icon-maptrain"></i><div class="map-nav-type">地铁</div></li>
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-grey"><i class="hf-icon-mapschool"></i><div class="map-nav-type">学校</div></li>
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-grey"><i class="hf-icon-maphospital"></i><div class="map-nav-type">医院</div></li>
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-grey"><i class="hf-icon-mapbank"></i><div class="map-nav-type">银行</div></li>
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-grey"><i class="hf-icon-mapshop"></i><div class="map-nav-type">购物</div></li>
+                <li class="ui-col ui-flex-ver ui-flex-pack-center hf-map-nav-grey"><i class="hf-icon-maphouse"></i><div class="map-nav-type">楼盘</div></li>
+
+            </ul>
+            <!-- 导航 end-->
+        </section>
+        <!-- 主体内容 start-->
+
+        <!-- frozenUI 框架 js start-->
+        <script src="../js/zepto.min.js"></script>
+        <script src="../js/frozen.js"></script>
+        <!-- frozenUI 框架 js end-->
+        <script src="http://webapi.amap.com/maps?v=1.3&key=08e6a276d212ffa855cf31accbf0cae7" type="text/javascript"></script>
+        <!-- 单个页面js  start 可省略-->
+        <script src="../js/map/nearbyMap.js"></script>
+        <!-- 单个页面js  end-->
+        <script>
+           $(function(){
+              var mapData = {
+                  center : {lng : 117.25456, lat:31.97514, name:"名门首府"},
+                  zoom : 12
+              }
+
+              nearbyMap.init({mapId : "findMapBox", height : "auto"}, mapData);
+           });
+        </script>
+    </body>
+</html>

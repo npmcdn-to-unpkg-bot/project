@@ -1,0 +1,95 @@
+.hf-user-top{background-color:#28b4f0;}
+.hf-user-head{padding: 25px 0;color: #fff;}
+.hf-user-img{display:inline-block;width: 40px;height: 40px;line-height: 40px;background-color: #fff;border-radius: 50%;border: 2px solid #53c3f3;vertical-align: middle;margin:0 10px 0 20px;color: #ccc;text-align:center;overflow: hidden;}
+.hf-user-img i{font-size: 25px;}
+.hf-user-img img{width: 100%;height: 100%;}
+/* 2015.12.15 by mhs */
+.ui-header .user_info{ display: block; position: absolute; right: 0; top: 0; width: 44px; height: 44px; background-image: url(../../images/new_user_no.png); background-size: auto 100%;}
+.ui-header .user_info1{ display: block; position: absolute; right: 0; top: 0; width: 44px; height: 44px; background-image: url(../../images/new_user.png); background-size: auto 100%;}
+/* 2015.12.15 by mhs */
+.hf-user-head .ui-arrowlink:before{color: #fff;}
+.hf-user-nav{color: #fff;border-top: #53c3f3 1px solid;padding: 5px 0;}
+.hf-user-nav li{border-right:rgba(255,255,255,.5) 1px solid;}
+.hf-user-nav li:last-child{border-right:none;}
+
+.ui-list li h4 a{display: block;}
+
+/* 去除箭头 */
+.hf-list-nolink:after { content: ""!important;}
+
+.hf-list-user{margin-top: 15px;}
+.hf-list-user .ui-list-thumb-s{width: 24px;height: 24px;}
+.hf-list-user .ui-list-thumb-s i{font-size: 18px;color: #7dd232;}
+
+.ui-txt-info .hf-user-img{border:#ccc 1px solid;}
+.upload_img img{width: 40px;height: 40px;line-height: 40px;border-radius: 50%;border: 2px solid #53c3f3;vertical-align: middle;margin:0 10px 0 20px;}
+
+.hf-share-code{text-align: center;padding: 10px 80px 5px;}
+
+/* 我的消息 */
+.hf-tidings .ui-list-thumb{width: 44px;height: 44px;}
+.hf-tidings li h4{font-size: 15px;}
+.hf-tidings-icon{background: #ccc;border-radius: 5px;color: #fff;text-align: center;}
+.hf-tidings-icon i{font-size: 24px;line-height: 44px;}
+
+.hf-tidings-blue{background: #28b4f0;}
+.hf-tidings-ora{background: #f18e37;}
+.hf-tidings-green{background: #7dd02c;}
+.hf-tidings-cho{background: #be8264;}
+.hf-tidings-pink{background: #f05e4b;}
+
+.hf-tidings-new {background-color:#fff;margin-top: 15px;}
+.hf-tidings-new a{display: block;}
+.hf-tidings-new h3{padding:10px 0;}
+.hf-tidings-text{padding:10px 0;font-size: 14px;}
+
+/* 我的钱包 */
+.hf-wallet{background: #28b4f0;border-top: #4cbcec 1px solid;text-align: center;padding: 30px 0;color: #fff;}
+.hf-wallet h2{font-size: 30px;padding-bottom: 15px;}
+
+.hf-table-title{line-height: 40px;font-size: 14px;}
+.ui-table{background-color: #fff;}
+.ui-table td, .ui-table th {
+  border-bottom: 1px solid #e0e0e0;
+  border-right: 0;
+  text-align: center; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .ui-table td, .ui-table th {
+    position: relative;
+    border-right: 0;
+    border-bottom: 0; padding: 5px 0;}
+
+  .ui-table td:after, .ui-table th:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, #e0e0e0), to(#e0e0e0));
+    background-size: 100% 1px;
+    background-repeat: no-repeat;
+    background-position:  bottom;
+    pointer-events: none; }
+    .ui-table tr:last-child td:not(:last-child):after {
+    background:none; }
+}
+
+/* 推荐 */
+.hf-table-lg th,.hf-table-lg td{padding: 10px 0;}
+
+.hf-recom{background-color: #fff;padding-left: 15px;}
+.hf-recom h3,.hf-recom li{padding: 10px 0;}
+
+.hf-step{background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ddd),to(#ddd));background-repeat:repeat-y;background-position:15px top;-webkit-background-size:1px 100%;padding:0 15px 0 30px;}
+.hf-step li{position:relative;padding-top:15px;}
+.hf-step li p{font-size:14px;background-color:white;}
+.hf-step li .time{display:block;width:18px;height:18px;line-height:18px;background:rgba(153,153,153,.4);border-radius:50%;position:absolute;left:-24px;top:17px;color:gray;}
+.hf-step li .time i{font-size: 18px;line-height: 18px;vertical-align: top;}
+
+.hf-step li .time.hf-step-ok{background:rgba(125,208,44,.4);color:#7dd02c;}
+.hf-step li .time.hf-step-fail{background:rgba(255,49,0,.4);color:#ff3100;}
+
+/* 2015.12.15 by mhs */
+.ui-list-info .ui-nowrap span{ float: right; color: #28b4f0;}

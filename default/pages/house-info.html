@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-dns-prefetch-control" content="on"/>
+        <link rel="dns-prefetch" href="http://webapi.amap.com"/>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>新房详情</title>
+        <link rel="stylesheet" href="../css/frozen.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/pages/house1.css">
+        <link rel="stylesheet" href="../css/pages/map.css">
+        <style type="text/css">
+        .nav-fixed{position:fixed;z-index:999;top:44px;background:#fff;}
+        </style>
+    </head>
+    <body>
+
+
+        <!-- 主体内容 start-->
+        <section class="ui-container">
+
+
+            <!-- tab3 start-->
+            <div id="nearby-content" class="subnav-content">
+                <!-- 周边配套 start-->
+                <div class="ui-whitespace hf-detail-box">
+                    <div class="hf-panel-info">
+                        <ul class="hf-detail-list detail-fixw">
+                            <li class=""><label>楼盘地址</label>合肥市包河区宿松路与祁门路交汇处西南角</li>
+                            <li class="ui-border-t" style="padding-left:0;">
+                                <div id="houseMap"></div>
+                            </li>
+                            <li class="ui-border-t"><label><i class="hf-icon-peitao1 hf-fblue"></i> 交通</label>7个公交站点</li>
+                            <li class="ui-border-t"><label><i class="hf-icon-peitao1 hf-fgreen"></i> 教育</label>8所中学，2所小学，2所幼儿园</li>
+                            <li class="ui-border-t"><label><i class="hf-icon-peitao1 hf-fyellow"></i> 商业</label>5间餐厅，1个商城超市，1个银行</li>
+                            <li class="ui-border-t"><label><i class="hf-icon-peitao1 hf-fora"></i> 医院</label>6所医院</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 周边配套 start-->
+
+            </div>
+            <!-- tab3 end-->
+        <!-- <div class="ui-loading-wrap">
+            <p>正在加载中...</p>
+            <i class="ui-loading"></i>
+        </div> -->
+
+        </section>
+        <!-- 主体内容 start-->
+
+   
+        <!-- frozenUI 框架 js start-->
+        <script src="../js/zepto.min.js"></script>
+        <script src="../js/frozen.js"></script>
+        <!-- frozenUI 框架 js end-->
+        <!-- 图表框架  start-->
+        <script src="../js/chart/ichartjs.base.js"></script>
+        <script src="../js/chart/ichart.coordinate.js"></script>
+        <script src="../js/chart/ichartjs.line.js"></script>
+        <!-- 图表框架  end-->
+        <!--  地图 start -->
+        <script src="http://webapi.amap.com/maps?v=1.3&key=08e6a276d212ffa855cf31accbf0cae7" type="text/javascript"></script>
+        <!-- 地图  end-->
+        <script src="../js/public.js"></script>
+        <script src="../js/pages/houseInfo.js"></script>
+        <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=b1365a58-9ec4-4f43-b74c-d5587a34924a&style=-1"></script>
+
+        <script src="../js/map/showMapNew.js"></script>
+        <script type="text/javascript">
+          $(function(){
+            var mapData = [{lat:"31.97514", lng:"117.25456", name:"淮矿馥邦天下"}];
+            Map.init({data : mapData, mapId : "houseMap", height : "200px"});
+
+            //('1' === 1)? alert(true) : alert(false);
+
+          });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <title>FrozenUI Demo</title>
+        <!-- frozenUI 框架 CSS start-->
+        <link rel="stylesheet" href="../css/frozen.css">
+        <!-- frozenUI 框架 CSS end-->
+        <!-- 扩展 公共css  start-->
+        <link rel="stylesheet" href="../css/public.css">
+        <!-- 扩展 公共css  end-->
+        <!-- 单个页面css  start 可省略-->
+        <link rel="stylesheet" href="../css/page/index.css">
+        <!-- 单个页面css  end-->
+    </head>
+    <body ontouchstart="">
+        <!-- 头部 start-->
+        <header class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()"></i><h1>选项卡 tab</h1><button class="ui-btn">回首页</button>
+        </header>
+        <!-- 头部 end-->
+
+        <!-- 尾部 start-->
+        <footer class="ui-footer ui-footer-btn">
+            <ul class="ui-tiled ui-border-t">
+                <li data-href="index.html" class="ui-border-r"><div>基础样式</div></li>
+                <li data-href="ui.html" class="ui-border-r"><div>UI组件</div></li>
+                <li data-href="js.html"><div>JS插件</div></li>
+            </ul>
+        </footer>
+        <!-- 尾部 end-->
+        <!-- 主体内容 start-->
+        <section class="ui-container">
+           <!-- List  列表 start-->
+           <ul class="ui-list ui-list-pure ui-border-tb">
+                <li class="ui-border-t">
+                    <ul class="ui-row">
+                        <li class="ui-col ui-col-25"><img src="images/1.jpg" width="60%"/></li>
+                        <li class="ui-col ui-col-75">ffffffffffffff</li>
+                    </ul>
+                </li>
+                <li class="ui-border-t">
+                    <ul class="ui-justify ui-whitespace">
+                        <li><div class="test-img"></div><p>xxx</p></li>
+                        <li><div class="test-img"></div><p>xxx</p></li>
+                        <li><div class="test-img"></div><p>xxx</p></li>
+                        <li><div class="test-img"></div><p>xxx</p></li>
+                    </ul>
+                </li>
+                <li class="ui-border-t">
+                    <p><span>3.faycheng </span><span class="date"> 2月12日</span></p>
+                    <h4>标题标题标题标题标题标题题标题标题标题标题标题标题标题标题标题</h4>
+                </li>
+            </ul>
+           <!-- List  列表 end-->
+
+        </section>
+        <!-- 主体内容 start-->
+
+        <!-- frozenUI 框架 js start-->
+        <script src="../js/zepto.min.js"></script>
+        <script src="../js/frozen.js"></script>
+        <!-- frozenUI 框架 js end-->
+
+        <!-- 扩展 公共js  start-->
+        <!--<script src="../js/public.js"></script>-->
+        <!-- 扩展 公共js  end-->
+        <!-- 单个页面js  start 可省略-->
+        <!-- <script src="../js/pages/index.js"></script>-->
+        <!-- 单个页面js  end-->
+
+        <script type="text/javascript">
+          (function(){
+            //选项卡切换js
+            var tab = new fz.Scroll('.ui-tab', {
+                role: 'tab',
+                autoplay: false,
+                interval: 3000
+            });
+         })();
+        </script>
+    </body>
+</html>

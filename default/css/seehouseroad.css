@@ -1,0 +1,16 @@
+/* 2015.12.11 by mhs */
+.clear:after{ content: ""; display: block; clear: both; height: 0; visibility: hidden;}
+.clear{ zoom: 1;}
+
+.ui-list.ui-border-tb{ /*border-bottom-width: 15px;*/ margin-bottom: 15px;}
+.ui-row-flex .ui-col h2{ font-size: 16px; font-weight: bold; font-size: 16px;}
+.ui-row-flex .ui-col ul li{ padding: 0; font-size: 14px; color: #000;}
+.ui-row-flex .ui-col ul li h3{ float: left; font-size: 14px;}
+.ui-row-flex .ui-col ul li span{ float: left; width: 60%;}
+
+.ui-border-t .ui-list-info .heavy{ font-weight: bold;}
+.ui-border-t .hf-house-box{ padding-left: 25px; border-left: 1px solid #7dd02c;}
+
+.ui-list-active .ui-border-t .hf-house-box{ position: relative;}
+.circle{ height: 18px; width: 18px; border-radius: 50%; background: #7dd02c; border: 2px solid #d8f1bf; position: absolute; left: -10px; color: #fff; text-align: center; font-size: 12px;}
+
