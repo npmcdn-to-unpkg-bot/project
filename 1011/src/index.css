@@ -1,7 +1,9 @@
-body{background-color: #ffcc00;}
+body{background-color: #ffcc00;position: relative;}
 body.home{
 	background: #ffcc00 url(../images/home.png) top center no-repeat;
 	background-size: contain;
+	width: 100%;
+	overflow: hidden;
 }
 .day{
 	width: 4.48rem;
