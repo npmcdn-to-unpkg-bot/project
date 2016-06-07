@@ -3,8 +3,17 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     rename = require('gulp-rename'),
     changed = require('gulp-changed'),
-    uglify = require("gulp-uglify");
+    sass = require('gulp-sass'),
+    uglify = require("gulp-uglify"),//JS 压缩
+    minifyCss = require("gulp-minify-css"), // css文件压缩
+    minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
+//sass
+gulp.task('sass',function(){
+  return gulp.src('1*/**/*.scss')
+             .pipe(sass())
+             .pipe(gulp.dest());
+})
 // 文件刷新
 gulp.task('livereload', function() {
   gulp.src('1*/**/*.html')
@@ -52,7 +61,7 @@ gulp.task('rename', function () {
 gulp.task('watch', function() {
   livereload.listen(); //要在这里调用listen()方法
   // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
-  gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['livereload']);
+  gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['livereload','sass']);
 });
 
 gulp.task('canvas', function() {
