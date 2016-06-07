@@ -12,7 +12,7 @@ var gulp = require('gulp'),
 gulp.task('sass',function(){
   return gulp.src('1*/**/*.scss')
              .pipe(sass())
-             .pipe(gulp.dest());
+             .pipe(gulp.dest('.'));
 })
 // 文件刷新
 gulp.task('livereload', function() {

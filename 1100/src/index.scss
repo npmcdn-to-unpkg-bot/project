@@ -1,0 +1,16 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #333;
+$baseFontSize:75;
+// pixels to rems 
+@function pxToRem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+.main{
+	font-size:pxToRem(40);
+	line-height: pxToRem(60);
+	height:pxToRem(20);
+}
