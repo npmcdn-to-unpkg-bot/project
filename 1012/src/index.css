@@ -1,0 +1,227 @@
+/*
+* made in fanfan
+*/
+body {
+  background-color: #f10060; }
+
+.main {
+  color: #fff;
+  font-size: 0.4rem; }
+
+.share {
+  position: fixed;
+  right: 4%;
+  top: 2%;
+  z-index: 999;
+  background: url("../images/share@2x.png") center no-repeat;
+  background-size: contain;
+  width: 4.61333rem;
+  height: 3.41333rem;
+  display: inline-block;
+  display: none; }
+
+.iconCalendar {
+  background: url("../images/calendar@2x.png") center no-repeat;
+  background-size: contain;
+  width: 0.68rem;
+  height: 0.66667rem;
+  display: inline-block; }
+
+.iconCanyu {
+  background: url("../images/canyu@2x.png") center no-repeat;
+  background-size: contain;
+  width: 4.02667rem;
+  height: 1.21333rem;
+  display: inline-block; }
+
+.iconTell {
+  background: url("../images/tell@2x.png") center no-repeat;
+  background-size: contain;
+  width: 4.02667rem;
+  height: 1.21333rem;
+  display: inline-block; }
+
+.iconSign {
+  background: url("../images/sign@2x.png") center no-repeat;
+  background-size: contain;
+  width: 4.02667rem;
+  height: 1.21333rem;
+  display: inline-block; }
+
+.iconSign-true {
+  background: url("../images/sign-true@2x.png") center no-repeat;
+  background-size: contain;
+  width: 4.02667rem;
+  height: 1.21333rem;
+  display: inline-block; }
+
+.btnGroup {
+  margin-top: 0.42667rem; }
+
+.head {
+  height: 0.66667rem;
+  line-height: 0.66667rem;
+  position: relative;
+  width: 91.66667%;
+  margin: 0 auto; }
+  .head i {
+    float: left;
+    margin-right: 5px; }
+  .head .time {
+    float: left; }
+  .head .count {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0.66667rem;
+    line-height: 0.66667rem; }
+    .head .count .number {
+      font-size: 0.53333rem; }
+
+.content {
+  width: 91.66667%;
+  margin: 0 auto; }
+  .content table {
+    margin-top: 0.32rem;
+    margin-bottom: 0.32rem;
+    width: 100%; }
+    .content table th {
+      border: 1px solid #fff;
+      height: 1.04rem;
+      vertical-align: middle;
+      font-weight: normal; }
+    .content table td {
+      border: 1px solid #fff;
+      height: 1.06667rem;
+      position: relative;
+      text-align: center; }
+      .content table td span {
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 100%;
+        text-align: center; }
+      .content table td.active:after {
+        position: absolute;
+        content: '';
+        bottom: 10%;
+        left: 50%;
+        margin-left: -0.24rem;
+        background: url("../images/right@2x.png") center no-repeat;
+        background-size: contain;
+        width: 0.56rem;
+        height: 0.53333rem;
+        display: inline-block; }
+
+.tip {
+  width: 91.66667%;
+  padding-bottom: 1rem;
+  margin: 0 auto; }
+  .tip h3 {
+    font-weight: normal;
+    font-size: 0.4rem;
+    margin-top: 0.53333rem; }
+  .tip p {
+    text-indent: 2em;
+    line-height: 1.5em; }
+
+.prize {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  margin-top: -4.17333rem;
+  left: 0.45333rem;
+  background: url("../images/dialog@2x.png") center no-repeat;
+  background-size: contain;
+  width: 8.89333rem;
+  height: 8.34667rem;
+  display: inline-block;
+  display: none; }
+  .prize .close {
+    position: absolute;
+    right: 0;
+    top: -0.13333rem;
+    width: 0.97333rem;
+    height: 0.97333rem; }
+  .prize .top {
+    position: absolute;
+    bottom: 4.66667rem;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 0.48rem;
+    color: #fe573d; }
+    .prize .top i {
+      font-size: 0.56rem; }
+
+.eraserMain {
+  text-align: center;
+  font-size: 0.48rem;
+  width: 5.33333rem;
+  height: 1.49333rem;
+  line-height: 0.96rem;
+  position: absolute;
+  bottom: 2.70667rem;
+  left: 1.93333rem; }
+
+#redux {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%; }
+
+.userInfo {
+  position: fixed;
+  z-index: 999;
+  top: 50%;
+  margin-top: -5.53333rem;
+  left: 0.45333rem;
+  background: url("../images/userinfo@2x.png") center no-repeat;
+  background-size: contain;
+  width: 8.58667rem;
+  height: 11.06667rem;
+  display: inline-block;
+  display: none; }
+  .userInfo .username, .userInfo .usertel {
+    position: absolute;
+    top: 3.76rem;
+    left: 1.2rem;
+    outline: none;
+    border: 2px solid #fc5232;
+    width: 6.26667rem;
+    height: 1.44rem;
+    border-radius: 0.66667rem;
+    text-align: center;
+    color: #000;
+    font-size: 0.53333rem; }
+  .userInfo .usertel {
+    top: 5.86667rem; }
+  .userInfo .submit {
+    width: 4.36rem;
+    height: 1.28rem;
+    background: #fc5232;
+    border: none;
+    position: absolute;
+    bottom: 0.34667rem;
+    border-radius: 0.66667rem;
+    left: 2.16rem;
+    color: #fff;
+    font-size: 0.61333rem; }
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #7c7c7c; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #7c7c7c; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #7c7c7c; }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #7c7c7c; }
