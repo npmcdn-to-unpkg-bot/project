@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>H5</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+	<style>
+		.download{
+		    display: inline-block;
+		    padding: 6px 12px;
+		    margin-bottom: 0;
+		    font-size: 14px;
+		    font-weight: 400;
+		    line-height: 1.42857143;
+		    text-align: center;
+		    white-space: nowrap;
+		    vertical-align: middle;
+		    -ms-touch-action: manipulation;
+		    touch-action: manipulation;
+		    cursor: pointer;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		    user-select: none;
+		    background-image: none;
+		    border: 1px solid transparent;
+		    border-radius: 4px;
+	        color: #333;
+    		background-color: #fff;
+    		border-color: #ccc;
+		}
+		.download:hover{
+		    color: #333;
+		    background-color: #e6e6e6;
+		    border-color: #adadad;
+		}
+		table{width: 60%;margin: 0 auto;line-height: 1.5em;font-size: 16px;border: 1px solid #ccc;}
+		table td{border: 1px solid #ccc;}
+	</style>
+</head>
+<body>
+<button class="download">下载</button>
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<!-- 遮罩层 -->
+	<div id="shade"></div>
+	<!-- 代码部分 -->
+	<div class="main">
+		
+	</div>
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/jquery.table2excel.min.js"></script>
+<!-- <script src="src/index.js"></script> -->
+<script>
+
+	var json='{"code":"101","msg":"success","data":{"count":"12162","list":[{"projectId":"17446","housetypeId":"11585","areaName":"\u5305\u6cb3\u533a","typeArea":"88","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/AGC041416895641.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"3\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11586","areaName":"\u5305\u6cb3\u533a","typeArea":"88","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/A14911416895693.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"3\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11587","areaName":"\u5305\u6cb3\u533a","typeArea":"88","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/K0Q3R1416895725.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"3\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11588","areaName":"\u5305\u6cb3\u533a","typeArea":"98","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/B1BPB1416895780.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"3\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11589","areaName":"\u5305\u6cb3\u533a","typeArea":"98","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/PLMVL1416895810.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"3\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11590","areaName":"\u5305\u6cb3\u533a","typeArea":"98","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/2C0JI1416895858.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"3\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11591","areaName":"\u5305\u6cb3\u533a","typeArea":"108","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/QX5ZT1416895871.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"4\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11592","areaName":"\u5305\u6cb3\u533a","typeArea":"108","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/JIINJ1416895949.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"4\u5ba42\u53851\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11593","areaName":"\u5305\u6cb3\u533a","typeArea":"118","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2014\/11\/20141125\/EMBO41416895964.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"4\u5ba42\u53852\u536b1\u53a8","saleState":"\u5728\u552e"},{"projectId":"17446","housetypeId":"11979","areaName":"\u5305\u6cb3\u533a","typeArea":"88","photoPath":"http:\/\/img2.xkhouse.com\/hfhouse\/newhouse\/2015\/04\/20150401\/D8D6R1427877103.jpg","projectName":"\u4fe1\u8fbe\u5929\u5fa1","longitude":"117.26785","latitude":"31.80612","totalPrice":"\u4e00\u623f\u4e00\u4ef7","averagePrice":"13351\u5143\/\u33a1","housetype":"3\u5ba42\u53851\u536b\u53a8","saleState":"\u5728\u552e"}]}}';
+
+	var obj = jQuery.parseJSON(json);
+
+	
+	var table=$('<table>');
+	var str="<thead><tr><th>区域</th><th>价格</th><th>户型</th><th colspan='9'></th></tr></thead><tbody>";
+
+		for(var i=0;i<obj.data.list.length;i++){
+			str+='<tr>'
+				+'<td>'+obj.data.list[i].areaName+'</td>'
+				+'<td>'+obj.data.list[i].averagePrice+'</td>'
+				+'<td>'+obj.data.list[i].housetype+'</td>'
+				+'<td>'+obj.data.list[i].housetypeId+'</td>'
+				+'<td>'+obj.data.list[i].latitude+'</td>'
+				+'<td>'+obj.data.list[i].longitude+'</td>'
+				+'<td>'+obj.data.list[i].photoPath+'</td>'
+				+'<td>'+obj.data.list[i].projectId+'</td>'
+				+'<td>'+obj.data.list[i].projectName+'</td>'
+				+'<td>'+obj.data.list[i].saleState+'</td>'
+				+'<td>'+obj.data.list[i].totalPrice+'</td>'
+				+'<td>'+obj.data.list[i].typeArea+'</td>'
+				+'</tr>';
+		}
+
+	str+="</tbody>";
+	table.html(str);
+	// $('body').append(table);
+
+	$(function(){
+		$('.download').on('click',function(){
+			table.table2excel({
+				exclude: ".noExl",
+				name: "Excel Document Name",
+				filename: "myFileName",
+				fileext: ".xls",
+				exclude_img: true,
+				exclude_links: true,
+				exclude_inputs: true
+			});
+		})
+	})
+	$(window).resize(function(event) {
+		/* Act on the event */
+	});
+</script>
+</body>
+</html>
