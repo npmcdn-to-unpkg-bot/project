@@ -240,51 +240,27 @@ body {
 @-webkit-keyframes weixin {
   from {
     background: url("../images/1.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; }
+    background-size: contain; }
   40% {
     background: url("../images/2.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; }
+    background-size: contain; }
   80% {
     background: url("../images/3.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; }
+    background-size: contain; }
   to {
     background: url("../images/4.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; } }
+    background-size: contain; } }
 
 @keyframes weixin {
   from {
     background: url("../images/1.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; }
+    background-size: contain; }
   40% {
     background: url("../images/2.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; }
+    background-size: contain; }
   80% {
     background: url("../images/3.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; }
+    background-size: contain; }
   to {
     background: url("../images/4.png") center no-repeat;
-    background-size: contain;
-    width: 1.70667rem;
-    height: 1.70667rem;
-    display: inline-block; } }
+    background-size: contain; } }

@@ -31,7 +31,7 @@
 <script>
 	$('.demo').on('click',function(){
 		$(this).toggleClass('active');
-	}).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	}).on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 		$(this).removeClass('active');
 	});
 </script>

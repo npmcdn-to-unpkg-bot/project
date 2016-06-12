@@ -239,30 +239,38 @@ body{
 
 @-webkit-keyframes weixin {
   from {
-  	@include icon('../images/1.png',128,128)
+  	background: url("../images/1.png") center no-repeat;
+    background-size: contain;
   }
   40%{
-  	@include icon('../images/2.png',128,128)
+  	background: url("../images/2.png") center no-repeat;
+    background-size: contain;
   }
   80%{
-	@include icon('../images/3.png',128,128)
+	background: url("../images/3.png") center no-repeat;
+    background-size: contain;
   }
   to {
-  	@include icon('../images/4.png',128,128)
+  	background: url("../images/4.png") center no-repeat;
+    background-size: contain;
   }
 }
 
 @keyframes weixin {
   from {
-  	@include icon('../images/1.png',128,128)
+  	background: url("../images/1.png") center no-repeat;
+    background-size: contain;
   }
   40%{
-  	@include icon('../images/2.png',128,128)
+  	background: url("../images/2.png") center no-repeat;
+    background-size: contain;
   }
   80%{
-	@include icon('../images/3.png',128,128)
+	background: url("../images/3.png") center no-repeat;
+    background-size: contain; 
   }
   to {
-  	@include icon('../images/4.png',128,128)
+  	background: url("../images/4.png") center no-repeat;
+    background-size: contain;
   }
 }
