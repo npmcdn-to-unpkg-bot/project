@@ -228,3 +228,41 @@ body{
 :-ms-input-placeholder { /* Internet Explorer 10+ */ 
 	color: #7c7c7c; 
 } 
+
+.demo{
+	@include icon('../images/4.png',128,128)
+}
+.demo.active{
+	-webkit-animation:weixin 1s linear both;
+	animation:weixin 1s linear both;
+}
+
+@-webkit-keyframes weixin {
+  from {
+  	@include icon('../images/1.png',128,128)
+  }
+  40%{
+  	@include icon('../images/2.png',128,128)
+  }
+  80%{
+	@include icon('../images/3.png',128,128)
+  }
+  to {
+  	@include icon('../images/4.png',128,128)
+  }
+}
+
+@keyframes weixin {
+  from {
+  	@include icon('../images/1.png',128,128)
+  }
+  40%{
+  	@include icon('../images/2.png',128,128)
+  }
+  80%{
+	@include icon('../images/3.png',128,128)
+  }
+  to {
+  	@include icon('../images/4.png',128,128)
+  }
+}

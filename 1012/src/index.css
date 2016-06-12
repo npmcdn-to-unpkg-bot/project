@@ -225,3 +225,66 @@ body {
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
   color: #7c7c7c; }
+
+.demo {
+  background: url("../images/4.png") center no-repeat;
+  background-size: contain;
+  width: 1.70667rem;
+  height: 1.70667rem;
+  display: inline-block; }
+
+.demo.active {
+  -webkit-animation: weixin 1s linear both;
+  animation: weixin 1s linear both; }
+
+@-webkit-keyframes weixin {
+  from {
+    background: url("../images/1.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; }
+  40% {
+    background: url("../images/2.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; }
+  80% {
+    background: url("../images/3.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; }
+  to {
+    background: url("../images/4.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; } }
+
+@keyframes weixin {
+  from {
+    background: url("../images/1.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; }
+  40% {
+    background: url("../images/2.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; }
+  80% {
+    background: url("../images/3.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; }
+  to {
+    background: url("../images/4.png") center no-repeat;
+    background-size: contain;
+    width: 1.70667rem;
+    height: 1.70667rem;
+    display: inline-block; } }

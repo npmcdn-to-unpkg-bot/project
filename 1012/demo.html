@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>芜房网签到活动</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+	<style>
+		body{
+			background-color: #b1e866;
+		}
+		.demo{
+			position: fixed;
+			left: 20%;
+			top: 20%;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script>
+	$('.demo').on('click',function(){
+		$(this).toggleClass('active');
+	}).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+		$(this).removeClass('active');
+	});
+</script>
+</body>
+</html>
