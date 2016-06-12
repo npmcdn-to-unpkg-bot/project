@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    body {
+        margin: 100px;
+    }
+
+    .rss-block {
+        width: 100px;
+        height: 30px;
+        background-color:#abcdef;
+        margin:0 auto;
+        position: relative;
+    }
+
+    .rss-am {
+        opacity: 0;
+        -o-animation: wifianimation 1s infinite;
+        -moz-animation: wifianimation 1s infinite;
+        -webkit-animation: wifianimation 1s infinite;
+        animation: wifianimation 1s infinite;
+    }
+
+    .rss-1,
+    .rss-2,
+    .rss-3 {
+        border-radius: 100%;
+        position: absolute;
+        content: "";
+        border-width: 3px;
+        border-style: solid;
+        border-color: transparent transparent transparent #000;
+    }
+
+    .rss-1 {
+        top: 13px;
+        left: 35px;
+        width: 0;
+        height: 0;
+        -o-animation: none;
+        -moz-animation: none;
+        -webkit-animation: none;
+        animation: none;
+        opacity: 1
+    }
+
+    .rss-2 {
+        top: 8px;
+        left: 30px;
+        width: 10px;
+        height: 10px;
+        -o-animation-delay: 200ms;
+        -moz-animation-delay: 200ms;
+        -webkit-animation-delay: 200ms;
+        animation-delay: 200ms;
+    }
+
+    .rss-3 {
+        top: 3px;
+        left: 25px;
+        width: 20px;
+        height:20px;
+        -o-animation-delay: 400ms;
+        -moz-animation-delay: 400ms;
+        -webkit-animation-delay: 400ms;
+        animation-delay: 400ms;
+    }
+
+    @-o-keyframes wifianimation {
+        0% {
+            opacity: 0.4
+        }
+        100% {
+            opactiy: 1
+        }
+    }
+
+    @-moz-keyframes wifianimation {
+        0% {
+            opacity: 0.4
+        }
+        100% {
+            opactiy: 1
+        }
+    }
+
+    @-webkit-keyframes wifianimation {
+        0% {
+            opacity: 0.4
+        }
+        100% {
+            opactiy: 1
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="rss-block">
+        <div class="rss rss-1"></div>
+        <div class="rss rss-2"></div>
+        <div class="rss rss-3"></div>
+    </div>
+
+    <script>
+        window.onload = function(){
+            var res = document.querySelector('.rss-block');
+            res.onclick = function(){
+                for(var i = 0;i<this.children.length;i++){
+                    this.children[i].classList.toggle('rss-am');
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

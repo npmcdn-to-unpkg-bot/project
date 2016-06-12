@@ -19,12 +19,101 @@
 			left: 20%;
 			top: 20%;
 		}
+		.rss{
+			margin-left: 3rem;
+			margin-top: 3rem;
+			box-sizing: border-box;
+			border-width: .4rem;
+			border-style: solid;
+			border-color: #000;
+			border-radius: 100%;
+			background: #000;
+			width:.8rem;
+			height: .8rem;
+			position: relative;
+		}
+		.rss::before,
+		.rss::after{
+			border-radius: 100%;
+			position: absolute;
+			content: "";
+			border-width: .5rem;
+			border-style: solid;
+			border-color: #000 #abcdef #f00 green;
+			border-color: transparent #000 transparent transparent;
+		}
+		.rss::before{
+			top:-1.2rem;
+			left:-1.2rem;
+			width: 2.4rem;
+			height: 2.4rem;
+			
+		}
+		.rss::after{
+			top:-2rem;
+			left:-2rem;
+			width: 4rem;
+			height: 4rem;
+			
+		}
+		.rss.active{
+			-webkit-animation:weixin3 1s linear both;
+			animation:weixin3 1s linear both;
+		}
+		.rss.active::before,.rss.active::after{
+			-webkit-animation:weixin2 1s linear both;
+			animation:weixin2 1s linear both;
+		}
+		.rss.active::before{
+			-webkit-animation-delay:400ms;
+      		animation-delay:400ms;
+		}
+		.rss.active::after{
+			-webkit-animation-delay:800ms;
+      		animation-delay:800ms;
+		}
+		@-webkit-keyframes weixin2 {
+		  from {
+		  	border-color: transparent #fff transparent transparent;
+		  }
+		  to {
+		  	border-color: transparent #000 transparent transparent;
+		  }
+		}
+
+		@keyframes weixin2 {
+		  from {
+		  	border-color: transparent #fff transparent transparent;
+		  }
+		  to {
+		  	border-color: transparent #000 transparent transparent;
+		  }
+		}
+
+		@-webkit-keyframes weixin3 {
+		  from {
+		  	border-color:  #fff  ;
+		  }
+		  to {
+		  	border-color:  #000  ;
+		  }
+		}
+
+		@keyframes weixin3 {
+		  from {
+		  	border-color:  #fff  ;
+		  }
+		  to {
+		  	border-color:  #000  ;
+		  }
+		}
+
 	</style>
 </head>
 <body>
-	<div class="demo">
-		
-	</div>
+	<div class="rss"></div>
+
+	<!-- <div class="demo"></div> -->
 
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
 <script src="../_public/public.js"></script>

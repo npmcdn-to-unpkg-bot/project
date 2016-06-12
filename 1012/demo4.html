@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>芜房网签到活动</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<style>
+		body{
+			background-color: #b1e866;
+		}
+		.demo{
+			position: fixed;
+			left: 20%;
+			top: 20%;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 100%;
+			background: red;
+		}
+		.demo:active{
+			-webkit-animation:scale 500ms infinite linear both;
+			animation:scale 500ms infinite linear both;
+		}
+		
+
+		@-webkit-keyframes scale {
+		  from {
+		  	transform: scale3d(0,0,1,);
+		  }
+		  to {
+		  	border-color:  #000  ;
+		  }
+		}
+
+		@keyframes scale {
+		  from {
+		  	border-color:  #fff  ;
+		  }
+		  to {
+		  	border-color:  #000  ;
+		  }
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="demo"></div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+
+</body>
+</html>
