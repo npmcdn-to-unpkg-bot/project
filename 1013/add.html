@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>添加信息</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+
+<div class="userinfo">
+	<table>
+		<tbody>
+			<tr>
+				<td>姓名：</td>
+				<td><input type="text" placeholder="请输入姓名"></td>
+			</tr>
+			<tr>
+				<td>电话：</td>
+				<td><input type="text" placeholder="请输入联系电话"></td>
+			</tr>
+			<tr>
+				<td>编号：</td>
+				<td><input type="text" placeholder="请输入员工编号"></td>
+			</tr>
+		</tbody>
+	</table>
+	<p>上传照片</p>
+	<div class="upload">
+		<div class="uploadInput" id="uploadInput"></div>
+		<div class="imglist" style="display: none;"><img src="images/user@2x.png" alt=""></div>
+	</div>
+	<div class="imgtips">备注：照片像素1M大小的家庭合照（合照中须含儿童）</div>
+</div>
+<div class="userbottom">
+	<button class="button">提交</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+	<a href="index.html">
+		<img src="images/icon1.png" alt="">
+		<p>活动</p>
+	</a>
+	<a href="list.html">
+		<img src="images/icon2.png" alt="">
+		<p>排行榜</p>
+	</a>
+	<a href="add.html" class="active">
+		<img src="images/icon3-1.png" alt="">
+		<p>我要报名</p>
+	</a>
+	<a href="guize.html">
+		<img src="images/icon4.png" alt="">
+		<p>活动规则</p>
+	</a>
+</footer>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/webuploader-master/dist/webuploader.min.js"></script>
+<script src="../_public/public.js"></script>
+<script>
+	// 初始化Web Uploader
+var uploader = WebUploader.create({
+
+    // 选完文件后，是否自动上传。
+    auto: true,
+
+    // swf文件路径
+    swf: '../_public/webuploader-master/dist/Uploader.swf',
+
+    // 文件接收服务端。
+    server: '../_public/webuploader-master/server/fileupload.php',
+
+    // 选择文件的按钮。可选。
+    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+    pick: '#uploadInput',
+
+    // 只允许选择图片文件。
+    accept: {
+        title: 'Images',
+        extensions: 'gif,jpg,jpeg,bmp,png'
+        // mimeTypes: 'image/*'
+    }
+});
+
+// 文件上传成功，给item添加成功class, 用样式标记上传成功。
+uploader.on( 'uploadSuccess', function( file ) {
+});
+
+// 文件上传失败，显示上传出错。
+uploader.on( 'uploadError', function( file ) {
+
+});
+
+
+
+</script>
+</body>
+</html>

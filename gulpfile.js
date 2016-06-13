@@ -23,7 +23,7 @@ gulp.task('sass',function(){
 gulp.task('livereload', function() {
   gulp.src(['*/*.html','!1001/*.html','!1002/*.html','!1003/*.html','!1004/*.html'
             ,'!1005/*.html','!1006/*.html','!1007/*.html','!1008/*.html','!1009/*.html'
-            ,'!1010/*.html','!1011/*.html','!1tel/*.html','!animated/*.html'
+            ,'!1010/*.html','!1011/*.html','!1012/*.html','!1tel/*.html','!animated/*.html'
             ,'!canvas/*.html','!default/*.html','!fish/*.html','!map/*.html'
             ,'!tableToExcel/*.html','!1100/*.html','!_public/*.html'])
       .pipe(livereload());
@@ -70,7 +70,8 @@ gulp.task('rename', function () {
 gulp.task('watch', function() {
   livereload.listen(); //要在这里调用listen()方法
   // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
-  gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['sass','livereload']);
+  gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['livereload']);
+  // gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['sass','livereload']);
 });
 
 gulp.task('canvas', function() {
