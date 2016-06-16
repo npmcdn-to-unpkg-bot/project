@@ -1,0 +1,94 @@
+/*
+* made in fanfan
+*/
+body {
+  background-color: #4f7dc8; }
+
+.main {
+  color: #000;
+  font-size: 0.4rem; }
+
+.game {
+  background: url("../images/bggame.jpg") center no-repeat;
+  width: 10rem;
+  height: 16.08rem;
+  background-size: contain; }
+  .game .time {
+    font-size: 0.61333rem;
+    color: #452d12;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.33333rem; }
+    .game .time span {
+      font-size: 0.82667rem;
+      color: #d11a02; }
+  .game .title {
+    font-size: 0;
+    color: #fff;
+    position: absolute;
+    top: 2.53333rem;
+    left: 0;
+    text-align: center;
+    width: 100%; }
+    .game .title span {
+      font-size: 0.8rem;
+      margin: 0 0.08rem;
+      display: inline-block;
+      position: relative; }
+      .game .title span.active {
+        color: #feff01; }
+      .game .title span.on::after {
+        content: '';
+        background: url("../images/sanjiao.png") center no-repeat;
+        background-size: contain;
+        width: 0.45333rem;
+        height: 0.24rem;
+        display: inline-block;
+        position: absolute;
+        bottom: -0.24rem;
+        left: 50%;
+        margin-left: -0.22667rem; }
+  .game .content {
+    width: 7.38667rem;
+    position: absolute;
+    top: 4.66667rem;
+    left: 1.30667rem;
+    font-size: 0; }
+    .game .content span {
+      display: inline-block;
+      width: 1.12rem;
+      height: 1.12rem;
+      line-height: 1.12rem;
+      border-radius: 0.2rem;
+      color: #fff;
+      text-align: center;
+      font-size: 0.58667rem;
+      background: #d59e54;
+      margin-right: 0.13333rem;
+      margin-bottom: 0.13333rem; }
+      .game .content span:nth-child(6n) {
+        margin-right: 0; }
+      .game .content span.c1 {
+        color: #452d12; }
+      .game .content span.c2 {
+        color: #d11a02; }
+      .game .content span.c3 {
+        color: #feff01; }
+      .game .content span.c4 {
+        color: #568dd0; }
+      .game .content span.c5 {
+        color: #9accff; }
+      .game .content span.c6 {
+        color: #fff; }
+      .game .content span.t1 {
+        -webkit-transform: rotate3d(0, 0, 1, 0);
+        transform: rotate3d(0, 0, 1, 0); }
+      .game .content span.t2 {
+        -webkit-transform: rotate3d(0, 0, 1, 90deg);
+        transform: rotate3d(0, 0, 1, 90deg); }
+      .game .content span.t3 {
+        -webkit-transform: rotate3d(0, 0, 1, 180deg);
+        transform: rotate3d(0, 0, 1, 180deg); }
+      .game .content span.t4 {
+        -webkit-transform: rotate3d(0, 0, 1, 270deg);
+        transform: rotate3d(0, 0, 1, 270deg); }

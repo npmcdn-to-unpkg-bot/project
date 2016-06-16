@@ -1,0 +1,117 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #000;
+$bgColor:#4f7dc8;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+
+body{
+	background-color: $bgColor;
+}
+
+.main{
+	color: $primaryColor;
+	font-size: rem(30);
+}
+.game{
+	background: url('../images/bggame.jpg') center no-repeat;
+	width: rem(750);
+	height:rem(1206);
+	background-size: contain;
+	.time{
+		font-size: rem(46);
+		color: #452d12;
+		width: 100%;
+		text-align:center;
+		margin-top: rem(25);
+		span{
+			font-size:rem(62);
+			color: #d11a02;
+		}
+	}
+	.title{
+		font-size: 0;
+		color: #fff;
+		position: absolute;
+		top:rem(190);
+		left:0;
+		text-align:center;
+		width: 100%;
+		span{
+			font-size: rem(60);
+			margin:0 rem(6);
+			display: inline-block;
+			position: relative;
+			&.active{
+				color: #feff01;
+			}
+			&.on::after{
+				content:'';
+				@include icon('../images/sanjiao.png',34,18);
+				position: absolute;
+				bottom:rem(-18);
+				left:50%;
+				margin-left: rem(-17);
+			}
+		}
+	}
+	.content{
+		width: rem(554);
+		position: absolute;
+		top:rem(350);
+		left:rem(98);
+		font-size: 0;
+		span{
+			display: inline-block;
+			width: rem(84);
+			height: rem(84);
+			line-height: rem(84);
+			border-radius: rem(15);
+			color:#fff;
+			text-align:center;
+			font-size: rem(44);
+			background: #d59e54;
+			margin-right: rem(10);
+			margin-bottom: rem(10);
+			&:nth-child(6n){
+				margin-right: 0;
+			}
+			&.c1{color: #452d12;}
+			&.c2{color: #d11a02;}
+			&.c3{color: #feff01;}
+			&.c4{color: #568dd0;}
+			&.c5{color: #9accff;}
+			&.c6{color: #fff;}
+			&.t1{
+				-webkit-transform:rotate3d(0,0,1,0);
+				transform:rotate3d(0,0,1,0);
+			}
+			&.t2{
+				-webkit-transform:rotate3d(0,0,1,90deg);
+				transform:rotate3d(0,0,1,90deg);
+			}
+			&.t3{
+				-webkit-transform:rotate3d(0,0,1,180deg);
+				transform:rotate3d(0,0,1,180deg);
+			}
+			&.t4{
+				-webkit-transform:rotate3d(0,0,1,270deg);
+				transform:rotate3d(0,0,1,270deg);
+			}
+		}
+	}
+}
