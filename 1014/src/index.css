@@ -9,7 +9,7 @@ body {
   font-size: 0.4rem; }
 
 .game {
-  background: url("../images/bggame.jpg") center no-repeat;
+  background: url("../images/bggame.webp") center no-repeat;
   width: 10rem;
   height: 16.08rem;
   background-size: contain; }
@@ -109,7 +109,7 @@ body {
 .dialog {
   width: 8rem;
   height: 12.26667rem;
-  background: url(../images/dialogbg.png) center no-repeat;
+  background: url(../images/dialogbg.webp) center no-repeat;
   position: absolute;
   z-index: 999;
   left: 50%;
@@ -117,7 +117,7 @@ body {
   top: 0;
   background-size: contain; }
   .dialog.share {
-    background: url(../images/share.png) center no-repeat;
+    background: url(../images/share.webp) center no-repeat;
     background-size: contain; }
     .dialog.share .code {
       height: 3.09333rem;
@@ -175,7 +175,7 @@ body {
   margin-left: -5rem;
   top: 0;
   height: 100%;
-  background: url("../images/home.png") center no-repeat;
+  background: url("../images/home.webp") center no-repeat;
   background-size: cover; }
   .home .btnStart {
     position: absolute;

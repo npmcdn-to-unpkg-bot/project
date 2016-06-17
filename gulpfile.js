@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     uglify = require("gulp-uglify"),//JS 压缩
     minifyCss = require("gulp-minify-css"), // css文件压缩
     gutil = require('gulp-util'), //错误日志格式与 gulp 的日志保持一致
+    imagemin = require('gulp-imagemin'), //图片压缩
     minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
 //sass
@@ -38,6 +39,20 @@ gulp.task('livereloaddefault', function() {
   gulp.src('default/**/*.html')
       .pipe(livereload());
 });
+
+//图片压缩
+
+gulp.task('imagemin', function(){
+    return gulp.src('img/**')
+        .pipe(imagemin({
+            optimizationLevel: 3, //类型：Number  默认：3  取值范围：0-7（优化等级）
+            progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+            interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+            multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
+        }))
+        .pipe(gulp.dest('image/'))
+})
+
 
 //JS压缩
 gulp.task('minify-js', function () {
@@ -72,6 +87,11 @@ gulp.task('watch', function() {
   // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
   // gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['livereload']);
   gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['sass','livereload']);
+});
+
+gulp.task('imgmin', function() {
+  livereload.listen(); //要在这里调用listen()方法
+  gulp.watch(['img/**'], ['imagemin']);
 });
 
 gulp.task('canvas', function() {

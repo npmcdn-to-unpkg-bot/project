@@ -42,7 +42,8 @@
 	<!-- 弹窗  时间到了 -->
 	<div class="dialog dialog1 none">
 		<img src="images/dialog1.png" class="title" alt="">
-		<img src="images/face1.png" class="face" alt="">
+		<!-- <img src="images/face1.png" class="face" alt=""> -->
+		<img src="images/face1.webp" class="face" alt="">
 		<h3>啊哦~</h3>
 		<h2>很遗憾时间到咯！</h2>
 		<img src="images/btn-again.png" alt="" class="btn btn1">
@@ -50,7 +51,8 @@
 	<!-- 机会用完 -->
 	<div class="dialog dialog2 none">
 		<img src="images/dialog2.png" class="title" alt="">
-		<img src="images/face2.png" class="face" alt="">
+		<!-- <img src="images/face2.png" class="face" alt=""> -->
+		<img src="images/face2.webp" class="face" alt="">
 		<h3>您的机会已经用完咯~</h3>
 		<h2>分享给朋友一起参与游戏领奖吧！</h2>
 		<img src="images/btn-share.png" alt="" class="btn btn2">
@@ -58,14 +60,16 @@
 	<!-- 很遗憾 -->
 	<div class="dialog dialog3 none">
 		<img src="images/dialog3.png" class="title" alt="">
-		<img src="images/face1.png" class="face" alt="">
+		<!-- <img src="images/face1.png" class="face" alt=""> -->
+		<img src="images/face1.webp" class="face" alt="">
 		<h3>&nbsp;</h3>
 		<h2>你来迟了，奖券已经被领完了！</h2>
 		<img src="images/btn-back.png" alt="" class="btn btn2">
 	</div>
 	<!-- 分享 -->
 	<div class="dialog share none">
-		<img src="images/er.jpg" alt="" class="code">
+		<!-- <img src="images/er.jpg" alt="" class="code"> -->
+		<img src="images/er.webp" alt="" class="code">
 	</div>
 	<!-- 填写信息 -->
 	<div class="dialog user none">
@@ -85,7 +89,7 @@
 <script>
 	$(function(){
 		defaultEvent($(".dialog")[0]); 
-		
+
 		$('.gameStart')[0].addEventListener('touchstart',function(){
 		$(this).fadeOut();
 		$('#shade').fadeOut();
