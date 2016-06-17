@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     minifyCss = require("gulp-minify-css"), // css文件压缩
     gutil = require('gulp-util'), //错误日志格式与 gulp 的日志保持一致
     imagemin = require('gulp-imagemin'), //图片压缩
+    imageisux = require('gulp-imageisux'), //智图压缩
     minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
 //sass
@@ -53,6 +54,10 @@ gulp.task('imagemin', function(){
         .pipe(gulp.dest('image/'))
 })
 
+gulp.task('imageisux', function() {
+    return gulp.src(['img/*'])
+               .pipe(imageisux());
+});
 
 //JS压缩
 gulp.task('minify-js', function () {
@@ -89,9 +94,9 @@ gulp.task('watch', function() {
   gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['sass','livereload']);
 });
 
-gulp.task('imgmin', function() {
+gulp.task('imgisux', function() {
   livereload.listen(); //要在这里调用listen()方法
-  gulp.watch(['img/**'], ['imagemin']);
+  gulp.watch(['img/*'], ['imageisux']);
 });
 
 gulp.task('canvas', function() {
