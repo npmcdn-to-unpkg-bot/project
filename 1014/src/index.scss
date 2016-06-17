@@ -115,3 +115,126 @@ body{
 		}
 	}
 }
+
+.none{
+	display: none;
+}
+//弹框
+.gameStart{
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index:999;
+	background: url(../images/loading.png) center no-repeat;
+	background-size:680/750*100%;
+}
+.dialog{
+	width: rem(600);
+	height: rem(920);
+	background: url(../images/dialogbg.png) center no-repeat;
+	position: absolute;
+	z-index:999;
+	left:50%;
+	margin-left: rem(-300);
+	top:0;
+	background-size: contain;
+	&.share{
+		background: url(../images/share.png) center no-repeat;
+		background-size: contain;
+		.code{
+			height: rem(232);
+			width: rem(236);
+			display: block;
+			position: absolute;
+			bottom:rem(170);
+			left:50%;
+			margin-left: rem(-118);
+		}
+	}
+	.title{
+		height: rem(45);
+		margin: rem(45) auto;
+		display: block;
+	}
+	.face{
+		height: rem(336);
+		display: block;
+		margin: rem(35) auto;
+	}
+	h2{
+		font-size: rem(34);
+		color: #000;
+		text-align: center;
+		padding:0 rem(40);
+	}
+	h3{
+		font-size: rem(30);
+		color: #000;
+		text-align: center;
+		line-height: rem(52);
+		padding:0 rem(40);
+	}
+	.btn{
+		width: rem(280);
+		height: rem(76);
+		display: block;
+		position: absolute;
+		bottom:rem(36);
+		left:50%;
+		margin-left: rem(-140);
+	}
+	.username,.usertel{
+		width:rem(500);
+		height:rem(88);
+		border-radius:rem(44);
+		border:solid 1px #452d12;
+		background:none;
+		text-align:center;
+		color:#452d12;
+		font-size:rem(32);
+		margin:rem(60) auto;
+		display: block;
+
+	}
+	input::-webkit-input-placeholder{
+		color: #666;
+	}
+}
+
+.home{
+	// height: rem(1206);
+	position: absolute;
+	left:50%;
+	width: 10rem;
+	margin-left:-5rem;
+	top:0;
+	height: 100%;
+	background: url('../images/home.png')  center no-repeat;
+	background-size: cover;
+	.btnStart{
+		position: absolute;
+		width: rem(360);
+		left:50%;
+		margin-left: rem(-180);
+		bottom:rem(126);
+	}
+	.btn-rule{
+		position: absolute;
+		width: rem(192);
+		left:50%;
+		margin-left: rem(-96);
+		bottom:rem(40);
+	}
+}
+.rule{
+	.content{
+		font-size: rem(34);
+		color: #000;
+		padding:0 rem(40);
+		height: rem(530);
+		overflow: scroll;
+		line-height: rem(52);
+	}
+}

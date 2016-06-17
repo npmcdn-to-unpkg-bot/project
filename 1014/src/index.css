@@ -92,3 +92,108 @@ body {
       .game .content span.t4 {
         -webkit-transform: rotate3d(0, 0, 1, 270deg);
         transform: rotate3d(0, 0, 1, 270deg); }
+
+.none {
+  display: none; }
+
+.gameStart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background: url(../images/loading.png) center no-repeat;
+  background-size: 90.66667%; }
+
+.dialog {
+  width: 8rem;
+  height: 12.26667rem;
+  background: url(../images/dialogbg.png) center no-repeat;
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  margin-left: -4rem;
+  top: 0;
+  background-size: contain; }
+  .dialog.share {
+    background: url(../images/share.png) center no-repeat;
+    background-size: contain; }
+    .dialog.share .code {
+      height: 3.09333rem;
+      width: 3.14667rem;
+      display: block;
+      position: absolute;
+      bottom: 2.26667rem;
+      left: 50%;
+      margin-left: -1.57333rem; }
+  .dialog .title {
+    height: 0.6rem;
+    margin: 0.6rem auto;
+    display: block; }
+  .dialog .face {
+    height: 4.48rem;
+    display: block;
+    margin: 0.46667rem auto; }
+  .dialog h2 {
+    font-size: 0.45333rem;
+    color: #000;
+    text-align: center;
+    padding: 0 0.53333rem; }
+  .dialog h3 {
+    font-size: 0.4rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.69333rem;
+    padding: 0 0.53333rem; }
+  .dialog .btn {
+    width: 3.73333rem;
+    height: 1.01333rem;
+    display: block;
+    position: absolute;
+    bottom: 0.48rem;
+    left: 50%;
+    margin-left: -1.86667rem; }
+  .dialog .username, .dialog .usertel {
+    width: 6.66667rem;
+    height: 1.17333rem;
+    border-radius: 0.58667rem;
+    border: solid 1px #452d12;
+    background: none;
+    text-align: center;
+    color: #452d12;
+    font-size: 0.42667rem;
+    margin: 0.8rem auto;
+    display: block; }
+  .dialog input::-webkit-input-placeholder {
+    color: #666; }
+
+.home {
+  position: absolute;
+  left: 50%;
+  width: 10rem;
+  margin-left: -5rem;
+  top: 0;
+  height: 100%;
+  background: url("../images/home.png") center no-repeat;
+  background-size: cover; }
+  .home .btnStart {
+    position: absolute;
+    width: 4.8rem;
+    left: 50%;
+    margin-left: -2.4rem;
+    bottom: 1.68rem; }
+  .home .btn-rule {
+    position: absolute;
+    width: 2.56rem;
+    left: 50%;
+    margin-left: -1.28rem;
+    bottom: 0.53333rem; }
+
+.rule .content {
+  font-size: 0.45333rem;
+  color: #000;
+  padding: 0 0.53333rem;
+  height: 7.06667rem;
+  overflow: scroll;
+  line-height: 0.69333rem; }
