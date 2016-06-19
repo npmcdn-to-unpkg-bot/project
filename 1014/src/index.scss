@@ -242,3 +242,10 @@ body{
 		line-height: rem(52);
 	}
 }
+
+.dialog .btn-submit{
+  background: url('../images/btn-submit.png') center no-repeat;
+  background-size: contain;
+  border:none;
+  outline: none;
+}

@@ -197,3 +197,9 @@ body {
   height: 7.06667rem;
   overflow: scroll;
   line-height: 0.69333rem; }
+
+.dialog .btn-submit {
+  background: url("../images/btn-submit.png") center no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none; }
