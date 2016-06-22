@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>安庆微信签到活动</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<!-- 遮罩层 -->
+	<div id="shade" style="display:none"></div>
+	<div class="share"></div>
+	<!-- 代码部分 -->
+	<div class="main">
+		<img src="images/top.png" alt="">
+		<div class="head">
+			<i class="iconCalendar"></i>
+			<span class="time"></span>
+			<div class="count">
+				已连续签到 <span class="number"></span> 天
+			</div>
+		</div>
+		<div class="content">
+			<table id="calendar">
+				<thead>
+					<tr>
+						<th>周日</th>
+						<th>周一</th>
+						<th>周二</th>
+						<th>周三</th>
+						<th>周四</th>
+						<th>周五</th>
+						<th>周六</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+			<div class="btnGroup clearfix">
+				<div class="btn1 fl">
+					<span class="iconTell"></span>
+				</div>
+				<div class="btn2 fr">
+					<span class="iconSign"></span> 
+					<!-- iconCanyu 参与抽奖 -->
+					<!-- iconSign 今日签到 -->
+					<!-- iconSign-true 今日已签到 -->
+				</div>
+			</div>
+		</div>
+		<div class="tip">
+			<h3>活动时间：</h3>
+				<p>2016年6月22日-7月11日</p>
+
+			<h3>活动规则：</h3>
+				<p>连续5天、10天、15天、20天即可获得抽奖机会；</p>
+			<h3>奖品：</h3>
+			<p>一等奖：品牌润唇唇膏一支，以及水上冲关嘉年华门票5张；</p>
+			<p>二等奖：品牌干发帽一个，水上冲关嘉年华门票5张；</p>
+			<p>三等奖：洗护大礼包一份，水上冲关嘉年华门票3张；</p>
+			<p>四等奖：水上冲关嘉年华门票3张；</p>
+			<h3>温馨提示：</h3>
+				<p>成功签到后，就可以参加抽奖活动，小伙伴们成功抽中礼品后，请到迎江区皖江大道绿地LOFT2-1414领取礼品，如有疑问，可拨打 0556-5575923</p>
+		</div>
+	</div>
+
+		<!-- 刮刮乐 -->
+	<div class="prize" >
+		<img  class="close" src="images/close@2x.png" alt="">
+		<div class="top">连续签到 <i>7</i> 天</div>
+		<div class="eraserMain">
+		 	<img src="images/prize01@2x.png" alt="">
+		 	<img id="redux" src="images/gua@2x.png"  />
+		 </div>
+
+	</div>
+	<div class="userInfo">
+		<input type="text" class="username" placeholder="请输入昵称">
+		<input type="text" class="usertel" placeholder="请输入手机号码">
+		<button class="submit">提交</button>
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="src/jquery.eraser.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/moment-with-locales.min.js"></script>
+<!-- <script src="src/index.js"></script> -->
+<script>
+	var calendar = function(){
+		var defaults={
+			day : 28,
+			element : '#calendar',
+			sign:[],
+			firstDay : 0,
+			nowDay:1
+		},game={},opts;
+		game.init=function(){
+			var weekLength = Math.ceil((opts.day+opts.firstDay)/7),
+				str = '',
+				day = 0,
+				state = true;
+				console.log(weekLength)
+
+			for(var i=0;i<weekLength;i++){
+				str+='<tr>';
+				for(var j=0;j<7;j++){
+					if(j<opts.firstDay && state){
+						str+='<td><span></span></td>';
+					}else{
+						state = false;
+						day++;
+						if(day > opts.day){
+							str+='<td><span></span></td>';
+						}else{
+							if(opts.sign.indexOf(day) != -1){
+								if(opts.nowDay == day){
+									str+='<td class="active on"><span>'+day+'</span></td>';
+								}else{
+									str+='<td class="active"><span>'+day+'</span></td>';
+								}
+							}else{
+								if(opts.nowDay == day){
+									str+='<td class="on"><span>'+day+'</span></td>';
+								}else{
+									str+='<td><span>'+day+'</span></td>';
+								}
+							}
+						}
+					}
+				}
+				str+='</tr>';
+			}
+			$(opts.element).find('tbody').html(str);
+			game.count();
+		}
+		game.count=function(){
+			//进行ajax 请求 返回数组
+			$('.number').html(opts.sign.length); //控制签到次数
+			return opts.sign.length;
+		}
+		return {
+		    init : function(options){
+		      options.date = moment().format("YYYY-MM");
+		      options.day = moment(options.date, "YYYY-MM").daysInMonth();
+		      options.firstDay = moment(options.date+'-01').day(); 
+		      options.nowDay = moment().get('date');
+		      opts = $.extend(defaults,options);
+		      game.init();
+		    },
+		    count: function(){
+		    	return game.count();
+		    }
+		  }
+	}
+	$(function(){
+		var test = new calendar();
+		// $('#redux').eraser();
+		moment.locale('zh-cn');
+		$('.time').html(moment().format("YYYY年MM月")); //控制日期
+
+		test.init({element : '#calendar',sign: [1,3,18,29]});
+		$('#calendar td').css({
+			height:parseInt($('#calendar td').width())*0.8
+		})
+		$('.iconSign').on('click',function(){
+			if($('#calendar').find('td.on').hasClass('active')){return;}
+			$('#calendar').find('td.on').addClass('active');
+			$(this).addClass('iconSign-true').removeClass('iconSign');
+			var day = moment().get('date');
+			// console.log(day)
+			//如下填写ajax 请求  添加数据到服务器
+
+			//然后执行 数量统计 判断是否为 7次 10 次；
+			var count=test.count();
+			console.log(count);
+			if( count == 4 ){
+				$('.btn2 span').removeClass().addClass('iconCanyu');
+				$('.iconCanyu').on('click',function(){
+					$('#shade').show();
+					$('.prize').show();
+					$('.prize .top i').html(count);
+					$('#redux').eraser();
+				})
+			}
+		})
+
+
+		$(".eraserMain")[0].addEventListener("touchend",function(e){
+			$('#redux').eraser('clear');
+			var prize = true;
+			if(prize){
+				setTimeout(function(){
+					//
+					$('.prize').hide();
+					$('.userInfo').show();
+				},600)
+			}
+		})
+		$('.prize .close')[0].addEventListener("touchstart",function(e){
+			$('#shade').hide();
+			$('.prize').hide();
+		});
+
+		$(".prize")[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		});
+		$(".userInfo")[0].addEventListener("touchmove",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		});
+		$(".share")[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+		});
+		$(".iconTell").on("click",function(){
+			$('#shade').show();
+			$('.share').show();
+		})
+
+	})
+	$(window).resize(function(event) {
+		/* Act on the event */
+	});
+</script>
+</body>
+</html>

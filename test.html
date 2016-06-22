@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+
+
+
+
+	<script>
+		document.writeln("<style type=\"text/css\">#xside_tuan{float:right; position:fixed; right:0;z-index:999; bottom:0;width:280px;height:220px;padding:0 0 0 30px;font-family:\"Microsoft Yahei\";font-size:14px;}#xside_tuan #hb{position:absolute;bottom:0;left:0;cursor:pointer;z-index:999;background:url(http://publicize.xkhouse.com/Public/images/bo.png) no-repeat right top;display: inline-block; font-weight:bold;height:95px; width:18px; line-height: 30px; color: #fff; padding:40px 4px 0 9px; display:none;}#xside_tuan #hb:hover{background-position:right -135px;}#xside_tuan .advclose{background:#ff9d11;height: 34px;line-height: 34px; font-family:\"Microsoft Yahei\";font-size:14px;text-align:right; padding-right:10px;color:#fff; cursor:pointer; position:absolute;top:-34px; width:270px; height:34px;}.side_flash{width:280px; height:220px;}</style>");
+		document.writeln("<div id=\"xside_tuan\">");
+		document.writeln("<div id=\"hb\">重播</div>");
+		document.writeln("<div class=\"advclose\">关闭</div>");
+		document.writeln("<div class=\"side_flash\">");
+		document.writeln("<div onMouseDown='javascript:positionClick();'  class='afd_com' style='width:280px; height:220px;'><object classid=\"clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\" width=\"280\" height=\"220\" hspace=\"0\" vspace=\"0\"><param name=\"movie\" value=\"http://img2.xkhouse.com/xkhouse/ggvert/hfHouse/95PJ41466564976.swf\" /><param name=\"quality\" value=\"high\" /><param name=\"wmode\" value=\"transparent\"><embed  src=\"http://img2.xkhouse.com/xkhouse/ggvert/hfHouse/95PJ41466564976.swf\" width=\"280\" height=\"220\" hspace=\"0\" vspace=\"0\" quality=\"high\"  type=\"application/x-shockwave-flash\" wmode=transparent></embed></object><a class='a_cover' href='http://newhouse.hfhouse.com/1400004978/' target='_blank' rel='nofollow' style='width:280px;height:220px;'></a></div>");
+		document.writeln("</div>");
+		document.writeln("</div>");
+		$(document).ready(function(){
+			$("#hb").click(function(){
+				var _right = 0;
+				$("#xside_tuan").animate({right: _right + "px"});
+				$("#xside_tuan").find(".advclose").fadeIn("fast");
+				$(this).hide();
+			})
+			
+			$("#xside_tuan .advclose").click(function(){
+				$("#xside_tuan").animate({right:"-280px"});
+				$(this).fadeOut("fast");
+				$("#hb").show();
+			})
+		})
+		
+		
+	</script>
+</body>
+</html>
