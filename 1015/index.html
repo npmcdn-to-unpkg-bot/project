@@ -30,21 +30,23 @@
 			</div>
 		</div>
 		<div class="content">
-			<table id="calendar">
-				<thead>
-					<tr>
-						<th>周日</th>
-						<th>周一</th>
-						<th>周二</th>
-						<th>周三</th>
-						<th>周四</th>
-						<th>周五</th>
-						<th>周六</th>
-					</tr>
-				</thead>
-				<tbody>
-				</tbody>
-			</table>
+			<div class="table">
+				<table id="calendar">
+					<thead>
+						<tr>
+							<th>日</th>
+							<th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
 			<div class="btnGroup clearfix">
 				<div class="btn1 fl">
 					<span class="iconTell"></span>
@@ -86,7 +88,7 @@
 	<div class="userInfo">
 		<input type="text" class="username" placeholder="请输入昵称">
 		<input type="text" class="usertel" placeholder="请输入手机号码">
-		<button class="submit">提交</button>
+		<button class="submit"></button>
 	</div>
 
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
@@ -114,12 +116,12 @@
 				str+='<tr>';
 				for(var j=0;j<7;j++){
 					if(j<opts.firstDay && state){
-						str+='<td><span></span></td>';
+						str+='<td></td>';
 					}else{
 						state = false;
 						day++;
 						if(day > opts.day){
-							str+='<td><span></span></td>';
+							str+='<td></td>';
 						}else{
 							if(opts.sign.indexOf(day) != -1){
 								if(opts.nowDay == day){
@@ -168,9 +170,7 @@
 		$('.time').html(moment().format("YYYY年MM月")); //控制日期
 
 		test.init({element : '#calendar',sign: [1,3,18,29]});
-		$('#calendar td').css({
-			height:parseInt($('#calendar td').width())*0.8
-		})
+		
 		$('.iconSign').on('click',function(){
 			if($('#calendar').find('td.on').hasClass('active')){return;}
 			$('#calendar').find('td.on').addClass('active');
@@ -184,14 +184,35 @@
 			console.log(count);
 			if( count == 4 ){
 				$('.btn2 span').removeClass().addClass('iconCanyu');
+				$('#shade').show();
+				$('.prize').show();
+				$('.prize .top i').html(count);
+				$('#redux').eraser();
+
+				//领奖事件注册 
 				$('.iconCanyu').on('click',function(){
 					$('#shade').show();
 					$('.prize').show();
 					$('.prize .top i').html(count);
 					$('#redux').eraser();
 				})
+
 			}
 		})
+
+
+
+		//点击领奖事件
+
+		$('.iconCanyu').on('click',function(){
+			$('#shade').show();
+			$('.prize').show();
+			$('.prize .top i').html(count);
+			$('#redux').eraser();
+		})
+
+
+
 
 
 		$(".eraserMain")[0].addEventListener("touchend",function(e){

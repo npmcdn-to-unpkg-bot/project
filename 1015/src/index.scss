@@ -43,7 +43,7 @@ body{
 }
 
 .iconCanyu{
-	@include icon('../images/canyu@2x.png',302,91)
+	@include icon('../images/canyu@2x.png',246,80)
 }
 .iconTell{
 	@include icon('../images/tell@2x.png',246,80)
@@ -85,35 +85,50 @@ body{
 .content{
 	width: 600/720*100%;
 	margin:0 auto;
+	.table{
+		background: #fffec0;
+	    border: 2px dashed #e4b214;
+	    border-radius: rem(18);
+	    box-shadow: 0 0 0 rem(14) #fffec0;
+	    margin-top: rem(42);
+		margin-bottom: rem(42);
+	}
 	table{
-		margin-top: rem(24);
-		margin-bottom: rem(24);
 		width: 100%;
 		th{
-			border: 1px solid #fff;
 			height: rem(78);
 			vertical-align: middle;
 			font-weight: normal;
 		}
+		tr td:last-child{
+			padding-right: rem(16);
+		}
+		tr td:first-child{
+			padding-left: rem(16);
+		}
+		tr:first-child td{
+			padding-top: rem(20);
+		}
+		tr:last-child td{
+			padding-bottom: rem(20);
+		}
 		td{
-			border: 1px solid #fff;
+			padding:rem(8);
 			height: rem(80);
 			position: relative;
 			text-align: center;
 			span{
-			    position: absolute;
-			    top: 10%;
-			    left: 0;
-			    width: 100%;
+			    width: rem(60);
+			    height: rem(66);
+			    line-height: rem(66);
+			    display: inline-block;
+			    border-radius: rem(8);
+				background: #fccc38;
 			    text-align: center;
 			}
-			&.active:after{
-				position: absolute;
-				content: '';
-				bottom:10%;
-				left:50%;
-				margin-left:rem(-18);
-				@include icon('../images/right@2x.png',42,40)
+			&.active span{
+				background: #e03a2d;
+				color: #fff;
 			}
 		}
 	}
@@ -132,7 +147,7 @@ body{
 		font-size: rem(30);
 		line-height: 1.5em;
 		color: #9e5500;
-		margin-bottom: rem(50);
+		margin-bottom: rem(30);
 	}
 }
 .prize{
@@ -180,13 +195,16 @@ body{
 	width: 100%;
 	height: 100%;
 }
-
+input::-webkit-input-placeholder{
+	color: #666;
+}
 .userInfo{
 	position: fixed;
 	z-index: 999;
 	top:50%;
 	margin-top: rem(-415);
-	left: rem(34);
+	left:50%;
+	margin-left: rem(-322);
 	@include icon('../images/userinfo@2x.png',644,830);
 	display: none;
 	.username{
@@ -194,29 +212,27 @@ body{
 		top:rem(282);
 		left:rem(90);
 		outline: none;
-		border: 2px solid #fc5232;
+		border: 1px solid #9e5500;
 		width: rem(470);
 		height: rem(108);
 		border-radius: rem(50);
 		text-align: center;
-		color:#000;
+		color:#9e5500;
 		font-size: rem(40);
+		background:transparent;
 	}
 	.usertel{
 		@extend .username;
 		top:rem(440);
 	}
 	.submit{
-		width: rem(327);
-		height: rem(96);
-		background: #fc5232;
+		@include icon('../images/tijiao.png',320,104);
 		border: none;
 		position: absolute;
-		bottom: rem(26);
+		bottom: rem(54);
 		border-radius: rem(50);
-		left:rem(162);
-		color:#fff;
-		font-size: rem(46);
+		left:50%;
+		margin-left: rem(-160);
 	}
 }
 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<title>游戏抽奖页面</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+	
+	<div class="main">
+		<div class="game">
+			<img src="images/main.png" alt="">
+			<input type="text" class="username" value="合房网" readonly="readonly">
+			<input type="text" class="usertel" value="18888888888" readonly="readonly">
+
+			<div class="start">
+				<img src="images/start.png" alt="">
+			</div>
+			<div class="stop">
+				<img src="images/stop.png" alt="">
+			</div>
+
+			<img src="images/title.png" class="title" alt="">
+			<div class="list" id="news-container">
+				<div class="list-content">
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="../_public/jquery/jquery-1.7.1.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+	
+
+	function autosize(){
+		var width=$(window).width(),
+				height=$(window).height(),
+				gameh=$('.game').height();
+
+		$('.main').css({
+			width:width,
+			height:height
+		})
+		$('input').css({
+			lineHeight:$('input').height()+'px'
+		})
+
+
+		if(gameh>height){
+			$('.game').css({
+				height:height,
+				width:height*1.5
+			})
+			
+		}else{
+			$('.game').css({
+				top:'50%',
+				marginTop:gameh*-1/2
+			})
+		}
+
+		$('.list').css({
+			fontSize:$(".list-content").width()*0.08+"px"
+		})
+
+
+	}
+	$(function(){
+		autosize();
+		game.init();
+		$('.start').on('click',function(){
+				game.play();
+		})
+		$('.stop').on('click',function(){
+				var list = game.stop();
+				if(list==undefined) return;
+
+				$('.list-content').prepend('<p><span>'+list.tel+'</span>'+list.name+'</p>');
+		})
+
+	})
+	$(window).resize(function(){
+	  autosize();
+	});
+</script>
+</body>
+</html>

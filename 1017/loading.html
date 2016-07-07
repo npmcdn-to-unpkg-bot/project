@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+  <meta charset="UTF-8">
+  <title>投票活动</title>
+  <link rel="stylesheet" href="../_public/reset.css">
+  <link rel="stylesheet" href="src/index.css">
+  <script src="../_public/rem.js"></script>
+</head>
+<body>
+  
+  <div class="main">
+    <img src="images/loading.gif" alt="" style="width:100%;">
+    <div class="music"></div>
+  </div>
+  <audio src="src/太阳的后裔.mp3" id="audio"></audio>
+
+<script src="../_public/jquery/jquery-1.7.1.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+  window.onload=function(){
+    $('.music')[0].addEventListener('touchstart',function(){
+      if($(this).hasClass('on')){
+        $(this).removeClass('on');
+        $('#audio')[0].pause();
+      }else{
+        $(this).addClass('on');
+        $('#audio')[0].play();
+      }
+    })
+  }
+</script>
+</body>
+</html>

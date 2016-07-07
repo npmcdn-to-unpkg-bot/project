@@ -11,31 +11,17 @@ var gulp = require('gulp'),
 
 //sass
 gulp.task('sass',function(){
-  return gulp.src('1015/src/*.scss')
+  return gulp.src('1017/src/*.scss')
              .pipe(sass())
              .on('error', function(err) {
                   gutil.log('Less Error!', err.message);
                   this.end();
               })
-             .pipe(gulp.dest('1015/src/'));
+             .pipe(gulp.dest('1017/src/'));
 })
 // 文件刷新
 gulp.task('livereload', function() {
-  gulp.src(['*/*.html','!1001/*.html','!1002/*.html','!1003/*.html','!1004/*.html'
-            ,'!1005/*.html','!1006/*.html','!1007/*.html','!1008/*.html','!1009/*.html'
-            ,'!1010/*.html','!1011/*.html','!1012/*.html','!1013/*.html','!1014/*.html','!1tel/*.html','!animated/*.html'
-            ,'!canvas/*.html','!default/*.html','!fish/*.html','!map/*.html'
-            ,'!tableToExcel/*.html','!1100/*.html','!_public/*.html'])
-      .pipe(livereload());
-});
-
-gulp.task('livereloadcanvas', function() {
-  gulp.src('canvas/*.html')
-      .pipe(livereload());
-});
-
-gulp.task('livereloaddefault', function() {
-  gulp.src('default/**/*.html')
+  gulp.src(['1017/*.html'])
       .pipe(livereload());
 });
 
@@ -87,24 +73,6 @@ gulp.task('rename', function () {
 //监听
 gulp.task('watch', function() {
   livereload.listen(); //要在这里调用listen()方法
-  // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
-  // gulp.watch(['1*/**','_public/*.css','_public/*.js'], ['livereload']);
-  gulp.watch(['1015/**','_public/*.css','_public/*.js'], ['sass','livereload']);
+  gulp.watch(['1017/**','_public/*.css','_public/*.js'], ['sass','livereload']);
 });
 
-gulp.task('imgisux', function() {
-  livereload.listen(); //要在这里调用listen()方法
-  gulp.watch(['img/*'], ['imageisux']);
-});
-
-gulp.task('canvas', function() {
-  livereload.listen(); //要在这里调用listen()方法
-  // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
-  gulp.watch(['canvas/**','_public/*.css','_public/*.js'], ['livereloadcanvas']);
-});
-
-gulp.task('default', function() {
-  livereload.listen(); //要在这里调用listen()方法
-  // gulp.watch(['1*/**','!1*/**/*.min.js','!1*/**/*.min.css','_public/*.css','!_public/*.min.css','_public/*.js','!_public/*.min.js'], ['livereload']);
-  gulp.watch(['default/**'], ['livereloaddefault']);
-});
