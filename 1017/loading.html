@@ -19,6 +19,14 @@
 <script src="src/index.js"></script>
 <script>
   window.onload=function(){
+
+    $('.music').addClass('on');
+    $('#audio')[0].play();
+    
+    setTimeout(function(){
+      window.location.href="index.html";
+    },3000)
+
     $('.music')[0].addEventListener('touchstart',function(){
       if($(this).hasClass('on')){
         $(this).removeClass('on');

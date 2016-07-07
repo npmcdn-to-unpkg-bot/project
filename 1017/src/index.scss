@@ -23,7 +23,7 @@ body{
 }
 .main{
   font-size: 0;
-  padding-bottom: rem(100);
+  padding-bottom: rem(120);
 }
 h1{font-size: rem(34);}
 h2{font-size: rem(32);}
@@ -31,6 +31,10 @@ h3{font-size: rem(30);}
 h4{font-size: rem(28);}
 h5{font-size: rem(26);}
 h6{font-size: rem(24);}
+a{
+  text-decoration: none;
+  color:inherit;
+}
 .text-center{
   text-align: center;
 }
@@ -293,22 +297,95 @@ footer{
   }
   .img{
     float: left;
-    width: rem(320);
+    width: rem(300);
     height: rem(240);
   }
   .right{
-    margin-left: rem(336);
+    margin-left: rem(16);
+    width: rem(390);
+    float: left;
     h2{
-
+      padding-top: rem(5);
+      span{
+        display: inline-block;
+        width: rem(124);
+        height: rem(45);
+        line-height: rem(45);
+        background: url(../images/top.png) center no-repeat;
+        background-size: contain;
+        padding-left: rem(64);
+        padding-right: rem(30);
+        text-align: right;
+        color: #fff;
+        font-size: rem(36);
+        margin-right: rem(5);
+      }
     }
     h4{
+      line-height:2em;
       span{
         color: #f55353;
       }
     }
     .row{
+      margin-top: rem(30);
       font-size: rem(26);
       color: #999;
+      line-height: 2em;
+    }
+  }
+}
+
+
+.shade{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  z-index: 900;
+  display: none;
+}
+
+.user{
+  width: rem(586);
+  height: rem(800);
+  display: none;
+  background: url(../images/user.png) center no-repeat;
+  background-size: contain;
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top:50%;
+  margin-top: rem(-400);
+  margin-left: rem(-293);
+  .username,.usertel{
+    border:1px solid #fff;
+    text-align: center;
+    height: rem(107);
+    width: rem(471);
+    border-radius: rem(50);
+    color: #fff;
+    font-size: rem(40);
+    position: absolute;
+    left:rem(60);
+    bottom:rem(462);
+    background: transparent;
+    &::-webkit-input-placeholder{
+      color: #7fcffe;
+    }
+  }
+  .usertel{
+    bottom:rem(292);
+  }
+  .submit{
+    @include icon("../images/submit.png",319,99);
+    position: absolute;
+    bottom:rem(60);
+    left: rem(134);
+    &:active{
+      opacity: 0.8;
     }
   }
 }

@@ -36,8 +36,8 @@
     <div class="list">
       <ul class="row">
         <li>
-          <img src="images/i001.png" class="top" alt="">
-          <h2>合肥云谷</h2>
+          <a href=""><img src="images/i001.png" class="top" alt=""></a>
+          <h2>融创合肥壹号院</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
             <div class="col-33 on"><span>配套</span></div>
@@ -50,8 +50,8 @@
           </div>
         </li>
         <li>
-          <img src="images/i002.png" class="top" alt="">
-          <h2>合肥云谷</h2>
+          <a href=""><img src="images/i002.png" class="top" alt=""></a>
+          <h2>信达公园里</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
             <div class="col-33 on"><span>配套</span></div>
@@ -64,8 +64,8 @@
           </div>
         </li>
         <li>
-          <img src="images/i001.png" class="top" alt="">
-          <h2>合肥云谷</h2>
+          <a href=""><img src="images/i001.png" class="top" alt=""></a>
+          <h2>国贸天悦</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
             <div class="col-33 on"><span>配套</span></div>
@@ -78,8 +78,8 @@
           </div>
         </li>
         <li>
-          <img src="images/i001.png" class="top" alt="">
-          <h2>合肥云谷</h2>
+          <a href=""><img src="images/i001.png" class="top" alt=""></a>
+          <h2>文一豪门金地</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
             <div class="col-33 on"><span>配套</span></div>
@@ -97,22 +97,47 @@
 <footer class="">
   <div class="border-top">
     <div class="row ">
-      <div class="col-33 on">
+      <a href="index.html" class="col-33 on">
         <p><span class="sy-1"></span></p>
         <p>首页</p>
-      </div>
-      <div class="col-33">
+      </a>
+      <a href="paihang.html" class="col-33">
         <p><span class="ph-1"></span></p>
         <p>排行榜</p>
-      </div>
-      <div class="col-33">
+      </a>
+      <a href="guize.html" class="col-33">
         <p><span class="gz-1"></span></p>
         <p>活动规则</p>
-      </div>
+      </a>
     </div>
   </div>
 </footer>
+
+<!-- 弹框 -->
+<div class="shade"></div>
+<div class="user">
+  <input type="text" class="username" placeholder="请输入昵称">
+  <input type="number" class="usertel" placeholder="请输入电话号码">
+  <div class="submit"></div>
+</div>
+
 <script src="../_public/jquery/jquery-1.7.1.min.js"></script>
 <script src="src/index.js"></script>
+<script>
+  $(function(){
+    $('.btn').on('click',function(){
+      if($(this).hasClass('on')) return;
+      $(this).addClass('on');
+    })
+
+    $('.tag span').on('click',function(){
+      if($(this).hasClass('on')){
+        $(this).removeClass('on')
+      }else{
+        $(this).addClass('on');
+      }
+    })
+  })
+</script>
 </body>
 </html>
