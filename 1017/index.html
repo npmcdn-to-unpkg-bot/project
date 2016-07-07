@@ -36,7 +36,7 @@
     <div class="list">
       <ul class="row">
         <li>
-          <a href=""><img src="images/i001.png" class="top" alt=""></a>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
           <h2>融创合肥壹号院</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
@@ -50,7 +50,7 @@
           </div>
         </li>
         <li>
-          <a href=""><img src="images/i002.png" class="top" alt=""></a>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
           <h2>信达公园里</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
@@ -64,7 +64,7 @@
           </div>
         </li>
         <li>
-          <a href=""><img src="images/i001.png" class="top" alt=""></a>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
           <h2>国贸天悦</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
@@ -78,7 +78,7 @@
           </div>
         </li>
         <li>
-          <a href=""><img src="images/i001.png" class="top" alt=""></a>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
           <h2>文一豪门金地</h2>
           <div class="tag row">
             <div class="col-33"><span>交通</span></div>
@@ -93,6 +93,8 @@
         </li>
       </ul>
     </div>
+
+    <div class="music on"></div>
 	</div>
 <footer class="">
   <div class="border-top">
@@ -121,7 +123,10 @@
   <div class="submit"></div>
 </div>
 
+  <audio src="src/太阳的后裔.mp3" id="audio" autoplay="autoplay"></audio>
+
 <script src="../_public/jquery/jquery-1.7.1.min.js"></script>
+<script src="../_public/jquery_lazyload/jquery.lazyload.min.js"></script>
 <script src="src/index.js"></script>
 <script>
   $(function(){
@@ -137,6 +142,18 @@
         $(this).addClass('on');
       }
     })
+
+    $('.music')[0].addEventListener('touchstart',function(){
+      if($(this).hasClass('on')){
+        $(this).removeClass('on');
+        $('#audio')[0].pause();
+      }else{
+        $(this).addClass('on');
+        $('#audio')[0].play();
+      }
+    })
+    $("img.lazy").lazyload();
+
   })
 </script>
 </body>
