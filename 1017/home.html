@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<title>投票活动</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="src/index.css">
+  <script src="../_public/rem.js"></script>
+</head>
+<body>
+	
+	<div class="main">
+    <img src="images/banner.png" class="banner" alt="">
+    <div class="tip row text-center">
+      <div class="col-33 border-right">
+        <h5>楼盘数</h5>
+        <p>16</p>
+      </div>
+      <div class="col-33 border-right">
+        <h5>投票人数</h5>
+        <p>2256</p>
+      </div>
+      <div class="col-33 border-right">
+        <h5>访问量</h5>
+        <p>22668</p>
+      </div>
+    </div>
+    <!-- 搜索 --> 
+    <div class="seach">
+      <input type="text" placeholder="请输入楼盘名">
+      <div class="border"></div>
+      <span class="iconseach"></span>
+    </div>
+
+    <!-- 列表 -->
+    <div class="list">
+      <ul class="row">
+        <li>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
+          <h2>融创合肥壹号院</h2>
+          <div class="tag row">
+            <div class="col-33"><span>交通</span></div>
+            <div class="col-33 on"><span>配套</span></div>
+            <div class="col-33"><span>地段</span></div>
+            <div class="col-33 on"><span>品牌</span></div>
+          </div>
+          <div class="bottom">
+            已有<span>5568</span>票
+            <div class="btn on pull-right"></div>
+          </div>
+        </li>
+        <li>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
+          <h2>信达公园里</h2>
+          <div class="tag row">
+            <div class="col-33"><span>交通</span></div>
+            <div class="col-33 on"><span>配套</span></div>
+            <div class="col-33"><span>地段</span></div>
+            <div class="col-33 on"><span>品牌</span></div>
+          </div>
+          <div class="bottom">
+            已有<span>5568</span>票
+            <div class="btn  pull-right"></div>
+          </div>
+        </li>
+        <li>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
+          <h2>国贸天悦</h2>
+          <div class="tag row">
+            <div class="col-33"><span>交通</span></div>
+            <div class="col-33 on"><span>配套</span></div>
+            <div class="col-33"><span>地段</span></div>
+            <div class="col-33 on"><span>品牌</span></div>
+          </div>
+          <div class="bottom">
+            已有<span>5568</span>票
+            <div class="btn  pull-right"></div>
+          </div>
+        </li>
+        <li>
+          <a href=""><img src="images/i002.png" class="top lazy" data-original="images/i001.png" alt=""></a>
+          <h2>文一豪门金地</h2>
+          <div class="tag row">
+            <div class="col-33"><span>交通</span></div>
+            <div class="col-33 on"><span>配套</span></div>
+            <div class="col-33"><span>地段</span></div>
+            <div class="col-33 on"><span>品牌</span></div>
+          </div>
+          <div class="bottom">
+            已有<span>5568</span>票
+            <div class="btn  pull-right"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="music on"></div>
+	</div>
+<footer class="">
+  <div class="border-top">
+    <div class="row ">
+      <a href="index.html" class="col-33 on">
+        <p><span class="sy-1"></span></p>
+        <p>首页</p>
+      </a>
+      <a href="paihang.html" class="col-33">
+        <p><span class="ph-1"></span></p>
+        <p>排行榜</p>
+      </a>
+      <a href="guize.html" class="col-33">
+        <p><span class="gz-1"></span></p>
+        <p>活动规则</p>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹框 -->
+<div class="shade"></div>
+<div class="user">
+  <input type="text" class="username" placeholder="请输入昵称">
+  <input type="number" class="usertel" placeholder="请输入电话号码">
+  <div class="submit"></div>
+</div>
+
+  <audio src="src/太阳的后裔.mp3" id="audio" autoplay="autoplay"></audio>
+
+<script src="../_public/jquery/jquery-1.7.1.min.js"></script>
+<script src="../_public/jquery_lazyload/jquery.lazyload.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+  $(function(){
+    $('.btn').on('click',function(){
+      if($(this).hasClass('on')) return;
+      $(this).addClass('on');
+    })
+
+    $('.tag span').on('click',function(){
+      if($(this).hasClass('on')){
+        $(this).removeClass('on')
+      }else{
+        $(this).addClass('on');
+      }
+    })
+
+    $('.music')[0].addEventListener('touchstart',function(){
+      if($(this).hasClass('on')){
+        $(this).removeClass('on');
+        $('#audio')[0].pause();
+      }else{
+        $(this).addClass('on');
+        $('#audio')[0].play();
+      }
+    })
+    $("img.lazy").lazyload();
+
+  })
+</script>
+</body>
+</html>
