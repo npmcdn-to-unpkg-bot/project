@@ -1,0 +1,304 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #9e5500;
+$bgColor:#fccc38;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+
+body{
+	background-color: $bgColor;
+}
+
+.main{
+	color: $primaryColor;
+	font-size: rem(30);
+	background:#2d3e50 url('../images/bg.png') top center no-repeat;
+	background-size:contain;
+}
+.share{
+	position: fixed;
+	right: 4%;
+	top:2%;
+	z-index:999;
+	@include icon('../images/share@2x.png',346,256);
+	display:none;
+}
+
+.iconCalendar{
+	@include icon('../images/calendar@2x.png',51,50)
+}
+
+.iconCanyu{
+	@include icon('../images/canyu@2x.png',246,80)
+}
+.iconEdit{
+	@include icon('../images/edit@2x.png',246,80)
+}
+.iconSign{
+	@include icon('../images/sign@2x.png',246,80)
+}
+.iconSign-true{
+	@include icon('../images/sign-true@2x.png',246,80)
+}
+
+.btnGroup{
+	margin-top:rem(32);
+}
+.head{
+	height: rem(50);
+	line-height: rem(50);
+	position: relative;
+	width: 600/720*100%;
+	color: #692a01;
+	margin:0 auto;
+	i{
+		float: left;
+		margin-right: 5px;
+	}
+	.time{
+		float: left;
+		color: #692a01;
+	}
+	.count{
+		position: absolute;
+		right: 0;
+		top:0;
+		height: rem(50);
+		line-height: rem(50);
+		.number{
+			font-size: rem(44);
+			color: #e03a2d;
+		}
+	}
+}
+.content{
+	width: 600/720*100%;
+	margin:0 auto;
+	.table{
+		background: #fffec0;
+	    border: 2px dashed #e4b214;
+	    border-radius: rem(18);
+	    box-shadow: 0 0 0 rem(14) #fffec0;
+	    margin-top: rem(42);
+		margin-bottom: rem(42);
+	}
+	table{
+		width: 100%;
+		th{
+			height: rem(78);
+			vertical-align: middle;
+			font-weight: normal;
+		}
+		tr td:last-child{
+			padding-right: rem(16);
+		}
+		tr td:first-child{
+			padding-left: rem(16);
+		}
+		tr:first-child td{
+			padding-top: rem(20);
+		}
+		tr:last-child td{
+			padding-bottom: rem(20);
+		}
+		td{
+			padding:rem(8);
+			height: rem(80);
+			position: relative;
+			text-align: center;
+			span{
+			    width: rem(60);
+			    height: rem(66);
+			    line-height: rem(66);
+			    display: inline-block;
+			    border-radius: rem(8);
+				background: #fccc38;
+			    text-align: center;
+			}
+			&.active span{
+				background: #e03a2d;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.tip{
+	width: 600/720*100%;
+	margin:0 auto;
+	h3{
+		font-weight: normal;
+		font-size: rem(30);
+		margin-top:rem(40);
+		color: #ffeb58;
+	}
+	p{
+		text-indent: 2em;
+		font-size: rem(30);
+		line-height: 1.5em;
+		color: #fff;
+		
+		i{
+			font-style: italic;
+			color: #ffeb58;
+		}
+	}
+}
+.prize{
+	position: fixed;
+	z-index: 999;
+	top:50%;
+	margin-top: rem(-313);
+	left: rem(34);
+	@include icon('../images/dialog@2x.png',667,626);
+	display: none;
+	.close{
+		position: absolute;
+		right:0;
+		top:rem(-10);
+		width: rem(73);
+		height: rem(73);
+	}
+	.top{
+		position: absolute;
+		bottom:rem(350);
+		width: 100%;
+		left:0;
+		text-align: center;
+		font-size: rem(36);
+		color:#fe573d;
+		i{
+			font-size: rem(42);
+		}
+	}
+}
+.eraserMain{
+	text-align: center;
+	font-size: 0.48rem;
+	width: rem(400);
+	height:rem(112);
+	line-height: 0.96rem;
+	position: absolute;
+	bottom:rem(203);
+	left:rem(145);
+}
+#redux{
+	position: absolute;
+	left: 0;top: 0;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+input::-webkit-input-placeholder{
+	color: #666;
+}
+.userInfo{
+	position: fixed;
+	z-index: 999;
+	top:50%;
+	margin-top: rem(-415);
+	left:50%;
+	margin-left: rem(-322);
+	@include icon('../images/userinfo@2x.png',644,830);
+	display: none;
+	.username{
+		position: absolute;
+		top:rem(282);
+		left:rem(90);
+		outline: none;
+		border: 1px solid #9e5500;
+		width: rem(470);
+		height: rem(108);
+		border-radius: rem(50);
+		text-align: center;
+		color:#9e5500;
+		font-size: rem(40);
+		background:transparent;
+	}
+	.usertel{
+		@extend .username;
+		top:rem(440);
+	}
+	.submit{
+		@include icon('../images/tijiao.png',320,104);
+		border: none;
+		position: absolute;
+		bottom: rem(54);
+		border-radius: rem(50);
+		left:50%;
+		margin-left: rem(-160);
+	}
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #7c7c7c; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	color: #7c7c7c; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	color: #7c7c7c; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	color: #7c7c7c; 
+} 
+
+.demo{
+	@include icon('../images/4.png',128,128)
+}
+.demo.active{
+	-webkit-animation:weixin 1s linear both;
+	animation:weixin 1s linear both;
+}
+
+@-webkit-keyframes weixin {
+  from {
+  	background: url("../images/1.png") center no-repeat;
+    background-size: contain;
+  }
+  40%{
+  	background: url("../images/2.png") center no-repeat;
+    background-size: contain;
+  }
+  80%{
+	background: url("../images/3.png") center no-repeat;
+    background-size: contain;
+  }
+  to {
+  	background: url("../images/4.png") center no-repeat;
+    background-size: contain;
+  }
+}
+
+@keyframes weixin {
+  from {
+  	background: url("../images/1.png") center no-repeat;
+    background-size: contain;
+  }
+  40%{
+  	background: url("../images/2.png") center no-repeat;
+    background-size: contain;
+  }
+  80%{
+	background: url("../images/3.png") center no-repeat;
+    background-size: contain; 
+  }
+  to {
+  	background: url("../images/4.png") center no-repeat;
+    background-size: contain;
+  }
+}
