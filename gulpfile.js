@@ -3,25 +3,25 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     rename = require('gulp-rename'),
     changed = require('gulp-changed'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-ruby-sass'),
     uglify = require("gulp-uglify"),//JS 压缩
     minifyCss = require("gulp-minify-css"), // css文件压缩
     gutil = require('gulp-util'), //错误日志格式与 gulp 的日志保持一致
     minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
 //sass
-gulp.task('sass',function(){
-  return gulp.src('1018/src/*.scss')
-             .pipe(sass())
-             .on('error', function(err) {
-                  gutil.log('Less Error!', err.message);
-                  this.end();
-              })
-             .pipe(gulp.dest('1018/src/'));
-})
+gulp.task('sass', function () {
+  return sass('1019/src/index.scss')
+    .on('error', sass.logError)
+    .pipe(minifyCss())
+    .pipe(rename(function (path) {
+      path.extname = ".min.css"
+    }))
+    .pipe(gulp.dest('1019/src/'));
+});
 // 文件刷新
 gulp.task('livereload', function() {
-  gulp.src(['1018/*.html'])
+  gulp.src(['1019/*.html'])
       .pipe(livereload());
 });
 
@@ -71,8 +71,8 @@ gulp.task('rename', function () {
 });
 
 //监听
-gulp.task('watch', function() {
+gulp.task('default', function() {
   livereload.listen(); //要在这里调用listen()方法
-  gulp.watch(['1018/**','_public/*.css','_public/*.js'], ['sass','livereload']);
+  gulp.watch(['1019/**','_public/*.css','_public/*.js'], ['sass','livereload']);
 });
 

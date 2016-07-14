@@ -1,0 +1,273 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #333;
+$bgColor:#fef6e9;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body{
+	background-color: $bgColor;
+	color: $primaryColor;
+	overflow-x: hidden;
+}
+a{
+	text-decoration: none;
+  color: inherit;
+}
+.home{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background:$bgColor url(../images/home.png) bottom center no-repeat;
+	background-size: cover;
+	.logo{
+		@include icon('../images/logo.png',288,92);
+		position: absolute;
+		top: 80/1152*100%;
+		left:50%;
+		margin-left: rem(-144);
+	}
+	.lst{
+		width: rem(620);
+		position: absolute;
+		top:250/1152*100%;
+		left: 50%;
+		margin-left: rem(-310);
+		li{
+			width: rem(620);
+			height: rem(136);
+			position: relative;
+			margin-bottom: rem(20);
+			img:nth-child(1){
+				width: 100%;
+				height: 100%;
+			}
+			img:nth-child(2){
+				width: auto;
+				height: rem(75);
+				position: absolute;
+				left: rem(40);
+				top:50%;
+				margin-top: rem(-37);
+			}
+
+		}
+	}
+	.bottom{
+		position: fixed;
+		bottom:0;
+		left: 0;
+		width: 100%;
+		height: rem(98);
+		background: rgba(0,0,0,.3);
+		font-size: 0;
+		padding-top: rem(8);
+		.lst-b{
+			width: 20%;
+			display: inline-block;
+			font-size: rem(24);
+			color: #fff;
+			text-align: center;
+			span{
+				margin-bottom: rem(4);
+			}
+		}
+	}
+}
+header{
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 300;
+	width: 100%;
+	height: rem(88);
+	line-height: rem(88);
+	background: url('../images/header.png') center no-repeat;
+	background-size: cover;
+	.title{
+		position: absolute;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: rem(88);
+		line-height: rem(88);
+		text-align: center;
+		font-size: rem(36);
+		color: #003200;
+	}
+	.iconmenu{
+		margin-left: rem(30);
+		position: relative;
+		z-index: 10;
+	}
+}
+header+.page{
+	margin-top: rem(88);
+}
+.page{
+	-webkit-transition:all 500ms;
+	transition:all 500ms;
+	position: relative;
+	.cnt-text{
+		width: 100%;
+		padding-left: rem(50);
+		padding-right: rem(50);
+		padding-top: rem(30);
+		padding-bottom: rem(30);
+		p{
+			color: #333;
+			font-size: rem(30);
+			text-indent: 1em;
+			line-height: 1.4em;
+		}
+		img.full-img{
+			width: 100%;
+			margin-top: rem(30);
+		}
+		margin-top: rem(30);
+		.img-double{
+			font-size: 0;
+			img{
+				margin-top: rem(30);
+				&:nth-child(1){
+					width: rem(270);
+					height: rem(200);
+					margin-right: rem(30);
+				}
+				&:nth-child(2){
+					width: rem(320);
+					height: rem(200);
+				}
+			}
+			+h3{
+				margin-top: rem(22);
+			}
+		}
+		h3{
+			display: inline-block;
+			line-height: rem(44);
+			margin-top: rem(60);
+			margin-bottom: rem(20);
+			font-size: rem(30);
+			height: rem(44);
+			color: #fff;
+			background: #003200;
+			padding-left: rem(10);
+			padding-right: rem(30);
+			position: relative;
+			&:after{
+				position: absolute;
+				content:" ";
+				right:rem(-30);
+				top:0;
+				width: rem(40);
+				height: rem(0);
+		    border-right: rem(30) solid transparent;
+    		border-bottom: rem(44) solid #003200;
+			}
+		}
+	}
+	.cnt-img{
+		font-size: 0;
+		img{width: 100%;margin-bottom: rem(24);}
+	}
+}
+
+// icon
+.icon_2_18{@include icon('../images/icon/2_18.png',44,44)}
+.icon_2_20{@include icon('../images/icon/2_20.png',44,44)}
+.icon_2_12{@include icon('../images/icon/2_12.png',44,44)}
+.icon_2_10{@include icon('../images/icon/2_10.png',44,44)}
+.icon_2_22{@include icon('../images/icon/2_22.png',44,44)}
+
+.icon_1_03{@include icon('../images/icon/1_03.png',44,44)}
+.icon_1_06{@include icon('../images/icon/1_06.png',44,44)}
+.icon_1_08{@include icon('../images/icon/1_08.png',44,44)}
+.icon_1_10{@include icon('../images/icon/1_10.png',44,44)}
+.icon_1_12{@include icon('../images/icon/1_12.png',44,44)}
+.icon_1_14{@include icon('../images/icon/1_14.png',44,44)}
+.icon_1_16{@include icon('../images/icon/1_16.png',44,44)}
+.icon_1_18{@include icon('../images/icon/1_18.png',44,44)}
+.icon_1_20{@include icon('../images/icon/1_20.png',44,44)}
+.icon_1_22{@include icon('../images/icon/1_22.png',44,44)}
+
+
+.iconmenu{@include icon('../images/menu.png',36,88)}
+.swiper-pagination{
+	position: relative;
+	margin-top: rem(30);
+}
+.swiper-pagination-bullet{
+	@include icon('../images/p1.png',32,28)
+}
+.swiper-pagination-bullet-active{
+	@include icon('../images/p2.png',32,28)
+}
+.shade{
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	z-index:200;
+}
+.openleft{
+	.page-left{
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+	.page{
+		-webkit-transform: translate3d(rem(280),0,0);
+		transform: translate3d(rem(280),0,0);
+
+	}
+}
+.page-left{
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+	-webkit-transition:all 500ms;
+	transition:all 500ms;
+	position: fixed;
+	left: 0;
+	top:rem(88);
+	width: rem(280);
+	bottom:0;
+	background: url('../images/left.png') center no-repeat;
+	background-size: cover;
+	z-index:300;
+	overflow-y: scroll;
+	li{
+		display: inline-block;
+		height: rem(100);
+		line-height: rem(100);
+		width: 100%;
+		padding-left: rem(26);
+		a{
+			display: block;
+			line-height: rem(100);
+			font-size: rem(30);
+			color: #000;
+			span{
+				margin-right: rem(26);
+			}
+		}
+	}
+}

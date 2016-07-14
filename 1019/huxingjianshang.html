@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+  <meta name="apple-mobile-web-app-capable" content="tes">
+  <meta http-equiv="widow-target" content="_blank">
+  <title>信达地产公园里微楼书</title>
+  <script src="../_public/rem.js"></script>
+  <link rel="stylesheet" href="../_public/reset.css">
+  <link rel="stylesheet" href="../_public/mobile-rem.css">
+  <link rel="stylesheet" href="../_public/Swiper-3.3.1/dist/css/swiper.min.css">
+  <link rel="stylesheet" href="src/index.min.css">
+  <style>
+    img{
+      width:100% ;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="iconmenu"></div>
+    <div class="title">户型鉴赏</div>
+  </header>
+  <div class="page">
+    <!-- <div class="shade"></div> -->
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/s1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/s2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/s3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/s4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/s5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/s6.jpg" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    
+  </div>
+  <div class="page-left">
+    <ul>
+      <li><a href=""><span class="icon_1_03"></span>首页</a></li>
+      <li><a href=""><span class="icon_1_06"></span>楼盘详情</a></li>
+      <li><a href=""><span class="icon_1_08"></span>户型鉴赏</a></li>
+      <li><a href=""><span class="icon_1_10"></span>周边配套</a></li>
+      <li><a href=""><span class="icon_1_12"></span>销售信息</a></li>
+      <li><a href=""><span class="icon_1_14"></span>项目图册</a></li>
+      <li><a href=""><span class="icon_1_16"></span>项目区位</a></li>
+      <li><a href=""><span class="icon_1_18"></span>地图导航</a></li>
+      <li><a href=""><span class="icon_1_20"></span>一键预约</a></li>
+      <li><a href=""><span class="icon_1_22"></span>关注我</a></li>
+    </ul>
+  </div>
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/Swiper-3.3.1/dist/js/swiper.jquery.min.js"></script>
+<script src="../_public/public.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    loop:true
+});
+$('.iconmenu').on('click',function(){
+  console.log(111)
+  $('body').toggleClass('openleft');
+})
+</script>
+</body>
+</html>
