@@ -54,12 +54,27 @@ a{
 			width: rem(620);
 			height: rem(136);
 			position: relative;
+			overflow: hidden;
 			margin-bottom: rem(20);
-			img:nth-child(1){
+			img.bg{
 				width: 100%;
 				height: 100%;
+		    -webkit-transition: all 2000ms;
+		    transition: all 2000ms;
+				&.right{
+			    -webkit-transform: translate3d(100%,0,0);
+			    transform: translate3d(100%,0,0);
+				}
+				&.left{
+			    -webkit-transform: translate3d(-100%,0,0);
+			    transform: translate3d(-100%,0,0);
+				}
+				&.on{
+					-webkit-transform: translate3d(0,0,0);
+			    transform: translate3d(0,0,0);
+				}
 			}
-			img:nth-child(2){
+			a img{
 				width: auto;
 				height: rem(75);
 				position: absolute;
@@ -119,14 +134,30 @@ header{
 	}
 }
 header+.page{
-	margin-top: rem(88);
+	padding-top: rem(88);
+}
+.page-group{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 .page{
 	-webkit-transition:all 500ms;
 	transition:all 500ms;
-	position: relative;
+	position: absolute;
+	width: 100%;
+	top:0;
+	height: 100%;
+	overflow-y: scroll;
 	.cnt-text{
+		position: relative;
+		height: 100%;
 		width: 100%;
+		overflow-x: hidden;
+		overflow-y: scroll;
 		padding-left: rem(50);
 		padding-right: rem(50);
 		padding-top: rem(30);
@@ -185,6 +216,11 @@ header+.page{
 		}
 	}
 	.cnt-img{
+		position: relative;
+		height: 100%;
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: scroll;
 		font-size: 0;
 		img{width: 100%;margin-bottom: rem(24);}
 	}
@@ -233,10 +269,10 @@ header+.page{
 }
 
 .page-dialog{
-	position: fixed;
+	position: absolute;
 	display: none;
-	left: 50%;
 	top:50%;
+	left: 50%;
 	width: rem(600);
 	height: auto;
 	background: #fff;
@@ -249,13 +285,18 @@ header+.page{
 	.cnt{
 		color: #003200;
 		font-size: rem(36);
-		.top{
+		.top,.dialog-top{
 			padding:rem(64) rem(120);
 			border-bottom:1px solid #c7c7c7;
 		}
-		.bottom{
+		.bottom,.dialog-bottom{
 			text-align: center;
 			font-size: rem(32);
+			&:after{
+				content:" ";
+				display: block;
+				clear: both;
+			}
 			.left{
 				float: left;
 				width: 50%;

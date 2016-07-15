@@ -13,37 +13,88 @@
 </head>
 <body>
 	<div class="home">
+	<div class="shade"></div>
+    
+    <!-- 电话 -->
+    <div class="page-dialog page-dialog-1">
+      <div class="cnt">
+        <div class="dialog-top">请拨打400-887-1216转10286</div>
+        <div class="dialog-bottom">
+          <a href="tel:4008871216" class="left">拨打</a>
+          <div class="close right">取消</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 二维码 -->
+    <div class="page-dialog page-dialog-2">
+      <div class="img"><img src="images/er.png" alt=""></div>
+    </div>
+
 		<div class="logo"></div>
 		<div class="lst">
 			<ul>
 				<li>
-					<img src="images/h-10.png" alt="">
-					<img src="images/h-11.png" alt="">
+					<img class="bg right" src="images/h-10.png" alt="">
+					<a href="loupanxiangqing.html"><img src="images/h-11.png" alt=""></a>
 				</li>
 				<li>
-					<img src="images/h-20.png" alt="">
-					<img src="images/h-21.png" alt="">
+					<img class="bg left" src="images/h-20.png" alt="">
+					<a href="huxingjianshang.html"><img src="images/h-21.png" alt=""></a>
 				</li>
 				<li>
-					<img src="images/h-30.png" alt="">
-					<img src="images/h-31.png" alt="">
+					<img class="bg right" src="images/h-30.png" alt="">
+					<a href="xiangmutuce.html"><img src="images/h-31.png" alt=""></a>
 				</li>
 				<li>
-					<img src="images/h-40.png" alt="">
-					<img src="images/h-41.png" alt="">
+					<img class="bg left" src="images/h-40.png" alt="">
+					<a href="xiangmuquwei.html"><img src="images/h-41.png" alt=""></a>
 				</li>
 			</ul>
 		</div>
 		<div class="bottom">
-			<a  href="" class="lst-b"><span class="icon_2_18"></span><br>地图导航</a>
-			<a  href="" class="lst-b"><span class="icon_2_20"></span><br>一键预约</a>
-			<a  href="" class="lst-b"><span class="icon_2_12"></span><br>销售信息</a>
-			<a  href="" class="lst-b"><span class="icon_2_10"></span><br>周边配套</a>
-			<a  href="" class="lst-b"><span class="icon_2_22"></span><br>关注我</a>
+			<a  href="http://dwz.cn/3J3uyT" class="lst-b"><span class="icon_2_18"></span><br>地图导航</a>
+			<a  href="javascript:;" class="lst-b show-dialog-1"><span class="icon_2_20"></span><br>一键预约</a>
+			<a  href="http://m.hfhouse.com/newhouse/1400004844/dongtai.html" class="lst-b"><span class="icon_2_12"></span><br>销售信息</a>
+			<a  href="zhoubianpeitao.html" class="lst-b"><span class="icon_2_10"></span><br>周边配套</a>
+			<a  href="javascript:;" class="lst-b show-dialog-2"><span class="icon_2_22"></span><br>关注我</a>
 		</div>
 	</div>
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
 <script src="../_public/public.js"></script>
+<script>
+	$(function(){
+		$('.shade').each(function(){
+		    this.addEventListener('touchmove',function(event){
+		      event.preventDefault();
+		    })
+		  })
+		  $('.page-dialog').each(function(){
+		    this.addEventListener('touchmove',function(event){
+		      event.preventDefault();
+		    })
+		  })
+		  $('.page-dialog .close').on('click',function(){
+		    $('.shade').hide();
+		    $('.page-dialog').hide();
+		  })
+		  $('.shade').on('click',function(){
+		    $(this).hide();
+		    $('.page-dialog').hide();
+		  })
+		  $('.show-dialog-2').on('click',function(){
+		    $('.page-dialog').hide();
+		    $('.shade').show();
+		    $('.page-dialog-2').show();
+		  })
+		  $('.show-dialog-1').on('click',function(){
+		    $('.page-dialog').hide();
+		    $('.shade').show();
+		    $('.page-dialog-1').show();
+		  })
 
+		  $('.bg').addClass('on');
+	})
+</script>
 </body>
 </html>

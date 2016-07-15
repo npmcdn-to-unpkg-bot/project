@@ -44,13 +44,13 @@ $(function(){
   $('.show-dialog-2').on('click',function(){
     $('.page-dialog').hide();
     $('.shade').show();
-    $('.page-dialog-2').fadeIn();
+    $('.page-dialog-2').show();
     $('body').removeClass('openleft');
   })
   $('.show-dialog-1').on('click',function(){
     $('.page-dialog').hide();
     $('.shade').show();
-    $('.page-dialog-1').fadeIn();
+    $('.page-dialog-1').show();
     $('body').removeClass('openleft');
   })
 
