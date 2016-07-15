@@ -210,6 +210,7 @@ header+.page{
 
 
 .iconmenu{@include icon('../images/menu.png',36,88)}
+.openleft .iconmenu{@include icon('../images/back.png',36,88)}
 .swiper-pagination{
 	position: relative;
 	margin-top: rem(30);
@@ -221,7 +222,8 @@ header+.page{
 	@include icon('../images/p2.png',32,28)
 }
 .shade{
-	position: fixed;
+	position: absolute;
+	display: none;
 	left: 0;
 	top:0;
 	width: 100%;
@@ -229,6 +231,49 @@ header+.page{
 	background: rgba(0,0,0,.5);
 	z-index:200;
 }
+
+.page-dialog{
+	position: fixed;
+	display: none;
+	left: 50%;
+	top:50%;
+	width: rem(600);
+	height: auto;
+	background: #fff;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+	z-index:201;
+	.img{
+		width: 100%;
+	}
+	.cnt{
+		color: #003200;
+		font-size: rem(36);
+		.top{
+			padding:rem(64) rem(120);
+			border-bottom:1px solid #c7c7c7;
+		}
+		.bottom{
+			text-align: center;
+			font-size: rem(32);
+			.left{
+				float: left;
+				width: 50%;
+				height: rem(100);
+				line-height: rem(100);
+				border-right:1px solid #c7c7c7;
+			}
+			.right{
+				float: right;
+				width: 50%;
+				height: rem(100);
+				line-height: rem(100);
+			}
+		}
+	}
+}
+
+
 .openleft{
 	.page-left{
 		-webkit-transform: translate3d(0,0,0);
