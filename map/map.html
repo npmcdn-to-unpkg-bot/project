@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>百度地图封装</title>
+  <style>
+    *{
+      padding:0;
+      margin:0;
+      font-size: 12px;
+      color: #333;
+    }
+    body{
+      padding:1px;
+    }
+    .echarts{
+      width: 1000px;
+      margin: 50px auto;
+      height: 600px;
+    }
+  </style>
+  <script src="src/jquery-2.2.3.min.js"></script>
+  <script src="src/echarts.min.js"></script>
+  <script src="src/index.js"></script>
+</head>
+<body>
+  
+  <div class="echarts echarts1"></div>
+  <div class="echarts echarts2"></div>
+  <div class="echarts echarts3"></div>
+  <div class="echarts echarts4"></div>
+  <div class="echarts echarts5"></div>
+
+  <script type="text/javascript">
+   var chartname = ['合肥','芜湖','马鞍山','六安','池州','淮南','黄山','蚌埠','安庆','铜陵','巢湖','阜阳','淮北','宣城','滁州','亳州','宿州'],
+      textvalue = [5621, 9423, 12417, 5908, 12183, 4236, 15211, 3277, 14072, 11674, 3324, 17124, 16067, 17828, 13602, 5249, 19559],
+      charttime = ['2015.07','2015.08','2015.09','2015.10','2015.11','2015.12','2016.01','2016.02','2016.03','2016.04','2016.05','2016.07','2016.08'],
+      textvalue = [5621, 9423, 12417, 5908, 12183, 4236, 15211, 3277, 14072, 11674, 3324, 17124];
+    $(".echarts1").chart({
+            color: ['#03a8b2'],
+            xAxis : [
+                {
+                  data : chartname
+                }
+            ],
+            legend:{
+              data:['住宅成交套数（套）']
+            },
+            series : [
+                {
+                    name:'住宅成交套数（套）',
+                    type:'bar',
+                    barWidth: '50%',
+                    data:textvalue
+                }
+            ]
+        })
+    $(".echarts2").chart({
+            color: ['#036ab2'],
+            xAxis : [
+                {
+                  data : chartname
+                }
+            ],
+            legend:{
+              data:['住宅成交均价（元）']
+            },
+            series : [
+                {
+                    name:'住宅成交均价（元）',
+                    type:'bar',
+                    barWidth: '50%',
+                    data:textvalue
+                }
+            ]
+        })
+    $(".echarts3").chart({
+            color: ['#e7625d'],
+            xAxis : [
+                {
+                  data : charttime
+                }
+            ],
+            legend:{
+              data:['住宅面积走势']
+            },
+            series : [
+                {
+                    name:'住宅面积走势',
+                    type:'line',
+                    data:textvalue
+                }
+            ]
+        })
+
+
+  </script>
+</body>
+</html>
