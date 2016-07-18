@@ -3,40 +3,53 @@
 *made in fanfan
 **********
 */
-var json = [{"合肥":1000},{"芜湖":1000},{"马鞍山":1000},{"六安":1000},
-            {"池州":1000},{"淮南":1000},{"黄山":1000},{"蚌埠":1000},
-            {"安庆":1000},{"铜陵":1000},{"巢湖":1000},{"阜阳":1000},
-            {"淮北":1000},{"宣城":1000},{"滁州":1000},{"亳州":1000},{"宿州":1000}];
+;(function($){ 
+ $.fn.chart = function(settings) {
+  var  defaults = {
+            color: ['#3398DB'],
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    axisTick: {
+                        alignWithLabel: true
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'直接访问',
+                    type:'bar',
+                    barWidth: 'auto',
+                    data:[10, 52, 200, 334, 390, 330, 220]
+                }
+            ]
+        };
 
-$(function(){
-  charts.init({
-    element : $('.chart-lst-2')[0],
-    data : json
+  var options = $.extend({},defaults,settings);
+  return this.each(function(){
+    var myChart = echarts.init(this);
+        // 指定图表的配置项和数据 options
+        // console.log(options)
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(options);
   })
-})
-
-
-var charts = function(){
-  var defaults={
-
-  },option={},chart={},myChart,chartoption={};
-
-  chart.init = function(){
-    myChart = echarts.init(option.element);
-
-    for(var attr in option.data){
-      chartoption.xAxis.push(attr);
-      chartoption.series.data.push(option.data[attr]);
-
-    }
-    
-  }
-
-  return {
-    init:function(options){
-      jQuery.extend(option,defaults, options);
-      chart.init();
-    }
-  }
-
-}()
+}
+})(jQuery); 

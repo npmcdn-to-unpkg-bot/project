@@ -1,0 +1,24 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #fff;
+$bgColor:#f10060;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+
+body{
+	background-color: $bgColor;
+}
