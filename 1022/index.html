@@ -11,6 +11,7 @@
 	</script>
 	<link rel="stylesheet" href="../_public/reset.css">
 	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="fullPage.js/jquery.fullPage.css">
 	<link rel="stylesheet" href="src/index.min.css">
 	<style>
 		.load-1,.load-2{width: 1.6rem;height: 1.6rem;background: rgba(0,255,0,0.6);position: absolute;top:50%;left: 50%;margin-left: -0.8rem;margin-top: -0.8rem;border-radius: 50%;}
@@ -55,8 +56,16 @@
 	</style>
 	<script src="src/load.js"></script>
 	<script>
-		var loadListImg = ['images/area.jpg','images/header.jpg','images/title-2.png'],
-				loadJS = ['../_public/jquery/jquery-2.2.3.min.js','../_public/public.js'];
+		var loadListImg = ['images/bg1.jpg','images/bg2.jpg','images/bg3.jpg',
+											 'images/bg4.jpg','images/bg5.jpg','images/bg6.jpg',
+											 'images/bg7.jpg','images/100.png','images/101.png',
+											 'images/102.png','images/200.png','images/201.png',
+											 'images/202.png','images/300.png','images/301.png',
+											 'images/302.png','images/400.png','images/401.png',
+											 'images/500.png','images/501.png','images/502.png',
+											 'images/bottom.png','images/dianji.png','images/loading.png',
+											 'images/logo-1.png','images/logo-2.png'],
+				loadJS = ['src/jquery-2.2.3.min.js','fullPage.js/jquery.fullPage.min.js','src/index.js'];
 		load({
 			img : loadListImg,
 			js : loadJS
@@ -65,12 +74,19 @@
 </head>
 <body>
 	<div class="loading">
-		<div class="load-1"></div>
+		<div class="lead-1"></div>
 		<div class="load-2"></div>
 		<div class="tip">0%</div>
 	</div>
-	<div class="main">
-		
+	<div class="page">
+		<!-- <iframe frameborder="0" width="100%" height="498" src="http://v.qq.com/iframe/player.html?vid=z0314j0z9w3&tiny=0&auto=0" allowfullscreen></iframe> -->
+		<section class="section page-1">sdsdsds</section>
+		<section class="section page-2">sdsdsds</section>
+		<section class="section page-3">sdsdsds</section>
+		<section class="section page-4">sdsdsds</section>
+		<section class="section page-5">sdsdsds</section>
+		<section class="section page-6">sdsdsds</section>
+		<section class="section page-7">sdsdsds</section>
 	</div>
 
 </body>
