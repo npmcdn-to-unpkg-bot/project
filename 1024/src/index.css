@@ -1,0 +1,137 @@
+/*add fanchaoyang*/
+body{
+	background-color: #0d1a51;
+	line-height: 1.4em;
+	font-size: 14px;
+}
+
+/*.main{width: 290px;height: 240px;position: relative;margin: auto;}
+.main img{width: 145px;height: 120px;float: left;}*/
+.main{
+	background: url(../images/bg.jpg) center no-repeat;
+    background-size: contain;
+}
+
+.game{
+	width: 86%;
+	margin: 15% auto 5%;
+}
+.game span{width: 50%;height: 50%;float: left;}
+
+.game span.i1{background: url(../images/101/1-1.jpg); background-size: 200%;}
+.game span.i1.on{background: url(../images/101/1.jpg); background-size: 200%;}
+.game span.i2{background: url(../images/101/2-1.jpg); background-size: 200%;}
+.game span.i2.on{background: url(../images/101/2.jpg); background-size: 200%;}
+.game span.i3{background: url(../images/101/3-1.jpg); background-size: 200%;}
+.game span.i3.on{background: url(../images/101/3.jpg); background-size: 200%;}
+.game span.i4{background: url(../images/101/4-1.jpg); background-size: 200%;}
+.game span.i4.on{background: url(../images/101/4.jpg); background-size: 200%;}
+.game span.i5{background: url(../images/101/5-1.jpg); background-size: 200%;}
+.game span.i5.on{background: url(../images/101/5.jpg); background-size: 200%;}
+.game span.i6{background: url(../images/101/6-1.jpg); background-size: 200%;}
+.game span.i6.on{background: url(../images/101/6.jpg); background-size: 200%;}
+.game span:nth-of-type(1),.game span.on:nth-of-type(1){
+	background-position: 0 0;
+}
+.game span:nth-of-type(2),.game span.on:nth-of-type(2){
+	background-position: 100% 0;
+}
+.game span:nth-of-type(3),.game span.on:nth-of-type(3){
+	background-position: 0 100%;
+}
+.game span:nth-of-type(4),.game span.on:nth-of-type(4){
+	background-position: 100% 100%;
+}
+
+.btn1{width: 100%;height: 100px;line-height: 100px; margin: 0 auto ;font-size: 16px;color: #fde101;background:url(../images/bg001.png) center no-repeat;background-size: contain;text-align: center;border-radius: 2px;}
+.lst{font-size: 13px;color: #fff;line-height: 18px;text-align: center;}
+.btnGroup1{width: 65%;margin: 5% auto 0;}
+.btnGroup2{width: 80%;margin: 5% auto 0;}
+.btn2{width: 90px;height: 30px;background: url(../images/i01.jpg) center no-repeat;    background-size: cover;}
+.btn3{width: 90px;height: 30px;background: url(../images/i02.jpg) center no-repeat;    background-size: cover;}
+.btnGroup2 .btn3{width: 30%;}
+.btn4{width: 30%;margin-right: 5%; height: 30px;background: url(../images/i03.jpg) center no-repeat;    background-size: cover;}
+.btn5{width: 30%;margin-right: 5%; height: 30px;background: url(../images/i04.jpg) center no-repeat;    background-size: cover;}
+.btn6{width: 90px;height: 30px;background: url(../images/i05.jpg) center no-repeat;    background-size: cover;}
+
+
+
+
+.share{
+	position: fixed;
+	top: 3%;
+	right: 3%;
+	z-index: 901;
+	display: none;
+}
+.share img{width: 195px;height:147px; }
+.wancheng{
+	position: fixed;
+	top: 50%;
+	right: 3%;
+	z-index: 901;
+	margin-top: -93px;
+	display: none;
+}
+.wancheng img{width: 343px;height:186px; }
+
+.user{
+	width: 76%;
+	position: fixed;
+	height: 358px;
+	left: 12%;
+	top: 50%;
+	margin-top: -179px;
+	z-index: 902;
+	background-color: #fff;
+	display: none;
+}
+.user p{text-align: center;font-size: 18px;color: #000;line-height: 1.6em;}
+.user p .close{width: 26px;height: 21px;margin-top: 10px;margin-right: 10px;}
+.user p i{color: #e95412;}
+.user table{width: 80%;margin: 20px auto;}
+.user table td{height: 50px; line-height: 50px;font-size: 18px;color: #000000;}
+.user table td input{border: 1px solid #000;width: 140px;height: 30px;padding-left: 10px;}
+.user table td button{width: 90px;height: 30px;border: none;background: url(../images/submit.jpg) center no-repeat;background-size: contain;    display: table-cell;}
+.user .tips{font-size: 13px;color: #000;text-align: center;line-height: 18px;}
+
+.eraserMain{text-align: center;font-size: 18px;width: 200px;height: 36px;line-height: 36px;margin: 100px auto 0; background-color: #fbf6e3;position: relative;}
+#redux{position: absolute;left: 0;top: 0;z-index: 2; }
+
+.qipao{
+	position: absolute;
+	right: 4%;
+	top: 71%;
+	width: 40px;
+	height: 40px;
+	background: url(../images/qipao.png) center no-repeat;
+	background-size: contain;
+}
+.prize{
+	width: 90%;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.4em;
+	
+}
+.prize td{
+	vertical-align: middle;
+	padding: 5px 0;
+}
+.prize small{font-size: 12px;}
+.prize tr td:first-child{
+	width: 15%;
+}
+.prize tr td:last-child{
+	width: 30%;
+	text-align: center;
+}
+.prize tr td:first-child img{
+	width: 90%;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+.prize tr td:nth-of-type(3){
+	color: #fde101;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>拼图</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+	
+	<div class="main">
+		<div class="qipao"></div>
+		<div class="game">
+			<span class="i1 on"></span>
+			<span class="i1"></span>
+			<span class="i1 "></span>
+			<span class="i1 on"></span>
+		</div>
+
+		<div class="btn1">你已拼齐4块拼图</div>
+
+		<div class="lst">
+			<p>0个好友帮你拼出了第1块拼图</p>
+			<p>0个好友帮你拼出了第2块拼图</p>
+			<p>0个好友帮你拼出了第3块拼图</p>
+			<p>0个好友帮你拼出了第4块拼图</p>
+		</div>
+
+		<div class="btnGroup1">
+			<div class="btn6 fl"></div>  <!-- 此行删除 -->
+			<a href="" class="btn3 fr"></a>  <!-- 去除 fr -->
+		</div>
+	</div>
+
+
+
+	<!-- 遮罩 -->
+	<div id="shade"></div>
+	<!-- 信息 -->
+	<div class="user user1">
+		<p class="clearfix"><span class="close fr"><img src="images/close.jpg" alt=""></span></p>
+		<p><i>恭喜您</i><br>
+		<i>获得一台</i>清凉小风扇</p>
+		<form action="">
+		<table>
+			<tbody>
+				<tr>
+					<td>姓名：</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td>手机：</td>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><button></button></td>
+				</tr>
+			</tbody>
+		</table>
+		</form>
+		<div class="tips">请尽快完善信息并参照活动规则领取奖品</div>
+	</div>
+	<!-- 刮刮乐 -->
+	<div class="user user2" >
+		<p class="clearfix"><span class="close fr"><img src="images/close.jpg" alt=""></span></p>
+		<p><i>恭喜您</i><br>
+		<i>获得一次</i>刮刮领奖<i>机会</i></p>
+
+		<div class="eraserMain">
+		 	恭喜中奖
+		 	<img id="redux" src="images/gua.jpg"  />
+		 </div>
+
+	</div>
+
+	
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/jquery.eraser.js"></script>
+<script>
+	var prize=true,
+	    user=false;
+	function resizeContent(){
+		autoHeight({element : $(".main"),scale : 1.6})
+		autoHeight({element : $(".game"),scale : 0.738})
+	}
+
+	$(function(){
+		resizeContent();
+
+		$(".btn6")[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$("#shade").show();
+			// $(".user1").show();
+			if(!user){
+				$(".user2").show();
+				$('#redux').eraser();
+			}else{
+				$(".user1").show();
+			}
+			
+		})
+
+		//遮罩
+
+		$(".close").each(function(){
+			this.addEventListener("touchstart",function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				$("#shade").hide();
+				$(".user").hide();
+			})
+		})
+
+		$(".eraserMain")[0].addEventListener("touchend",function(e){
+			$('#redux').eraser('clear');
+			if(prize){
+				setTimeout(function(){
+					$(".user2").hide();
+					$(".user1").show();
+					user = true;
+				},2000)
+			}
+		})
+		$("#shade")[0].addEventListener("touchstart",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			$("#shade").hide();
+			$(".user1").hide();
+		})
+	})
+	$(window).resize(function(){
+		resizeContent();
+	})
+</script>
+</body>
+</html>

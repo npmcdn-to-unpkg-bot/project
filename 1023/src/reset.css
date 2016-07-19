@@ -27,7 +27,7 @@ article, aside, figure, footer, header, nav, section, details, summary {display:
 /* Handle box-sizing while better addressing child elements:
    http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 }
 
 *,

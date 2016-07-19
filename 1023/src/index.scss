@@ -2,17 +2,32 @@
 * made in fanfan
 */
 
+@mixin transform ($option...) {
+    -webkit-transform: $option;
+  -ms-transform: $option;
+  -o-transform: $option;
+  transform: $option;
+}
+
+@mixin transition ($option...) {
+    -webkit-transition: $option;
+  -ms-transition: $option;
+  -o-transition: $option;
+  transition: $option;
+}
 body{
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	background: #fff;
 	font-family: "微软雅黑";
+	font-size: 12px;
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
 	color: #333;
+	background: rgba(0,0,0,.3);
 }
 h1{font-weight: bold;font-size: 34px;text-align: center;}
 h2{font-weight: bold;font-size: 32px;text-align: center;}
@@ -27,332 +42,186 @@ h3.title{color: #2a426c;}
 h4.title{color: #2a426c;}
 h5.title{color: #2a426c;}
 h6.title{color: #2a426c;}
-
 a{
 	text-decoration: none;
 }
 b{font-weight: bold;}
-.mb20{margin-bottom: 20px;}
-.mb50{margin-bottom: 50px;}
-.mb70{margin-bottom: 70px;}
-.mt40{margin-top: 40px;}
-.mt60{margin-top: 60px;}
+
+a{color:#333;text-decoration:none;}
+a:link{color:#333;text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{color:#049;text-decoration:underline;}
+a:active{color:#333;}
 
 .page{
-	min-width:1000px;
-	margin:0 auto;
-}
-.main{
-	width: 1000px;
-	margin:0 auto;
 	position: relative;
-}
-.header{
-	max-height: 746px;
-	width: 100%;
-	text-align: center;
-	position: relative;
-	.title{
-		position: absolute;
-		top:285/650*100%;
-		left: 0;
-		width: 100%;
-		text-align: center;
-		font-size: 66px;
-		color: #fff;
-		font-weight: bold;
-		line-height: 1em;
-	}
-}
-.tab-dir{
-	width: 100%;
-	position: absolute;
-	top:50%;
-	left: 0;
-	margin-top: -18px;
-	.pre,.next{
-			position: absolute;
-			left: 0;
-			cursor: pointer;
-		}
-	.next{
-		right:0;
-		left:auto;
-	}
-}
-.tab-parent{
-	width: 89%;
-	margin-left: auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	margin-right: auto;
+	width: 1200px;
+	height: 375px;
+	margin:0 auto;
 	overflow: hidden;
 }
-.tab{
-	width: 1530px;
-	position: relative;
-	div{
-		float: left;
-	}
-	
-	.lst{
-		cursor: pointer;
-		width: 80px;
-		height: 80px;
-		margin-left: 50px;
-		padding-top: 16px;
-		border-radius: 50%;
-		border:3px solid #03a8b2;
-		color: #03a8b2;
-		text-align: center;
-		line-height: 1em;
-		position: relative;
-		&:before{
-			content:" ";
-			position: absolute;
-			width: 18px;
-			height: 3px;
-			border-radius: 3px;
-			background: #03a8b2;
-			left: -37px;
-			top:38px;
-		}
-
-		&.first{
-			margin-left:18px; 
-			&:before{
-				display: none;
-			}
-		}
-		p{
-			font-size: 16px;
-			margin-bottom: 5px;
-		}
-		b{
-			font-weight: bold;
-			font-size: 30px;
-		}
-		&.on,&:hover{
-			background: #03a8b2;
-			color: #fff;
-		}
+.mapList{
+	position: absolute;
+	right:0;
+	top:0;
+	z-index:10;
+	width: 300px;
+	height: 100%;
+	background: #fff;
+	@include transition(all 500ms);
+	&.off{
+		@include transform(translateX(100%) translateY(0));
 	}
 }
-
-//样式
-p.dec{
-	font-size: 14px;
-	line-height: 28px;
-	text-indent: 2em;
-	a{
-		color: #fc7474
-	}
-}
-
-//图表
-.chart{
-	background: #fafafa;
-	padding-top: 54px;
-	padding-bottom: 40px;
-	.title-1{
-		margin-top: 45px;
-		margin-bottom: 60px;
-		width: 278px;
-		height: 63px;
-		line-height: 53px;
-		border:5px solid #e7625d;
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		font-size: 36px;
-		color: #e7625d;
-		font-weight: bold;
-	}
-	p.tips{
-		font-size: 18px;
-		text-align: center;
-	}
-}
-.chart-lst{
-	margin-top: 12px;
-	margin-bottom: 12px;
+#map{
+	position: absolute;
+	left: 0;
+	top:0;
 	width: 100%;
-	height: 350px;
-	background: rgba(255,0,0,.6);
+	height: 100%;
+	background: rgba(255,0,0,.3);
+}
+.info-title{
+  color: white;
+  font-size: 14px;
+  background-color: rgba(0,155,255,0.8);
+  line-height: 26px;
+  padding: 0px 0 0 6px;
+  font-weight: lighter;
+  letter-spacing: 1px
+}
+.info-content{
+  padding: 4px;
+  color: #666666;
+  line-height: 23px;
+}
+.info-content img{
+  float: left;
+  margin: 3px;
 }
 
-.title-0{
-	.cnt{
-		width: 512px;
-		margin-left: auto;
-		margin-right: auto;
-		background: #fafafa;
-		border-left:3px solid #ced3dc;
-		border-right:3px solid #ced3dc;
-		position: relative;
-		z-index:10;
-	}
-	text-align: center;
-	
-	position: relative;
-	h1{
-		color: #2a426c;
-		font-size: 45px;
-	}
-	h6{
-		font-size: 14px;
-		color: #2a426c;
-	}
-	&:after{
-		position: absolute;
-		content:" ";
-		left: 0;
-		top:50%;
-		width: 100%;
-		height: 3px;
-		background: #ced3dc;
-	}
-}
-
-.title-2{
-	width: 100%;
-	height: 60px;
-	line-height: 60px;
+//点标注样式
+.advancedMarker{
+	// border:1px solid #f55353;
+	border-radius: 5px;
+	padding:5px 10px;
+	white-space: nowrap;
 	color: #fff;
-	font-size: 30px;
-	font-weight: bold;
-	background: url('../images/title.png');
-	background-size: cover;
-	text-align: center;
-	margin-top: 50px;
-}
-.table{
-	width: 100%;
-	margin-top: 20px;
-	table{
-		width: 100%;
-		td,th{
-			border:1px solid #ccc;
-			text-align: center;
-			font-size: 16px;
-			height: 40px;
-			vertical-align: middle;
-		}
-		td{
-			font-size: 14px;
-			height: 30px;
-		}
-		tfoot{
-			td{
-				border:none;
-				height: 60px;
-				line-height: 60px;
-				text-align: center;
-			}
-		}
+	position: relative;
+	p{
+		position: relative;
+		z-index:3;
 	}
-}
-
-.tabs{
-	display: none;
-}
-.tabs.on{
-	display: block;
-}
-
-.floatnav{
-	position: fixed;
-	width: 157px;
-	left: 50%;
-	margin-left: 510px;
-	top:20%;
-	background: #e4f5f6;
-	.top{
-		height: 50px;
-		line-height: 50px;
-		text-align: center;
-		color: #fff;
-		font-size: 24px;
-		font-weight: bold;
-		background: #03a8b2;
+	&:before{
+		content:" ";
+		position: absolute;
+		z-index:1;
+		left: 14px;
+		bottom:-10px;
+		width: 10px;
+		height: 21px;
+		background: #f55353;
+    -webkit-transform: skewY(-60deg);
+    transform: skewY(-60deg);
 	}
-	.cnt{
-		padding-bottom: 18px;
-		&:after{
-			content:" ";
-			display: block;
-			clear: both;
-		}
-		a{
-			float: left;
-			width: 35%;
-			height: 28px;
-			line-height: 28px;
-			text-align: center;
-			color: #03a8b2;
-			&.on{
-				border:2px solid #e7625d;
-				line-height: 24px;
-				color: #e7625d;
-			}
-			margin-left: 15px;
-			margin-top: 18px;
-		}
-	}
-}
-
-.tab-1{
-	background: #03a8b2;
 	&:after{
 		content:" ";
-		clear: both;
-		display: block;
-	}
-	.lst{
-		width: 33.33%;
-		float: left;
-		height: 56px;
-		line-height: 56px;
-		color: #fff;
-		font-weight: bold;
-		font-size: 26px;
-		text-align: center;
-		position: relative;
-		span{
-			position: relative;
-			z-index: 1;
-			cursor: pointer;
-		}
-		&.on:after{
-			content:" ";
-			display: block;
-			position: absolute;
-			background: url(../images/title-2.png) center no-repeat;
-			width: 240px;
-			height: 68px;
-			bottom:0;
-			left: 50%;
-			margin-left: -110px;
-			z-index:0;
-		}
-	}
-}
-.title-3{
-	color: #2a426c;
-	font-size: 24px;
-	text-align: center;
-	margin-top: 50px;
-	margin-bottom: 30px;
-	img{
-		margin-right: 10px;
+		position: absolute;
+		left: 0;
+		top:0;
+		width: 100%;
+		height: 100%;
+		background: #f55353;
+		border-radius: 5px;
 	}
 	span{
-		color: #e7625d;
+		display: none;
+	}
+	&:hover{
+		span{
+			display: inline;
+		}
 	}
 }
-.tabs-1{
-	display: none;
-	&.on{
+//信息弹出框样式
+.info-content-hf{
+	padding-top: 10px;
+	width: 320px;
+	padding-botom: 10px;
+	&:after{
+		content:" ";
 		display: block;
+		clear: both;
 	}
+	img{
+		width: 150px;
+		height: 100px;
+		margin-right: 5px;
+	}
+	.prize{
+		color: #ff3333;
+		font-size: 20px;
+		margin-top: 20px;
+	}
+}
+
+.msclose{position:absolute;width:14px;height:150px;background-image:url(../images/mapopenclose1.jpg);background-position: left center;background-repeat:no-repeat;top:50%;left:-14px; margin-top:-75px; -webkit-box-shadow: -5px 0px 10px #e5e5e5;-moz-box-shadow: -5px 0px 10px #e5e5e5; box-shadow: -5px 0px 10px #e5e5e5; cursor:pointer;}
+.msclose:hover{ background-image:url(../images/mapopenclose2.jpg);}
+.off .msclose{background-position: right center;}
+.off .msclose:hover{background-position: right center;}
+
+.mapTab{ text-align:center; font-size:0;padding: 9px 6px 0;}
+.mapTab li{ display:inline-block; margin: 22px 22px; *display:inline; *zoom:1; width: 52px; font-size: 12px; text-align:center;}
+.mapTab li a{ display:block; cursor:pointer;}
+.mapTab li span{ display: block; margin-bottom:8px; width: 52px; height: 52px; background:url(../images/maptab.gif) no-repeat; overflow:hidden;}
+.mapTab li a:hover{ text-decoration:none; color:#c00;}
+
+.mapTab li span.s1{ background-position:-4px -4px;}
+.mapTab li span.s2{ background-position:-64px -4px;}
+.mapTab li span.s3{ background-position:-124px -4px;}
+.mapTab li span.s4{ background-position:-184px -4px;}
+.mapTab li span.s5{ background-position:-244px -4px;}
+.mapTab li span.s6{ background-position:-304px -4px;}
+.mapTab li span.s7{ background-position:-364px -4px;}
+.mapTab li span.s8{ background-position:-424px -4px;}
+.mapTab li span.s9{ background-position:-484px -4px;}
+
+.mapTab li a:hover .s1{ background-position:-4px -64px;}
+.mapTab li a:hover .s2{ background-position:-64px -64px;}
+.mapTab li a:hover .s3{ background-position:-124px -64px;}
+.mapTab li a:hover .s4{ background-position:-184px -64px;}
+.mapTab li a:hover .s5{ background-position:-244px -64px;}
+.mapTab li a:hover .s6{ background-position:-304px -64px;}
+.mapTab li a:hover .s7{ background-position:-364px -64px;}
+.mapTab li a:hover .s8{ background-position:-424px -64px;}
+.mapTab li a:hover .s9{ background-position:-484px -64px;}
+
+.map_lp{ 
+	.map_tit{
+		padding:10px;
+	}
+	display:none;
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+}
+.map_lpcon{ margin-top:10px; padding-right:10px; height:305px; overflow-y:auto; overflow-x:hidden; }
+.map_tit{ margin-right:10px; padding-bottom:10px; border-bottom:1px solid #ddd; font-size: 14px;}
+.map_tit a{ float: right; padding:1px 4px 1px 13px; background:url(../images/arr_back.gif) 2px center no-repeat; border: 1px solid #ddd; border-radius:2px; font-size: 12px; color:#999;}
+.map_tit a:hover{ background-color:#f1eee9; text-decoration:none;}
+.amap_lib_placeSearch .poibox .poi-title{text-align: left;}
+.amap_lib_placeSearch{border:none;}
+#near_search_wrap{
+	height: 320px;
+	overflow-y: scroll;
+	padding-bottom: 30px;
+}
+.amap-lib-transfer .planTitle h3{
+	text-align: left;
+}
+.amap-lib-transfer .plan dd h4{
+	text-align: left;
+	font-size: 12px;
 }

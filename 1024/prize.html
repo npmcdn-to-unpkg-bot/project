@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>获奖信息</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+	<div class="main">
+		<img src="images/prizeTitle.png" alt="">
+		<table class="prize">
+			<tbody>
+				<tr>
+					<td>
+						<img src="images/user.jpg" alt="">
+					</td>
+					<td>
+						<p>张泽华</p>
+						<small>186****2778</small>
+					</td>
+					<td>
+						一等奖
+					</td>
+					<td>
+						<small>2016/05/17 14:26</small>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="images/user.jpg" alt="">
+					</td>
+					<td>
+						<p>张泽华</p>
+						<small>186****2778</small>
+					</td>
+					<td>
+						一等奖
+					</td>
+					<td>
+						<small>2016/05/17 14:26</small>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script>
+	function resizeContent(){
+		autoHeight({element : $(".main"),scale : 1.6})
+		autoHeight({element : $(".game"),scale : 0.738})
+	}
+
+	$(function(){
+		resizeContent();
+	})
+	$(window).resize(function(){
+		resizeContent();
+	})
+</script>
+</body>
+</html>
