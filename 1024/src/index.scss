@@ -1,0 +1,113 @@
+/*
+* made in fanfan
+*/
+$baseFontSize: 75 ;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+body{
+  background: #fff;
+  color: #333;
+}
+.main{
+  font-size: 0;
+  padding-bottom: rem(120);
+}
+h1{font-size: rem(34);}
+h2{font-size: rem(32);}
+h3{font-size: rem(30);}
+h4{font-size: rem(28);}
+h5{font-size: rem(26);}
+h6{font-size: rem(24);}
+a{
+  text-decoration: none;
+  color:inherit;
+}
+.text-center{
+  text-align: center;
+}
+.pull-right{
+  float: right;
+}
+.border-bottom{
+  position: relative;
+  z-index: 1;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #c7c7c7;
+    display: block;
+    z-index: 150;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+    
+}
+.border-top{
+  position: relative;
+  z-index: 1;
+  &:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #c7c7c7;
+    display: block;
+    z-index: 150;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+    
+}
+
+.border-right{
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    left: auto;
+    bottom: auto;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #c7c7c7;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 100% 50%;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+  }
+    
+}
+
+
+.swiper-slide img{
+  width: 100%;
+}
