@@ -66,9 +66,12 @@
 	})
 
 	// 显示列表函数
-	function showlist(){
+	function showlist(name){
 		$('#mapTab').fadeOut();
 		$('.map_lp_1').fadeIn();
+		var title = name || "";
+				title = "皖新·朗诗绿郡附近" + title;
+		$('.map_lp_1').find('.map_tit strong').html(title);
 	}
 	// 返回按钮
 	$('.map_tit a').on('click',function(){
@@ -77,28 +80,28 @@
 		map.init();
 	})
 	$('#traffic').on('click',function(){
-		map.searchNearBy('交通',showlist);
+		map.searchNearBy('交通',showlist('交通'));
 	})
 	$('#fun').on('click',function(){
-		map.searchNearBy('娱乐',showlist);
+		map.searchNearBy('娱乐',showlist('娱乐'));
 	})
 	$('#supermark').on('click',function(){
-		map.searchNearBy('超市',showlist);
+		map.searchNearBy('超市',showlist('超市'));
 	})
 	$('#ct').on('click',function(){
-		map.searchNearBy('餐饮',showlist);
+		map.searchNearBy('餐饮',showlist('餐饮'));
 	})
 	$('#bank').on('click',function(){
-		map.searchNearBy('银行',showlist);
+		map.searchNearBy('银行',showlist('银行'));
 	})
 	$('#hos').on('click',function(){
-		map.searchNearBy('医院',showlist);
+		map.searchNearBy('医院',showlist('医院'));
 	})
 	$('#park').on('click',function(){
-		map.searchNearBy('公园',showlist);
+		map.searchNearBy('公园',showlist('公园'));
 	})
 	$('#school').on('click',function(){
-		map.searchNearBy('学校',showlist);
+		map.searchNearBy('学校',showlist('学校'));
 	})
 
 	
