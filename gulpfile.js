@@ -11,29 +11,17 @@ var gulp = require('gulp'),
 
 //sass
 gulp.task('sass', function () {
-<<<<<<< HEAD
   return sass('1024/src/index.scss')
-=======
-  return sass('1022/src/index.scss')
->>>>>>> 1203063b09f4a6b89d8d32f5bcf21c7bb4e70db3
     .on('error', sass.logError)
     .pipe(minifyCss())
     .pipe(rename(function (path) {
       path.extname = ".min.css"
     }))
-<<<<<<< HEAD
     .pipe(gulp.dest('1024/src/'));
 });
 // 文件刷新
 gulp.task('livereload', function() {
   gulp.src(['1024/*.html'])
-=======
-    .pipe(gulp.dest('1022/src/'));
-});
-// 文件刷新
-gulp.task('livereload', function() {
-  gulp.src(['1022/*.html'])
->>>>>>> 1203063b09f4a6b89d8d32f5bcf21c7bb4e70db3
       .pipe(livereload());
 });
 
@@ -85,11 +73,7 @@ gulp.task('rename', function () {
 //监听
 gulp.task('default', function() {
   livereload.listen(); //要在这里调用listen()方法
-<<<<<<< HEAD
-  gulp.watch(['1024/**','_public/*.css','_public/*.js'], ['sass','livereload']);
-=======
-  gulp.watch(['1022/**','_public/*.css','_public/*.js'], ['livereload']);
-  gulp.watch(['1022/src/index.scss'], ['sass','livereload']);
->>>>>>> 1203063b09f4a6b89d8d32f5bcf21c7bb4e70db3
+  gulp.watch(['1024/**','_public/*.css','_public/*.js'], ['livereload']);
+  gulp.watch(['1024/src/index.scss'], ['sass','livereload']);
 });
 
