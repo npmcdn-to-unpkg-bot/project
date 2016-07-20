@@ -5,7 +5,7 @@ function load(list){
   var length = img.length + js.length , num = 0;
   function progress(num){
     var progress = parseInt(num*100/length);
-    console.log(progress)
+    // console.log(progress)
     document.getElementsByClassName('loading')[0].getElementsByClassName('tip')[0].innerHTML=progress+"%";
     if(num == length){
       document.getElementsByClassName('loading')[0].style.display='none';

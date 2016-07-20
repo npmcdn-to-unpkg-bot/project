@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .main{
+      width: 800px;
+      height: 500px;
+      border:1px dashed red;
+      position: relative;;
+    }
+    .main:after{
+      content: " ";
+    }
+    .main::after{
+      content: " ";
+    }
+
+    .test{
+      position: absolute;
+      left: 50%;
+      top:50%;
+      background: #ccc;
+      -webkit-transition:all 500ms;
+      transition:all 500ms;
+      -webkit-transform: translate3d(-50%,-50%,0);
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="main">
+    
+  </div>
+  
+</body> 
+</html>
