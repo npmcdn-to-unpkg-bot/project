@@ -10,6 +10,10 @@ function load(list){
     if(num == length){
       document.getElementsByClassName('loading')[0].style.display='none';
       document.body.className = document.body.className +' ready';
+      var img = document.querySelector('.page-1').getElementsByTagName('img');
+      for(var i =0;i<img.length;i++){
+        img[i].setAttribute("class",img[i].getAttribute('class')+" "+img[i].getAttribute('data-val')+" animated")
+      }
     }
   }
   function imgload(src){
