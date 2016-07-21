@@ -1,6 +1,6 @@
 $(function(){
   $('.dianji').on('click',function(){
-    $(".page-1").slideUp();
+    $(".page-1").fadeOut(1000);
     $(".page-2").fadeIn(800);
     var img = document.querySelector('.page-2').getElementsByTagName('img');
       for(var i =0;i<img.length;i++){
