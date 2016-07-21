@@ -18,6 +18,8 @@
 
 ## 1022---- 页面加载效果JS 
 ## 1023---- 高德地图 
+## 1024---- 新城明珠微楼书 GreenSock Animation Platform 
+### https://github.com/greensock/GreenSock-JS/ 
 
 
 ## 演示地址
