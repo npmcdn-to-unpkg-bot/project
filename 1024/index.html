@@ -6,11 +6,82 @@
   <link rel="stylesheet" href="../_public/reset.css">
   <link rel="stylesheet" href="src/index.min.css">
   <link rel='prerender' href='index.html'>
-  <script src="../_public/rem.js"></script>
-  <script src="src/load.js"></script>
+  <script>
+    !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+  </script>
   <link rel="stylesheet" href="../_public/Swiper-3.3.1/dist/css/swiper.min.css">
+  <style>
+    .loading {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 100000;
+      background: #000
+    }
+    .load-1,.load-2{width: 1.6rem;height: 1.6rem;background: rgba(0,255,0,0.6);position: absolute;top:50%;left: 50%;margin-left: -0.8rem;margin-top: -0.8rem;border-radius: 50%;}
+    .tip{
+      font-size: 0.5rem;
+      color: rgb(0,255,0);
+      text-align: center;
+      position: absolute;
+      top:50%;
+      padding-top: 1rem;
+      left: 0;
+      width: 100%;
+    }
+    .load-1{
+      -webkit-animation: myload-1 2s infinite ease-in-out;
+    }
+    @-webkit-keyframes myload-1{
+      from {
+        -webkit-transform: scale3d(.2,.2,1);
+      }
+      50%{
+        -webkit-transform: scale3d(1,1,1);
+      }
+      to{
+        -webkit-transform: scale3d(.2,.2,1);
+      }
+    }
+    .load-2{
+      -webkit-animation: myload-2 2s infinite ease-in-out;
+    }
+    @-webkit-keyframes myload-2{
+      from {
+        -webkit-transform: scale3d(1,1,1);
+      }
+      50%{
+        -webkit-transform: scale3d(0.2,0.2,1);
+      }
+      to{
+        -webkit-transform: scale3d(1,1,1);
+      }
+    }
+  </style>
+  <script src="src/load.js"></script>
+  <script>
+    var loadListImg = ['images/swiper-2.png','images/swiper-1.png','images/100.png',
+                       'images/101.png','images/102.png','images/200.png',
+                       'images/300.png','images/400.png','images/500.png',
+                       'images/600.png','images/601.png','images/602.png',
+                       'images/700.png','images/701.png','images/702.png',
+                       'images/703.png','images/wx.png','images/bg.png'],
+        loadJS = ['../_public/jquery/jquery-1.7.1.min.js','GreenSock-JS/src/minified/TweenMax.min.js','../_public/Swiper-3.3.1/dist/js/swiper.jquery.min.js','src/index.js'];
+    load({
+      img : loadListImg,
+      js : loadJS
+    });
+  </script>
+
 </head>
 <body class="home">
+  <div class="loading">
+    <div class="load-1 "></div>
+    <div class="load-2"></div>
+    <div class="tip">0%</div>
+  </div>
   <!-- Swiper -->
   <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -23,10 +94,10 @@
       <tbody>
         <tr>
           <td rowspan="2" colspan="2">
-            <a href="huxingpinjian.html" class="lst">
-              <div class="img1"><img src="images/100.png" alt=""></div>
-              <div class="img2"><img src="images/101.png" alt=""></div>
-              <div class="img3"><img src="images/102.png" alt=""></div>
+            <a href="huxingpinjian.html" class="lst nineArea-1">
+              <div class="img1 bg1"><img src="images/100.png" alt=""></div>
+              <div class="img2 bg2"><img src="images/101.png" alt=""></div>
+              <div class="img3 nineTop"><img src="images/102.png" alt=""></div>
             </a>
           </td>
           <td colspan="2">
@@ -49,10 +120,10 @@
             </a>
           </td>
           <td rowspan="2" colspan="2">
-            <a href="xiaoguotuzhanshi.html" class="lst">
-              <div class="img1"><img src="images/600.png" alt=""></div>
-              <div class="img2"><img src="images/601.png" alt=""></div>
-              <div class="img3" style="top:0;left:0;"><img src="images/602.png" alt=""></div>
+            <a href="xiaoguotuzhanshi.html" class="lst nineArea-2">
+              <div class="img1 bg1"><img src="images/600.png" alt=""></div>
+              <div class="img2 bg2"><img src="images/601.png" alt=""></div>
+              <div class="img3 nineTop" style="top:0;left:0;"><img src="images/602.png" alt=""></div>
             </a>
           </td>
         </tr>
@@ -104,14 +175,6 @@
     </div>
   </div>
 
-<script src="../_public/jquery/jquery-1.7.1.min.js"></script>
-<script src="../_public/Swiper-3.3.1/dist/js/swiper.jquery.min.js"></script>
-<script src="src/index.js"></script>
-<script>
-  var swiper = new Swiper('.swiper-container',{
-    autoplay : 5000,
-    loop     : true
-  });
-</script>
+
 </body>
 </html>
