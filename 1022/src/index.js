@@ -31,4 +31,9 @@ $(function(){
       }
     });
   })
+  $('.loading').each(function(){
+    this.addEventListener('touchmove',function(e){
+      e.preventDefault();
+    })
+  })
 })
