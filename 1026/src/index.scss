@@ -38,3 +38,58 @@ body{
 @-webkit-keyframes back{
     100%{-webkit-transform:rotateY(180deg) translateZ(200px);}
 }
+
+.home:after{
+  content:"饭饭";
+  display: block;
+  position: absolute;
+  right: 1em;
+  bottom:1em;
+}
+table.rem{
+  caption{
+    height: 3em;
+    line-height: 3em;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+  }
+  width: 1000px;
+  font-size: 30px;
+  td{
+    height: 3em;
+    vertical-align: middle;
+    border:1px dashed red;
+    text-align: center;
+    &:first-child{
+      background: #cc6601;
+      width: 8em;
+      color: #fff;
+    }
+    &:last-child{
+      background: #0166ff;
+      width: 8em;
+      color: #fff;
+    }
+  }
+}
+
+// @media screen and (max-width: 414px) {
+//     html {
+//         font-size: 41.4px;
+//     }
+// }
+// @media screen and (max-width: 340px) {
+//     html {
+//         font-size: 34px;
+//     }
+// }
+// @media screen and (max-width: 320px) {
+//     html {
+//         font-size: 32px;
+//     }
+// }
+// @media screen and (max-width: 300px) {
+//     html {
+//         font-size: 30px;
+//     }
+// }
