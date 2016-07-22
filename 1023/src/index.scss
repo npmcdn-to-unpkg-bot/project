@@ -27,7 +27,6 @@ body{
 	-webkit-user-select: none;
 	user-select: none;
 	color: #333;
-	background: rgba(0,0,0,.3);
 }
 h1{font-weight: bold;font-size: 34px;text-align: center;}
 h2{font-weight: bold;font-size: 32px;text-align: center;}
@@ -52,13 +51,18 @@ a:link{color:#333;text-decoration:none;}
 a:visited{text-decoration:none;}
 a:hover{color:#049;text-decoration:underline;}
 a:active{color:#333;}
-
+.nmaptitle{
+	width: 1200px;
+	margin:0 auto ;
+	overflow: hidden;
+}
 .page{
 	position: relative;
 	width: 1200px;
 	height: 375px;
 	margin:0 auto;
 	overflow: hidden;
+  border: 1px solid #eee;
 }
 .mapList{
 	position: absolute;
@@ -224,4 +228,39 @@ a:active{color:#333;}
 .amap-lib-transfer .plan dd h4{
 	text-align: left;
 	font-size: 12px;
+}
+
+.nmapbox{width:960px;overflow:hidden; margin:0 auto;}
+.nmaptitle{height:40px;line-height:40px;border-bottom:2px solid #000;}
+.nmaptitleleft{float:left;font-family:"微软雅黑";font-size:16px;font-weight:bold;}
+.nmaptitleright{ float: right;}
+.nmapcontent{ border:1px solid #eee;border-top:0px;}
+
+
+.icon_menu a{ cursor: pointer; margin-left:10px; padding-left:18px; background:url(../images/icon_menu.gif) no-repeat;}
+.icon_menu a:hover{ background:url(../images/icon_menu_hover.gif) no-repeat; color:#c00; text-decoration:none;}
+.icon_menu .i1,.icon_menu .i1:hover{ background-position:0 1px;}
+.icon_menu .i2,.icon_menu .i2:hover{ background-position:0 -16px;}
+.icon_menu .i3,.icon_menu .i3:hover{ background-position:0 -31px;}
+.icon_menu .i4,.icon_menu .i4:hover{ background-position:0 -48px;}
+.icon_menu .i5,.icon_menu .i5:hover{ background-position:0 -64px;}
+
+.amap_lib_placeSearch_page span{
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    background: #3f95fa;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    margin: 3px;
+}
+.amap_lib_placeSearch_page span:hover{
+	opacity: 0.8;
+}
+.amap_lib_placeSearch .pageLink{
+	color: #fff;
+	text-decoration: none;
 }

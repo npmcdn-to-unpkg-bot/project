@@ -28,7 +28,7 @@ var maps = function(options){
               map.addControl(scale);
             })
         }
-        obj.setCircle(position,radius);
+        // obj.setCircle(position,radius);
         obj.setAdvancedMarker(position,{
             buildName    : options.buildName,
             equalPrice   : options.equalPrice,
@@ -80,33 +80,37 @@ var maps = function(options){
         })
     }
     //信息窗体点标注
-    obj.setMarker = function( position,list){
-        var infowindow;
-        if(list !== undefined){
-            var title   = list.title   || "暂无";
-            var tel     = list.tel     || "暂无电话";
-            var address = list.address || "暂无地址";
-        }else{
-            return;
-        }
+    obj.setMarker = function(o){
 
-        var marker = new AMap.Marker({
-            position: position
+        o.each(function(index, el) {
+         obj.setAdvancedMarker(o.posiiton,o.list)
         });
-        marker.setMap(map);
-        marker.on('click',function(e){
-            infowindow.open(map,e.target.getPosition());
-        })
-        AMap.plugin('AMap.AdvancedInfoWindow',function(){
-         infowindow = new AMap.AdvancedInfoWindow({
-          content: '<div class="info-title">'+title+'</div><div class="info-content">'+
-                  '<p>地址:'+address+'</p>'+
-                  '<p>电话:'+tel+'</p>'+
-                  '</div>',
-              offset: new AMap.Pixel(0, -30)
-            });
-        //infowindow.open(map,position);//打开窗口
-        })
+        // var infowindow;
+        // if(list !== undefined){
+        //     var title   = list.title   || "暂无";
+        //     var tel     = list.tel     || "暂无电话";
+        //     var address = list.address || "暂无地址";
+        // }else{
+        //     return;
+        // }
+
+        // var marker = new AMap.Marker({
+        //     position: position
+        // });
+        // marker.setMap(map);
+        // marker.on('click',function(e){
+        //     infowindow.open(map,e.target.getPosition());
+        // })
+        // AMap.plugin('AMap.AdvancedInfoWindow',function(){
+        //  infowindow = new AMap.AdvancedInfoWindow({
+        //   content: '<div class="info-title">'+title+'</div><div class="info-content">'+
+        //           '<p>地址:'+address+'</p>'+
+        //           '<p>电话:'+tel+'</p>'+
+        //           '</div>',
+        //       offset: new AMap.Pixel(0, -30)
+        //     });
+        // //infowindow.open(map,position);//打开窗口
+        // })
     }
 
     //覆盖物
@@ -126,9 +130,10 @@ var maps = function(options){
             AMap.service('AMap.PlaceSearch',function(){//回调函数
             //实例化PlaceSearch
             placeSearch= new AMap.PlaceSearch({
-                map     : map,
-                panel   : 'near_search_wrap',
-                pageSize: 5
+                map       : map,
+                pageIndex : 1,
+                panel     : 'near_search_wrap',
+                pageSize  : 5
             });
             //TODO: 使用placeSearch对象调用关键字搜索的功能
             placeSearch.setType(name);
@@ -143,7 +148,20 @@ var maps = function(options){
         })
 
     }
-    
+
+    obj.RangingTool=function(){
+        console.log(map)
+        var ruler1;
+        map.plugin(["AMap.RangingTool"], function() {
+            ruler1 = new AMap.RangingTool(map);
+            AMap.event.addListener(ruler1, "end", function(e) {
+                ruler1.turnOff();
+                 map.setDefaultCursor("pointer");
+            });
+        });
+        ruler1.turnOn();
+        map.setDefaultCursor("crosshair");
+    }
 
     obj.init();
     return obj;

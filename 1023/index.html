@@ -12,6 +12,21 @@
 	
 	<br><br><br>
 	<br><br><br>
+
+
+	<div class="nmaptitle">
+		<div class="nmaptitleleft">皖新·朗诗绿郡周边配套地图</div>
+		<div class="nmaptitleright">
+			<div class="icon_menu" id="icon_menu">
+				<!-- <a href="javascript:void(0)" class="i1" id="fullstatus">全屏</a> -->
+				<a href="" target="_blank" class="i2">合肥楼盘地图</a>
+				<a class="i3" id="btn_disTool">测距</a>
+				<!-- <a href="javascript:void(0)" class="i4" id="btn_gj">公交</a> -->
+				<!-- <a href="javascript:void(0)" class="i5" id="btn_jc">驾车</a> -->
+			</div>
+		</div>
+	</div>
+
 <div class="page">
 	<div id="map"></div>
 	<div class="mapList">
@@ -104,7 +119,10 @@
 		map.searchNearBy('学校',showlist('学校'));
 	})
 
-	
+	//测距
+	$('#btn_disTool').on('click',function(){
+		map.RangingTool();
+	})
 
 </script>
 </html>
