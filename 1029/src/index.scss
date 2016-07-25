@@ -1,0 +1,251 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #000;
+$bgColor:#4f7dc8;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+
+body{
+	background-color: $bgColor;
+}
+
+.main{
+	color: $primaryColor;
+	font-size: rem(30);
+}
+.game{
+	// background: url('../images/bggame.jpg') center no-repeat;
+	background: url('../images/bggame.webp') center no-repeat;
+	width: rem(750);
+	height:rem(1206);
+	background-size: contain;
+	.time{
+		font-size: rem(46);
+		color: #452d12;
+		width: 100%;
+		text-align:center;
+		margin-top: rem(25);
+		span{
+			font-size:rem(62);
+			color: #d11a02;
+		}
+	}
+	.title{
+		font-size: 0;
+		color: #fff;
+		position: absolute;
+		top:rem(190);
+		left:0;
+		text-align:center;
+		width: 100%;
+		span{
+			font-size: rem(60);
+			margin:0 rem(6);
+			display: inline-block;
+			position: relative;
+			&.active{
+				color: #feff01;
+			}
+			&.on::after{
+				content:'';
+				@include icon('../images/sanjiao.png',34,18);
+				position: absolute;
+				bottom:rem(-18);
+				left:50%;
+				margin-left: rem(-17);
+			}
+		}
+	}
+	.content{
+		width: rem(554);
+		position: absolute;
+		top:rem(350);
+		left:rem(98);
+		font-size: 0;
+		span{
+			display: inline-block;
+			width: rem(84);
+			height: rem(84);
+			line-height: rem(84);
+			border-radius: rem(15);
+			color:#fff;
+			text-align:center;
+			font-size: rem(44);
+			background: #d59e54;
+			margin-right: rem(10);
+			margin-bottom: rem(10);
+			&:nth-child(6n){
+				margin-right: 0;
+			}
+			&.c1{color: #452d12;}
+			&.c2{color: #d11a02;}
+			&.c3{color: #feff01;}
+			&.c4{color: #568dd0;}
+			&.c5{color: #9accff;}
+			&.c6{color: #fff;}
+			&.t1{
+				-webkit-transform:rotate3d(0,0,1,0);
+				transform:rotate3d(0,0,1,0);
+			}
+			&.t2{
+				-webkit-transform:rotate3d(0,0,1,90deg);
+				transform:rotate3d(0,0,1,90deg);
+			}
+			&.t3{
+				-webkit-transform:rotate3d(0,0,1,180deg);
+				transform:rotate3d(0,0,1,180deg);
+			}
+			&.t4{
+				-webkit-transform:rotate3d(0,0,1,270deg);
+				transform:rotate3d(0,0,1,270deg);
+			}
+		}
+	}
+}
+
+.none{
+	display: none;
+}
+//弹框
+.gameStart{
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index:999;
+	background: url(../images/loading.png) center no-repeat;
+	background-size:680/750*100%;
+}
+.dialog{
+	width: rem(600);
+	height: rem(920);
+	// background: url(../images/dialogbg.png) center no-repeat;
+	background: url(../images/dialogbg.webp) center no-repeat;
+	position: absolute;
+	z-index:999;
+	left:50%;
+	margin-left: rem(-300);
+	top:0;
+	background-size: contain;
+	&.share{
+		// background: url(../images/share.png) center no-repeat;
+		background: url(../images/share.webp) center no-repeat;
+		background-size: contain;
+		.code{
+			height: rem(232);
+			width: rem(236);
+			display: block;
+			position: absolute;
+			bottom:rem(170);
+			left:50%;
+			margin-left: rem(-118);
+		}
+	}
+	.title{
+		height: rem(45);
+		margin: rem(45) auto;
+		display: block;
+	}
+	.face{
+		height: rem(336);
+		display: block;
+		margin: rem(35) auto;
+	}
+	h2{
+		font-size: rem(34);
+		color: #000;
+		text-align: center;
+		padding:0 rem(40);
+	}
+	h3{
+		font-size: rem(30);
+		color: #000;
+		text-align: center;
+		line-height: rem(52);
+		padding:0 rem(40);
+	}
+	.btn{
+		width: rem(280);
+		height: rem(76);
+		display: block;
+		position: absolute;
+		bottom:rem(36);
+		left:50%;
+		margin-left: rem(-140);
+	}
+	.username,.usertel{
+		width:rem(500);
+		height:rem(88);
+		border-radius:rem(44);
+		border:solid 1px #452d12;
+		background:none;
+		text-align:center;
+		color:#452d12;
+		font-size:rem(32);
+		margin:rem(60) auto;
+		display: block;
+
+	}
+	input::-webkit-input-placeholder{
+		color: #666;
+	}
+}
+
+.home{
+	// height: rem(1206);
+	position: absolute;
+	left:50%;
+	width: 10rem;
+	margin-left:-5rem;
+	top:0;
+	height: 100%;
+	// background: url('../images/home.png')  center no-repeat;
+	background: url('../images/home.webp')  center no-repeat;
+	background-size: cover;
+	.btnStart{
+		position: absolute;
+		width: rem(360);
+		left:50%;
+		margin-left: rem(-180);
+		bottom:rem(126);
+	}
+	.btn-rule{
+		position: absolute;
+		width: rem(192);
+		left:50%;
+		margin-left: rem(-96);
+		bottom:rem(40);
+	}
+}
+.rule{
+	.content{
+		font-size: rem(34);
+		color: #000;
+		padding:0 rem(40);
+		height: rem(530);
+		overflow: scroll;
+		line-height: rem(52);
+	}
+}
+
+.dialog .btn-submit{
+  background: url('../images/btn-submit.png') center no-repeat;
+  background-size: contain;
+  border:none;
+  outline: none;
+}

@@ -1,0 +1,205 @@
+/*
+* made in fanfan
+*/
+body {
+  background-color: #4f7dc8; }
+
+.main {
+  color: #000;
+  font-size: 0.4rem; }
+
+.game {
+  background: url("../images/bggame.webp") center no-repeat;
+  width: 10rem;
+  height: 16.08rem;
+  background-size: contain; }
+  .game .time {
+    font-size: 0.61333rem;
+    color: #452d12;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.33333rem; }
+    .game .time span {
+      font-size: 0.82667rem;
+      color: #d11a02; }
+  .game .title {
+    font-size: 0;
+    color: #fff;
+    position: absolute;
+    top: 2.53333rem;
+    left: 0;
+    text-align: center;
+    width: 100%; }
+    .game .title span {
+      font-size: 0.8rem;
+      margin: 0 0.08rem;
+      display: inline-block;
+      position: relative; }
+      .game .title span.active {
+        color: #feff01; }
+      .game .title span.on::after {
+        content: '';
+        background: url("../images/sanjiao.png") center no-repeat;
+        background-size: contain;
+        width: 0.45333rem;
+        height: 0.24rem;
+        display: inline-block;
+        position: absolute;
+        bottom: -0.24rem;
+        left: 50%;
+        margin-left: -0.22667rem; }
+  .game .content {
+    width: 7.38667rem;
+    position: absolute;
+    top: 4.66667rem;
+    left: 1.30667rem;
+    font-size: 0; }
+    .game .content span {
+      display: inline-block;
+      width: 1.12rem;
+      height: 1.12rem;
+      line-height: 1.12rem;
+      border-radius: 0.2rem;
+      color: #fff;
+      text-align: center;
+      font-size: 0.58667rem;
+      background: #d59e54;
+      margin-right: 0.13333rem;
+      margin-bottom: 0.13333rem; }
+      .game .content span:nth-child(6n) {
+        margin-right: 0; }
+      .game .content span.c1 {
+        color: #452d12; }
+      .game .content span.c2 {
+        color: #d11a02; }
+      .game .content span.c3 {
+        color: #feff01; }
+      .game .content span.c4 {
+        color: #568dd0; }
+      .game .content span.c5 {
+        color: #9accff; }
+      .game .content span.c6 {
+        color: #fff; }
+      .game .content span.t1 {
+        -webkit-transform: rotate3d(0, 0, 1, 0);
+        transform: rotate3d(0, 0, 1, 0); }
+      .game .content span.t2 {
+        -webkit-transform: rotate3d(0, 0, 1, 90deg);
+        transform: rotate3d(0, 0, 1, 90deg); }
+      .game .content span.t3 {
+        -webkit-transform: rotate3d(0, 0, 1, 180deg);
+        transform: rotate3d(0, 0, 1, 180deg); }
+      .game .content span.t4 {
+        -webkit-transform: rotate3d(0, 0, 1, 270deg);
+        transform: rotate3d(0, 0, 1, 270deg); }
+
+.none {
+  display: none; }
+
+.gameStart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  background: url(../images/loading.png) center no-repeat;
+  background-size: 90.66667%; }
+
+.dialog {
+  width: 8rem;
+  height: 12.26667rem;
+  background: url(../images/dialogbg.webp) center no-repeat;
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  margin-left: -4rem;
+  top: 0;
+  background-size: contain; }
+  .dialog.share {
+    background: url(../images/share.webp) center no-repeat;
+    background-size: contain; }
+    .dialog.share .code {
+      height: 3.09333rem;
+      width: 3.14667rem;
+      display: block;
+      position: absolute;
+      bottom: 2.26667rem;
+      left: 50%;
+      margin-left: -1.57333rem; }
+  .dialog .title {
+    height: 0.6rem;
+    margin: 0.6rem auto;
+    display: block; }
+  .dialog .face {
+    height: 4.48rem;
+    display: block;
+    margin: 0.46667rem auto; }
+  .dialog h2 {
+    font-size: 0.45333rem;
+    color: #000;
+    text-align: center;
+    padding: 0 0.53333rem; }
+  .dialog h3 {
+    font-size: 0.4rem;
+    color: #000;
+    text-align: center;
+    line-height: 0.69333rem;
+    padding: 0 0.53333rem; }
+  .dialog .btn {
+    width: 3.73333rem;
+    height: 1.01333rem;
+    display: block;
+    position: absolute;
+    bottom: 0.48rem;
+    left: 50%;
+    margin-left: -1.86667rem; }
+  .dialog .username, .dialog .usertel {
+    width: 6.66667rem;
+    height: 1.17333rem;
+    border-radius: 0.58667rem;
+    border: solid 1px #452d12;
+    background: none;
+    text-align: center;
+    color: #452d12;
+    font-size: 0.42667rem;
+    margin: 0.8rem auto;
+    display: block; }
+  .dialog input::-webkit-input-placeholder {
+    color: #666; }
+
+.home {
+  position: absolute;
+  left: 50%;
+  width: 10rem;
+  margin-left: -5rem;
+  top: 0;
+  height: 100%;
+  background: url("../images/home.webp") center no-repeat;
+  background-size: cover; }
+  .home .btnStart {
+    position: absolute;
+    width: 4.8rem;
+    left: 50%;
+    margin-left: -2.4rem;
+    bottom: 1.68rem; }
+  .home .btn-rule {
+    position: absolute;
+    width: 2.56rem;
+    left: 50%;
+    margin-left: -1.28rem;
+    bottom: 0.53333rem; }
+
+.rule .content {
+  font-size: 0.45333rem;
+  color: #000;
+  padding: 0 0.53333rem;
+  height: 7.06667rem;
+  overflow: scroll;
+  line-height: 0.69333rem; }
+
+.dialog .btn-submit {
+  background: url("../images/btn-submit.png") center no-repeat;
+  background-size: contain;
+  border: none;
+  outline: none; }

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>合房父亲节微信拼字活动</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+	<!-- <link rel='subresource' href='images/bggame.jpg'> -->
+	<link rel='prerender' href='game.html'>
+</head>
+<body>
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+
+
+	<!-- 遮罩层 -->
+	<div id="shade" style="display:none;"></div>
+	<div class="share"></div>
+	<!-- 代码部分 -->
+	<div class="main home" id="home">
+		
+		<img src="images/rule.png" class="btn-rule" alt="">
+		<a href="game.html"><img src="images/btn-start.png" class="btnStart" alt=""></a>
+	</div>
+
+	<!-- 弹窗  规则 -->
+	<div class="dialog rule none">
+		<img src="images/dialog-rule.png" class="title" alt="">
+		<div class="content">
+			活动时间：<br>
+			2016年6月18日-6月25日<br>
+			活动内容：<br>
+			1.进入活动页面，在限定时间内，从下方的文字中，找到预设句子的文字；<br>
+			2.成功找齐句子中所有文字，将有机会获得惊喜奖券；<br>
+			3.参与父亲节拼字游戏，每人共10次拼字机会，成功完成拼字，填写相关信息，即可到南二环985号财智中心14楼领取父亲节奖品！
+		</div>
+		<img src="images/btn-submit.png" alt="" class="btn btn-sure">
+	</div>
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+	$(function(){
+		// defaultEvent($(".dialog")[0]); 
+		// --
+		$('.btn-rule')[0].addEventListener('touchstart',function(){
+			$('.rule').slideDown();
+			$('#shade').show();
+		})
+		
+		$('.btn-sure')[0].addEventListener('touchstart',function(){
+			$('.rule').slideUp();
+			$('#shade').hide();
+		})
+
+		var height = $(window).height();
+		var dialogHeight = $(".dialog").height();
+		if(dialogHeight<height){
+			$(".dialog").css({
+				top:(height-dialogHeight)/2
+			})
+		}
+
+	})
+</script>
+</body>
+</html>

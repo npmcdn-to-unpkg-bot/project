@@ -8,7 +8,7 @@ $(function(){
       }
   })
   $('.weclome').on('click',function(){
-    $(".page-2").slideUp();
+    $(".page-2").slideUp().remove();
     $('.page').show().fullpage({
       afterRender:function(){
         $('.page').find('img').each(function(){
