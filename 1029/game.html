@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>合房拼字活动</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+
+	<div class="gameStart " ></div>
+
+	<!-- 遮罩层 -->
+	<div id="shade" style="display:block;"></div>
+	<div class="share"></div>
+	<!-- 代码部分 -->
+	<div class="main game" id="game">
+		<div class="time">
+			倒计时 <span></span> 秒
+		</div>
+		<div class="title">
+			<span></span>
+		</div>
+		<div class="content">
+		</div>
+	</div>
+
+	<!-- 弹窗  时间到了 -->
+	<div class="dialog dialog1  ">
+		<img src="images/title-2.png" alt="" class="title">
+		<div class="tips off">未能领到红包</div>
+		<div class="hb off"></div>
+		<img src="images/tips.png" alt="" class="tips-bottom">
+		<img src="images/btn-submit.png" alt="" class="btn btn1">
+	</div>
+
+	<!-- 分享 -->
+	<div class="dialog share ">
+		<img src="images/er.jpg" alt="" class="code">
+	</div>
+	<!-- 填写信息 -->
+	<div class="dialog user ">
+		<img src="images/title-1.png" alt="" class="title">
+		<div class="tips">
+			获得<span>1.25</span>元红包
+		</div>
+		<div class="hb">
+			<p>1.25</p>
+		</div>
+		<!-- <img src="images/btn-submit.png" alt=""> -->
+		<button class="btn btn-submit"></button>
+	</div>
+
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+	$(function(){
+		defaultEvent($(".dialog")[0]); 
+
+		$('.gameStart')[0].addEventListener('touchstart',function(){
+		$(this).fadeOut();
+		$('#shade').fadeOut();
+		font.init({
+				element : $('#game'),
+				colorList : ['c1','c2','c3','c4','c5','c6'],
+				transformList : ['t1','t2','t3','t4']	
+			});
+		})
+
+		// $('.btn1')[0].addEventListener('touchstart',function(){
+		// 	var state = true; //控制是否次数用完
+		// 	$('.dialog1').slideUp();
+		// 	if(state){
+		// 		$('.dialog2').slideDown();
+		// 	}else{
+		// 		$('#shade').hide();
+		// 		font.init({
+		// 			element : $('#game'),
+		// 			colorList : ['c1','c2','c3','c4','c5','c6'],
+		// 			transformList : ['t1','t2','t3','t4']	
+		// 		});
+		// 	}
+			
+		// })
+		// // --
+		// $('.btn2')[0].addEventListener('touchstart',function(){
+		// 	$('.dialog2').slideUp();
+		// 	$('.share').slideDown();
+		// })
+	})
+</script>
+</body>
+</html>

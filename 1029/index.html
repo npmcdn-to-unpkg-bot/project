@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>合房微信拼字活动</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.min.css">
+	<!-- <link rel='subresource' href='images/bggame.jpg'> -->
+	<link rel='prerender' href='game.html'>
+</head>
+<body>
+	<!-- 加载动画 -->
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+
+
+	<!-- 遮罩层 -->
+	<div id="shade" style="display:none;"></div>
+	<div class="share"></div>
+	<!-- 代码部分 -->
+	<div class="main home" id="home">
+		<img src="images/rule.png" class="btn-rule" alt="">
+		<img src="images/title.png" alt="" class="title an-1">
+		<a href="game.html"><img src="images/btn-start.png" class="btnStart" alt=""></a>
+	</div>
+
+	<!-- 弹窗  规则 -->
+	<div class="dialog rule ">
+		<img src="images/btn-submit.png" alt="" class="btn btn-sure">
+	</div>
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script>
+	$(function(){
+		// defaultEvent($(".dialog")[0]); 
+		// --
+		$('.btn-rule')[0].addEventListener('touchstart',function(){
+			$('.rule').addClass('show');
+			$('#shade').show();
+		})
+		
+		$('.btn-sure')[0].addEventListener('touchstart',function(){
+			$('.rule').removeClass('show');
+			$('#shade').hide();
+		})
+
+
+	})
+</script>
+</body>
+</html>

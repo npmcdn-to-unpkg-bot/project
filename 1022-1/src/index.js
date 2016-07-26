@@ -30,8 +30,11 @@ $(function(){
   })
   $('.weclome').on('click',function(){
     $(".page-2").slideUp().remove();
+<<<<<<< HEAD:1022-1/src/index.js
     $('.audio_btn').addClass('on');
     $('#media')[0].play();
+=======
+>>>>>>> 768f677d1578e224426f6ae2d6a7ee6e02cb25a7:1022/src/index.js
     $('.page').show().fullpage({
       afterRender:function(){
         $('.page').find('img').each(function(){
