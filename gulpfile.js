@@ -11,17 +11,17 @@ var gulp = require('gulp'),
 
 //sass
 gulp.task('sass', function () {
-  return sass('1026/src/index.scss')
+  return sass('1022/src/index.scss')
     .on('error', sass.logError)
     .pipe(minifyCss())
     .pipe(rename(function (path) {
       path.extname = ".min.css"
     }))
-    .pipe(gulp.dest('1026/src/'));
+    .pipe(gulp.dest('1022/src/'));
 });
 // 文件刷新
 gulp.task('livereload', function() {
-  gulp.src(['1026/*.html'])
+  gulp.src(['1022/*.html'])
       .pipe(livereload());
 });
 
@@ -73,7 +73,7 @@ gulp.task('rename', function () {
 //监听
 gulp.task('default', function() {
   livereload.listen(); //要在这里调用listen()方法
-  gulp.watch(['1026/**','_public/*.css','_public/*.js'], ['livereload']);
-  gulp.watch(['1026/src/index.scss'], ['sass','livereload']);
+  gulp.watch(['1022/**','_public/*.css','_public/*.js'], ['livereload']);
+  gulp.watch(['1022/src/index.scss'], ['sass','livereload']);
 });
 
