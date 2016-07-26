@@ -7,7 +7,7 @@ var font = (function(){
 		element : {}
 	},game={},options={},
 	  bout=0,index,time=10,timer,state=false,
-	  text = ['祝','父','亲','节','快','乐'],
+	  text = ['中','行','信','用','卡','有','礼'],
 	  // text = ['   ','  ','  ','  ','  ','  '],
 	  tempList=[];
 	game.init=function(){
@@ -21,7 +21,7 @@ var font = (function(){
 		index = tempList.indexOf(text[bout]);
 		// console.log(tempList)
 		// console.log(index)
-		var str = '';
+		var str = '',width;
 		tempList.forEach(function(e){
 			str+='<span class="'
 				 +options.colorList[Math.floor(Math.random()*options.colorList.length)]
@@ -30,11 +30,15 @@ var font = (function(){
 				 +'">'+e+'</span>';
 		})
 		options.element.find('.content').html(str);
-		options.element.find('.title span').eq(bout).addClass('on').siblings().removeClass('on');
-		for(var j=0 ;j<bout;j++){
-			options.element.find('.title span').eq(j).addClass('active');
-		}
-		time = 10;
+		width = bout/text.length*100+'%';
+		options.element.find('.title span').css({
+			width : width
+		})
+		// options.element.find('.title span').eq(bout).addClass('on').siblings().removeClass('on');
+		// for(var j=0 ;j<bout;j++){
+		// 	options.element.find('.title span').eq(j).addClass('active');
+		// }
+		time = 100;
 		game.play();
 	}
 	game.play = function(){
@@ -47,7 +51,7 @@ var font = (function(){
 				console.log(text.length)
 				if(bout>=text.length){
 					$('#shade').fadeIn();
-					$('.user').slideDown();
+					$('.user').addClass('show');
 					return;
 				}
 				game.init();
@@ -62,7 +66,7 @@ var font = (function(){
 				options.element.find('.content').find('span').each(function(index, el) {
 					this.removeEventListener('touchstart',clickFont);
 					$('#shade').fadeIn();
-					$('.dialog1').slideDown();
+					$('.dialog1').addClass('show');
 				});
 			}
 		}
@@ -89,7 +93,13 @@ var font = (function(){
 							'的','自','房','间','啊','热',
 							'及','第','吹','爱','云','好',
 							'吃','计','才','陪','我','奇',
-							'迹','去','藕','马','甲'];
+							'迹','去','藕','马','器'];
+			options.font=['11','11','11','11','11','11',
+							'11','11','11','11','11','11',
+							'11','11','11','11','11','11',
+							'11','11','11','11','11','11',
+							'11','11','11','11','11','11',
+							'11','11','11','11','11'];
 			options.length = 36;
 			bout = 0;
 			options.element.find('.title span').removeAttr('class');

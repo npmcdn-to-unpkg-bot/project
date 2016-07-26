@@ -5,11 +5,11 @@
 	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
 	<meta name="apple-mobile-web-app-capable" content="tes">
 	<meta http-equiv="widow-target" content="_blank">
-	<title>合房父亲节微信拼字活动</title>
+	<title>合房拼字活动</title>
 	<script src="../_public/rem.js"></script>
 	<link rel="stylesheet" href="../_public/reset.css">
 	<link rel="stylesheet" href="../_public/mobile-rem.css">
-	<link rel="stylesheet" href="src/index.css">
+	<link rel="stylesheet" href="src/index.min.css">
 </head>
 <body>
 	<!-- 加载动画 -->
@@ -28,56 +28,34 @@
 			倒计时 <span></span> 秒
 		</div>
 		<div class="title">
-			<span>祝</span>
-			<span>父</span>
-			<span>亲</span>
-			<span>节</span>
-			<span>快</span>
-			<span>乐</span>
+			<span></span>
 		</div>
 		<div class="content">
 		</div>
 	</div>
 
 	<!-- 弹窗  时间到了 -->
-	<div class="dialog dialog1 none">
-		<img src="images/dialog1.png" class="title" alt="">
-		<!-- <img src="images/face1.png" class="face" alt=""> -->
-		<img src="images/face1.webp" class="face" alt="">
-		<h3>啊哦~</h3>
-		<h2>很遗憾时间到咯！</h2>
-		<img src="images/btn-again.png" alt="" class="btn btn1">
+	<div class="dialog dialog1  ">
+		<img src="images/title-2.png" alt="" class="title">
+		<div class="tips off">未能领到红包</div>
+		<div class="hb off"></div>
+		<img src="images/tips.png" alt="" class="tips-bottom">
+		<img src="images/btn-submit.png" alt="" class="btn btn1">
 	</div>
-	<!-- 机会用完 -->
-	<div class="dialog dialog2 none">
-		<img src="images/dialog2.png" class="title" alt="">
-		<!-- <img src="images/face2.png" class="face" alt=""> -->
-		<img src="images/face2.webp" class="face" alt="">
-		<h3>您的机会已经用完咯~</h3>
-		<h2>分享给朋友一起参与游戏领奖吧！</h2>
-		<img src="images/btn-share.png" alt="" class="btn btn2">
-	</div>
-	<!-- 很遗憾 -->
-	<div class="dialog dialog3 none">
-		<img src="images/dialog3.png" class="title" alt="">
-		<!-- <img src="images/face1.png" class="face" alt=""> -->
-		<img src="images/face1.webp" class="face" alt="">
-		<h3>&nbsp;</h3>
-		<h2>你来迟了，奖券已经被领完了！</h2>
-		<img src="images/btn-back.png" alt="" class="btn btn2">
-	</div>
+
 	<!-- 分享 -->
-	<div class="dialog share none">
-		<!-- <img src="images/er.jpg" alt="" class="code"> -->
-		<img src="images/er.webp" alt="" class="code">
+	<div class="dialog share ">
+		<img src="images/er.jpg" alt="" class="code">
 	</div>
 	<!-- 填写信息 -->
-	<div class="dialog user none">
-		<img src="images/dialog4.png" class="title" alt="">
-		<h2>恭喜你完成了拼字。填写相关信息领取父亲节惊喜奖品！详情请见活动规则~！</h2>
-		<input type="text" class="username" placeholder="请输入姓名">
-		<input type="text" class="usertel" placeholder="请输入电话号码">
-
+	<div class="dialog user ">
+		<img src="images/title-1.png" alt="" class="title">
+		<div class="tips">
+			获得<span>1.25</span>元红包
+		</div>
+		<div class="hb">
+			<p>1.25</p>
+		</div>
 		<!-- <img src="images/btn-submit.png" alt=""> -->
 		<button class="btn btn-submit"></button>
 	</div>
@@ -100,33 +78,27 @@
 				transformList : ['t1','t2','t3','t4']	
 			});
 		})
-		var height = $(window).height();
-		var dialogHeight = $(".dialog").height();
-		if(dialogHeight<height){
-			$(".dialog").css({
-				top:(height-dialogHeight)/2
-			})
-		}
-		$('.btn1')[0].addEventListener('touchstart',function(){
-			var state = true; //控制是否次数用完
-			$('.dialog1').slideUp();
-			if(state){
-				$('.dialog2').slideDown();
-			}else{
-				$('#shade').hide();
-				font.init({
-					element : $('#game'),
-					colorList : ['c1','c2','c3','c4','c5','c6'],
-					transformList : ['t1','t2','t3','t4']	
-				});
-			}
+
+		// $('.btn1')[0].addEventListener('touchstart',function(){
+		// 	var state = true; //控制是否次数用完
+		// 	$('.dialog1').slideUp();
+		// 	if(state){
+		// 		$('.dialog2').slideDown();
+		// 	}else{
+		// 		$('#shade').hide();
+		// 		font.init({
+		// 			element : $('#game'),
+		// 			colorList : ['c1','c2','c3','c4','c5','c6'],
+		// 			transformList : ['t1','t2','t3','t4']	
+		// 		});
+		// 	}
 			
-		})
-		// --
-		$('.btn2')[0].addEventListener('touchstart',function(){
-			$('.dialog2').slideUp();
-			$('.share').slideDown();
-		})
+		// })
+		// // --
+		// $('.btn2')[0].addEventListener('touchstart',function(){
+		// 	$('.dialog2').slideUp();
+		// 	$('.share').slideDown();
+		// })
 	})
 </script>
 </body>
