@@ -21,6 +21,9 @@ var maps = function(options){
             mapStyle     :  'normal',
             // zooms        :  [12,16]
         });
+        map.setFitView=function(){
+            return false;
+        }
         if(options.toolBar === true){
             AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){
               var toolBar = new AMap.ToolBar();
@@ -127,7 +130,17 @@ var maps = function(options){
         // map.setFitView();
     }
     obj.searchNearBy=function(name,callback){
-            obj.init();
+            // obj.init();
+            map.clearMap();
+            // map.setStatus({
+            //     zoomEnable : false
+            // });
+
+            obj.setAdvancedMarker(position,{
+                buildName    : options.buildName,
+                equalPrice   : options.equalPrice,
+                buildAddress : options.buildAddress
+            })
             AMap.service('AMap.PlaceSearch',function(){//回调函数
             //实例化PlaceSearch
             placeSearch= new AMap.PlaceSearch({

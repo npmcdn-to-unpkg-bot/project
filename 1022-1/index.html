@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>微信活动</title>
+	<script>
+		!function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={}));
+	</script>
+	<link rel="stylesheet" href="src/reset.css">
+	<link rel="stylesheet" href="fullPage/jquery.fullPage.css">
+	<link rel="stylesheet" href="src/animate.min.css">
+	<link rel="stylesheet" href="src/index.min.css">
+	<style>
+		.load-1,.load-2{width: 1.6rem;height: 1.6rem;background: rgba(0,255,0,0.6);position: absolute;top:50%;left: 50%;margin-left: -0.8rem;margin-top: -0.8rem;border-radius: 50%;}
+		.tip{
+			font-size: 0.5rem;
+			color: rgb(0,255,0);
+			text-align: center;
+			position: absolute;
+			top:50%;
+			padding-top: 1rem;
+			left: 0;
+			width: 100%;
+		}
+		.load-1{
+			-webkit-animation: myload-1 2s infinite ease-in-out;
+		}
+		@-webkit-keyframes myload-1{
+			from {
+				-webkit-transform: scale3d(.2,.2,1);
+			}
+			50%{
+				-webkit-transform: scale3d(1,1,1);
+			}
+			to{
+				-webkit-transform: scale3d(.2,.2,1);
+			}
+		}
+		.load-2{
+			-webkit-animation: myload-2 2s infinite ease-in-out;
+		}
+		@-webkit-keyframes myload-2{
+			from {
+				-webkit-transform: scale3d(1,1,1);
+			}
+			50%{
+				-webkit-transform: scale3d(0.2,0.2,1);
+			}
+			to{
+				-webkit-transform: scale3d(1,1,1);
+			}
+		}
+	</style>
+	<script src="src/load.js"></script>
+	<script>
+		var loadListImg = ['images/bg1.jpg','images/bg2.jpg','images/bg3.jpg',
+											 'images/bg4.jpg','images/bg5.jpg','images/bg6.jpg',
+											 'images/bg7.jpg','images/100.png','images/101.png',
+											 'images/102.png','images/200.png','images/201.png',
+											 'images/202.png','images/300.png','images/301.png',
+											 'images/302.png','images/400.png','images/401.png',
+											 'images/500.png','images/501.png','images/502.png',
+											 'images/bottom.png','images/dianji.png','images/loading.png',
+											 'images/logo.png','images/logo-2.png'],
+				loadJS = ['src/jquery-2.2.3.min.js','fullPage/jquery.fullPage.min.js','src/index.js'];
+		load({
+			img : loadListImg,
+			js : loadJS,
+			audio : ['images/bg.mp3']
+		});
+	</script>
+</head>
+<body>
+	<div class="loading">
+		<div class="load-1 "></div>
+		<div class="load-2"></div>
+		<div class="tip">0%</div>
+	</div>
+	<section class="section page-1">
+		<img  data-val="bounceInDown" class="title" src="images/logo.png" alt="">
+		<img  data-val="flash" class="loadgin" src="images/loading.png" alt="">
+		<img  data-val="zoomInUp"  class="dianji" src="images/dianji.png" alt="">
+		<img  data-val="zoomIn"  class="bottom" src="images/bottom.png" alt="">
+	</section>
+	<section class="section page-2 ">
+		<img  data-val="bounceInDown"  class="title-2" src="images/logo-2.png" alt="" >
+		<iframe class="video" frameborder="0" src="http://v.qq.com/iframe/player.html?vid=z0314j0z9w3&tiny=0&auto=0" allowfullscreen></iframe>
+		<img data-val="zoomIn"  class="bottom" src="images/bottom.png" alt="">
+		<img data-val="zoomInDown"  class="weclome" src="images/welcome.png" alt="">
+	</section>
+
+	<div class="page" style="display:none;">
+		<section class="section page-3">
+			<img data-val="bounceInLeft" data-leave="bounceOutLeft" data-class="a100" src="images/100.png" alt="" >
+			<img data-val="lightSpeedIn" data-leave="lightSpeedOut" data-class="a101" src="images/101.png" alt="" >
+			<img data-val="flipInX" data-leave="flipOutX" data-class="a102" src="images/102.png" alt="" >
+			<img data-val="zoomIn" data-leave="zoomOut" data-class="bottom"  src="images/bottom.png" alt="">
+		</section>
+		<section class="section page-4 ">
+			<img data-val="bounceInLeft" data-leave="bounceOutLeft" src="images/200.png" alt="" data-class="a200">
+			<img data-val="flipInY" data-leave="flipOutY" src="images/201.png" alt="" data-class="a201">
+			<img data-val="zoomInLeft" data-leave="zoomOutLeft" src="images/202.png" alt="" data-class="a202">
+			<img data-val="zoomIn" data-leave="zoomOut" data-class="bottom" src="images/bottom.png" alt="">
+		</section>
+		<section class="section page-5 ">
+			<img data-val="bounceInDown" data-leave="bounceOutUp" data-class="title" src="images/logo.png" alt="">
+			<img data-val="zoomInRight" data-leave="zoomOutRight" src="images/300.png" alt="" data-class="a300">
+			<img data-val="lightSpeedIn" data-leave="lightSpeedOut" src="images/301.png" alt="" data-class="a301">
+			<img data-val="flipInX" data-leave="flipOutX" src="images/302.png" alt="" data-class="a302">
+		</section>
+		<section class="section page-6 ">
+			<img data-val="bounceInDown" data-leave="bounceOutUp" data-class="title" src="images/logo.png" alt="">
+			<img data-val="rotateInDownLeft" data-leave="rotateOutDownLeft" src="images/400.png" alt="" data-class="a400">
+			<img data-val="slideInUp" data-leave="slideOutUp" src="images/401.png" alt="" data-class="a401">
+			<img data-val="zoomIn" data-leave="zoomOut" data-class="bottom" src="images/bottom.png" alt="">
+		</section>
+		<section class="section page-7 ">
+			<img data-val="bounceInDown" data-leave="bounceOutUp" data-class="title" src="images/logo.png" alt="">
+			<img data-val="rollIn" data-leave="rollOut" src="images/500.png" alt="" data-class="a500">
+			<img data-val="lightSpeedIn" data-leave="lightSpeedOut" src="images/501.png" alt="" data-class="a501">
+			<img data-val="flipInX" data-leave="flipOutX" src="images/502.png" alt="" data-class="a502">
+		</section>
+	</div>
+	<div class="audio_btn "></div>
+	<!-- <audio loop="" src="images/bg.mp3" id="media" autoplay=""></audio> -->
+
+</body>
+</html>
