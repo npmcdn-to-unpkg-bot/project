@@ -16,9 +16,10 @@ var maps = function(options){
     obj.init = function(){
         map = new AMap.Map(element, {
             resizeEnable :  true,//是否监控地图容器尺寸变化，默认值为false
-            zoom         :  15,
+            zoom         :  16,
             center       :  position,
-            mapStyle     :  'normal'
+            mapStyle     :  'normal',
+            // zooms        :  [12,16]
         });
         if(options.toolBar === true){
             AMap.plugin(['AMap.ToolBar','AMap.Scale'],function(){
@@ -123,7 +124,7 @@ var maps = function(options){
             strokeWeight : 0.2
         })
         circle.setMap(map);
-        map.setFitView();
+        // map.setFitView();
     }
     obj.searchNearBy=function(name,callback){
             obj.init();
@@ -142,9 +143,10 @@ var maps = function(options){
                     //TODO : 解析返回结果,如果设置了map和panel，api将帮助完成点标注和列表
                     console.log(result.poiList);
                     if(callback !==undefined) callback();
+                    // map.setZoom(10);
                 }
             });
-            map.setFitView();
+            // map.setFitView();
         })
 
     }
