@@ -1,0 +1,40 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #000;
+$bgColor:rgba(0,255,0,.3);
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+
+@mixin animation($animation...){
+	-webkit-animation:$animation;
+	animation:$animation;
+}
+@mixin keyframes ($name) {
+    @keyframes #{$name}
+		{
+			@content;
+		}
+		@-webkit-keyframes #{$name} /* Safari 和 Chrome */
+		{
+			@content;
+		}
+}
+
+body{
+	background-color: $bgColor;
+}
+

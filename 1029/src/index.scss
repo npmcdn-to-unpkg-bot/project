@@ -36,6 +36,8 @@ $baseFontSize:75;
 
 .an-1{
 	@include animation(an-1 4s infinite ease-in-out alternate);
+	-webkit-animation-fill-mode:both;
+	animation-fill-mode:both;
 }
 @include keyframes('an-1'){
 	from{
@@ -273,7 +275,7 @@ body{
 	margin-left:-5rem;
 	top:0;
 	height: 100%;
-	background: url('../images/home.jpg')  center no-repeat;
+	background: url('../images/home.jpg') top center no-repeat;
 	background-size: cover;
 	.title{
 		width: rem(615);
@@ -315,4 +317,13 @@ body{
   background-size: contain;
   border:none;
   outline: none;
+}
+
+.help{
+	font-size: 0;
+	line-height: 0;
+	background: #fff;
+	img{
+		width:100%;
+	}
 }

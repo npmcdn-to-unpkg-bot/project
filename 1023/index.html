@@ -77,7 +77,10 @@
 		buildName : "皖新·朗诗绿郡",
 		equalPrice : "14000元/㎡",
 		buildAddress : "滨湖新区徽州大道与云谷路交口向东550米",
-		radius : 500
+		radius : 500,
+		zoom   : 16,
+		imgSrc : '11.jpg',
+		link   : 'http://hfhouse.com'
 	})
 
 	// 显示列表函数
@@ -92,7 +95,7 @@
 	$('.map_tit a').on('click',function(){
 		$('#mapTab').fadeIn();
 		$('.map_lp_1').fadeOut();
-		map.init();
+		map.reset();
 	})
 	$('#traffic').on('click',function(){
 		map.searchNearBy('交通',showlist('交通'));

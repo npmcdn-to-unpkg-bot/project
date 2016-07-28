@@ -40,13 +40,16 @@
 		<div class="tips off">未能领到红包</div>
 		<div class="hb off"></div>
 		<img src="images/tips.png" alt="" class="tips-bottom">
-		<img src="images/btn-submit.png" alt="" class="btn btn1">
+		<a href="help.html"><img src="images/btn-submit.png" alt="" class="btn btn1"></a>
+	</div>
+	
+	<!-- 抱歉 你今天没有游戏机会啦 -->
+	<div class="dialog dialog2  ">
+		<img src="images/baoqian.png" alt="">
+		<a href="help.html" class="btn btn-submit"></a>
 	</div>
 
-	<!-- 分享 -->
-	<div class="dialog share ">
-		<img src="images/er.jpg" alt="" class="code">
-	</div>
+
 	<!-- 填写信息 -->
 	<div class="dialog user ">
 		<img src="images/title-1.png" alt="" class="title">
@@ -57,7 +60,7 @@
 			<p>1.25</p>
 		</div>
 		<!-- <img src="images/btn-submit.png" alt=""> -->
-		<button class="btn btn-submit"></button>
+		<a href="help.html" class="btn btn-submit"></a>
 	</div>
 
 
@@ -68,37 +71,20 @@
 <script>
 	$(function(){
 		defaultEvent($(".dialog")[0]); 
-
+		var game = false;//判断是否还有次数
+		if(game == false){
+			$('.dialog2').addClass('show');
+		}
 		$('.gameStart')[0].addEventListener('touchstart',function(){
-		$(this).fadeOut();
-		$('#shade').fadeOut();
-		font.init({
+			if(game==false) return;
+			$(this).fadeOut();
+			$('#shade').fadeOut();
+			font.init({
 				element : $('#game'),
 				colorList : ['c1','c2','c3','c4','c5','c6'],
 				transformList : ['t1','t2','t3','t4']	
 			});
 		})
-
-		// $('.btn1')[0].addEventListener('touchstart',function(){
-		// 	var state = true; //控制是否次数用完
-		// 	$('.dialog1').slideUp();
-		// 	if(state){
-		// 		$('.dialog2').slideDown();
-		// 	}else{
-		// 		$('#shade').hide();
-		// 		font.init({
-		// 			element : $('#game'),
-		// 			colorList : ['c1','c2','c3','c4','c5','c6'],
-		// 			transformList : ['t1','t2','t3','t4']	
-		// 		});
-		// 	}
-			
-		// })
-		// // --
-		// $('.btn2')[0].addEventListener('touchstart',function(){
-		// 	$('.dialog2').slideUp();
-		// 	$('.share').slideDown();
-		// })
 	})
 </script>
 </body>
