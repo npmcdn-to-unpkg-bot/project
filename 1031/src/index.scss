@@ -1,0 +1,209 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #000;
+$bgColor:#ff5242;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+
+@mixin animation($animation...){
+	-webkit-animation:$animation;
+	animation:$animation;
+}
+@mixin keyframes ($name) {
+    @keyframes #{$name}
+		{
+			@content;
+		}
+		@-webkit-keyframes #{$name} /* Safari 和 Chrome */
+		{
+			@content;
+		}
+}
+
+body{
+	background-color: $bgColor;
+  font-size: 0;
+}
+img{
+  width: 100%;
+}
+.page-group{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.page{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  font-size: 0;
+}
+
+.link{
+  position: absolute;
+  display: block;
+  // background: blue;
+  z-index:2;
+}
+.link-1{
+  width: rem(750);
+  height: rem(160);
+  top:rem(977);
+}
+
+.username,.usertel{
+  position: absolute;
+  top:rem(370);
+  left: 50%;
+  margin-left: rem(-250);
+  width: rem(500);
+  height: rem(56);
+  font-size: rem(40);
+  color: #333;
+  text-align: center;
+  border:none;
+  outline:none;
+  background-color: transparent;
+}
+.usertel{
+  top:rem(580);
+}
+.job{
+  width: rem(600);
+  height: auto;
+  position: absolute;
+  top:rem(800);
+  left: 50%;
+  margin-left: rem(-300);
+  font-size: rem(40);
+  color: #333;
+  td{
+    height:rem(90);
+    vertical-align: middle;
+    padding-left: rem(80);
+  }
+}
+input[type="radio"]{
+  width: rem(44);
+  height: rem(44);
+  margin-right: rem(20);
+  position: relative;
+  &:after{
+    content:" ";
+    position: absolute;
+    background: #fff;
+    z-index: 2;
+    width: rem(44);
+    height: rem(44);
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+    border:1px solid #fc4547;
+  }
+  &:checked:after{
+    background: url(../images/radio.png) center no-repeat;
+    background-size: 70% 70%;
+  }
+}
+.otherInfo{
+  position: absolute;
+  position: absolute;
+  top:rem(1280);
+  left: 50%;
+  margin-left: rem(-250);
+  width: rem(500);
+  height: rem(56);
+  background-color: transparent;
+  font-size: rem(40);
+  color: #333;
+  text-align: center;
+  border:none;
+  outline:none;
+}
+
+.userSubmit{
+  @include icon('../images/btn.png',300,77);
+  position: absolute;
+  outline:none;
+  border:none;
+  top:rem(1500);
+  left: 50%;
+  margin-left: rem(-150);
+}
+.tips{
+  position: absolute;
+  top:rem(1620);
+  width: rem(660);
+  left: 50%;
+  margin-left: rem(-330);
+  font-size: rem(28);
+  line-height: rem(42);
+  color: #fff;
+  p{
+    text-indent: 1em;
+  }
+}
+
+.row{
+  width: 100%;
+  &:after{
+    content:" ";
+    display: block;
+    clear: both;
+  }
+  .col-33{
+    width: 33.33%;
+    float: left;
+  }
+}
+
+.page.list{
+  background: url(../images/bg.jpg) center no-repeat;
+  background-size: cover;
+  .userlist{
+    width: rem(700);
+    margin-left: auto;
+    margin-right: auto;
+    color: #ffff00;
+    font-size: rem(30);
+    .row{
+      height: rem(66);
+      border-radius: rem(33);
+      line-height: rem(66);
+      text-align: center;
+      border:1px solid #ffff00;
+      margin-bottom: rem(24);
+    }
+    .title{
+      font-size: rem(40);
+      border:none;
+    }
+  }
+}
+.link-2{
+  @include icon('../images/next.png',52,52);
+  position: absolute;
+  top:rem(30);
+  right:rem(30);
+}
