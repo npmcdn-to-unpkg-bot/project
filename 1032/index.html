@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>微信</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+	<p class="p1">你好</p>
+	<!-- 遮罩层 -->
+	<div id="shade" style="display:none;"></div>
+	<!-- 代码部分 -->
+	<div class="page-group">
+		<div class="page">
+			<div class="content">
+				<img src="images/top.jpg" class="top" alt="">
+				<div class="games">
+					<div class="shade"></div>
+					<div class="star"></div>
+					<div class="game"></div>
+					<div class="start"></div>
+				</div>
+				<div class="tips"></div>
+				<!-- 弹框 -->
+				<div class="dialog">
+					<img src="images/1.jpg" alt="">
+					<div class="close"></div>
+					<div class="btn"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="src/TweenMax.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+$(function(){
+	// 1、洗衣液
+	// 2、食用油
+	// 3、纯牛奶
+	// 4、大米
+	// 5、左邻积分
+	// 6、谢谢参与
+	// 7、抽纸
+	// 8、牙膏
+	var prize = 3;
+	$('.start')[0].addEventListener('touchstart',function(){
+		console.info('开始');
+		//事件移除
+		$(this)[0].removeEventListener('touchstart',arguments.callee);
+		//AJAX 请求;
+		prize = parseInt(Math.random()*8 + 1);
+		console.info(prize);
+
+		//动画
+		TweenLite.to($('.game'),5,
+		{
+			'x':'-50%',
+			'y':'-50%',
+			'rotationZ':360*5 - (prize*45-22.5),
+			// ease:Expo.easeOut,
+			ease : Expo.linear,
+			onComplete:function(){
+				$('#shade').show();
+				$('.dialog').addClass('show');
+				$('.dialog').find('img').attr('src','images/'+prize+'.jpg');
+			}
+		});
+
+		// TweenLite.to($(this),5,
+		// {
+		// 	'x':'-50%',
+		// 	'y':'-50%',
+		// 	'rotationZ':-360*5,
+		// 	// ease:Expo.easeOut,
+		// 	ease : Expo.linear,
+		// });
+
+
+	})
+})
+	
+</script>
+</body>
+</html>

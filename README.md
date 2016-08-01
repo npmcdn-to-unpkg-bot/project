@@ -23,6 +23,8 @@
 ### https://github.com/greensock/GreenSock-JS/ 
 ## 1028---- 微信产品展示 
 
+## 1032---- 大转盘抽奖 
+
 ## 演示地址
 ## http://fanchaoyang.com/project/1002/
 ## 请将后面的数字替换即可

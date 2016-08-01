@@ -1,0 +1,189 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #333;
+$bgColor:#ff5242;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+
+@mixin animation($animation...){
+	-webkit-animation:$animation;
+	animation:$animation;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+@mixin keyframes ($name) {
+    @keyframes #{$name}
+		{
+			@content;
+		}
+		@-webkit-keyframes #{$name} /* Safari 和 Chrome */
+		{
+			@content;
+		}
+}
+
+body{
+	background-color: $bgColor;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+img{
+  width: 100%;
+}
+.page-group{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 0;
+}
+.page{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.top{
+  width: 100%;
+}
+.games{
+  position: relative;
+  width: rem(632);
+  height: rem(632);
+  margin-top: rem(-100);
+  margin-left: auto;
+  margin-right: auto;
+}
+.game{
+  @include icon('../images/game.png',534,534);
+  z-index:3;
+  position: absolute;
+  left:50%;
+  top:50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+}
+.shade{
+  @include icon('../images/shade.png',452,58);
+  z-index:1;
+  position: absolute;
+  bottom:rem(-20);
+  left: 50%;
+  -webkit-transform: translate3d(-50%,0,0);
+  transform: translate3d(-50%,0,0);
+}
+.star{
+  @include icon('../images/star.png',632,632);
+  z-index:2;
+  position: absolute;
+  left:50%;
+  top:50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  @include animation(star 20s infinite steps(24,end));
+}
+.start{
+  @include icon('../images/start.png',153,177);
+  z-index:4;
+  position: absolute;
+  left:50%;
+  top:50%;
+  -webkit-transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%,-50%,0);
+  -webkit-transform-origin:50% 56.5%;
+  transform-origin:50% 56.5%;
+}
+
+.tips{
+  @include icon('../images/tips.png',637,234);
+  display: block;
+  margin-top: rem(50);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(50);
+}
+@include keyframes(star){
+  from{
+    -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,0);
+    transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,0);
+  }
+  to{
+    -webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,360deg);
+    transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,360deg);
+  }
+}
+.dialog{
+  position: fixed;
+  top:50%;
+  left:50%;
+  width: rem(585);
+  height: rem(521);
+  -webkit-transform: translate3d(-200%,-200%,0);
+  transform: translate3d(-200%,-200%,0);
+  -webkit-transition:all 300ms;
+  transition:all 300ms;
+  z-index:999;
+  border-radius: rem(20);
+  overflow: hidden;
+  &.show{
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+  }
+  img{
+    width: 100%;
+    height: 100%;
+  }
+  .close{
+    display: block;
+    // background: red;
+    width: rem(52);
+    height: rem(52);
+    position: absolute;
+    z-index:2;
+    top:0;
+    right:rem(25);
+  }
+  .btn{
+    display: block;
+    // background: blue;
+    width: rem(458);
+    height: rem(82);
+    position: absolute;
+    z-index:2;
+    bottom:rem(30);
+    left:50%;
+    -webkit-transform: translate3d(-50%,0,0);
+    transform: translate3d(-50%,0,0);
+  }
+}
