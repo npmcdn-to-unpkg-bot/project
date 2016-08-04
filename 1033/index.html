@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>大家来找茬</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    .img{
+      width: 350px;
+      height: 386px;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      -webkit-transform:translate3d(-50%,-50%,0);
+      transform:translate3d(-50%,-50%,0);
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top:0;
+    }
+    .two{
+      -webkit-filter:invert(100%) opacity(50%);
+    }
+  </style>
+</head>
+<body>
+  
+
+  <div class="img">
+    <img src="640.jpg" alt="">
+    <img src="640.webp" alt="" class="two">
+  </div>
+</body>
+</html>

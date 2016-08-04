@@ -34,7 +34,8 @@ body{
   top:0;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow: auto;
+  -webkit-overflow-scrolling:touch;
   background-image: -moz-linear-gradient( 90deg, rgb(114,91,170) 0%, rgb(145,135,204) 34%, rgb(85,178,217) 67%, rgb(75,159,211) 100%);
   background-image: -webkit-linear-gradient( 90deg, rgb(114,91,170) 0%, rgb(145,135,204) 34%, rgb(85,178,217) 67%, rgb(75,159,211) 100%);
   background-image: -ms-linear-gradient( 90deg, rgb(114,91,170) 0%, rgb(145,135,204) 34%, rgb(85,178,217) 67%, rgb(75,159,211) 100%);
@@ -141,6 +142,7 @@ a{
     font-size: 0;
     white-space: nowrap;
     overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
     img{
       display: inline-block;
       width: rem(375);

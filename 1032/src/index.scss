@@ -18,7 +18,6 @@ $baseFontSize:75;
     height: rem($height);
     display: inline-block;
 }
-
 @mixin animation($animation...){
 	-webkit-animation:$animation;
 	animation:$animation;
@@ -35,7 +34,6 @@ $baseFontSize:75;
 			@content;
 		}
 }
-
 body{
 	background-color: $bgColor;
   position: absolute;
@@ -45,9 +43,38 @@ body{
   left: 0;
   overflow: hidden;
 }
-img{
-  width: 100%;
+img{width: 100%;}
+i{font-style: normal;}
+a {
+  color: #0894ec;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+a:active {
+  color: #0a8ddf;
+}
+.main{
+  max-width: 10rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+/*常用样式*/
+.fl{float:left;}
+.fr{float:right;}
+
+/*遮罩*/
+#shade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.8);
+  z-index: 900;
+  display: none;
+}
+
 .page-group{
   position: absolute;
   left: 0;
@@ -71,17 +98,21 @@ img{
   right: 0;
   bottom: 0;
   left: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling:touch;
 }
 .top{
   width: 100%;
+}
+.parent{
+  overflow: hidden;
+  margin-top: rem(-100);
+  padding-bottom: rem(20);
 }
 .games{
   position: relative;
   width: rem(632);
   height: rem(632);
-  margin-top: rem(-100);
   margin-left: auto;
   margin-right: auto;
 }
@@ -128,7 +159,7 @@ img{
 .tips{
   @include icon('../images/tips.png',637,234);
   display: block;
-  margin-top: rem(50);
+  margin-top: rem(30);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: rem(50);

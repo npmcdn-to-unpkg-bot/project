@@ -1,0 +1,423 @@
+body{
+	background-color:#eec785;
+}
+.main.game{
+	/*background: url(../images/bg.jpg) top center no-repeat;*/
+	/*background-size: contain;*/
+}
+.main.home{
+    background: url(../images/bg2.jpg) top center no-repeat;
+    background-size: cover;
+}
+.main.gameover,.main.paihang{
+    background: url(../images/gameoverbg@2x.png) top center no-repeat;
+    background-size: cover;
+}
+.music{
+	width:1.06rem;
+	height:1.06rem;
+	background:url(../images/music.png) center no-repeat;
+	background-size:contain;
+	position: absolute;
+	right: 0.15rem;
+	top: 0.1rem;
+	z-index: 10;
+}
+.music.on{
+    -webkit-animation: rotate360 1.2s infinite linear;
+    animation: rotate360 1.2s infinite linear;
+}
+.game .head{
+	width: 10rem;
+	/*padding-top: 2.22rem;*/
+	/*padding-bottom: 1rem;*/
+    position: relative;
+    font-size: 0.48rem;line-height: 1.33em; 
+}
+.game .head img.bg{width: 100%;}
+.game .head table{width: 100%;}
+.game .head table td{text-align: center;vertical-align: middle;}
+.game .head table td:last-child{color: #be4646;}
+.time{width: 3.28rem;height: 0.97rem;background: url(../images/time.png) center no-repeat; background-size: contain;color: #fff;line-height: 0.97rem;padding-left: 1.2rem;position: absolute;right: 2%;bottom: 14%;}
+
+.game .head .guize{width:14%;position: absolute;left: 42.2%;top: 16%;}
+.game .head .score{font-size: 0.53rem;color: #be4646; position: absolute;left: 29%;top: 64%;}
+
+.content{width: 93%;margin: 0 auto;}
+.content .lst{width: 23%;margin: 0 1% 0.17rem;float: left;position: relative;}
+
+.bottom {margin-top: 0.7rem;}
+.bottom .btn{margin: 0 auto;width: 2.67rem;height:1.06rem;background: url(../images/start.png) center no-repeat;background-size: contain;}
+.bottom .btn.on{background: url(../images/end.png) center no-repeat;background-size: contain;}
+
+
+.card {
+	perspective: 1000;
+    -webkit-perspective: 1000;
+    /*box-shadow: 0 0 0 3px red;*/
+}
+.face{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    transition: all .7s ease;
+    backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+}
+.face img{width: 100%;height: 100%;}
+.front {
+    z-index: 10;
+}
+.back{
+    transform:rotate3d(0,1,0,-180deg);
+    -ms-transform:rotate3d(0,1,0,-180deg);	/* IE 9 */
+    -moz-transform:rotate3d(0,1,0,-180deg);	/* Firefox */
+    -webkit-transform:rotate3d(0,1,0,-180deg); /* Safari 和 Chrome */
+    -o-transform:rotateY(0,1,0,-180deg);	/* Opera */
+    z-index: 8;
+}
+.card-flipped .front{
+    transform:rotate3d(0,1,0,180deg);
+    -ms-transform:rotate3d(0,1,0,180deg);/* IE 9 */
+    -moz-transform:rotate3d(0,1,0,180deg);/* Firefox */
+    -webkit-transform:rotate3d(0,1,0,180deg);/* Safari 和 Chrome */
+    -o-transform:rotate3d(0,1,0,180deg);	/* Opera */
+    z-index: 8;
+}
+.card-flipped .back{
+    transform:rotate3d(0,1,0,0deg);
+    -ms-transform:rotate3d(0,1,0,0deg);/* IE 9 */
+    -moz-transform:rotate3d(0,1,0,0deg);/* Firefox */
+    -webkit-transform:rotate3d(0,1,0,0deg);/* Safari 和 Chrome */
+    -o-transform:rotate3d(0,1,0,0deg);	/* Opera */
+    z-index: 10;
+}
+
+.iconClose{width: 0.46rem; height: 0.46rem;display: inline-block; background: url(../images/close@2x.png) center no-repeat;background-size: contain;}
+
+.home{text-align: center;position: relative;}
+.home .top{position: relative;}
+.home .top img.bg{width: 100%;}
+.home .logo{width:94%;position: absolute;left: 3%;top: 10px;}
+.home .guize{width:14%;position: absolute;left: 42.2%;top: 48%;}
+.home .menghuitongnian{width:80%;position: absolute;left: 10%;top: 22%;}
+.home .startBtn{width:46%;position: absolute;left: 27%;bottom: 10%;-webkit-transition: all 300ms;transition: all 300ms;}
+.home .startBtn:active{-webkit-transform: scale(0.8);transform: scale(0.8);}
+.guizeDialog{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 4%;
+    z-index: 20;
+    display: none;
+    
+}
+.guizeDialog img{width: 100%;}
+.guizeDialog .iconClose{position: absolute;right: 3%;top: 3%;}
+.guizeDialog .content{
+    position: absolute;
+    width: 84%;
+    left: 8%;
+    top: 14%;
+    bottom: 9%;
+    font-size: 0.48rem;
+    color: #b26b36;
+    line-height: 1.3em;
+    /*background-color: rgba(0,0,0,.3);*/
+    text-align: left;
+    overflow: scroll;
+}
+.guizeDialog .content p{margin-bottom: 0.64rem;text-indent: 1em;}
+
+.flash2{
+    -webkit-animation-name: flash2;
+    animation-name: flash2;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 8s;
+    animation-duration: 8s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+@-webkit-keyframes flash2{
+  from,25% {
+    transform: rotate3d(0,1,0,0);
+  }
+  50%{
+    transform: rotate3d(0,1,0,180deg);
+  }
+  75%,to{
+    transform: rotate3d(0,1,0,0);
+  }
+}
+
+@keyframes flash2{
+  from,25% {
+    transform: rotate3d(0,1,0,0);
+  }
+  50%{
+    transform: rotate3d(0,1,0,180deg);
+  }
+  75%,to{
+    transform: rotate3d(0,1,0,0);
+  }
+}
+.gameover{text-align: center;}
+.gameover .gameimg {
+    position: absolute;width:80% ;left: 10%;top: 15%;
+}
+.gameover .scoreBest {
+    position: absolute;width:100% ;top: 28%;
+    color: #ef0211;
+    font-size: 0.53rem;
+}
+.gameover .score {
+    position: absolute;width: 44%;left: 28%;top: 35%;
+}
+.gameover .scoreIng {
+    position: absolute;width:100% ;top: 52%;
+    font-size: 1rem;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff451), to(#fbac50));
+    color: transparent;
+    /* -webkit-text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-stroke:1px #4d3e01;text-stroke:1px #4d3e01;
+    font-weight: bold;
+}
+.gameover .paihang {
+    position: absolute;width: 27%;left:14%;top: 65%;-webkit-transition: all 300ms;transition: all 300ms;
+}
+.gameover .again {
+    position: absolute;width: 27%;right:14%;top: 65%;-webkit-transition: all 300ms;transition: all 300ms;
+}
+
+.gameover .paihang:active,.gameover .again:active{
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+}
+.gameover .tip {
+    position: absolute;width:100% ;top: 88%;
+    font-size: 0.48rem;
+}
+.gameover .tip a {
+    color: #ac0109;
+    text-decoration: underline;
+}
+
+.shareTip{
+    position: absolute;
+    width: 44%;
+    right: 5%;
+    top: 2%;
+    z-index: 910;
+    display: none;
+}
+.shareTip2{
+    width: 7.54rem;
+    height: 5.46rem;
+    position: absolute;
+    z-index: 910;
+    left: 50%;
+    top: 50%;
+    margin-left: -3.77rem;
+    margin-top: -2.73rem;
+    background: url(../images/tip@2x.png) center no-repeat;
+    background-size: contain;
+    display: none;
+}
+.shareTip2 .close{
+    width: 0.72rem;
+    height: 0.72rem;
+    position: absolute;
+    right: 6%;
+    top: 6%;
+    background: url(../images/cha@2x.png) center no-repeat;
+    background-size: contain;
+}
+.shareTip2 .content{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 45%;
+    font-size: .4rem;
+    line-height: 1.6em;
+    color: #663204;
+    text-align: center;
+}
+.shareTip2 .btn01{
+    width: 3.2rem;height: 1rem;line-height:1rem;text-align: center;border-radius: 1rem;
+    position: absolute;left: 4%;bottom: 4%; color: #663204;background-color: #ffc82f;
+    font-size: 0.4rem;
+}
+.shareTip2 .btn02{
+    width: 3.2rem;height: 1rem;line-height:1rem;text-align: center;border-radius: 1rem;
+    position: absolute;right: 4%;bottom: 4%; color: #fff;background-color: #ed1c43;
+    font-size: 0.4rem;
+}
+
+.shareTip2 .btn02 a{color: #fff;text-decoration:none;}
+
+
+.shareTip3{
+    width: 8.2rem;
+    height: 10.56rem;
+    position: absolute;
+    z-index: 910;
+    left: 50%;
+    top: 50%;
+    margin-left: -4.1rem;
+    margin-top: -5.28rem;
+    text-align: center;
+    background: url(../images/userbg@2x.png) center no-repeat;
+    background-size: contain;
+    display: none;
+}
+.shareTip3 .close{
+    width: 0.84rem;
+    height: 0.84rem;
+    position: absolute;
+    right: 1.5%;
+    top: 1.5%;
+    background: url(../images/chauser@2x.png) center no-repeat;
+    background-size: contain;
+}
+
+.paihang .title{
+    width: 58%;
+    position: absolute;
+    left: 21%;
+    top: 2%;
+}
+.paihang .retreat{
+    width: 10%;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+.paihang #wrapper{
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 15%;
+    bottom: 10%;
+    overflow: hidden;
+}
+.paihang table{width: 100%;color:#663204;}
+.paihang table .level{
+    font-size: 0.64rem;
+    text-align: center;
+}
+.paihang table .level span{width: 0.82rem;height:1.02rem; }
+.paihang table .level01 span{display: inline-block; background: url(../images/1@2x.png) center no-repeat; background-size: contain;}
+.paihang table .level02 span{display: inline-block; background: url(../images/2@2x.png) center no-repeat; background-size: contain;}
+.paihang table .level03 span{display: inline-block; background: url(../images/3@2x.png) center no-repeat; background-size: contain;}
+.paihang table img{width: 1.2rem;height: 1.2rem;border-radius: 5px;margin-right: 0.16rem;}
+.paihang table p{font-size: 0.426rem;line-height: 1.5em;}
+.paihang table small{font-size: 0.4rem;}
+.paihang table tr td{padding: 0.2rem 0;vertical-align: middle;}
+.paihang table tr td:last-child{font-size: 0.64rem;text-align: right;}
+
+.spinner2{
+    position: absolute;
+    width: 3.4rem;
+    height: 6rem;
+    top: 50%;
+    left: 50%;
+    margin-left: -1.7rem;
+    margin-top: -3rem;
+}
+.spinner2 .img1{width: 2.72rem;height: 2.72rem; position: absolute;top: 0;left: 0.34rem;-webkit-animation: rotate360 1.2s infinite linear;
+    animation: rotate360 1.2s infinite linear;}
+.spinner2 .img2{width: 1.1rem;height: 1.37rem; position: absolute;top: 0.675rem;left: 1.15rem;}
+.spinner2 .img3{width: 0.106rem;height: 0.32rem; position: absolute;top: 1.14rem;left: 1.647rem;-webkit-animation: rotate360clock 1.2s infinite linear;
+    animation: rotate360clock 1.2s infinite linear;}
+.spinner2 .img4{width: 3.36rem;height: 0.586rem; position: absolute;bottom: 2rem;left: 0;}
+.shareTip3 input::-webkit-input-placeholder{color: #7c7c7c;line-height: 1.4em;}
+.username{font-size: 0.48rem;text-align: center;width: 5.6rem;
+    height: 1.24rem;outline: none;border:2px solid #663204;border-radius: 1rem;margin-top: 40%;color: #663204;font-size: 0.48rem;
+}
+.usertel{font-size: 0.48rem;text-align: center;width: 5.6rem;
+    height: 1.24rem;outline: none;border:2px solid #663204;border-radius: 1rem;margin-top: 10%;color: #663204;font-size: 0.48rem;
+}
+.usersubmit{display: block;width: 4rem;height: 1.2rem;border-radius: 1rem;border:none;background-color: #ffc82f;
+    font-size: 0.56rem;color: #663204;position: absolute;left: 50%;margin-left: -2rem;bottom: 5%;
+    transition: all 300ms;-webkit-transition: all 300ms;outline:none;
+}
+.usersubmit:active{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+}
+
+.load{
+    width: 100%;
+    text-align: center;
+    line-height: 1rem;
+    /*background-color: #fff;*/
+}
+.loader {
+    display: inline-block;
+    font-size: 0px;
+    padding: 0px;
+}
+.loader span {
+    vertical-align: middle;
+    border-radius: 100%;
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin: 0 2px;
+    -webkit-animation: loader 0.8s linear infinite alternate;
+    animation: loader 0.8s linear infinite alternate;
+}
+.loader span:nth-child(1) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+    background: rgba(245, 103, 115,0.6);
+}
+.loader span:nth-child(2) {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+    background: rgba(245, 103, 115,0.8);
+}
+.loader span:nth-child(3) {
+    -webkit-animation-delay: -0.26666s;
+    animation-delay: -0.26666s;
+    background: rgba(245, 103, 115,1);
+}
+.loader span:nth-child(4) {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+    background: rgba(245, 103, 115,0.8);
+}
+.loader span:nth-child(5) {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s;
+    background: rgba(245, 103, 115,0.4);
+}
+ @keyframes loader {
+     from {
+    transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+    }
+    @-webkit-keyframes loader {
+     from {
+    -webkit-transform: scale(0, 0);
+    }
+    to {
+    -webkit-transform: scale(1, 1);
+    }
+}
