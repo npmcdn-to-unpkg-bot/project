@@ -27,6 +27,8 @@
 ## 1033---- 大家来找茬 
 
 ## 1035---- url scheme   /* fyfeng://helloandroid */
+## 1036---- 手机端模版
+## 1037---- bootstrap 
 
 ## 演示地址
 ## http://fanchaoyang.com/project/1002/

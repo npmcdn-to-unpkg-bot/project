@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>效果图展示</title>
+    <script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="../_public/Swiper-3.3.1/dist/css/swiper.min.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+<div class="main list">
+    <a href="index.html" class="back"></a>
+    <img src="images/xiaoguotu.png" alt="">
+    <!-- <img src="images/xiaoguotu.jpg" alt=""> -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+    </div>
+</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/Swiper-3.3.1/dist/js/swiper.jquery.min.js"></script>
+<script>
+    $(function(){
+        // $('.back').on('click',function(){
+        //     history.go(-1);
+        // })
+        var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        paginationClickable: true,
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        spaceBetween: 30,
+	        loop:true
+	    });
+    })
+</script>
+</body>
+</html>
