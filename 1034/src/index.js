@@ -5,7 +5,7 @@
 
 
 function autosize(){
-	autoHeight({element : $('.content .lst'),scale : 1.0})
+	autoHeight({element : $('.content .lst'),scale : 1.26})
 }
 
 var game ={
@@ -54,7 +54,7 @@ var game ={
 			},10)
 		}()
 
-		var list=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg','9.jpg','10.jpg'];
+		var list=['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg'];
 		list = list.concat(list);
 		list = shuffle(list);
 		if( imgStr== undefined) imgStr = 'images/';

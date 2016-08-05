@@ -26,52 +26,52 @@
 	<!-- 遮罩 -->
 	<div id="shade"></div>
 	
-	<!-- 提示1 -->
-	<img src="images/shareTip@2x.png" alt="" class="shareTip shareTip11">
-	<!-- 提示1 副本-->
-	<img src="images/shareTip2@2x.png" alt="" class="shareTip shareTip22">
-	<!-- 提示2 -->
-	<div class="shareTip2">
+	<!-- 提示2  次数用完 -->
+	<div class="shareTip2 shareTip2-1">
 		<div class="close"></div>
-		<div class="content">
-			亲，每天最多只能玩2次哦！<br>赶快邀请您的小伙伴一起来耍吧！
-		</div>
-		<div class="btn01">召唤小伙伴</div>
-		<div class="btn02"><a href="">关注我们</a></div>
+		<img src="images/none.jpg" class="full" alt="">
+	</div>
+
+	<!-- 活动结束 -->
+	<div class="shareTip2 shareTip2-2">
+		<div class="close"></div>
+		<img src="images/over.jpg" class="full" alt="">
 	</div>
 
 
 
 	<div class="main home">
 		<div class="top">
+			<img src="images/bg2.jpg" alt="" class="full">
 			<!-- <img class="bg" src="images/home-top.png" alt=""> -->
 			<!-- <img class="logo" src="images/logo@2x.png" alt=""> -->
-			<!-- <img class="guize" src="images/guize@2x.png" alt=""> -->
+			<img class="guize" src="images/guize@2x.png" alt="">
 		</div>
 		
 		<!-- <img class="menghuitongnian " src="images/menghuitongnian@2x.png" alt=""> -->
 		<img class="startBtn" src="images/start@2x.png" alt="">
 		<div class="guizeDialog">
-			<img src="images/guizeImg@2x.png" alt="">
+			<img src="images/guizeImg@2x.jpg" alt="">
 			<div class="iconClose"> </div>
 			<div class="content">
 				<div class="title">活动时间：</div>
-				<p>5月26号-5月31号</p>
+				<p>8月8日~8月15日</p>
 				<div class="title">活动奖品：</div>
-				<p>一等奖：上海迪士尼门票2张</p>
-				<p>二等奖：芭比娃娃正装</p>
+				<p>1—5名：VR眼镜</p>
+				<p>6—22名：智能手表</p>
 				<p>三等奖：童年大礼包</p>
-				<p>幸运奖：俄罗斯方块游戏机</p>
+				<p>21—54名：USB风扇</p>
 
 				<div class="title">主办单位：</div>
-				<p>合房网 安房网 星空地产网</p>
+				<p>普天world庐州公馆 合房网</p>
 
 				<div class="title">活动规则:</div>
 
 				<p>一、根据游戏分数排名，赢取奖品。游戏花费时间越短，游戏分数越高。</p>
-				<p>二、每个用户每天有1次游戏机会，每天第一次分享到朋友圈可获取1次游戏机会。</p>
-				<p>三、中奖结果于6.1号在微信公众平台予以公布。</p>
-				<p>本活动最终解释权归星空传媒控股所有</p>
+				<p>二、每个用户每天有1次游戏机会。</p>
+				<p>三、活动结束后根据游戏内的排名到项目售楼部领取相应的奖品。</p>
+				<br>
+				<p>临时售楼部地址：合肥市北二环与四里河交叉口明发国际大酒店一楼大厅</p>
 			</div>
 		</div>
 	</div>
@@ -81,7 +81,7 @@
 <script src="src/index.js"></script>
 <script>
 	$(".main").css({
-		height:parseInt($(window).height())
+		// height:parseInt($(window).height())
 	})
 	$(".guize").on("click",function(){
 		$(".guizeDialog").show();
