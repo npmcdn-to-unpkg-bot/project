@@ -3,7 +3,7 @@ body{
 }
 .main.game{
 	background: url(../images/game.jpg) top center no-repeat;
-	background-size: contain;
+	background-size: cover;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -41,7 +41,7 @@ img.full{
 }
 .game .head{
 	width: 10rem;
-    height: 3rem;
+    height: 1.5rem;
 	/*padding-top: 2.22rem;*/
 	/*padding-bottom: 1rem;*/
     position: relative;
@@ -121,7 +121,33 @@ img.full{
 .home .logo{width:94%;position: absolute;left: 3%;top: 10px;}
 .home .guize{width:46%;position: absolute;left: 27%;top: 34%;}
 .home .menghuitongnian{width:80%;position: absolute;left: 10%;top: 22%;}
-.home .startBtn{width:30%;position: absolute;left: 35%;bottom: 30%;-webkit-transition: all 300ms;transition: all 300ms;}
+.home .startBtn{
+    width:30%;position: absolute;left: 35%;bottom: 30%;-webkit-transition: all 300ms;transition: all 300ms;
+    -webkit-transform: scale3d(1.4,1.4,1);
+    transform: scale3d(1.4,1.4,1);
+    -webkit-animation:scale1 800ms infinite linear  alternate;
+    animation:scale1 800ms infinite linear  alternate;
+}
+@-webkit-keyframes scale1{
+    from {
+       -webkit-transform: scale3d(1.4,1.4,1);
+        transform: scale3d(1.4,1.4,1); 
+    }
+    to{
+        -webkit-transform: scale3d(1.1,1.1,1);
+        transform: scale3d(1.1,1.1,1);
+    }
+}
+@keyframes scale1{
+    from {
+       -webkit-transform: scale3d(1.4,1.4,1);
+        transform: scale3d(1.4,1.4,1); 
+    }
+    to{
+        -webkit-transform: scale3d(1.1,1.1,1);
+        transform: scale3d(1.1,1.1,1);
+    }
+}
 .home .startBtn:active{-webkit-transform: scale(0.8);transform: scale(0.8);}
 .guizeDialog{
     width: 100%;
@@ -342,7 +368,7 @@ img.full{
     background-color: transparent;
 }
 .usertel{font-size: 0.48rem;text-align: center;width: 5.6rem;
-    height: 1.24rem;outline: none;border:2px solid #dfd8bc;border-radius: 1rem;margin-top: 10%;color: #fffded;font-size: 0.48rem;
+    height: 1.24rem;outline: none;border:2px solid #dfd8bc;border-radius: 1rem;margin-top: 0.5rem;color: #fffded;font-size: 0.48rem;
     background-color: transparent;
 }
 .usersubmit{display: block;width: 1.5rem;height: 1.2rem;border-radius: 1rem;border:none;background-color: #ffc82f;

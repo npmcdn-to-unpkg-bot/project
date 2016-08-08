@@ -24,25 +24,76 @@
   </script>
   <link rel="stylesheet" href="../_public/reset.css">
   <link rel="stylesheet" href="src/index.min.css">
-  <style>
-    .tips{
-      color:#fff;
-      font-size: 0.48rem;
-      height: 1.4rem;
-      line-height: 1.4rem;
-    }
-    .tips .p{
-      color:#ffcc00;
-    }
-  </style>
 </head>
 <body>
   <div class="page-group">
     <div class="page">
       <div class="content">
         <div class="content-inner">
-          <img src="images/home.jpg" alt="" class="full">
-          <div class="btn btn-1 btn-home">领红包</div>
+          <img src="images/2.jpg" class="full" alt="">
+          <table class="userlist">
+            <tbody>
+              <tr>
+                <td>姓名</td>
+                <td><input type="text" placeholder="请输入姓名"></td>
+              </tr>
+              <tr>
+                <td>性别</td>
+                <td>
+                  <label for=""><input type="radio" name="sex">男</label>
+                  <label for=""><input type="radio" name="sex">女</label>
+                </td>
+              </tr>
+              <tr>
+                <td>血型</td>
+                <td>
+                  <label for=""><input type="radio" name="blood">A</label>
+                  <label for=""><input type="radio" name="blood">B</label>
+                  <label for=""><input type="radio" name="blood">AB</label>
+                  <label for=""><input type="radio" name="blood">O</label>
+                </td>
+              </tr>
+              <tr>
+                <td>星座</td>
+                <td>
+                  <div class="select">
+                    <select name="" id="">
+                      <option value="">白羊座</option>
+                      <option value="">金牛座</option>
+                      <option value="">双子座</option>
+                      <option value="">巨蟹座</option>
+                      <option value="">狮子座</option>
+                      <option value="">处女座</option>
+                      <option value="">天秤座</option>
+                      <option value="">天蝎座</option>
+                      <option value="">射手座</option>
+                      <option value="">摩羯座</option>
+                      <option value="">水瓶座</option>
+                      <option value="">双鱼座</option>
+                    </select>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>性格</td>
+                <td class="checkbox">
+                  <label for=""><input type="checkbox">活泼</label>
+                  <label for=""><input type="checkbox">开朗</label>
+                  <label for=""><input type="checkbox">稳重</label>
+                  <label for=""><input type="checkbox">事业型</label>
+                  <label for=""><input type="checkbox">外向</label>
+                  <label for=""><input type="checkbox">自信</label>
+                  <label for=""><input type="checkbox">多愁善感</label><br>
+                  <label for=""><input type="checkbox">善良</label>
+                  <label for=""><input type="checkbox">热情</label>
+                  <label for=""><input type="checkbox">体贴务实</label><br>
+                  <label for=""><input type="checkbox">勇敢</label>
+                  <label for=""><input type="checkbox">神经质</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="" class="btn btn-go"></a>
         </div>
       </div>
     </div>
@@ -50,19 +101,13 @@
     <div id="shade"></div>
     <!-- 弹框 -->
     <div class="dialog">
-      <br><br>
-      <p class="tips">1、长按识别二维码关注</p>
-      <img src="images/er.png" class="wx" alt="">
-     <p class="tips"> 2、回复“<span class="y">星空红包节</span>”抢红包</p>
+      
     </div>
   </div>
 <script src="../_public/jquery/jquery-2.2.3.min.js"></script>
 <script>
   $(function(){
-    $('.btn-home').on('click',function(){
-      $('#shade').show();
-      $('.dialog').show();
-    })
+
   })
 </script>
 </body>

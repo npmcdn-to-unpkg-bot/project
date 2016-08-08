@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'), //错误日志格式与 gulp 的日志保持一致
     minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
-var num = '1034';
+var num = '1040';
 
 //sass
 gulp.task('sass', function () {
