@@ -184,6 +184,7 @@ footer{
   overflow: hidden;
   font-size: 0;
   position: relative;
+  -webkit-overflow-scrolling:touch;
 }
 .scroll{
   -webkit-overflow-scrolling:touch;
@@ -295,6 +296,7 @@ table.userlist{
   }
   input[type="radio"]{
     position: relative;
+    outline: none;
     width: rem(30);
     height: rem(30);
     border:1px solid #000;
@@ -345,6 +347,7 @@ table.userlist{
   }
   input[type="checkbox"]{
     position: relative;
+    outline: none;
     width: rem(26);
     height: rem(26);
     border:1px solid #000;
