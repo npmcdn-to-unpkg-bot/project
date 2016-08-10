@@ -2,6 +2,7 @@ function load(list){
   if(list == undefined ) return
   var img = list.img == undefined ? [] : list.img ;
   var js = list.js == undefined ? [] : list.js ;
+  var css = list.css == undefined ? [] : list.css ;
   var audio = list.audio == undefined ? [] : list.audio ;
   var length = img.length + js.length , num = 0;
   function progress(num){
@@ -13,7 +14,7 @@ function load(list){
       document.body.className = document.body.className +' ready';
     }
   }
-  function imgload(src){
+  function imgLoad(src){
     var img = new Image();
     img.onload = function () {
         num++;
@@ -21,7 +22,7 @@ function load(list){
     };
     img.src = src;
   }
-  function audioload(src){
+  function audioLoad(src){
     var audio = new Audio();
     audio.onload = function () {
         num++;
@@ -30,7 +31,7 @@ function load(list){
     audio.src = src;
   }
 
-  function jsload(list,index){
+  function jsLoad(list,index){
     if(index == undefined ) index = 0;
     if(index >= list.length) return
     var _doc=document.getElementsByTagName('head')[0];
@@ -40,16 +41,17 @@ function load(list){
      _doc.appendChild(script);
      script.onload=function(){
         index++
-        jsload(list,index);
+        jsLoad(list,index);
         num++;
         progress(num);
      }
   }
+
   for(var i=0;i<img.length;i++){
-    imgload(img[i]);
+    imgLoad(img[i]);
   }
   for(var i=0;i<audio.length;i++){
-    audioload(audio[i]);
+    audioLoad(audio[i]);
   }
-  jsload(js);
+  jsLoad(js);
 }

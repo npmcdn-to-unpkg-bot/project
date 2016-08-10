@@ -43,12 +43,12 @@ function defaultEvent(element){
 		// e.stopPropagation();
 	})
 	element.addEventListener("touchend",function(e){
-		e.preventDefault();
-		e.stopPropagation();
-	})
-	element.addEventListener("touchmove",function(e){
 		// e.preventDefault();
 		// e.stopPropagation();
+	})
+	element.addEventListener("touchmove",function(e){
+		e.preventDefault();
+		e.stopPropagation();
 	})
 }
 
