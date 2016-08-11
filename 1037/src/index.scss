@@ -1,0 +1,34 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #333;
+$bgColor:#fff;
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: $width * 1px;
+    height: $height * 1px;
+    display: inline-block;
+}
+@mixin animation($animation...){
+  -webkit-animation:$animation;
+  animation:$animation;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+@mixin keyframes ($name) {
+    @keyframes #{$name}
+    {
+      @content;
+    }
+    @-webkit-keyframes #{$name} /* Safari 和 Chrome */
+    {
+      @content;
+    }
+}
+body{
+  font-family: "微软雅黑",Helvetica,Arial,sans-serif;
+}

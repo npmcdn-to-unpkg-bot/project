@@ -1,0 +1,311 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #333;
+$bgColor:#fff;
+$baseFontSize:75;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+@mixin animation($animation...){
+  -webkit-animation:$animation;
+  animation:$animation;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+@mixin center(){
+
+}
+@mixin keyframes ($name) {
+    @keyframes #{$name}
+    {
+      @content;
+    }
+    @-webkit-keyframes #{$name} /* Safari 和 Chrome */
+    {
+      @content;
+    }
+}
+body{
+  background-color: $bgColor;
+}
+img{max-width: 100%;}
+i{font-style: normal;}
+a {
+  color: #0894ec;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:active {
+  color: #0a8ddf;
+}
+/*常用样式*/
+.fl{float:left;}
+.fr{float:right;}
+
+
+/*
+* 公共布局部分结束
+**/
+.section{
+  background: url(../images/bg.jpg) center no-repeat;
+  background-size: 100% 100%;
+  &:first-child{
+    background: url(../images/1000.jpg) center no-repeat;
+    background-size: 100% 100%;
+  }
+  &:after{
+    content:" ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index:2;
+    background: url(../images/border.png) center no-repeat;
+    background-size: 0 0;
+    -webkit-opacity: 0;
+    -webkit-transition:all 800ms;
+    transition:all 800ms;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+}
+.active.section:after{
+  -webkit-opacity: 1;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  background-size: 100% 100%;
+}
+
+.f-logo{
+  position: absolute;@include icon('../images/logo.png',750,191);
+  background-size: auto 100%;
+}
+.f-1001{
+  position: absolute; @include icon('../images/1001.png',750,115);
+  background-size: auto 100%;
+}
+.f-1002{
+  position: absolute; @include icon('../images/1002.png',750,28);
+  background-size: auto 100%;
+}
+.f-2001{
+  position: absolute; @include icon('../images/2001.png',72,606);
+}
+.f-2002{
+  position: absolute; @include icon('../images/2002.png',222,335);
+}
+.f-2003{
+  position: absolute; @include icon('../images/2003.png',750,742);
+}
+.f-2004{
+  position: absolute; @include icon('../images/2004-1.png',84,83);
+  @include animation(butterfly 500ms linear infinite);
+}
+@include keyframes(butterfly){
+  from{
+      @include icon('../images/2004-1.png',84,83);
+  }
+  to{
+      @include icon('../images/2004-2.png',84,83);
+  }
+}
+.f-2005{
+  position: absolute; @include icon('../images/2005-1.png',169,162);
+  @include animation(butterfly-2 500ms linear infinite);
+}
+@include keyframes(butterfly-2){
+  from{
+      @include icon('../images/2005-1.png',169,162);
+  }
+  to{
+      @include icon('../images/2005-2.png',169,162);
+  }
+}
+
+.f-3001{
+  position: absolute; @include icon('../images/3001.png',72,606);
+}
+.f-3002{
+  position: absolute; @include icon('../images/3002.png',225,659);
+}
+.f-3003{
+  position: absolute; @include icon('../images/3003.png',750,1134);
+}
+.f-4001{
+  position: absolute; @include icon('../images/4001.png',72,606);
+}
+.f-4002{
+  position: absolute; @include icon('../images/4002.png',225,600);
+}
+.f-4003{
+  position: absolute; @include icon('../images/4003.png',750,801);
+}
+.f-4004{
+  position: absolute; @include icon('../images/4004-1.png',133,104);
+  @include animation(dragonfly 500ms linear infinite);
+}
+@include keyframes(dragonfly){
+  from{
+      @include icon('../images/4004-1.png',133,104);
+  }
+  to{
+      @include icon('../images/4004-2.png',133,104);
+  }
+}
+
+
+.f-5001{
+  position: absolute; @include icon('../images/5001.png',72,606);
+}
+.f-5002{
+  position: absolute; @include icon('../images/5002.png',177,660);
+}
+.f-5003{
+  position: absolute; @include icon('../images/5003.png',750,847);
+}
+.f-5004{
+  position: absolute; @include icon('../images/5004-1.png',289,422);
+  @include animation(smog 2s linear infinite);
+}
+@include keyframes(smog){
+  from{
+    opacity: 0;
+  }
+  20%{
+      opacity: 1;
+      @include icon('../images/5004-1.png',289,422);
+  }
+  80%{
+      opacity: 1;
+      @include icon('../images/5004-2.png',289,422);
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+.f-6001{
+  position: absolute; @include icon('../images/6001.png',72,606);
+}
+.f-6002{
+  position: absolute; @include icon('../images/6002.png',177,660);
+}
+.f-6003{
+  position: absolute; @include icon('../images/6003.png',750,785);
+}
+.f-6004{
+  position: absolute; @include icon('../images/6004.png',208,179);
+  @include animation(violin 1s linear infinite alternate);
+}
+@include keyframes(violin){
+  from{
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  to{
+    -webkit-transform: translate3d(40%,10%,0);
+    transform: translate3d(40%,10%,0);
+  }
+}
+
+
+.f-7001{
+  position: absolute; @include icon('../images/7001.png',72,606);
+}
+.f-7002{
+  position: absolute; @include icon('../images/7002.png',225,473);
+}
+.f-7003{
+  position: absolute; @include icon('../images/7003.png',750,779);
+}
+.f-8001{
+  position: absolute; @include icon('../images/8001.png',72,606);
+}
+.f-8002{
+  position: absolute; @include icon('../images/8002.png',340,370);
+  -webkit-transform: scale3d(0.8,0.8,1);
+  transform: scale3d(0.8,0.8,1);
+}
+.f-8003{
+  position: absolute; @include icon('../images/8003.png',340,370);
+  -webkit-transform: scale3d(0.8,0.8,1);
+  transform: scale3d(0.8,0.8,1);
+}
+.f-8004{
+  position: absolute; @include icon('../images/8004.png',340,370);
+  -webkit-transform: scale3d(0.8,0.8,1);
+  transform: scale3d(0.8,0.8,1);
+}
+.f-9001{
+  position: absolute; @include icon('../images/9001.png',750,212);
+  background-size: auto 100%;
+}
+.f-9002{
+  position: absolute; @include icon('../images/9002.png',750,94);
+  background-size: auto 100%;
+}
+.f-9003{
+  position: absolute; @include icon('../images/9003.png',750,586);
+  background-size: auto 100%;
+  -webkit-transform: scale3d(0.8,0.8,1);
+  transform: scale3d(0.8,0.8,1);
+}
+.up{
+  position: absolute; @include icon('../images/up.png',750,34);
+  z-index:10;
+  bottom:rem(20);
+  @include animation(up 1s linear infinite);
+}
+
+@include keyframes(up){
+  from{
+    opacity: 0;
+    -webkit-transform: translate3d(0,150%,0);
+    transform: translate3d(0,200%,0);
+  }
+  50%{
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  to{
+    opacity: 0;
+    -webkit-transform: translate3d(0,-150%,0);
+    transform: translate3d(0,-200%,0);
+  }
+}
+
+.music{
+  position: absolute;
+  top:rem(80);
+  right:rem(80);
+  z-index:999;
+  @include icon('../images/yy.png',44,44);
+  &.on{
+    @include animation(rotate360 2s linear infinite);
+  }
+}
+@include keyframes(rotate360){
+  from{
+    -webkit-transform: rotate3d(0,0,1,0);
+    transform: rotate3d(0,0,1,0);
+  }
+  to{
+    -webkit-transform: rotate3d(0,0,1,360deg);
+    transform: rotate3d(0,0,1,360deg);
+  }
+}

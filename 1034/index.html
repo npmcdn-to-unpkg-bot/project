@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>抽奖</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<!-- <link rel="stylesheet" href="../_public/mobile-rem.css"> -->
+	<link rel="stylesheet" href="src/index.css">
+	 <!-- <link rel="prefetch" href="game.html"/>  -->
+	 <!-- <link rel="prefetch" href="images/bg.mp3"/>  -->
+	 <style>
+
+	 	.dialog{
+	 		position: fixed;
+    	background: rgba(0,0,0,.8);
+    	left: 0;
+    	top: 0;
+    	width: 100%;
+    	height: 100%;
+    	text-align: center;
+    	z-index: 1000;
+    	color: #fff;
+    	-webkit-transform: translate3d(0,0,0);
+    	transform: translate3d(0,0,0);
+	 	}
+	 	.dialog p{
+	 		height: 1rem;
+	 		line-height: 1rem;
+	 		font-size: 0.5rem;
+	 	}
+	 </style>
+</head>
+<body>
+	<div class="dialog">
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p>请识别二维码</p>
+		<img src="images/263497033618088227.jpg" alt="">
+		<p>回复关键字“楼盘消消乐”</p>
+	</div>
+
+	<div id="shade"></div>
+
+	<div class="loading" >
+		<div class="spinner2">
+			<img src="images/loading/01@2x.png" alt="" class="img1">
+			<img src="images/loading/02@2x.png" alt="" class="img2">
+			<img src="images/loading/03@2x.png" alt="" class="img3">
+			<img src="images/loading/tip@2x.png" alt="" class="img4">
+		</div>
+	</div>
+
+	<!-- 遮罩 -->
+	
+	
+	<!-- 提示2  次数用完 -->
+	<div class="shareTip2 shareTip2-1">
+		<div class="close"></div>
+		<img src="images/none.jpg" class="full" alt="">
+	</div>
+
+	<!-- 活动结束 -->
+	<div class="shareTip2 shareTip2-2">
+		<div class="close"></div>
+		<img src="images/over.jpg" class="full" alt="">
+	</div>
+
+
+
+	<div class="main home">
+		<div class="top">
+			<img src="images/bg2.jpg" alt="" class="full">
+			<!-- <img class="bg" src="images/home-top.png" alt=""> -->
+			<!-- <img class="logo" src="images/logo@2x.png" alt=""> -->
+			<img class="guize" src="images/guize@2x.png" alt="">
+		</div>
+		
+		<!-- <img class="menghuitongnian " src="images/menghuitongnian@2x.png" alt=""> -->
+		<img class="startBtn" src="images/start@2x.png" alt="">
+		<div class="guizeDialog">
+			<img src="images/guizeImg@2x.jpg" alt="">
+			<div class="iconClose"> </div>
+			<div class="content">
+				<div class="title">活动时间：</div>
+				<p>8月8日~8月15日</p>
+				<div class="title">活动奖品：</div>
+				<p>1—5名：VR眼镜</p>
+				<p>6—22名：智能手表</p>
+				<p>三等奖：童年大礼包</p>
+				<p>21—54名：USB风扇</p>
+
+				<div class="title">主办单位：</div>
+				<p>普天world庐州公馆 合房网</p>
+
+				<div class="title">活动规则:</div>
+
+				<p>一、根据游戏分数排名，赢取奖品。游戏花费时间越短，游戏分数越高。</p>
+				<p>二、每个用户每天有1次游戏机会。</p>
+				<p>三、活动结束后根据游戏内的排名到项目售楼部领取相应的奖品。</p>
+				<br>
+				<p>临时售楼部地址：合肥市北二环与四里河交叉口明发国际大酒店一楼大厅</p>
+			</div>
+		</div>
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+	defaultEvent($(".dialog")[0]);
+	$(".main").css({
+		// height:parseInt($(window).height())
+	})
+	$(".guize").on("click",function(){
+		$(".guizeDialog").show();
+	})
+	$(".iconClose").on("click",function(){
+		$(".guizeDialog").hide();
+	})
+	$(".startBtn").on("click",function(){
+		setTimeout(function(){
+			window.location.href="game.html";
+		},500)
+	})
+	$(".btn01").on("click",function(){
+		$("#shade").show();
+		$(".shareTip2").hide();
+		$(".shareTip22").show();
+	})
+	$(".close").on("click",function(){
+		$(".shareTip2").hide();
+		$("#shade").hide();
+	})
+	window.onload=function(){
+		$('.loading').fadeOut(1000);
+	}
+</script>
+</body>
+</html>

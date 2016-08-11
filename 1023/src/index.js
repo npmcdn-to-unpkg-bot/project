@@ -10,15 +10,18 @@ var maps = function(options){
     var element  = options.element,
         position = options.position,
         radius   = options.radius,
+        link     = options.link || '',
+        imgSrc   = options.imgSrc || '',
         map      = {},
         obj      = {};
     //地图初始化
     obj.init = function(){
         map = new AMap.Map(element, {
             resizeEnable :  true,//是否监控地图容器尺寸变化，默认值为false
-            zoom         :  15,
+            zoom         :  options.zoom || 15,
             center       :  position,
-            mapStyle     :  'normal'
+            mapStyle     :  'normal',
+            // zooms        :  [12,16]
         });
         map.setFitView=function(){
             return false;
@@ -38,7 +41,18 @@ var maps = function(options){
             buildAddress : options.buildAddress
         })
     }
+    obj.reset=function(){
+        map.clearMap();
+        // map.setStatus({
+        //     zoomEnable : false
+        // });
 
+        obj.setAdvancedMarker(position,{
+            buildName    : options.buildName,
+            equalPrice   : options.equalPrice,
+            buildAddress : options.buildAddress
+        })
+    }
     //高级信息窗体点标注
     obj.setAdvancedMarker = function(position,list){
         var infowindow;
@@ -64,11 +78,11 @@ var maps = function(options){
         AMap.plugin('AMap.AdvancedInfoWindow',function(){
          infowindow = new AMap.AdvancedInfoWindow({
                   content: '<div class="info-title">'+buildName+'</div><div class="info-content info-content-hf">'+
-                          '<img src="http://img2.xkhouse.com/hfhouse/newhouse/2015/05/20150512/CL4BI1431398813.jpg"><div class="prize">'+
+                          '<img src="'+imgSrc+'"><div class="prize">'+
                           equalPrice   + '</div><div class="buildAddress">'+
                           buildAddress + '</div>'+
 
-                          '<a target="_blank" href = "http://http://newhouse.hfhouse.com//"></a></div>',
+                          '<a target="_blank" href = "'+link+'"></a></div>',
                   offset: new AMap.Pixel(0, -30),
                   placeSearch: false,
                   asOrigin   : false,
@@ -130,16 +144,7 @@ var maps = function(options){
     }
     obj.searchNearBy=function(name,callback){
             // obj.init();
-            map.clearMap();
-            // map.setStatus({
-            //     zoomEnable : false
-            // });
-
-            obj.setAdvancedMarker(position,{
-                buildName    : options.buildName,
-                equalPrice   : options.equalPrice,
-                buildAddress : options.buildAddress
-            })
+            obj.reset();
             AMap.service('AMap.PlaceSearch',function(){//回调函数
             //实例化PlaceSearch
             placeSearch= new AMap.PlaceSearch({
@@ -155,6 +160,7 @@ var maps = function(options){
                     //TODO : 解析返回结果,如果设置了map和panel，api将帮助完成点标注和列表
                     console.log(result.poiList);
                     if(callback !==undefined) callback();
+                    // map.setZoom(10);
                 }
             });
             // map.setFitView();

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>加乔微楼书</title>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile.css">
+    <link rel="stylesheet" href="../_public/animate.css-master/animate.min.css">
+	<link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+
+<div class="loading" style="display:none;">
+    <div class="spinner"></div>
+</div>
+<div class="music"></div>
+<audio src="images/music_bg.mp3"  id="audio" hidden="hidden" loop="loop" ></audio>
+
+<div class="main" >
+    <img src="images/bg.jpg" alt="">
+    <div class="circlelogo"></div>
+    <div class="circle animated infinite">
+        <div class="circlelist circle01"></div>
+        <div class="circlelist circle02"></div>
+        <div class="circlelist circle03"></div>
+        <div class="circlelist circle04"></div>
+        <div class="circlelist circle05"></div>
+        <div class="circlelist circle06"></div>
+        <div class="circlelist circle07"></div>
+        <div class="circlelist circle08"></div>
+        <div class="circlelist circlelink">
+            <a href="javascript:;" class="dialogTel-a" target="_bank"></a> <!-- 预约看房-->
+            <a href="loupangaikuang.html" target="_bank"></a> <!-- 楼盘概况-->
+            <a href="peitao.html" target="_bank"></a> <!-- 配套服务-->
+            <a href="huxing.html" target="_bank"></a> <!-- 户型鉴赏-->
+            <a href="jiaotongquwei.html" target="_bank"></a> <!-- 交通区位-->
+            <a href="xiaoguotu.html" target="_bank"></a> <!-- 效果图展示-->
+            <a href="" target="_bank"></a> <!-- 销售动态-->
+            <a href="" target="_bank"></a> <!-- 一键关注-->
+        </div>
+
+    </div>
+    
+</div>
+
+<div id="shade"></div>
+<div class="dialogTel">
+    <div class="top">
+        请拨打<i>0561-3861666</i> <br>
+    </div>
+    <div class="bottom clearfix">
+        <span class="fl"><a href="tel:05613861666">拨打</a></span>
+        <span class="fr quxiao">取消</span>
+    </div>
+</div>   
+
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+function autosize(){
+    autoHeight({element : $(".circle"),scale : 1,marginTop:-0.5})
+    autoHeight({element : $(".circlelogo"),scale : 1,marginTop:-0.5})
+    autoHeight({element : $(".dialogTel"),scale : 0.53,marginTop:-0.5})
+}
+
+$(function(){
+    autosize();
+    $(".main").css({
+        height:parseInt($(window).height())
+    })
+    $(".dialogTel-a").on("click",function(){
+        $("#shade").show();
+        $(".dialogTel").show();
+    })
+    $(".quxiao").on("click",function(){
+        $("#shade").hide();
+        $(".dialogTel").hide();
+    })
+    $(".circle01").addClass('touming');
+    setTimeout(function(){$(".circle02").addClass('touming');},200)
+    setTimeout(function(){$(".circle03").addClass('touming');},400)
+    setTimeout(function(){$(".circle04").addClass('touming');},600)
+    setTimeout(function(){$(".circle05").addClass('touming');},800)
+    setTimeout(function(){$(".circle06").addClass('touming');},1000)
+    setTimeout(function(){$(".circle07").addClass('touming');},1200)
+    setTimeout(function(){$(".circle08").addClass('touming');$(".circle").addClass('turn');},1400)
+    $(".music").on("click",function(){
+        if($(this).hasClass("on")){
+            $("#audio")[0].pause();
+            $(this).removeClass('on');
+        }else{
+            $("#audio")[0].play();
+            $(this).addClass('on');
+        }
+        
+    })
+    
+})
+
+$(window).resize(function() {
+    autosize();
+});
+</script>
+</body>
+</html>

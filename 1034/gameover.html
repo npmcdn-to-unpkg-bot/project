@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>游戏结束</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+	<link rel="prefetch" href="game.html"/> 
+	 <link rel="prefetch" href="images/bg.mp3"/> 
+</head>
+<body>
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<!-- 遮罩 -->
+	<div id="shade"></div>
+	
+	<!-- 提示1 -->
+	<img src="images/shareTip@2x.png" alt="" class="shareTip">
+	<!-- 提示2 -->
+	<div class="shareTip2">
+		<div class="close"></div>
+		<img src="images/none.jpg" class="full" alt="">
+	</div>
+	<!-- 提示3 -->
+	<div class="shareTip3">
+		<div class="close"></div>
+		<input type="text" class="username" placeholder="请输入昵称">
+		<input type="text" class="usertel" placeholder="请输入手机号码">
+		<button class="usersubmit"></button>
+	</div>
+
+	<div class="main gameover">
+		<div class="scoreBest">最优成绩：12s</div>
+		<div class="scoreIng">0s</div>
+		<a href="paihang.html"><img class="paihang" src="images/paihangbang@2x.png" alt=""></a>
+		<a href="index.html"><img class="again" src="images/again@2x.png" alt=""></a>
+		<div class="tip">
+			<!-- <a href="">关注</a>我们及时了解获奖名单 -->
+		</div>
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+	$(".main").css({
+		height:parseInt($(window).height())
+	})
+	$(".btn01").on("click",function(){
+		$("#shade").show();
+		$(".shareTip2").hide();
+		$(".shareTip").show();
+	})
+	$(".close").on("click",function(){
+		$(".shareTip2").hide();
+		// $(".shareTip3").hide();
+		$("#shade").hide();
+	})
+	$(function(){
+		var score=GetQueryString('score');
+		$(".scoreIng").html(score+'s');
+		
+		// $("#shade").show();
+		// $(".shareTip3").show();
+	})
+
+	// $(".guize").on("click",function(){
+	// 	$(".guizeDialog").show();
+	// })
+	// $(".iconClose").on("click",function(){
+	// 	$(".guizeDialog").hide();
+	// })
+	// $(".startBtn").on("click",function(){
+	// 	setTimeout(function(){
+	// 		window.location.href="game.html";
+	// 	},500)
+	// })
+</script>
+</body>
+</html>

@@ -3,9 +3,9 @@
 */
 
 body{
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+	// width: 100%;
+	// height: 100%;
+	// overflow: hidden;
 	background: #fff;
 	font-family: "微软雅黑";
 	-moz-user-select: none;
@@ -261,6 +261,7 @@ p.dec{
 }
 
 .floatnav{
+	display: none;
 	position: fixed;
 	width: 157px;
 	left: 50%;

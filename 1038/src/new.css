@@ -1,0 +1,276 @@
+.csstransforms .cn-wrapper {
+  font-size:1em;
+  width: 8rem;
+  height: 8rem;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  top: 20%;
+  left: 50%;
+  border-radius: 50%;
+  margin-left: -4rem;
+  /*transform: scale(0.1);*/
+  /*background-color: rgba(255,0,255,0.4);*/
+  transition: all .3s ease;
+}
+/* class applied to the container via JavaScript that will scale the navigation up */
+.csstransforms .opened-nav {
+  border-radius: 50%;
+  transform: scale(1);
+}
+
+
+.csstransforms .cn-wrapper li {
+  position: absolute;
+  font-size: 1.5em;
+  width: 4rem;
+  height: 3.02rem;
+  transform-origin: 4.1rem 3.1rem;
+  overflow: hidden;
+  left: -0.1rem;
+  top: 0.9rem;
+  transition: border .3s ease;
+  background-color: #4473cd;
+  background-color: hsla(219,67%,49%,.8);
+}
+
+.csstransforms .cn-wrapper li a {
+  display: block;
+  font-size: 0.4rem;
+  height: 5.5rem;
+  width: 5rem;
+  position: absolute;
+  /*bottom: -2.23rem;*/
+  top: 0;
+  right: -2rem;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  transform: skew(-45deg) rotate(-67.5deg) scale(1);
+  transition: opacity 0.3s, color 0.3s;
+}
+
+.csstransforms .cn-wrapper li a span {
+  font-size: 1.1em;
+  opacity: 0.7;
+}
+/* for a central angle x, the list items must be skewed by 90-x degrees
+in our case x=40deg so skew angle is 50deg
+items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
+
+.csstransforms .cn-wrapper li:first-child {
+  transform: rotate(0deg) skew(45deg);
+}
+
+.csstransforms .cn-wrapper li:nth-child(2) {
+  transform: rotate(45deg) skew(45deg);
+}
+
+.csstransforms .cn-wrapper li:nth-child(3) {
+  transform: rotate(90deg) skew(45deg)
+}
+
+.csstransforms .cn-wrapper li:nth-child(4) {
+  transform: rotate(135deg) skew(45deg);
+}
+
+.csstransforms .cn-wrapper li:nth-child(5) {
+  transform: rotate(180deg) skew(45deg);
+}
+.csstransforms .cn-wrapper li:nth-child(6) {
+  transform: rotate(225deg) skew(45deg);
+}
+.csstransforms .cn-wrapper li:nth-child(7) {
+  transform: rotate(270deg) skew(45deg);
+}
+.csstransforms .cn-wrapper li:nth-child(8) {
+  transform: rotate(315deg) skew(45deg);
+}
+
+/*.csstransforms .cn-wrapper li:nth-child(odd) a {
+  background-color: #a11313;
+  background-color: hsla(0, 88%, 63%, 1);
+}*/
+
+/*.csstransforms .cn-wrapper li:nth-child(even) a {
+  background-color: #a61414;
+  background-color: hsla(0, 88%, 65%, 1);
+}
+*/
+/* active style */
+/*.csstransforms .cn-wrapper li.active a {
+  background-color: #b31515;
+  background-color: hsla(0, 88%, 70%, 1);
+}
+*/
+/* hover style */
+/*.csstransforms .cn-wrapper li:not(.active) a:hover,
+.csstransforms .cn-wrapper li:not(.active) a:active,
+.csstransforms .cn-wrapper li:not(.active) a:focus {
+  background-color: #b31515;
+  background-color: hsla(0, 88%, 70%, 1);
+}*/
+
+
+
+
+
+
+
+.turn {
+  -webkit-animation-name: turn;
+  animation-name: turn;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  /* animation-direction:alternate; 是否轮流播放*/
+  /*-webkit-animation-direction:alternate; /*是否轮流播放*/
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
+  }
+  6.25% {
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
+  }
+  12.5% {
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
+  }
+  18.75% {
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
+  }
+  25% {
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
+  }
+  31.25% {
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
+  }
+  37.5% {
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
+  }
+  43.75% {
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
+  }
+  56.25% {
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
+  }
+  62.5% {
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
+  }
+  68.75% {
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
+  }
+  75% {
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
+  }
+  81.25% {
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
+  }
+  87.5% {
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
+  }
+  93.75% {
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0,0,1,360deg);
+    transform: rotate3d(0,0,1,360deg);
+  }
+}
+
+@keyframes turn {
+  0% {
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
+  }
+  6.25% {
+    -webkit-transform: rotate3d(0,0,1,0deg);
+    transform: rotate3d(0,0,1,0deg);
+  }
+  12.5% {
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
+  }
+  18.75% {
+    -webkit-transform: rotate3d(0,0,1,45deg);
+    transform: rotate3d(0,0,1,45deg);
+  }
+  25% {
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
+  }
+  31.25% {
+    -webkit-transform: rotate3d(0,0,1,90deg);
+    transform: rotate3d(0,0,1,90deg);
+  }
+  37.5% {
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
+  }
+  43.75% {
+    -webkit-transform: rotate3d(0,0,1,135deg);
+    transform: rotate3d(0,0,1,135deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
+  }
+  56.25% {
+    -webkit-transform: rotate3d(0,0,1,180deg);
+    transform: rotate3d(0,0,1,180deg);
+  }
+  62.5% {
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
+  }
+  68.75% {
+    -webkit-transform: rotate3d(0,0,1,225deg);
+    transform: rotate3d(0,0,1,225deg);
+  }
+  75% {
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
+  }
+  81.25% {
+    -webkit-transform: rotate3d(0,0,1,270deg);
+    transform: rotate3d(0,0,1,270deg);
+  }
+  87.5% {
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
+  }
+  93.75% {
+    -webkit-transform: rotate3d(0,0,1,315deg);
+    transform: rotate3d(0,0,1,315deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0,0,1,360deg);
+    transform: rotate3d(0,0,1,360deg);
+  }
+}

@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"> -->
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- 移动端手机号码/邮箱识别 -->
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 添加到桌面图标/如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon -->
+  <link href="" rel="apple-touch-icon-precomposed">
+  <!-- 浏览器中地址栏左侧显示的图标 -->
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <meta http-equiv="widow-target" content="_blank">
+  <!-- 微信调试 取消缓存 -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">  
+  <!-- 调试 -->
+  <title>微信H5</title>
+  <script>
+   !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
+  </script>
+  <style>
+    .loading{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:100000;
+      background:#000;
+    }
+    .load-1,.load-2{width: 1.6rem;height: 1.6rem;background: rgba(216, 189, 51,0.6);position: absolute;top:50%;left: 50%;margin-left: -0.8rem;margin-top: -0.8rem;border-radius: 50%;}
+    .tip{
+      font-size: 0.5rem;
+      color: rgb(216, 189, 51)  ;
+      text-align: center;
+      position: absolute;
+      top:50%;
+      padding-top: 1rem;
+      left: 0;
+      width: 100%;
+    }
+    .load-1{
+      -webkit-animation: myload-1 2s infinite ease-in-out;
+    }
+    @-webkit-keyframes myload-1{
+      from {
+        -webkit-transform: scale3d(.2,.2,1);
+      }
+      50%{
+        -webkit-transform: scale3d(1,1,1);
+      }
+      to{
+        -webkit-transform: scale3d(.2,.2,1);
+      }
+    }
+    .load-2{
+      -webkit-animation: myload-2 2s infinite ease-in-out;
+    }
+    @-webkit-keyframes myload-2{
+      from {
+        -webkit-transform: scale3d(1,1,1);
+      }
+      50%{
+        -webkit-transform: scale3d(0.2,0.2,1);
+      }
+      to{
+        -webkit-transform: scale3d(1,1,1);
+      }
+    }
+  </style>
+  <script src="src/load.js"></script>
+  <script>
+    var loadListImg = ['images/1000.jpg','images/1001.png','images/2001.png','images/2002.png','images/2003.png','images/2004-1.png','images/2004-2.png','images/2005-1.png','images/2005-2.png','images/3001.png','images/3002.png','images/3003.png','images/4001.png','images/4002.png','images/4003.png','images/4004-1.png','images/4004-2.png','images/5001.png','images/5002.png','images/5003.png','images/5004-1.png','images/5004-2.png','images/6001.png','images/6002.png','images/6003.png','images/6004.png','images/7001.png','images/7002.png','images/7003.png','images/8001.png','images/8002.png','images/8003.png','images/9001.png','images/9002.png','images/9003.png','images/bg.jpg','images/border.png','images/logo.png'],
+        loadJS = ['../_public/jquery/jquery-2.2.3.min.js','src/jquery.fullPage.min.js','src/index.js']
+    load({
+      img : loadListImg,
+      js  : loadJS,
+      // audio :['src/bg.mp3']
+    });
+  </script>
+  <link rel="stylesheet" href="../_public/reset.css">
+  <link rel="stylesheet" href="src/jquery.fullPage.css">
+  <link rel="stylesheet" href="../_public/animate.css-master/animate.min.css">
+  <link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+  <div class="loading">
+    <div class="load-1 "></div>
+    <div class="load-2"></div>
+    <div class="tip">0%</div>
+  </div>
+  <div class="music on"></div>
+  <audio src="src/bg.mp3" autoplay="" loop="" hidden=""></audio>
+  <div id="page">
+    <div class="section">
+      <div class="component f-logo " load="fadeInDown" leave="fadeOutUp" top="148"></div>
+      <div class="component f-1001 " load="zoomIn" leave="zoomOut" alt="" top="480" "></div>
+      <div class="component f-1002 " load="zoomIn" leave="zoomOut" alt="" bottom="80" "></div>
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-2003" load="bounceInRight" leave="bounceOutRight" bottom="0"></div> 
+      <div class="component f-2001" load="fadeInLeft" leave="fadeOutLeft" top="80" left="150"></div> 
+      <div class="component f-2002" load="lightSpeedIn" leave="lightSpeedOut" top="80" left="270"></div>
+      <div class="component f-2004" left="170" bottom="290"></div> 
+      <div class="component f-2005" left="314" bottom="240"></div>
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-3003 " load="bounceInLeft" leave="bounceOutLeft" bottom="-200" ></div>
+      <div class="component f-3001" load="fadeInRight" leave="fadeOutRight" top="80" left="526"></div> 
+      <div class="component f-3002" load="slideInLeft" leave="slideOutLeft" top="80" left="248"></div>
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-4003" load="bounceInRight" leave="bounceOutRight" bottom="-120"></div> 
+      <div class="component f-4001" load="fadeInLeft" leave="fadeOutLeft" top="80" left="160"></div> 
+      <div class="component f-4002" load="lightSpeedIn" leave="lightSpeedOut" top="80" left="270"></div>
+      <div class="component f-4004" left="56" bottom="260" style="display:none;"></div> 
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-5003" load="bounceInLeft" leave="bounceOutLeft" bottom="-160">
+        <div class="component f-5004" left="450" top="200"></div> 
+      </div>
+      <div class="component f-5001" load="fadeInRight" leave="fadeOutRight" top="80" left="528"></div> 
+      <div class="component f-5002" load="slideInLeft" leave="slideOutLeft" top="80" left="300"></div>
+      
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-6003" load="bounceInRight" leave="bounceOutRight" bottom="-160">
+        <div class="component f-6004" left="60" top="360"></div> 
+      </div> 
+      <div class="component f-6001" load="fadeInLeft" leave="fadeOutLeft" top="80" left="156"></div> 
+      <div class="component f-6002" load="lightSpeedIn" leave="lightSpeedOut" top="80" left="270"></div>
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-7003" load="bounceInLeft" leave="bounceOutLeft" bottom="-120"></div> 
+      <div class="component f-7001" load="fadeInRight" leave="fadeOutRight" top="80" left="525"></div> 
+      <div class="component f-7002" load="slideInLeft" leave="slideOutLeft" top="80" left="254"></div>
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-8001" load="slideInLeft" leave="slideOutLeft" left="100" top="80"></div> 
+      <div class="component f-8002" load="zoomIn" leave="zoomOut" left="272" top="60"></div>
+      <div class="component f-8003" load="zoomIn" leave="zoomOut" left="272" top="360"></div> 
+      <div class="component f-8004" load="zoomIn" leave="zoomOut" left="272" top="660"></div> 
+      <div class="up"></div>
+    </div>
+    <div class="section ">
+      <div class="component f-9001" load="slideInDown" leave="slideOutDown" top="123"></div> 
+      <div class="component f-9002" load="slideInUp" leave="slideOutUp" bottom="102"></div>
+      <div class="component f-9003" load="zoomIn" leave="zoomOut" top="320"></div> 
+    </div>
+  </div>
+</body>
+</html>

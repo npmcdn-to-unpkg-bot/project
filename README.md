@@ -23,6 +23,13 @@
 ### https://github.com/greensock/GreenSock-JS/ 
 ## 1028---- 微信产品展示 
 
+## 1032---- 大转盘抽奖 
+## 1033---- 大家来找茬 
+
+## 1035---- url scheme   /* fyfeng://helloandroid */
+## 1036---- 手机端模版
+## 1037---- bootstrap 
+
 ## 演示地址
 ## http://fanchaoyang.com/project/1002/
 ## 请将后面的数字替换即可

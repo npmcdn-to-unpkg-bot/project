@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>微信</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.min.css">
+	<style>
+		.filePicker{
+			background: none repeat scroll 0 0 #00B7EE;
+		    border-radius: 3px;
+		    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+		    color: #FFFFFF;
+		    cursor: pointer;
+		    display: inline-block;
+		    font-size: 0.4rem;
+		    height: 1rem;
+		    line-height: 1rem;
+		    width: 90%;
+		    min-width:120px;
+		    margin: 0 auto 0px;
+		    overflow: hidden;
+		    transition: background 0.2s;
+			-moz-transition: background 0.2s;
+			-webkit-transition: background 0.2s;
+			-o-transition: background 0.2s;
+		}
+		.filePicker:hover{
+			background: none repeat scroll 0 0 #00A2D4;
+		}
+		input[type="file"]{
+			display: none;
+		}
+		.img{
+			width: 2rem;
+			height: 2rem;
+			position: relative;
+			margin:20px;
+		}
+		.img img{
+			position: absolute;
+			width: 100%;
+			top:50%;
+			left: 0;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+	</style>
+</head>
+<body>
+
+	<!-- 遮罩层 -->
+	<div id="shade" style="display:none;"></div>
+	<!-- 代码部分 -->
+	<div class="page-group">
+		<div class="page">
+			<h1>颜值测试</h1>
+			<div class="filePicker">点击选择文件</div>
+			<input type="file" id="file">
+			<div class="img">
+				
+			</div>
+		</div>
+	</div>
+
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="src/jquery.facedetection.min.js"></script>
+<script>
+	$(function(){
+		$('.filePicker').on('click',function(){
+			// $('#file').click();
+			$('#file').trigger('click')
+		})
+		var oFReader = new FileReader();
+		oFReader.onload = function (oFREvent){
+			var img = new Image();
+			img.src = oFREvent.target.result;
+			$('.img').html(img);
+
+			$('.img img').faceDetection({
+	        complete: function (faces) {
+	            console.log(faces);
+	            if(faces[0]===undefined){
+	            	alert('好丑啊！！')
+	            }else{
+	            	alert('好靓的小伙！！！')
+	            }
+	        }
+	    });
+		}
+		$('#file').on('change',function(){
+	    if(this.files[0].type.indexOf('image')==-1){
+	    	//清空input file
+	    }else{
+	    	oFReader.readAsDataURL(this.files[0])
+	    }
+		})
+	})
+</script>
+</body>
+</html>

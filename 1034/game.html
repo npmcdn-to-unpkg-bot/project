@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="m">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no"> drp.js将根据此 -->
+	<meta name="apple-mobile-web-app-capable" content="tes">
+	<meta http-equiv="widow-target" content="_blank">
+	<title>抽奖</title>
+	<script src="../_public/rem.js"></script>
+	<link rel="stylesheet" href="../_public/reset.css">
+	<link rel="stylesheet" href="../_public/mobile-rem.css">
+	<link rel="stylesheet" href="src/index.css">
+	<style>
+		#shade{
+			font-size: 2rem;
+			padding-top: 50%;
+			color: #ffd103;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<audio src="images/bg.mp3"  id="audio" hidden="hidden" loop="loop" autoplay=""></audio>
+
+	<div class="loading" style="display:none;">
+		<div class="spinner"></div>
+	</div>
+	<div id="shade" style="display:block">
+		准备
+	</div>
+	<div class="main game">
+		<div class="music on"></div>
+
+		<div class="head">
+			<!-- <img class="bg" src="images/2_02.png"  alt=""> -->
+			<div class="time" id="time">00:00:00</div>
+			<!-- <div class="score">12'12''2</div> -->
+			
+		</div>
+		<div class="content clearfix">
+
+		</div>
+		<!-- <div class="bottom">
+			<div class="btn"></div>
+		</div> -->
+	</div>
+<script src="../_public/jquery/jquery-2.2.3.min.js"></script>
+<script src="../_public/public.js"></script>
+<script src="src/index.js"></script>
+<script>
+	window.onload=function(){
+		var num = 3;
+		var str='images/';
+		document.getElementById('shade').innerHTML=num;
+		var time=setInterval(function(){
+			num--;
+			if(num<1){
+				clearTimeout(time);
+				document.getElementById('shade').style.display='none';
+				game.game();
+				return
+			} 
+			document.getElementById('shade').innerHTML=num;
+		},1000)
+	}
+	$(window).resize(function(event) {
+		/* Act on the event */
+		autosize();
+	});
+
+</script>
+</body>
+</html>
