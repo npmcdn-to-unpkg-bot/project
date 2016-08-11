@@ -1,0 +1,178 @@
+
+@mixin transform($option...){
+  transform:$option;
+  -ms-transform:$option;   /* IE 9 */
+  -moz-transform:$option;  /* Firefox */
+  -webkit-transform:$option; /* Safari 和 Chrome */
+  -o-transform:$option; 
+}
+
+@mixin transform-origin($option...){
+  transform-origin:$option;
+  -ms-transform-origin:$option;   /* IE 9 */
+  -moz-transform-origin:$option;  /* Firefox */
+  -webkit-transform-origin:$option; /* Safari 和 Chrome */
+  -o-transform-origin:$option; 
+}
+
+@mixin transition($option...){
+  transition:$option;
+  -ms-transition:$option;   /* IE 9 */
+  -moz-transition:$option;  /* Firefox */
+  -webkit-transition:$option; /* Safari 和 Chrome */
+  -o-transition:$option; 
+}
+body{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6,p{
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+}
+.page{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.slides{
+  position: absolute;
+  z-index:1;
+  left: 50%;
+  top:50%;
+  width: 1920px;
+  height: 1080px;
+  @include transform(translate3d(-50%,-50%,0));
+  img{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    @include transition(all 500ms);
+    &.active{
+      opacity: 1;
+    }
+  }
+}
+.slider-overlay{
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  z-index: 50;
+  div{
+      position: absolute;
+      top: 30%;
+      left: -100%;
+      opacity: 0;
+      @include transition(all .4s ease);
+      z-index: 999;
+      color: #fff;
+      padding: 0 20px;
+      width: 60%;
+      text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+      &.active{
+        left: 0;
+        opacity: 1;
+      }
+      h3{
+        font-size: 4em;
+        margin:0;
+      }
+      p{
+        font-size: 1.2em;
+      }
+  }
+}
+
+.spinner{
+    position: absolute;
+    width: 2650px;
+    height: 2650px;
+    top: 50%;
+    left: 50%;
+    // 1325
+    margin-left: -900px;
+    margin-top: -1300px;
+    right: initial;
+    @include transition(all .5s ease, opacity .3s ease);
+    opacity: .6;
+    z-index: 30;
+    @include transform(scale(2));
+}
+.spinner-btn{
+  position: absolute;
+  width: 2650px;
+  height: 2650px;
+  top: 50%;
+  left: 50%;
+  // 1325
+  margin-left: -900px;
+  margin-top: -1300px;
+  @include transition(all .5s ease, opacity .3s ease);
+  z-index: 40;
+}
+.spinner-btn1{
+  position: absolute;
+  width: 2650px;
+  height: 2650px;
+  top: 50%;
+  left: 50%;
+  // 1325
+  margin-left: -900px;
+  margin-top: -1300px;
+  z-index: 50;
+}
+.button{
+  width: 500px;
+  height: 500px;
+  // background: #000;
+  position: absolute;
+  z-index: 60;
+  left: 50%;
+  top:50%;
+  margin-left: 175px;
+  margin-top:-225px ;
+  // opacity: 0.5;
+  overflow: hidden;
+  font-size: 5em;
+  color: #fff;
+  a{
+    text-align: right;
+    padding-top: 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom:50%;
+    right:50%;
+    // background: rgba(255,0,0,.3);
+    @include transform(rotateZ(-36deg) skewX(20deg));
+    @include transform-origin(right bottom);
+    &:nth-child(2){
+      // background: rgba(255,0,255,.6);
+      @include transform(rotateZ(37deg) skewX(20deg) );
+    }
+    &:nth-child(3){
+      // background: rgba(255,0,0,.3);
+      @include transform(rotateZ(111deg) skewX(20deg) );
+    }
+    &:nth-child(4){
+      // background: rgba(255,0,255,.6);
+      @include transform(rotateZ(184deg) skewX(20deg) );
+    }
+    &:nth-child(5){
+      // background: rgba(255,0,255,.8);
+      @include transform(rotateZ(256deg) skewX(20deg) );
+    }
+  }
+}

@@ -9,31 +9,21 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'), //错误日志格式与 gulp 的日志保持一致
     minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
+var num = 'demo';
+
 //sass
 gulp.task('sass', function () {
-<<<<<<< HEAD
-  return sass('1022/src/index.scss')
-=======
-  return sass('1029/src/index.scss')
->>>>>>> 768f677d1578e224426f6ae2d6a7ee6e02cb25a7
+  return sass(num+'/src/index.scss')
     .on('error', sass.logError)
     .pipe(minifyCss())
     .pipe(rename(function (path) {
       path.extname = ".min.css"
     }))
-<<<<<<< HEAD
-    .pipe(gulp.dest('1022/src/'));
+    .pipe(gulp.dest(num+'/src/'));
 });
 // 文件刷新
 gulp.task('livereload', function() {
-  gulp.src(['1022/*.html'])
-=======
-    .pipe(gulp.dest('1029/src/'));
-});
-// 文件刷新
-gulp.task('livereload', function() {
-  gulp.src(['1029/*.html'])
->>>>>>> 768f677d1578e224426f6ae2d6a7ee6e02cb25a7
+  gulp.src([num+'/*.html'])
       .pipe(livereload());
 });
 
@@ -60,8 +50,8 @@ gulp.task('minify-js', function () {
     gulp.src(['_public/*.js']) // 要压缩的js文件
     .pipe(uglify())  //使用uglify进行压缩,更多配置请参考：
     .pipe(rename(function (path) {
-	    path.extname = ".min.js"
-	  }))
+      path.extname = ".min.js"
+    }))
     .pipe(gulp.dest('.')); //压缩后的路径
 });
 //重命名
@@ -72,12 +62,12 @@ gulp.task('rename', function () {
     .pipe(gulp.dest('js'));
 
    //  gulp.src("./src/**/hello.txt")
-	  // .pipe(rename(function (path) {
-	  //   path.dirname += "/ciao";
-	  //   path.basename += "-goodbye";
-	  //   path.extname = ".md"
-	  // }))
-	  // .pipe(gulp.dest("./dist")); // ./dist/main/text/ciao/hello-goodbye.md 
+    // .pipe(rename(function (path) {
+    //   path.dirname += "/ciao";
+    //   path.basename += "-goodbye";
+    //   path.extname = ".md"
+    // }))
+    // .pipe(gulp.dest("./dist")); // ./dist/main/text/ciao/hello-goodbye.md 
 
     //关于gulp-rename的更多强大的用法请参考https://www.npmjs.com/package/gulp-rename
 });
@@ -85,12 +75,7 @@ gulp.task('rename', function () {
 //监听
 gulp.task('default', function() {
   livereload.listen(); //要在这里调用listen()方法
-<<<<<<< HEAD
-  gulp.watch(['1022/**','_public/*.css','_public/*.js'], ['livereload']);
-  gulp.watch(['1022/src/index.scss'], ['sass','livereload']);
-=======
-  gulp.watch(['1029/**','_public/*.css','_public/*.js'], ['livereload']);
-  gulp.watch(['1029/src/index.scss'], ['sass','livereload']);
->>>>>>> 768f677d1578e224426f6ae2d6a7ee6e02cb25a7
+  gulp.watch([num+'/**','_public/*.css','_public/*.js'], ['livereload']);
+  gulp.watch([num+'/src/index.scss'], ['sass','livereload']);
 });
 
