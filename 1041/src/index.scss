@@ -288,3 +288,24 @@ a:active {
     transform: translate3d(0,-200%,0);
   }
 }
+
+.music{
+  position: absolute;
+  top:rem(80);
+  right:rem(80);
+  z-index:999;
+  @include icon('../images/yy.png',44,44);
+  &.on{
+    @include animation(rotate360 2s linear infinite);
+  }
+}
+@include keyframes(rotate360){
+  from{
+    -webkit-transform: rotate3d(0,0,1,0);
+    transform: rotate3d(0,0,1,0);
+  }
+  to{
+    -webkit-transform: rotate3d(0,0,1,360deg);
+    transform: rotate3d(0,0,1,360deg);
+  }
+}
