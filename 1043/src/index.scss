@@ -201,7 +201,7 @@ footer{
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling:touch;
   // background: rgba(0,255,0,.8);
 }
@@ -249,7 +249,8 @@ img.full{
   margin-top: -4rem;
   
   transform-style: preserve-3d;
-  @include animation(rotate 3000ms 5000ms)
+  @include transform(perspective(2000px));
+  @include animation(rotate 12000ms linear 5000ms infinite);
 }
 .bottom,.top,.left,.right,.front,.back{
   position: absolute;
@@ -257,76 +258,102 @@ img.full{
   top:0;
   width: 8rem;
   height: 8rem;
+  line-height: 8rem;
+  text-align: center;
+  font-size: 1rem;
   border:1px solid red;
   display: none;
+  @include transition(all 500ms);
+  background: rgba(255,0,0,0);
   &:hover{
-    background: rgba(255,0,0,.3);
+    background: rgba(255,0,0,.6);
   }
 }
 .bottom{
   display: block;
-  @include animation(bottom 100ms);
+  background: rgba(255,0,0,0);
+  &:hover{
+    background: rgba(255,0,0,.6);
+  }
 }
 .left{
   display: block; 
-  @include animation(left 2000ms );
+  @include animation(left 2000ms linear);
+  background: rgba(0,255,0,0);
+  &:hover{
+    background: rgba(0,255,0,.6);
+  }
 }
 .right{
   display: block;
-  @include animation(right 2000ms 500ms);
+  @include animation(right 2000ms linear 500ms);
+  background: rgba(0,0,255,0);
+  &:hover{
+    background: rgba(0,0,255,.6);
+  }
 }
 .front{
   display: block;
-  @include animation(front 2000ms 1000ms);
+  @include animation(front 2000ms linear 1000ms);
+  background: rgba(255,255,0,0);
+  &:hover{
+    background: rgba(255,255,0,.6);
+  }
 }
 .back{
   display: block;
-  @include animation(back 2000ms 1500ms);
+  @include animation(back 2000ms linear 1500ms);
+  background: rgba(255,0,255,0);
+  &:hover{
+    background: rgba(255,0,255,.6);
+  }
 }
 .top{
   display: block;
-  @include animation(top 2000ms 2000ms);
+  @include animation(top 2000ms linear 2000ms);
+  background: rgba(0,255,255,0);
+  &:hover{
+    background: rgba(0,255,255,.6);
+  }
 }
 @include keyframes(left){
   to{
-    @include transform(rotateY(-90deg) translateZ(200px));
+    @include transform(rotateY(-90deg));
     @include transform-origin(left center);
   }
 }
 @include keyframes(right){
   to{
-    @include transform(rotateY(90deg) translateZ(200px));
+    @include transform(rotateY(90deg));
     @include transform-origin(right center);
   }
 }
 @include keyframes(front){
   to{
-    @include transform(rotateX(90deg) translateZ(200px));
+    @include transform(rotateX(90deg));
     @include transform-origin(top center);
   }
 }
 @include keyframes(back){
   to{
-    @include transform(rotateX(-90deg) translateZ(200px));
+    @include transform(rotateX(-90deg));
     @include transform-origin(bottom center);
   }
 }
 @include keyframes(top){
   to{
-    @include transform(translateZ(8rem) translateZ(200px));
-    @include transform-origin(center center);
-  }
-}
-@include keyframes(bottom){
-  to{
-    @include transform(translateZ(200px));
+    @include transform(translateZ(8rem));
     @include transform-origin(center center);
   }
 }
 
 @include keyframes(rotate){
+  from{
+    @include transform(perspective(2000px) rotate3d(1,1,1,0deg));
+    @include transform-origin(center center 4rem);
+  }
   to{
     @include transform(perspective(2000px) rotate3d(1,1,1,360deg));
-    @include transform-origin(center center);
+    @include transform-origin(center center 4rem);
   }
 }
