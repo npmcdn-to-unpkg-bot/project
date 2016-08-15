@@ -250,7 +250,7 @@ img.full{
   
   transform-style: preserve-3d;
   @include transform(perspective(2000px));
-  @include animation(rotate 12000ms linear 5000ms infinite);
+  @include animation(rotate 12000ms linear 10s infinite);
 }
 .bottom,.top,.left,.right,.front,.back{
   position: absolute;
@@ -286,7 +286,7 @@ img.full{
 }
 .right{
   display: block;
-  @include animation(right 2000ms linear 500ms);
+  @include animation(right 2000ms linear 2000ms);
   background: rgba(0,0,255,0);
   &:hover{
     background: rgba(0,0,255,.6);
@@ -294,7 +294,7 @@ img.full{
 }
 .front{
   display: block;
-  @include animation(front 2000ms linear 1000ms);
+  @include animation(front 2000ms linear 4000ms);
   background: rgba(255,255,0,0);
   &:hover{
     background: rgba(255,255,0,.6);
@@ -302,7 +302,7 @@ img.full{
 }
 .back{
   display: block;
-  @include animation(back 2000ms linear 1500ms);
+  @include animation(back 2000ms linear 6000ms);
   background: rgba(255,0,255,0);
   &:hover{
     background: rgba(255,0,255,.6);
@@ -310,7 +310,7 @@ img.full{
 }
 .top{
   display: block;
-  @include animation(top 2000ms linear 2000ms);
+  @include animation(top 2000ms linear 8000ms);
   background: rgba(0,255,255,0);
   &:hover{
     background: rgba(0,255,255,.6);
