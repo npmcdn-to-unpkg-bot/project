@@ -14,13 +14,7 @@
 	<script src="../_public/rem.js"></script>
 	<link rel="stylesheet" href="../_public/reset.css">
 	<link rel="stylesheet" href="src/index.min.css">
-	<style>
-		p{
-			font-size: 50px;
-			width: 100%;
-			overflow: hidden;
-		}
-	</style>
+
 </head>
 <body>
 	<!-- 遮罩层 -->
@@ -40,17 +34,18 @@
 				<div class="tips"></div>
 				<!-- 弹框 -->
 				<div id="shade" style="display:none;"></div>
-				<div class="dialog">
+				<div class="dialog dialogprize">
 					<img src="" alt="">
 					<div class="close"></div>
 					<div class="btn"></div>
 				</div>
-				<p>00000000000000000000000000000000000000000</p>
-				<p>123123123123132123</p>
-				<p>123123123123132123</p>
-				<p>123123123123132123</p>
-				<p>123123123123132123</p>
-				<p>123123123123132123</p>
+				<div class="dialog dialoguser show">
+					<img src="images/userlist.jpg" alt="">
+					<div class="close"></div>
+					<input type="text" class="username" placeholder="请输入姓名">
+					<input type="text" class="usertel" placeholder="请输入手机号码">
+					<div class="btn"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -76,7 +71,6 @@ $(function(){
 		//AJAX 请求;
 		prize = parseInt(Math.random()*8 + 1);
 		console.info(prize);
-
 		//动画
 		TweenLite.to($('.game'),5,
 		{
@@ -87,8 +81,8 @@ $(function(){
 			ease : Expo.linear,
 			onComplete:function(){
 				$('#shade').show();
-				$('.dialog').find('img').attr('src','images/'+prize+'.jpg');
-				$('.dialog').addClass('show');
+				$('.dialogprize').find('img').attr('src','images/'+prize+'.jpg');
+				$('.dialogprize').addClass('show');
 			}
 		});
 
@@ -100,9 +94,14 @@ $(function(){
 		// 	// ease:Expo.easeOut,
 		// 	ease : Expo.linear,
 		// });
+	});
 
 
-	})
+	$('.dialoguser .btn').on('click',function(){
+			alert('点什么')
+		})
+
+
 })
 $(function(){
 

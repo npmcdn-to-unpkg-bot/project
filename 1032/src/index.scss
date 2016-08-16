@@ -218,3 +218,25 @@ a:active {
     transform: translate3d(-50%,0,0);
   }
 }
+.dialoguser{
+  width: rem(585);
+  height: rem(397);
+  .btn{
+    bottom:rem(50);
+  }
+  .username,.usertel{
+    position: absolute;
+    width: rem(374);
+    height: rem(52);
+    font-size: rem(30);
+    color:#474747;
+    border:1px solid #9c9c9c;
+    left: rem(180);
+    top:rem(84);
+    padding-left: 1em;
+    outline:none;
+  }
+  .usertel{
+    top:rem(164);
+  }
+}

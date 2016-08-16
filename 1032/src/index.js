@@ -19,7 +19,7 @@ $(function(){
 		$('.dialog').removeClass('show');
 		$('#shade').hide();
 	})
-	$('.btn').on('click',function(){
+	$('.dialogprize .btn').on('click',function(){
 		$('.close').trigger('click');
 	})
 })

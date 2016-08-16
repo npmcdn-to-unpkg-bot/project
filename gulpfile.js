@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
 
-var num = '1043';
+var num = '1032';
 
 //sass
 gulp.task('sass', function () {
