@@ -141,5 +141,9 @@ input[type=button] {width: auto; overflow: visible;}
 .clearfix:after { content: "."; display: block;height: 0;visibility: hidden;font-size: 0; clear: both; }
 * {     
     -webkit-tap-highlight-color: transparent;  
-    -webkit-appearance: none;  
+    -webkit-appearance: none;
+    -webkit-user-select: none;  /* Chrome all / Safari all /opera15+*/  
+    -moz-user-select: none;     /* Firefox all */  
+    -ms-user-select: none;      /* IE 10+ */  
+    user-select: none;  
 }

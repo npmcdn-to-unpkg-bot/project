@@ -31,7 +31,7 @@
       <div class="content">
           <div class="content-inner">
             <div id="indicator" class="rotate">
-              你好
+              <div class="rotate-1"></div>
             </div>
           </div>
       </div>
@@ -50,7 +50,41 @@
 <script src='src/CSSPlugin.min.js'></script>
 
 <script src="src/index.js"></script>
+<script>
+  function defaultEvent(element){
+    if(element === undefined) return;
+    element.addEventListener("touchstart",function(e){
+      e.stopPropagation();
+    })
+    element.addEventListener("touchend",function(e){
+      e.stopPropagation();
+    })
+    element.addEventListener("touchmove",function(e){
+      // e.preventDefault();
+      e.stopPropagation();
+    })
+  }
 
+  $(function(){
+    defaultEvent($('.rotate-1')[0]);
+    // var path = $('#path');
+
+    Draggable.create("#indicator", {
+      type: "rotation",
+      throwProps: true,
+      maxRotation: 360,
+      onDrag: function() {
+        var i = this.rotation;
+        // path.css('stroke-dashoffset', 620*(1-i/360));
+        // console.log(i)
+      },
+      onDragEnd:function(){
+        TweenLite.to($('#indicator')[0], 0.2, {transform:"rotateZ(0deg)"});
+      }
+    });
+
+  })
+</script>
 
 </body>
 </html>
