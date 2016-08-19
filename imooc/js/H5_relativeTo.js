@@ -28,39 +28,13 @@ var H5ComponentBase = function(name,cfg){
       left       : '50%',
     })
   }
-  if(cfg.relativeTo !== undefined){
-    component.css('visibility','hidden');
-  }
   // ........更多参数
   component.on('onLoad',function(){
     component.addClass(cls+'_load')
              .removeClass(cls+'_leave');
-
-    // relativeTo
-    // 
-    if(cfg.relativeTo !== undefined){
-      var relativeToComponent = component.parent().find('.h5_component_name_'+cfg.relativeTo);
-      var top = relativeToComponent.offset().top;
-      var left = relativeToComponent.offset().left;
-      if(cfg.css.top !== undefined){
-        component.css({
-          top : cfg.css.top + top
-        })
-      }
-      if(cfg.css.left !== undefined && cfg.center !== true){
-        component.css({
-          left : cfg.css.left + left
-        })
-      }
-      component.css('visibility','visible');
-    }
-    //relativeTo end
-
-
     cfg.animateIn && component.animate(cfg.animateIn);
     return false;
   })
-
   component.on('onLeave',function(){
     component.addClass(cls+'_leave')
              .removeClass(cls+'_load');
@@ -69,5 +43,10 @@ var H5ComponentBase = function(name,cfg){
   })
 
 
-  return component;
-}
+  if(cfg.relativeTo !== undefined){
+    var relativeToComponent = $('.h5_page').eq(-1).find('.h5_component_name_'+cfg.relativeTo);
+    relativeToComponent.append(component);
+    return null;
+  }else{
+    return component;
+  }

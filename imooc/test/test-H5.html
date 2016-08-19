@@ -19,6 +19,10 @@
     <link rel="stylesheet" type="text/css" href="../css/H5ComponentBase.css">
 
     <style type="text/css">
+        body{
+            margin: 0;
+            padding:0;
+        }
     </style>
 
 
@@ -32,13 +36,56 @@
     <script type="text/javascript">
     $(function(){
         var h5 = new H5();
-            h5.addPage('face','首页')
-                    // .addComponent('logo',{text:'log'})
-                    // .addComponent('slogan',{text:'slogan'})
-              .addPage('desc','核心理念页')
-                    // .addComponent('caption',{text:'核心理念'})
-              .addPage('page-3','课程分布页')
-                    // .addComponent('caption',{text:'课程方向分布'})
+            h5.addPage('face','')
+                    .addComponent('logo',{
+                        text   : 'log',
+                        width  : 400,
+                        height : 100,
+                        css    : {backgroundColor:'red',top:200,opacity:0},
+                        center : true,
+                        animateIn:{opacity:1},
+                        animateOut:{opacity:0},
+                    })
+                    .addComponent('slogan',{
+                        text       : 'slogan',
+                        relativeTo : 'logo',
+                        width      : 400,
+                        height     : 100,
+                        css        : {backgroundColor:'green',top:150,left:-10},
+                        // center     : true,
+                    })
+              .addPage('desc','')
+                    .addComponent('caption',{
+                        text:'核心理念',
+                        width  : 400,
+                        height : 100,
+                        css    : {backgroundColor:'red',top:200},
+                        center : true,
+                    })
+                    .addComponent('caption2',{
+                        text:'核心理念222',
+                        relativeTo : 'caption',
+                        width  : 400,
+                        height : 100,
+                        css    : {backgroundColor:'red',top:110},
+                        center : true,
+                    })
+              .addPage('page-3','')
+                    .addComponent('caption',{
+                        text:'课程方向分布',
+                        width  : 400,
+                        height : 100,
+                        css    : {backgroundColor:'red',top:200},
+                        center : true,
+                    })
+                    .addComponent('caption2',{
+                        text:'核心理念222',
+                        relativeTo : 'caption',
+                        width  : 400,
+                        height : 100,
+                        css    : {backgroundColor:'red',top:130},
+                        center : true,
+                    })
               .loader();
     })
     </script>
