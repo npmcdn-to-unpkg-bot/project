@@ -20,7 +20,7 @@
   <!-- 调试 -->
   <title>mobile</title>
   <script>
-   !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
+   !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>5400&&(a=5400*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
   </script>
   <link rel="stylesheet" href="src/reset.css">
   <link rel="stylesheet" href="src/index.min.css">
@@ -30,20 +30,9 @@
     <div class="page">
       <div class="content">
           <div class="content-inner">
-          <br>
-           <div class="rotate">
-             456456456
-           </div>
-           <p class="tip"></p>
-           <p>touchstart</p>
-           <div class="touchstart">
-             
-           </div>
-           <p>touchmove</p>
-           <div class="touchmove">
-             
-           </div>
-           <div class="number"></div>
+            <div id="indicator" class="rotate">
+              你好
+            </div>
           </div>
       </div>
     </div>
@@ -54,57 +43,14 @@
     </div>
   </div>
 <script src="src/jquery-2.2.3.min.js"></script>
-<script>
-$(function(){
-  var x1,x2,x3,y1,y2,y3;
+<script src='src/TweenLite.min.js'></script>
 
-  x1 = $('.rotate').offset().left + $('.rotate').width()/2;
-  y1 = ($('.rotate').offset().top + $('.rotate').height()/2)*-1;
-  var tip = "" ;
-  tip += x1 + '  ' + y1;
-  $('.tip').html(tip);
+<script src='src/Draggable.min.js'></script>
 
-  $('.rotate')[0].addEventListener('touchstart',function(e){
-    // console.log(e.touches[0])
-    x2 = e.touches[0]['pageX'];
-    y2 = e.touches[0]['pageY']*-1;
-    var html = "";
-    html+= x2+ ' ' + y2 + '<br>'
-    $('.touchstart').html(html)
-  });
+<script src='src/CSSPlugin.min.js'></script>
 
-  $('.rotate')[0].addEventListener('touchmove',function(e){
-    // console.log(e.touches[0])
-    x3 = e.touches[0]['pageX'];
-    y3 = e.touches[0]['pageY']*-1;
-    var html = "";
-    html+= x3+ ' ' + y3 + '<br>'
-    $('.touchmove').html(html);
-
-    var ab,ac,cosA;
-    ab = Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-    ac = Math.sqrt((x3-x1)*(x3-x1)+(y3-y1)*(y3-y1));
-    cosA = ((x2-x1)*(x3-x1)+(y2-y1)*(y3-y1)) / (ab*ac);
+<script src="src/index.js"></script>
 
 
-    var rotate = Math.acos(cosA)*180/Math.PI;
-    if(y3 < y2 ){
-      rotate = 360 - rotate;
-    }
-    $('.number').html(rotate);
-    $('.rotate').css({
-      'transform' : 'rotateZ('+rotate+'deg)'
-    })
-
-  });
-
-  $('.rotate')[0].addEventListener('touchend',function(e){
-    $('.rotate').css({
-      'transform' : 'rotateZ('+0+'deg)'
-    })
-  })
-
-})
-</script>
 </body>
 </html>
