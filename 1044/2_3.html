@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=0"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=0">
   <!-- 删除默认的苹果工具栏和菜单栏 -->
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="yes" name="apple-touch-fullscreen">
@@ -20,9 +20,7 @@
   <!-- 调试 -->
   <title>mobile</title>
   <link rel="stylesheet" href="src/reset.css">
-  <link rel="stylesheet" href="dist/flipster.css">
   <link rel="stylesheet" href="src/index.min.css">
-
 </head>
 <body>
   <div class="page">
@@ -31,9 +29,9 @@
         <img src="images/logo.png" alt="">
       </div>
       <ul class="nav clearfix">
-        <li class="active"><a href="2_1.html">知名教育机构</a></li>
-        <li><a href="2_2.html">专家学者</a></li>
-        <li><a href="">科研成果</a></li>
+        <li><a href="2_1.html">知名教育机构</a></li>
+        <li ><a href="2_2.html">专家学者</a></li>
+        <li class="active"><a href="">科研成果</a></li>
         <li><a href="">收录情况</a></li>
         <li><a href="">资源列表</a></li>
       </ul>
@@ -49,27 +47,19 @@
         <div class="btn-nav btn-nav-other"><img src="images/other.png" alt=""></div>
         <div class="btn-nav btn-nav-back"><img src="images/back.png" alt=""></div>
       </div>
-      <div class="main my-flipster-carousel">
-        <div class="flipster">
-          <ul>
-            <li><img src="images/i001.jpg" /></li>
-            <li><img src="images/i002.jpg" /></li>
-            <li><img src="images/i003.jpg" /></li>
-            <li><img src="images/i004.jpg" /></li>
-            <li><img src="images/i005.jpg" /></li>
-          </ul>
-        </div>
+      <div class="main select-main">
 
       </div>
     </div>
   </div>
 <script src="src/jquery-2.2.3.min.js"></script>
-<!-- <script src="dist/jquery.flipster.min.js"></script> -->
-<script src="dist/jquery.flipster.js"></script>
 <script src="src/index.js"></script>
 <script>
-  $(function(){ $(".flipster").flipster({ style: 'carousel', start: 0 }); });
+$(function(){
+
+})
 </script>
+
 <script>
   $(function(){
     $('.openSeach').on('click',function(){

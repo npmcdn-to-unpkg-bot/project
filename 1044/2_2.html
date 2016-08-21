@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=0.5,maximum-scale=0.5,user-scalable=0"> -->
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- 移动端手机号码/邮箱识别 -->
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 添加到桌面图标/如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon -->
+  <link href="" rel="apple-touch-icon-precomposed">
+  <!-- 浏览器中地址栏左侧显示的图标 -->
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <meta http-equiv="widow-target" content="_blank">
+  <!-- 微信调试 取消缓存 -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">  
+  <!-- 调试 -->
+  <title>mobile</title>
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="src/index.min.css">
+
+</head>
+<body>
+  <div class="page">
+    <div class="content-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="">
+      </div>
+      <ul class="nav clearfix">
+        <li><a href="2_1.html">知名教育机构</a></li>
+        <li class="active"><a href="2_2.html">专家学者</a></li>
+        <li><a href="">科研成果</a></li>
+        <li><a href="">收录情况</a></li>
+        <li><a href="">资源列表</a></li>
+      </ul>
+      <div class="rightNav">
+        <div class="btn-nav btn-nav-seach ">
+          <img src="images/seach.png" alt="" class="openSeach">
+          <div class="seach">
+            <input type="text" placeholder="搜索内容">
+            <img src="images/close.png" class="closeSeach" alt="">
+          </div>
+        </div>
+        <div class="btn-nav btn-nav-home"><img src="images/home.png" alt=""></div>
+        <div class="btn-nav btn-nav-other"><img src="images/other.png" alt=""></div>
+        <div class="btn-nav btn-nav-back"><img src="images/back.png" alt=""></div>
+      </div>
+      <div class="main pic-main">
+        <div class="pic">
+            <img src="images/i1001.jpg" draggable="false" />
+            <img src="images/i1002.jpg" draggable="false" />
+            <img src="images/i1003.jpg" draggable="false" />
+            <img src="images/i1004.jpg" draggable="false" />
+            <img src="images/i1005.jpg" draggable="false" />
+            <img src="images/i1006.jpg" draggable="false" />
+            <img src="images/i1007.jpg" draggable="false" />
+            <img src="images/i1008.jpg" draggable="false" />
+            <img src="images/i1009.jpg" draggable="false" />
+            <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="src/jquery-2.2.3.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+$(function (){
+  var imgl = $("div.pic img").size();
+  var deg = 360/imgl;
+  var roY = 0;
+  var rox = -10;
+  var xn = 0, yn = 0;
+  var play = null;
+  var x_,y_;
+
+  $("div.pic img").each(function (i) {
+      $(this).css({
+          // "transform": "rotateY("+i*deg+ "deg) translateZ(350px)"
+          "transform": "rotateY("+i*deg+ "deg) translateZ(450px)"
+      });
+      $(this).attr('ondragstart', 'return false');
+  });
+
+  var mouseOver = function (ev) {
+      ev.preventDefault();
+      var x = ev.touches[0].pageX;
+      var y = ev.touches[0].pageY;
+      xn = x - x_;
+      yn = y - y_;
+      roY += xn * 0.2;
+      rox -= yn * 0.1;
+      
+      
+      $('div.pic').css({
+          transform: 'perspective(2000px) rotateX('+rox+'deg) rotateY(' + roY + 'deg)'
+      })
+
+      x_ = ev.touches[0].pageX;
+      y_ = ev.touches[0].pageY;
+  }
+
+  var mouseDown = function (ev) {
+    // ev.preventDefault();
+       x_ = ev.touches[0].pageX;
+       y_ = ev.touches[0].pageY;
+      clearInterval(play);
+
+      $('.pic-main')[0].addEventListener('touchmove',mouseOver);
+  }
+  var museUp= function () {
+    // ev.preventDefault();
+    $(this).unbind("mousemove");
+    $('.pic-main')[0].removeEventListener('touchmove',mouseOver);
+
+    var play=setInterval(function () {
+         xn *= 0.95;
+         yn *= 0.95;
+         if (Math.abs(xn) < 1 && Math.abs(yn)<1) clearInterval(play);
+
+         roY += xn * 0.2;
+         rox -= yn * 0.1;
+         $('div.pic').css({
+             transform: 'perspective(2000px) rotateX(' + rox + 'deg) rotateY(' + roY + 'deg)'
+         })
+      },30)
+  }
+
+
+  $('.pic-main')[0].addEventListener('touchstart',mouseDown)
+  $('.pic-main')[0].addEventListener('touchend',museUp)
+
+});
+</script>
+<script>
+  $(function(){
+    $('.openSeach').on('click',function(){
+      $('.btn-nav-seach').addClass('on');
+    })
+    $('.closeSeach').on('click',function(){
+      $('.btn-nav-seach').removeClass('on');
+    })
+  })
+</script>
+
+</body>
+</html>
