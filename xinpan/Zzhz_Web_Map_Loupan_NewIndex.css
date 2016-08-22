@@ -1,0 +1,1251 @@
+html {
+	color: #333;
+	background: #FFF;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,img {
+	border: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+caption,th {
+	text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,q:after {
+	content: '';
+}
+
+abbr,acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+input,textarea,select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	outline: none;
+}
+
+input,textarea,select { *
+	font-size: 100%;
+}
+
+legend {
+	color: #000;
+}
+
+a {
+	text-decoration: none;
+	color: #003FD8;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #f60;
+}
+
+.search {
+	width: 312px;
+	height: 23px;
+	position: relative;
+	font-size: 12px;
+}
+
+.search input {
+	width: 240px;
+	height: 16px;
+	line-height: 16px;
+	_line-height: 18px;
+	border: 1px solid #799556;
+	padding: 2px 10px 3px;
+}
+
+.search em.searchclear {
+	display: block;
+	width: 25px;
+	height: 15px;
+	position: absolute;
+	left: 236px;
+	top: 4px;
+	_top: 5px;
+	cursor: pointer;
+	background: url(newmap.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/newmap.png*/ no-repeat
+		-65px -27px #fff;
+}
+
+.search button {
+	width: 51px;
+	height: 23px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	_top: 1px;
+	background: url(newmap.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/newmap.png*/ no-repeat
+		0 -26px;
+	border: none;
+	cursor: pointer;
+}
+
+.search div {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 22px;
+	border: 1px solid #adadad;
+	width: 260px;
+	background: #fff;
+	line-height: 26px;
+	color: #333;
+}
+
+.search div a {
+	display: block;
+	width: 100%;
+	height: 26px;
+	overflow: hidden;
+	text-indent: 10px;
+	cursor: pointer;
+	color: #333;
+}
+
+.search div a.on {
+	background: #c5e5fe;
+	text-decoration: none;
+}
+
+.nav {
+	height: 40px;
+	font-size: 12px;
+}
+
+.nav li {
+	float: left;
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	width: 70px;
+}
+
+.nav .navlv1 {
+	color: #fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 40px;
+}
+
+.nav .navlv1:hover {
+	text-decoration: none;
+	background: #568B10;
+	color: #fff;
+}
+
+.nav li.hover {
+	background: #568B10;
+}
+
+.nav li.on {
+	background: #568B10;
+}
+
+.nav li.hover div {
+	display: block;
+}
+
+.nav li div {
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 38px;
+	width: 68px;
+	padding: 2px 0 1px;
+	border-style: solid;
+	border-width: 2px 1px;
+	border-color: #548f00;
+	background: #fff;
+	border-radius: 0 0 5px 5px;
+}
+
+.nav li div a {
+	display: block;
+	width: 100%;
+	height: 28px;
+	line-height: 28px;
+	text-indent: 1em;
+}
+
+.header {
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #62AB00;
+}
+
+.logo {
+	float: left;
+	margin: 8px 0 0 20px;
+	display: block;
+	width: 73px;
+	height: 21px;
+	background: url(newmap.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/newmap.png*/;
+}
+
+.header .search {
+	position: absolute;
+	left: 153px;
+	top: 7px;
+}
+
+.header .nav {
+	position: absolute;
+	left: 515px;
+	top: 0;
+}
+
+.filter {
+	height: ;
+	padding: 9px;
+	height: 66px;
+	position: relative;
+	z-index: 101;
+	background: #fff;
+}
+
+.select {
+	position: relative;
+	z-index: 30;
+	width: 99px;
+	height: 30px;
+	float: left;
+	margin-right: -1px;
+	margin-bottom: 6px;
+	border: 1px solid #c8c8c8;
+	border-bottom: none;
+}
+
+.select span {
+	position: relative;
+	z-index: 32;
+	color: #333;
+	display: block;
+	height: 28px;
+	padding: 0 5px 0 10px;
+	line-height: 28px;
+	background: #fff;
+	cursor: pointer;
+	border-bottom: 1px solid #c8c8c8;
+}
+
+.select span .micon {
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+
+.select div {
+	position: absolute;
+	left: -1px;
+	top: 28px;
+	z-index: 31;
+	display: none;
+	width: 240px;
+	padding: 4px 10px;
+	border: 1px solid #c8c8c8;
+	background: #fff;
+	line-height: 26px;
+}
+
+.select div.op-min {
+	width: 100%;
+	padding: 0;
+}
+
+.select div.op-min a {
+	display: block;
+	padding-left: 10px;
+}
+
+.select div a {
+	margin-right: 12px;
+	white-space: nowrap;
+	color: #666;
+}
+
+.select div a:hover {
+	text-decoration: none;
+	color: #690;
+}
+
+.select-cur {
+	border-color: #690;
+}
+
+.select-cur span {
+	background: #FAFFF4;
+	border-color: #690;
+}
+
+.select-open span {
+	border-bottom: 1px solid #fff;
+}
+
+.select-open div {
+	display: block;
+}
+
+.select-dis span {
+	background: #efefef;
+}
+
+#loc_town {
+	z-index: 50;
+}
+
+#loc_town span {
+	z-index: 52;
+}
+
+#loc_town div {
+	z-index: 51;
+}
+
+#loc_zoon {
+	z-index: 47;
+	width: 109px;
+}
+
+#loc_zoon span {
+	z-index: 49;
+}
+
+#loc_zoon div {
+	z-index: 48;
+}
+
+#fil_type {
+	width: 118px;
+	z-index: 44;
+}
+
+#fil_type span {
+	z-index: 46;
+}
+
+#fil_type div {
+	z-index: 45;
+}
+
+.status {
+	height: 30px;
+	line-height: 30px;
+	float: left;
+	padding-left: 5px;
+}
+
+.status strong {
+	float: left;
+	color: #333;
+}
+
+.status label {
+	float: left;
+	cursor: pointer;
+}
+
+.status label input {
+	float: left;
+	margin: 9px 2px 0; *
+	margin: 5px 0 0;
+}
+
+.status label .micon {
+	float: left;
+	margin: 6px 2px 0 0; *
+	margin: 6px 1px 0 0;
+}
+
+.sort {
+	z-index: 100;
+	height: 34px;
+	line-height: 34px;
+	position: relative;
+	padding: 0 0 0 12px;
+	border-top: 3px solid #999;
+	border-bottom: #ccc 1px solid;
+	overflow: hidden;
+	background: url(sort.gif)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/sort.gif*/ repeat-x;
+}
+
+.sort strong {
+	margin: 0 5px;
+	color: #f60;
+	font-weight: bold;
+}
+
+.sort ul {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 34px;
+}
+
+.sort ul li {
+	float: left;
+	position: relative;
+	height: 34px;
+	line-height: 34px;
+	width: 48px;
+	text-align: center;
+	padding: 0 0 0 2px;
+	cursor: pointer;
+	background: url(sortside.gif)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/sortside.gif*/
+		no-repeat left top;
+}
+
+.sort ul li.hover {
+	color: #690;
+}
+
+.sort ul li .micon {
+	position: absolute;
+	right: 7px;
+	top: 14px;
+}
+
+.result {
+	padding: 3px 0 0;
+	background: url(shadow.gif)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/shadow.gif*/ repeat-x
+		#fff;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.list {
+	overflow: hidden;
+}
+
+.list li {
+	_float: left;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+
+.list li a {
+	display: block;
+	height: 94px;
+	overflow: hidden;
+	padding: 5px 0 12px 20px;
+	color: #666;
+}
+
+.list li a dl {
+	color: #666;
+	cursor: pointer;
+}
+
+.list li dt {
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.list li dt b {
+	float: left;
+	margin-right: 2px;
+}
+
+.list li dt .micon {
+	float: left;
+	margin: 3px 1px 0;
+}
+
+.list li dd {
+	line-height: 22px;
+	height: 22px;
+	overflow: hidden;
+}
+
+.list li a dd p {
+	color: #999;
+}
+
+.list li strong {
+	position: absolute;
+	cursor: pointer;
+	right: 10px;
+	top: 50px;
+	height: 24px;
+	overflow: hidden;
+	line-height: 24px;
+}
+
+.list li strong em {
+	font-size: 16px;
+	font-weight: bold;
+	color: #F60;
+	margin-right: 5px;
+}
+
+.list li a:hover {
+	text-decoration: none;
+	background: #f3f3f3;
+	color: #666;
+}
+
+.list li a:hover dt {
+	color: #690;
+}
+
+.list li.on a {
+	text-decoration: none;
+	background: #f3f3f3;
+	color: #666;
+}
+
+.list li.on a dt {
+	color: #690;
+}
+
+.null {
+	padding: 10px 0 0 15px;
+}
+
+.null h3 {
+	line-height: 24px;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+.null p {
+	line-height: 21px;
+}
+
+.null dl {
+	line-height: 21px;
+}
+
+.null dd {
+	padding-left: 3em;
+}
+
+.null strong {
+	color: #f60;
+}
+
+.null a {
+	color: #690;
+}
+
+.null a:hover {
+	color: #690;
+}
+
+.loading {
+	clear: both; *
+	float: left;
+	height: 24px;
+	line-height: 24px;
+	padding: 140px 0 10px 134px;
+	background: url(loading.gif)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/loading.gif*/
+		no-repeat 110px 144px;
+}
+
+.loading-mini {
+	padding: 10px 0 10px 134px;
+	background-position: 110px 14px;
+	color: #999;
+}
+
+#bmap {
+	width: 100%;
+	height: 100%;
+}
+
+.bmap-mark {
+	position: absolute;
+	left: 500px;
+	top: 200px;
+}
+
+.bmap-mark p {
+	position: absolute;
+	top: -25px;
+	margin: 0 auto;
+	padding: 4px 3px;
+	white-space: nowrap;
+	border: 1px solid #ff6701;
+	color: #ff6701;
+	background: #fff0dc;
+}
+
+.bmap-mark i {
+	display: block;
+	width: 32px;
+	height: 42px;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left top;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left top;
+}
+
+.bmap-block {
+	position: absolute;
+	left: 500px;
+	top: 200px;
+	cursor: pointer;
+	width: 64px;
+	height: 30px;
+	padding: 20px 0 14px;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left -171px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left -171px;
+}
+
+.bmap-block p {
+	line-height: 16px;
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+}
+
+.bmap-block-none {
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat -157px -171px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat -157px -171px;
+}
+
+.bmap-area {
+	position: absolute;
+	left: 600px;
+	top: 200px;
+	cursor: pointer;
+	width: 74px;
+	height: 40px;
+	padding: 20px 0 14px;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat -92px -92px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat -92px -92px;
+}
+
+.bmap-area p {
+	line-height: 20px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+}
+
+.bmap-area-none {
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat -174px -92px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat -174px -92px;
+}
+
+.bmap-block-hover {
+	z-index: 9999;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat -78px -171px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat -78px -171px;
+}
+
+.bmap-area-hover {
+	z-index: 9999;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left -92px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left -92px;
+}
+
+.bmap-point {
+	z-index: 1000;
+	position: absolute;
+	cursor: pointer;
+	color: #fff;
+	width: auto;
+}
+
+.bmap-point span {
+	width: auto;
+	position: absolute;
+	white-space: nowrap;
+	text-align: center;
+	left: -21px;
+	top: -22px;
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	padding-left: 10px;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left -282px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left -282px;
+}
+.bmap-point span.pointright {
+	position: absolute;
+	right: -20px;
+	left: auto;
+	text-align: left;
+}
+
+.bmap-point span.pointleft {
+	position: absolute;
+	left: -20px;
+	text-align: left;
+}
+.bmap-point strong {
+	display: inline-block;
+	height: 24px;
+	padding-right: 10px;
+		background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat right -282px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat right -282px;
+}
+
+.bmap-point em {
+	display: inline-block;
+	width: auto;
+	height: 24px;
+	background: #2b9225;
+}
+
+.bmap-point i {
+	display: inline-block;
+	width: 17px;
+	height: 11px;
+	overflow: hidden;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat -118px -24px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat -118px -24px;
+}
+
+.bmap-point-sell span {
+	width: auto;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left -239px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left -239px;
+}
+
+.bmap-point-sell span.pointright {
+	position: absolute;
+	right: -20px;
+	left: auto;
+	text-align: left;
+}
+
+.bmap-point-sell span.pointleft {
+	position: absolute;
+	left: -20px;
+	text-align: left;
+}
+.bmap-point-sell strong {
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat right -239px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat right -239px;
+}
+
+.bmap-point-sell em {
+	width: auto;
+	background: #0099ff;
+}
+
+.bmap-point-sell i {
+	display: inline-block;
+	width: 17px;
+	height: 11px;
+	overflow: hidden;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat -58px -24px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat -58px -24px;
+}
+
+
+
+.bmap-point-sold span {
+		width: auto;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left -326px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left -326px;
+}
+
+.bmap-point-sold span.pointright {
+	position: absolute;
+	right: -20px;
+	left: auto;
+	text-align: left;
+}
+
+.bmap-point-sold span.pointleft {
+	position: absolute;
+	left: -20px;
+	text-align: left;
+}
+.bmap-point-sold strong {
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat right -326px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat right -326px;
+}
+
+.bmap-point-sold em {
+	width: auto;
+	background: #7f7f7f;
+}
+
+.bmap-point-sold i {
+	display: inline-block;
+	width: 17px;
+	height: 11px; 
+	overflow: hidden;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat -178px -24px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat -178px -24px;
+}
+
+.bmap-point-hover {
+	z-index: 1000;
+}
+
+.bmap-point-hover span {
+	width: auto;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left -48px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left -48px;
+}
+
+.bmap-point-hover span.pointright {
+	position: absolute;
+	right: -20px;
+	left: auto;
+	text-align: left;
+}
+
+.bmap-point-hover span.pointleft {
+	position: absolute;
+	left: -20px;
+	text-align: left;
+}
+
+.bmap-point-hover strong {
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat right -48px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat right -48px;
+}
+
+.bmap-point-hover em {
+	width: auto;
+	background: #f60;
+}
+
+.bmap-point-hover i {
+	display: inline-block;
+	width: 17px;
+	height: 11px;
+	overflow: hidden;
+	background: url(mark32-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark32-1_new.png*/
+		no-repeat left -76px;
+	_background: url(mark-1_new.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mark-1_new.png*/
+		no-repeat left -76px;
+}
+
+.bmap-info {
+	z-index: 99999;
+	position: relative;
+	top: -100px;
+	width: 378px;
+	height: 180px;
+	cursor: pointer;
+	padding: 15px 5px 5px 63px;
+	background: url(info32.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/info32.png*/ no-repeat
+		;
+	_background: url(info.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/info.png*/ no-repeat;
+}
+
+.bmap-info a:hover {
+	text-decoration: none;
+}
+.bmap-info h3 {
+	height: 24px;
+	overflow: hidden;
+	line-height: 24px;
+	color: #666;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.bmap-info h3 strong {
+	font-weight: bold;
+	float: left;
+}
+
+.bmap-info h3 span {
+	float: left;
+}
+
+.bmap-info h3 .micon {
+	float: left;
+	margin-left: 5px;
+}
+
+.micon-vd {
+	margin-top: 2px;
+}
+
+.micon-t {
+	margin-top: 2px;
+}
+
+.micon-qifang {
+	margin-top: 2px;
+}
+
+.micon-daishou {
+	margin-top: 2px;
+}
+
+.micon-xianfang {
+	margin-top: 2px;
+}
+
+.micon-weipan {
+	margin-top: 2px;
+}
+
+.micon-shouqin {
+	margin-top: 2px;
+}
+
+.bmap-info b.bmap-info-close {
+	width: 21px;
+	height: 21px;
+	display: block;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+}
+
+.bmap-info .bmap-info-img {
+	float: left;
+	width: 129px;
+	height: 115px;
+	margin-top: 15px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.bmap-info .bmap-info-img img {
+	width: 100%;
+	height: 115px;
+}
+
+.bmap-info dl {
+	padding: 7px 0 0;
+	float: right;
+	width: 240px;
+	cursor: pointer;
+}
+
+.bmap-info dd {
+	height: 27px;
+	line-height: 27px;
+	color: #666;
+}
+
+.bmap-info dd strong {
+	font-size: 16px;
+	color: #f60;
+	font-weight: bold;
+}
+
+.bmap-info dd span {
+	color: #999;
+}
+
+
+
+.bmap-info ul {
+	padding: 7px 0 0;
+	float: right;
+	width: 240px;
+	cursor: pointer;
+}
+
+.bmap-info li {
+	height: 27px;
+	line-height: 27px;
+	color: #666;
+}
+
+.bmap-info li strong {
+	font-size: 16px;
+	color: #f60;
+	font-weight: bold;
+}
+
+.bmap-info li span {
+	color: #999;
+}
+
+
+
+.bmap-info-hover {
+	background-position: left -202px;
+}
+
+.siderbtn {
+	display: none;
+	position: absolute;
+	cursor: pointer;
+	left: 0;
+	top: 50%;
+	margin-top: -50px;
+	width: 24px;
+	height: 100px;
+	overflow: hidden;
+	background: url(mapbtn32.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mapbtn32.png*/
+		no-repeat left top;
+	_background: url(mapbtn.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/mapbtn.png*/
+		no-repeat left top;
+}
+
+.siderbtn-on {
+	background-position: -27px 0;
+}
+
+.siderbtn-hover {
+	background-position: -54px 0;
+}
+
+.siderbtn-on-hover {
+	background-position: -81px 0;
+}
+
+body {
+	overflow: hidden;
+	font-size: 12px;
+}
+
+html {
+	overflow: hidden;
+}
+
+.micon {
+	display: inline-block;
+	overflow: hidden;
+	background-image: url(newmap.png)/*tpa=http://xinpan.zzhz.zjol.com.cn/images/newmap.png*/;
+	background-repeat: no-repeat;
+}
+
+.micon-v {
+	width: 21px;
+	height: 20px;
+	background-position: 0 -69px;
+}
+
+.micon-vd {
+	width: 72px;
+	height: 18px;
+	background-position: 0 -50px;
+}
+
+.micon-t {
+	width: 19px;
+	height: 20px;
+	background-position: -21px -69px;
+}
+
+.micon-arrgreen-down {
+	width: 7px;
+	height: 8px;
+	background-position: -50px -69px;
+}
+
+.micon-arrgreen-up {
+	width: 7px;
+	height: 8px;
+	background-position: -50px -78px;
+}
+
+.micon-arrgray-down {
+	width: 7px;
+	height: 8px;
+	background-position: -42px -69px;
+}
+
+.micon-arrgray-up {
+	width: 7px;
+	height: 8px;
+	background-position: -42px -78px;
+}
+
+.micon-sale {
+	width: 34px;
+	height: 19px;
+	background-position: 0 -90px;
+}
+
+.micon-sell {
+	width: 34px;
+	height: 19px;
+	background-position: -35px -90px;
+}
+
+.micon-sold {
+	width: 34px;
+	height: 19px;
+	background-position: 0 -110px;
+}
+
+.micon-tgla {
+	width: 8px;
+	height: 7px;
+	background-position: 0 -132px;
+}
+
+.micon-tglb {
+	width: 8px;
+	height: 7px;
+	background-position: -10px -132px;
+}
+
+.micon-qifang {
+	width: 43px;
+	height: 18px;
+	background-position: left -142px;
+}
+
+.micon-daishou {
+	width: 43px;
+	height: 18px;
+	background-position: left -160px;
+}
+
+.micon-xianfang {
+	width: 43px;
+	height: 18px;
+	background-position: left -178px;
+}
+
+.micon-weipan {
+	width: 43px;
+	height: 18px;
+	background-position: left -196px;
+}
+
+.micon-shouqin {
+	width: 43px;
+	height: 18px;
+	background-position: left -214px;
+}
+
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	font-size: 0;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+
+.header {
+	z-index: 100;
+}
+
+.main {
+	width: 100%;
+	height:100%;
+	padding: 0;
+	margin:0;
+	position: relative;
+	z-index: 1;
+}
+
+.sider {
+	width: 368px;
+	height: 999px;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 10px;
+	background: #f7f7f7;
+	overflow: hidden;
+	box-shadow: 1px 1px 3px #999;
+	z-index: 99999; *
+	filter: progid : DXImageTransform.Microsoft.Shadow ( color = #999999,
+		direction = 90, strength = 3 );
+	-ms-filter: progid : DXImageTransform.Microsoft.Shadow ( color = #999999,
+		direction = 90, strength = 3 );
+}
+.sider1 {
+	width: 268px;
+	height: 480px;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	top: 0px;
+	background: #f7f7f7;
+	overflow: hidden;
+	box-shadow: 1px 1px 3px #999;
+	z-index: 99999; *
+	filter: progid : DXImageTransform.Microsoft.Shadow ( color = #999999,
+		direction = 90, strength = 3 );
+	-ms-filter: progid : DXImageTransform.Microsoft.Shadow ( color = #999999,
+		direction = 90, strength = 3 );
+}
+.map {
+	position: relative;
+	margin-left: 368px;
+	z-index: 100;
+}

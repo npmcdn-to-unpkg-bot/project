@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<Link href="/images/zjol.ico" rel="Shortcut Icon"/>
+<TITLE>【 地图找新盘|楼盘地图】- 住在杭州新盘网,开启完美找楼盘之旅</TITLE> 
+<META content="text/html; charset=utf-8" http-equiv=Content-Type>
+<META name=description content=住在杭州新盘网-地图找楼盘频道,让您足不出户,多维度查看房源.二维地图、三维地图、卫星地图,让您迅速了解房源位置,给您提供最全面的房源信息,地图找房就来住在杭州网!>
+<META name=keywords content=,地图找新盘,楼盘地图>
+    <link rel="stylesheet" rev="stylesheet" href="Zzhz_Web_Map_Loupan_NewIndex.css" type="text/css" /> 
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=63c4ca91e854d14a9cbdd8f7cf663071"></script>
+<script src="comm.js"  type="text/javascript" ></script> 
+</head> 
+<SCRIPT type=text/javascript>
+var gfzn='91';
+var bkid='';
+var COMM_TIP ="请输入楼盘名或拼音...";
+</SCRIPT>
+<body> 
+
+<div id="main" class="main">
+<div id="map" style="position: relative;margin-left: 268px;z-index: 100;">
+
+		<div id="bmap"></div>
+
+<div id="siderbtn" class="siderbtn"></div>	</div>
+	<div id="sider" class="sider1">
+
+<div class="sort">
+
+	共找到<strong id="list_inall"></strong>个楼盘
+
+
+</div>
+
+
+
+<div class="result" style="height: 425px;">
+
+	<div class="clearfix" style="height: 406px; position:abslute;left:0; top:0;">
+
+		<ul id="list" class="list clearfix"></ul>
+
+		<div id="error" class="null"></div>
+
+		<div id="loading" class="loading">楼盘加载中...</div>
+
+	</div>
+
+</div>
+
+	</div>
+
+	
+
+</div>
+
+<script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="Zzhz_Web_Map_Loupan_NewIndex2.js"></script> 
+<script type="text/javascript"> 
+jQuery(function(){
+
+	// var map=new bmap.Map({sale_status:{"onsale":"3,4,6","saleout":"5","forsale":"7"},unitprice_list:[],resource_url:'http://xinpan.zzhz.zjol.com.cn/selectHouseDataBaidu.html',soj_data:{p:'Zzhz_Web_Map_Loupan_NewIndexPage',pn:'zzhz_map_listing_loupan'}});
+
+	// var map=new bmap.Map({sale_status:{"onsale":"3,4,6","saleout":"5","forsale":"7"},unitprice_list:[],resource_url:'11111111111.json',soj_data:{p:'Zzhz_Web_Map_Loupan_NewIndexPage',pn:'zzhz_map_listing_loupan'}});
+	
+	var map=new bmap.Map({sale_status:{"onsale":"3,4,6","saleout":"5","forsale":"7"},unitprice_list:[],resource_url:'11111111111.json'});
+
+
+	});
+</script> 
+</body> 
+</html> 

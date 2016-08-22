@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=0.8,user-scalable=0">
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- 移动端手机号码/邮箱识别 -->
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 添加到桌面图标/如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon -->
+  <link href="" rel="apple-touch-icon-precomposed">
+  <!-- 浏览器中地址栏左侧显示的图标 -->
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <meta http-equiv="widow-target" content="_blank">
+  <!-- 微信调试 取消缓存 -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">  
+  <!-- 调试 -->
+  <title>mobile</title>
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+  <div class="page">
+    <div class="content-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="">
+      </div>
+      <ul class="nav clearfix">
+        <li><a href="2_1.html">知名教育机构</a></li>
+        <li ><a href="2_2.html">专家学者</a></li>
+        <li class="active"><a href="">科研成果</a></li>
+        <li><a href="">收录情况</a></li>
+        <li><a href="">资源列表</a></li>
+      </ul>
+      <div class="rightNav">
+        <div class="btn-nav btn-nav-seach ">
+          <img src="images/seach.png" alt="" class="openSeach">
+          <div class="seach">
+            <input type="text" placeholder="搜索内容">
+            <img src="images/close.png" class="closeSeach" alt="">
+          </div>
+        </div>
+        <div class="btn-nav btn-nav-home"><img src="images/home.png" alt=""></div>
+        <div class="btn-nav btn-nav-other"><img src="images/other.png" alt=""></div>
+        <div class="btn-nav btn-nav-back"><img src="images/back.png" alt=""></div>
+      </div>
+      <div class="main chart-main">
+        <div class="left">
+          <a href="" ><img src="images/keyan.png" alt=""></a>
+          <a href="" class="on"><img src="images/shoulu.png" alt=""></a>
+        </div>
+        <div class="content">
+          <img src="images/bintu.png" alt="">
+        </div>
+        <div class="bottom">
+          <img src="images/details.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="src/jquery-2.2.3.min.js"></script>
+<script src="src/index.js"></script>
+
+<script>
+  $(function(){
+    $('.openSeach').on('click',function(){
+      $('.btn-nav-seach').addClass('on');
+    })
+    $('.closeSeach').on('click',function(){
+      $('.btn-nav-seach').removeClass('on');
+    })
+  })
+</script>
+
+</body>
+</html>

@@ -333,7 +333,7 @@ img.full{
   padding-left: 192px;
 }
 .select-main{
-  width: 1400px;
+  // width: 1400px;
   height: 800px;
   padding-left: 192px;
   padding-top: 40px;
@@ -364,4 +364,212 @@ div.pic p{
   margin-left:-700px;
   transform:rotateX(90deg);
   border-radius:700px;
+}
+
+
+.f-select{
+  width: 524px;
+  height: 656px;
+  background: #fff;
+  border-radius: 20px;
+  border:1px solid #475d81;
+  position: relative;
+  .select-pr{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-box-image: -webkit-linear-gradient(bottom, transparent, transparent 5%, #fff 40%, #fff 60%, transparent 95%, transparent);
+  }
+  .select-inner{
+    position: absolute;
+    top:50%;
+    left:0;
+    width:100%;
+    height: 64px;
+    line-height: 64px;
+    
+    text-align: center;
+    font-size: 32px;
+    color:#4c4b4c;
+    margin-top: -32px;
+
+    ul{
+      position: absolute;
+      left: 0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+      transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+    }
+
+    li{
+      position: absolute;
+      &.on{
+        border-top: 1px solid #475d81;
+        border-bottom: 1px solid #475d81;
+      }
+      left:0;
+      top:0;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      font-size: 20px;
+      padding: 0 66px;
+    }
+  }
+}
+
+.iconshuaxin{
+  @include icon('../images/shuaxin.png',48,656);
+  margin-left: 36px;
+  margin-right: 36px;
+}
+.iconzhe{@include icon('../images/zhe.png',34,33);}
+.iconbin{@include icon('../images/bin.png',27,27);}
+.iconprev{@include icon('../images/prev.png',15,29);}
+.iconnext{@include icon('../images/next.png',15,29);}
+
+.news-cnt{
+  width: 902px;
+  height: 658px;
+  background: #fff;
+  border-radius: 20px;
+  border:1px solid #475d81;
+  padding-left: 88px;
+  padding-right: 88px;
+  padding-bottom: 40px;
+
+  .title{
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-bottom:1px dashed #d2d2d2;
+    span{
+      margin-left: 26px;
+    }
+  }
+}
+.news-list{
+  overflow: scroll;
+  -webkit-overflow-scrolling:touch;
+  line-height: 2em;
+  height: 518px;
+  h2{
+    font-size: 14px;
+    color:#323333;
+    .flag{
+      color:#717171;
+      font-size: 12px;
+      border:1px solid #717171;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+  }
+  p{
+    color:#666666;
+    font-size: 12px;
+    line-height: 1.8em;
+    b{
+      color:#fd0000;
+    }
+  }
+  li{
+    border-bottom:1px dashed #d2d2d2;
+    padding-bottom: 10px;
+  }
+}
+
+.news-bottom{
+  text-align: right;
+  padding-top: 6px;
+}
+.chart-main{
+  padding-left: 208px;
+  padding-top: 80px;
+  .left{
+    float: left;
+    width: 250px;
+    margin-right: -250px;
+    a{
+      margin-top: 80px;
+      display: inline-block;
+      &.on{
+        position: relative;
+        &:after{
+          content:" ";
+          position: absolute;
+          width: 164px;
+          height: 76px;
+          border:3px solid #69458f;
+          border-radius: 5px;
+          top:50%;
+          left:50%;
+          transform: translate3d(-50%,-50%,0);
+          -webkit-transform: translate3d(-50%,-50%,0);
+        }
+      }
+    }
+  }
+  .content{
+    width: 100%;
+    margin-left: 250px;
+  }
+  .bottom{
+    width: 1463px;
+    text-align: right;
+  }
+}
+.f-dial{
+  width: 570px;
+  margin-right: 50px;
+}
+.cc{
+  width: 552px;
+  height: 552px;
+  position: relative;
+}
+.cc-1{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  // background: url(../images/c1.png) center no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+}
+.cc-2{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 350px;
+  height: 350px;
+  top:50%;
+  left: 50%;
+  margin-top: -175px;
+  margin-left: -175px;
+  // background: url(../images/c2.png) center no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+}
+.cc-3{
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  line-height: 140px;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  top:50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  -webkit-transform: translate3d(-50%,-50%,0);
+  font-size: 24px;
+  color:#050000;
 }
