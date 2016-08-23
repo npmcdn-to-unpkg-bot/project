@@ -52,7 +52,7 @@
           <div class="cc">
             <img src="images/c1.png" class="cc-1" id="cc-1" alt="">
             <img src="images/c2.png" class="cc-2" id="cc-2" alt="">
-            <div class="cc-3" id="cc-3">123</div>
+            <div class="cc-3" id="cc-3"></div>
           </div>
         </div>
         <div class="news-cnt fl">
@@ -127,7 +127,8 @@
   $(function(){
     defaultEvent($('.cc')[0]);
     // var path = $('#path');
-
+    var num1 = 0;
+    var num2 = 0;
     Draggable.create("#cc-1", {
       type: "rotation",
       throwProps: true,
@@ -138,8 +139,13 @@
         // console.log(i)
       },
       onDragEnd:function(){
-        console.log(this.rotation)
-        // TweenLite.to($('#cc-1')[0], 0.2, {transform:"rotateZ("+this.rotation+"deg)"});
+        console.log(this)
+        num1 =  parseInt(this.rotation%360 / 45 );
+
+        this.rotation = 0 ;
+
+        $('#cc-3').html(num1 + '  '+ num2)
+        // TweenLite.to($('#cc-1')[0], 0.2, {transform:"rotateZ("+num1*45+"deg)"});
       }
     });
 
@@ -153,6 +159,10 @@
         // console.log(i)
       },
       onDragEnd:function(){
+        num2 =  parseInt(this.rotation%360 / 45 );
+
+
+        $('#cc-3').html(num1 + '  '+ num2)
         // TweenLite.to($('#cc-2')[0], 0.2, {transform:"rotateZ("+this.rotation+"deg)"});
       }
     });
