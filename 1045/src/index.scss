@@ -326,7 +326,7 @@ img.full{
 .c4{
   // position: absolute;left:rem(1184);top:rem(630);
   position: absolute;left:rem(373);top:rem(640);
-  @include animation(c1 20s linear infinite);
+  @include animation(c4 20s linear infinite);
   z-index:11;
 }
 .plane{
@@ -416,5 +416,20 @@ img.full{
   to{
     @include transform(translate3d(-600%,-126%,0));
     opacity: 0;
+  }
+}
+
+@include keyframes(c4){
+  from{
+    @include transform(rotateZ(0deg) translate3d(-330%,-120%,0));
+  }
+  30%{
+    @include transform(rotateZ(-6deg) translate3d(0,10%,0));
+  }
+  60%{
+    @include transform(rotateZ(-4deg) translate3d(405%,50%,0));
+  }
+  to{
+    @include transform(rotateZ(-4deg) translate3d(805%,60%,0));
   }
 }
