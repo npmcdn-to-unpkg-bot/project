@@ -18,6 +18,10 @@ $baseFontSize:124.2;
     height: rem($height);
     display: inline-block;
 }
+@mixin transform($transform...){
+  -webkit-transfrom:$transform;
+  transform:$transform;
+}
 @mixin animation($animation...){
   -webkit-animation:$animation;
   animation:$animation;
@@ -261,21 +265,156 @@ img.full{
   }
  }
  .left{
-  width: rem(54);
-  height: rem(54);
-  line-height: rem(54);
+  width: rem(50);
+  height: rem(50);
+  font-style: italic;
+  line-height: rem(50);
   float: left;
-  margin-right: rem(-54);
-  font-size: rem(42);
+  margin-right: rem(-50);
+  font-size: rem(38);
   border:1px solid #ffe558;
-  border-radius: 50%;
+  border-radius: rem(50);;
   text-align: center;
-  transform: translateY(rem(10));
-  -webkit-transform: translateY(rem(10));
  } 
  .right{
-  width: 100%;
   margin-left: rem(80);
   line-height: 1.4em;
  }
+}
+
+.top{
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  overflow: hidden;
+}
+.ball{@include icon('../images/ball.png',843,610)}
+.balls{@include icon('../images/balls.png',353,485)}
+.c1{@include icon('../images/c1.png',105,55)}
+.c2{@include icon('../images/c2.png',88,47)}
+.c3{@include icon('../images/c3.png',121,45)}
+.c4{@include icon('../images/c4.png',113,48)}
+.plane{@include icon('../images/plane.png',142,95)}
+.y1{@include icon('../images/y1.png',126,75)}
+.y2{@include icon('../images/y2.png',151,101)}
+
+.ball{
+  position: absolute;left:rem(190);top:rem(27);
+
+}
+.balls{
+  position: absolute;left:rem(1060);top:rem(68);
+  @include animation(balls 8s linear infinite);
+}
+.c1{
+  position: absolute;left:rem(373);top:rem(640);
+  @include animation(c1 20s linear infinite 12s);
+  z-index:11;
+}
+.c2{
+  position: absolute;left:rem(560);top:rem(634);
+  @include animation(c2 20s linear infinite );
+  z-index:10;
+}
+.c3{
+  // position: absolute;left:rem(786);top:rem(636);
+  position: absolute;left:rem(373);top:rem(640);
+  @include animation(c1 20s linear infinite 6s);
+  z-index:11;
+}
+.c4{
+  // position: absolute;left:rem(1184);top:rem(630);
+  position: absolute;left:rem(373);top:rem(640);
+  @include animation(c1 20s linear infinite);
+  z-index:11;
+}
+.plane{
+  position: absolute;left:rem(100);top:rem(164);
+  @include animation(plane 5s linear infinite);
+}
+.y1{
+  position: absolute;left:rem(70);top:rem(86);
+  @include animation(y1 15s linear infinite);
+}
+.y2{
+  position: absolute;left:rem(958);top:rem(0);
+  @include animation(y2 20s linear infinite);
+}
+
+@include keyframes(plane){
+  from{
+    @include transform(translate3d(-200%,0,0))
+  }
+  to{
+    @include transform(translate3d(800%,-200%,0))
+  }
+}
+
+@include keyframes(y1){
+  from{
+    @include transform(translate3d(-200%,0,0))
+  }
+  to{
+    @include transform(translate3d(800%,0,0))
+  }
+}
+
+@include keyframes(y2){
+  from{
+    @include transform(translate3d(-200%,0,0))
+  }
+  to{
+    @include transform(translate3d(800%,0,0))
+  }
+}
+
+@include keyframes(balls){
+  from{
+    @include transform(translate3d(0,100%,0));
+    opacity: 0;
+  }
+  30%{
+    @include transform(translate3d(0,0,0));
+    opacity: 1;
+  }
+  to{
+    @include transform(translate3d(0,-300%,0));
+    opacity: 0.6;
+  }
+}
+
+
+@include keyframes(c1){
+  from{
+    @include transform(translate3d(-330%,-110%,0));
+  }
+  30%{
+    @include transform(translate3d(0,10%,0));
+  }
+  60%{
+    @include transform(translate3d(405%,-15%,0));
+  }
+  to{
+    @include transform(translate3d(805%,-15%,0));
+  }
+}
+
+@include keyframes(c2){
+  from{
+    @include transform(translate3d(700%,-60%,0));
+    opacity: 1;
+  }
+  30%{
+    @include transform(translate3d(100%,-30%,0));
+    opacity: 1;
+  }
+  40%{
+    @include transform(translate3d(0,0,0));
+    opacity: 1;
+  }
+  to{
+    @include transform(translate3d(-600%,-126%,0));
+    opacity: 0;
+  }
 }
