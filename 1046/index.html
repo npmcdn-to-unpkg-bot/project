@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- 移动端手机号码/邮箱识别 -->
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 添加到桌面图标/如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon -->
+  <link href="" rel="apple-touch-icon-precomposed">
+  <!-- 浏览器中地址栏左侧显示的图标 -->
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <meta http-equiv="widow-target" content="_blank">
+  <!-- 微信调试 取消缓存 -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">  
+  <!-- 调试 -->
+  <title>mobile</title>
+  <script>
+   !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>5400&&(a=5400*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
+  </script>
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="src/swiper.min.css">
+  <link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+  <div class="page-group">
+    <div class="page">
+      <div class="content">
+          <div class="content-inner">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <!-- 通知 -->
+            <div class="inform">
+              <div class="left">
+                <div class="icon-tz"></div>
+              </div>
+              <div class="right">
+                <div class="icon-close"></div>
+              </div>
+              <div class="md">
+                二期业主请于8.10之后到物业中心领取门禁卡10之后到物业中心领取门禁卡
+              </div>
+            </div>
+            <!-- 通知 end  -->
+            <!-- 菜单 --> 
+            <div class="menu">
+              <div class="row">
+                <div class="col col-20">
+                  <div class="icon-i001"></div>
+                  <p>物业公告</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i002"></div>
+                  <p>小区新闻</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i003"></div>
+                  <p>投诉</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i004"></div>
+                  <p>报修</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i005"></div>
+                  <p>物业费</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i006"></div>
+                  <p>手机充值</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i007"></div>
+                  <p>电费</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i008"></div>
+                  <p>水费</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i009"></div>
+                  <p>燃气费</p>
+                </div>
+                <div class="col col-20">
+                  <div class="icon-i010"></div>
+                  <p>全部</p>
+                </div>
+              </div>
+            </div>
+            <!-- 菜单 end -->
+            <!-- 列表 -->
+            <div class="list">
+              <div class="cntImg">
+                <div class="row ">
+                  <div class="col-50 border-right">
+                    <img src="images/i1001.jpg" alt="">
+                  </div>
+                  <div class="col-50">
+                    <img src="images/i1002.jpg" alt="">
+                  </div>
+                </div>
+                <div class="hr"></div>
+                <div class="row">
+                  <div class="col-33 border-right"><img src="images/i1003.jpg" alt=""></div>
+                  <div class="col-33 border-right"><img src="images/i1004.jpg" alt=""></div>
+                  <div class="col-33"><img src="images/i1005.jpg" alt=""></div>
+                </div>
+              </div>
+            </div>
+            <!-- 列表 end -->
+            <!-- 列表 -->
+            <div class="list">
+              <div class="title link">主题馆</div>
+              <div class="hr"></div>
+              <div class="cntImg">
+                <div class="row">
+                  <div class="col-44 border-right">
+                    <img src="images/i2001.jpg" alt="">
+                  </div>
+                  <div class="col-56">
+                    <img src="images/i2002.jpg" alt="">
+                    <div class="hr"></div>
+                    <div class="row">
+                      <div class="col-50"><img src="images/i2003.jpg" alt=""></div>
+                      <div class="col-50"><img src="images/i2004.jpg" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 列表 end -->
+            <!-- 附近友邻圈 -->
+            <div class="list">
+              <div class="title link">附近友邻圈</div>
+              <div class="scroll-friend">
+                <ul class="scroll">
+                  <li>
+                    <img src="" alt="">
+                    <div class="bottom">
+                      <h3>外星人</h3>
+                      <p>仁恒滨江园</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                    <div class="bottom">
+                      <h3>外星人</h3>
+                      <p>仁恒滨江园</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                    <div class="bottom">
+                      <h3>外星人</h3>
+                      <p>仁恒滨江园</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                    <div class="bottom">
+                      <h3>外星人</h3>
+                      <p>仁恒滨江园</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                    <div class="bottom">
+                      <h3>外星人</h3>
+                      <p>仁恒滨江园</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                    <div class="bottom">
+                      <h3>外星人</h3>
+                      <p>仁恒滨江园</p>
+                    </div>
+                  </li>
+                  <li>
+                    <img src="" alt="">
+                    <div class="bottom">
+                      <h3>外星人</h3>
+                      <p>仁恒滨江园</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 附近友邻圈end -->
+            <!-- 推介商家 -->
+            <div class="list">
+              <div class="title link">推荐商家</div>
+              <div class="hr"></div>
+              <div class="cnt">
+                <img src="images/test1.jpg" alt="" >
+              </div>
+            </div>
+            <!-- 推介商家 end -->
+
+            <!-- 大家都在找这些 -->
+            <div class="list ">
+              <div class="title link">大家都在找这些</div>
+              <div class="hr"></div>
+              <div class="menu">
+                <div class="row">
+                  <div class="col col-25">
+                    <div class="icon-i3001"></div>
+                    <p>保洁家政</p>
+                  </div>
+                  <div class="col col-25">
+                    <div class="icon-i3002"></div>
+                    <p>家电维修</p>
+                  </div>
+                  <div class="col col-25">
+                    <div class="icon-i3003"></div>
+                    <p>生活配送</p>
+                  </div>
+                  <div class="col col-25">
+                    <div class="icon-i3004"></div>
+                    <p>洗衣店</p>
+                  </div>
+                  <div class="col col-25">
+                    <div class="icon-i3005"></div>
+                    <p>搬家</p>
+                  </div>
+                  <div class="col col-25">
+                    <div class="icon-i3006"></div>
+                    <p>开锁</p>
+                  </div>
+                  <div class="col col-25">
+                    <div class="icon-i3007"></div>
+                    <p>洗车</p>
+                  </div>
+                  <div class="col col-25">
+                    <div class="icon-i3008"></div>
+                    <p>更多</p>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <!-- 大家都在找这些 end--> 
+
+            <!-- 友邻到家 -->
+            <div class="list">
+              <div class="title link">友邻到家</div>
+              <div class="hr"></div>
+              <div class="cnt">
+                <img src="images/test2.jpg" alt="">
+              </div>
+            </div>
+            <!-- 友邻到家 end -->
+            
+            <div class="icon-toTop"></div>
+          </div>
+      </div>
+    </div>
+    <!-- 遮罩 -->
+    <div id="shade"></div>
+    <!-- 弹框 -->
+    <div class="dialog">
+    </div>
+  </div>
+<script src="src/jquery-2.2.3.min.js"></script>
+<script src="src/swiper.jquery.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+  function defaultEvent(element){
+    if(element === undefined) return;
+    element.addEventListener("touchstart",function(e){
+      e.stopPropagation();
+    })
+    element.addEventListener("touchend",function(e){
+      e.stopPropagation();
+    })
+    element.addEventListener("touchmove",function(e){
+      // e.preventDefault();
+      e.stopPropagation();
+    })
+  }
+</script>
+
+<script>
+$(function(){
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    loop:true,
+  });
+  $('.icon-toTop').on('click',function(){
+    $('.content-inner').animate({
+      scrollTop:0
+    }, 300)
+  })
+})
+</script>
+
+
+
+</body>
+</html>

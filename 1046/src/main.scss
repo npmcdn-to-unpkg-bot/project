@@ -1,0 +1,161 @@
+.swiper-container{
+  font-size: 0;
+  width: rem(750);
+  height: rem(376);
+  overflow: hidden;
+}
+.swiper-pagination-bullet{
+  background: rgba(255,255,255,.5);
+}
+.swiper-pagination-bullet-active{
+  background: #ff0000;
+}
+.inform{
+  width: 100%;
+  height: rem(88);
+  &:after{
+    content:" ";
+    display: block;
+    clear: both;
+  }
+  .left{
+    width: rem(80);
+    float: left;
+    margin-right: rem(-80);
+    text-align: right;
+    padding-top: rem(28);
+  }
+  .right{
+    width: rem(70);
+    float: right;
+    margin-left: rem(-70);
+    text-align: left;
+    height: 100%;
+    position: relative;
+    .icon-close{
+      @include transform(translate3d(0,-50%,0));
+      position: absolute;
+      top:50%;
+      left:0;
+    }
+  }
+  .md{
+    margin-left: rem(80);    
+    margin-right: rem(70);
+    font-size: rem(28);
+    line-height: rem(88);
+    height: 100%;
+    overflow: hidden;
+    padding-left: rem(10);
+    padding-right: rem(10);
+  }
+
+}
+.menu{
+  background: #fff;
+  text-align: center;
+  padding-top: rem(40);
+  font-size: 0;
+  p{
+    font-size: rem(24);
+    color:#8b8b8b;
+    line-height: 1em;
+    margin-top: rem(20);
+    margin-bottom: rem(40);
+  }
+  .col:last-child{
+    p{
+      color:#ccc;
+    }
+  }
+}
+
+.list{
+  background: #fff;
+  margin-top: rem(20);
+  .title{
+    height: rem(80);
+    line-height: rem(80);
+    padding-left: rem(12);
+    font-size: rem(30);
+    position: relative;
+    &.link{
+      &:after{
+        content:" ";
+        position: absolute;
+        right:rem(24);
+        top:50%;
+        @include transform(translate3d(0,-50%,0));
+        @include icon('../images/link.png',18,32);
+      }
+    }
+  }
+  .cntImg{
+    width: 100%;
+    font-size: 0;
+    div{
+      overflow: hidden;
+    }
+  }
+  .cnt{
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.scroll-friend{
+  padding-left: rem(24);
+  padding-right: rem(24);
+  ul{
+    width: 100%;
+    overflow: scroll;
+    white-space: nowrap;
+    &:after{
+      content:" ";
+      display: block;
+      clear: both;
+    }
+  }
+  li{
+    display: inline-block;
+    width: rem(218);
+    height: rem(144);
+    position: relative;
+    margin-right: rem(10);
+    text-align: center;
+    img{
+      width: 100%;
+      height: 100%;
+      background: red;
+    }
+    .bottom{
+      position: absolute;
+      left:0;
+      width: 100%;
+      bottom:0;
+      z-index:10;
+      height:rem(80);
+      background: rgba(0,0,0,.4);
+    }
+    h3{
+      font-size: rem(26);
+      color:#fff;
+      line-height: 1em;
+      margin-top: rem(10);
+    }
+    p{
+      font-size: rem(24);
+      color:#fff;
+      line-height: 1em;
+      margin-top: rem(10);
+    }
+  }
+}
+
+.icon-toTop{
+  position: fixed;
+  right:rem(30);
+  bottom:rem(176);
+  z-index:100;
+}

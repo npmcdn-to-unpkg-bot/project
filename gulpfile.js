@@ -10,7 +10,7 @@ var gulp = require('gulp'),
     minifyHtml = require("gulp-minify-html"); //html 文件压缩
 
 
-var num = '1045';
+var num = '1046';
 
 //sass
 gulp.task('sass', function () {
@@ -77,6 +77,6 @@ gulp.task('rename', function () {
 gulp.task('default', function() {
   livereload.listen(); //要在这里调用listen()方法
   gulp.watch([num+'/**','_public/*.css','_public/*.js'], ['livereload']);
-  gulp.watch([num+'/src/index.scss'], ['sass','livereload']);
+  gulp.watch([num+'/src/*.scss'], ['sass','livereload']);
 });
 
