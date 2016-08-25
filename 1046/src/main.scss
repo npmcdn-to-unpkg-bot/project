@@ -158,4 +158,25 @@
   right:rem(30);
   bottom:rem(176);
   z-index:100;
+  display: none;
+}
+
+.guanjia{
+  width: rem(450);
+  position: absolute;
+  left: 50%;
+  top:50%;
+  @include transform(translate3d(-50%,-50%,0));
+  text-align: center;
+  font-size: 0;
+  .seachlink{
+    margin-top: rem(20);
+  }
+}
+.close-dialog{
+  width: rem(40);
+  height: rem(40);
+  float: right;
+  margin-bottom: rem(10);
+  margin-right: rem(-40);
 }

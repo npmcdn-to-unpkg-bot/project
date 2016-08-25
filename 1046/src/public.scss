@@ -78,6 +78,7 @@ a:active {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
   z-index: 10000;
   display: none;
 }
@@ -184,7 +185,9 @@ footer{
   // background: rgba(0,255,0,.8);
 }
 .content-inner{
-  width: 100%;
+  width: 10rem;
+  margin-left: auto;
+  margin-right: auto;
   height: 100%;
   position: relative;
   -webkit-overflow-scrolling:touch;
