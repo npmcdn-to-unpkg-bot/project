@@ -1,0 +1,345 @@
+body {
+
+    background: #ededed;
+
+}
+
+li {list-style:none;}
+
+.float_l {
+
+    float: left;
+
+}
+
+.float_r {
+
+    float: right;
+
+}
+
+.header {
+
+    background: #fff;
+
+    border-bottom: 5px solid #e34050;
+
+    min-width: 1000px;
+
+}
+
+.main {
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    width: 1000px;
+
+}
+
+.header .inner {
+
+    padding: 6px 0;
+
+}
+
+.header .branding {
+
+    width: 348px;
+
+    height: 48px;
+
+}
+
+.header .branding .logo {
+
+    background: transparent url("../images/kj-logo.gif") no-repeat scroll 0 0;
+
+    display: block;
+
+    height: 48px;
+
+    text-indent: -9999px;
+
+    width: 180px;
+
+}
+
+.header .branding .logo-m {
+
+    background: transparent url("../images/kj-logo-m.gif") no-repeat scroll 0 0;
+
+    display: block;
+
+    height: 48px;
+
+    margin-left: 10px;
+
+    width: 125px;
+
+}
+
+.header .mainnav {
+
+    height: 48px;
+
+    line-height: 48px;
+
+    width: 652px;
+
+}
+
+.clearfix::after {
+
+    clear: both;
+
+    content: ".";
+
+    display: block;
+
+    height: 0;
+
+    overflow: hidden;
+
+    visibility: hidden;
+
+}
+
+.nav {
+
+    height: 48px;
+
+    position: absolute;
+
+    width: 652px;
+
+    z-index: 100;
+
+}
+
+.nav .nLi {
+
+    position: relative;
+
+}
+
+.header .mainnav li {
+
+    float: right;
+
+    text-align: center;
+
+    width: 96px;
+
+}
+
+.header .mainnav li.max, .header .mainnav li.max h3 {
+
+    background: transparent url("../images/kj-bg.png") no-repeat scroll 0 0;
+
+}
+
+.header .mainnav li.max {
+
+    background-position: -999px -48px;
+
+    padding-right: 1px;
+
+    text-align: right;
+
+    width: 110px;
+
+}
+
+.nav .nLi h3 {
+
+    font-size: 16px;
+
+    font-style: normal;
+
+    font-weight: lighter;
+
+}
+
+.header .mainnav li.max h3 {
+
+    background-position: -975px -98px;
+
+    padding-left: 30px;
+
+}
+
+.header .mainnav li h3 a {
+
+    color: #000;
+
+}
+
+.header .mainnav li h3 a:hover {
+
+    text-decoration: none;
+
+}
+
+.header .mainnav li.on h3 a {
+
+    color: #f60;
+
+}
+
+.header .mainnav li.mid {
+
+    width: 80px;
+
+}
+
+.nav .sub {
+
+    display: none;
+
+    font-family: Arial;
+
+    left: -47px;
+
+    padding-top: 12px;
+
+    position: absolute;
+
+    top: 32px;
+
+    width: 190px;
+
+}
+
+.nav .sub.sub2 {
+
+    left: -15px;
+
+    width: 110px;
+
+}
+.nav .sub.sub3 {
+
+    left: -6px;
+
+}
+.nav .sub .arrow {
+
+    border-color: transparent transparent #0e8a7a;
+
+    border-style: solid;
+
+    border-width: 6px;
+
+    height: 0;
+
+    left: 89px;
+
+    position: absolute;
+
+    top: 0;
+
+    width: 0;
+
+}
+
+.nav .sub.sub2 .arrow {
+
+    left: 49px;
+
+}
+
+.nav .sub ul {
+
+    background: #fff none repeat scroll 0 0;
+
+    border-top: 3px solid #0e8a7a;
+
+    overflow: hidden;
+
+    padding: 5px 0 5px 10px;
+
+    position: relative;
+
+    width: 180px;
+
+}
+
+.nav .sub.sub2 ul, .nav .sub.sub3 ul {
+
+    width: 95px;
+
+}
+
+.nav .sub li {
+
+    float: left;
+
+    line-height: 25px;
+
+    padding-right: 10px;
+
+    width: 50px;
+
+}
+
+.nav .sub.sub2 ul li {
+
+    float: none;
+
+    width: 85px;
+
+}
+
+.nav .sub li a {
+
+    padding: 3px 5px;
+
+}
+
+.nav .sub li a:hover {
+
+    background: #ff6600 none repeat scroll 0 0;
+
+    color: #ffffff;
+
+    padding: 3px 5px;
+
+    text-decoration: none;
+
+}
+
+.header .mainnav li.min {
+
+    width: 64px;
+
+}
+
+#main {
+
+    margin: 0 auto;
+
+    width: 1000px;
+
+}
+
+.footer{ background:#3d3d3d;}
+
+.footer .inner{ padding:8px 0; color:#ccc;}
+
+.footer a{ color:#eee;}
+
+.footer a:hover{ color: #FF6600;}
+
+.footer .nav_f{ padding-bottom:15px;}
+
+.footer ul{ padding-bottom:15px;}
+
+.footer li{ float:left; padding-right:10px; white-space:nowrap;}
+
+.footer .contact{float:right;}
+
+.footer .copyright{ font-family:Arial;color:#ccc; line-height:18px;}
+
+.footer .copyright a{ color:#ccc;}

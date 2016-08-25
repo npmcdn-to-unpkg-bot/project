@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--手机自适应1:1 用户不可以手动缩放-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!--默认浏览器为极速核-->
+<meta name="renderer" content="webkit">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/amazeui.min.css">
+<script src="kj/js/jquery.js"></script>
+<script type="text/javascript">
+  $(function(){
+		$(".t_sx li").click(function(){
+			 $(this).toggleClass("hover")
+			 var leg=$(".hover").length-1;
+			 $("#selectCount").html(leg);
+			 if(leg>4){
+				 alert("您已超过了最大选号范围,请检查！")
+				 } 
+			})
+		$(".reset").click(function(){
+			$(".t_num li a").removeClass("hover")
+			var leg=$(".hover").length;
+			 $("#selectCount").html(leg);
+			})
+	  })
+  </script>
+<style type="text/css">
+.blolw a {
+	float:left;
+}
+#marquee_product1 img:hover {
+	border:1px solid red;
+	box-sizing: border-box;
+}
+.blolw p {
+	width:100%;
+}
+.box_gree {
+	margin-top: 5px;
+	padding: 1px;
+	background: #fff;
+}
+.guapai {
+	margin: 3px 0;
+	padding: 3px;
+	overflow:hidden;
+}
+.guapai .float_l {
+	width: 470px;
+}
+.guapai .xtsa {
+	margin: 0 2px;
+	float:left;
+	margin-right:20px;
+}
+.guapai .float_r {
+	width: 470px;
+}
+.guapai .tit {
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+	background:#ee7024;
+}
+.box_gree {
+	margin-top: 5px;
+	padding: 1px;
+	background: #fff;
+}
+.addFloatRight {
+	float: right;
+	font-size: 12px;
+	padding: 0 10px 0 0;
+}
+</style>
+<title>首页</title>
+</head>
+
+<body style="background:#f1f1f1;">
+<!--头部-->
+<header data-am-widget="header" class="am-header am-header-default">
+    <h1 class="am-header-title">
+      <a href="#title-link">天空彩票</a>
+    </h1>
+ </header>
+
+<!--头部结束 头部结束 头部结束 头部结束-->
+<div class="lottery_auto">
+  <div id="twl_zodiac" style="width:100%;">
+    <h4> 
+        <span class="addFloatLeft">选择生肖<strong>2016 第 96 期</strong></span>
+        <div style="float:left; margin-left:15px;">
+        	<select name="">
+           	    <option>特码肖</option>
+            	<option>平特肖</option>
+                <option>号码</option>
+                <option>单双</option>
+                <option>波色</option>
+                <option>五行</option>
+                <option>家野</option>
+                <option>头尾</option>
+            </select>
+            <select name="">
+            	 <option>1肖</option>
+            	<option>2肖</option>
+                <option>3肖</option>
+                <option>4肖</option>
+                <option>5肖</option>
+                <option>6肖</option>
+                <option>7肖</option>
+                <option>8肖</option>
+                <option>9肖</option>
+            </select>
+        </div> 
+        <span class="addFloatRight">离下次开奖时间还有：<strong id="leftTime">03:59:15</strong></span>
+     </h4>
+    <ul class="t_sx" id="shengxiao" style="float: left; clear: left;">
+      <li> <span class="z1">鼠</span>
+        <p class="ckb"> 鼠 </p>
+      </li>
+      <li> <span class="z2">牛</span>
+        <p class="ckb"> 牛 </p>
+      </li>
+      <li class=""> <span class="z3">虎</span>
+        <p class="ckb"> 虎 </p>
+      </li>
+      <li class=""> <span class="z4">兔</span>
+        <p class="ckb"> 兔 </p>
+      </li>
+      <li class=""> <span class="z5">龙</span>
+        <p class="ckb"> 龙 </p>
+      </li>
+      <li> <span class="z6">蛇</span>
+        <p class="ckb"> 蛇 </p>
+      </li>
+      <li> <span class="z7">马</span>
+        <p class="ckb"> 马 </p>
+      </li>
+      <li> <span class="z8">羊</span>
+        <p class="ckb"> 羊 </p>
+      </li>
+      <li> <span class="z9">猴</span>
+        <p class="ckb"> 猴 </p>
+      </li>
+      <li class=""> <span class="z10">鸡</span>
+        <p class="ckb"> 鸡 </p>
+      </li>
+      <li class=""> <span class="z11">狗</span>
+        <p class="ckb"> 狗 </p>
+      </li>
+      <li class=""> <span class="z12">猪</span>
+        <p class="ckb"> 猪 </p>
+      </li>
+    </ul>
+    <p style="display: block; padding: 10px 0 20px 0; clear: left;">
+    	 <span class="js_notice2">您已选择了<b id="selectCount">0</b>/4个生肖</span> 
+         <span class="js_notice3" style="display: block; padding: 10px 0 0 0;"> 
+         	<a href="javascript:;" id="sxSubmit" class="sx_submit hover">提交</a> <a href="javascript:;" class="reset">重设</a> 
+         </span> 
+    </p>
+    <div id="vote_chart" style="display: none;"></div>
+  </div>
+	<div class="index_bsx_left" style=" width:100%; margin-bottom:20px;">
+
+       <ul style="background:#fff;">
+         	<p>为范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法</p>
+       </ul>
+   </div>
+</div>
+      <!--底部公用内容-->
+<div class="lottery_footer">
+    <p>六合看开奖,找www.2m.cc - 2m.cc开奖直播中心:汇集香港六合开奖网站,这里无广告,更专业,速度更快,更稳定!</p>
+    <p>与本港电视台直播开奖同步更新.更有精确的开奖记录,开奖结果,走势图对照研究.</p>
+</div>
+</body>
+</html>

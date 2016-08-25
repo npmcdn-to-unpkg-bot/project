@@ -1,0 +1,57 @@
+﻿
+
+.txt_info{height:180px; background:#FFFFFF; border:7px solid #3399ff;}
+
+
+
+.focus{ height:245px; background: #222222;}
+
+
+
+.focus .msg .action .share{ height:30px; background:#3399ff; line-height:30px; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; behavior:url(PIE.htc); position:relative;}
+
+
+
+.searchbar li a:hover{ background:#3399ff; color:#fff; text-decoration: none;}
+
+
+
+.search input[type="button"]{ width:130px; background:#3399ff;}
+
+
+
+*html .search .btn2{ width:130px; background:#3399ff; right:2px;}
+
+
+
+.flink dt h3{ font-size:16px; color:#3399ff;}
+
+
+
+.flink li a:hover{ color:#3399ff;}
+
+
+
+#tabbox{border: 7px solid #3399ff; padding:1px}
+
+
+
+.tabs .thistab,.tabs .thistab a:hover{background: #3399ff; color:#FFFFFF}
+
+
+
+.tab_con {margin:0 3px; border:1px dashed #3399ff}
+
+
+
+.gjptuzhi img {margin:15px 0 0 15px;}
+
+.tuzhi{border-bottom:3px solid #2264fa; font-size:16px; padding:15px 0 0 35px; font-weight: normal;}
+
+#ziliao a{ margin-left:35px; font-size:16px;}
+
+#ziliao ul{font:14px "Microsoft Yahei";list-style:none;margin-left:0px;padding-left:0px;}
+
+#ziliao ul ol{font:14px "Microsoft Yahei";list-style:none;margin-left:0px;padding-left:0px;}
+
+#ziliao ul ol dd{font:14px "Microsoft Yahei";list-style:none;margin-left:0px;padding-left:0px;}

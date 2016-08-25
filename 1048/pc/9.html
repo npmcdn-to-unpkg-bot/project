@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
+<script src="kj/js/jquery.js"></script>
+<script type="text/javascript">
+  $(function(){
+		$(".t_num li a").click(function(){
+			 $(this).toggleClass("choose")
+			 var leg=$(".choose").length;
+			 $("#selectCount").html(leg);
+			 if(leg>30){
+				 alert("您已超过了最大选号范围,请检查！")
+				 } 
+			})
+		$(".reset").click(function(){
+			$(".t_num li a").removeClass("choose")
+			var leg=$(".choose").length;
+			 $("#selectCount").html(leg);
+			})
+	  })
+  </script>
+<style type="text/css">
+.blolw a {
+	float:left;
+}
+#marquee_product1 img:hover {
+	border:1px solid red;
+	box-sizing: border-box;
+}
+.blolw p {
+	width:100%;
+}
+.box_gree {
+	margin-top: 5px;
+	padding: 1px;
+	background: #fff;
+}
+.guapai {
+	margin: 3px 0;
+	padding: 3px;
+	overflow:hidden;
+}
+.guapai .float_l {
+	width: 470px;
+}
+.guapai .xtsa {
+	margin: 0 2px;
+	float:left;
+	margin-right:20px;
+}
+.guapai .float_r {
+	width: 470px;
+}
+.guapai .tit {
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 5px;
+	font-size: 20px;
+	text-align: center;
+	color: #fff;
+	background:#ee7024;
+}
+.box_gree {
+	margin-top: 5px;
+	padding: 1px;
+	background: #fff;
+}
+.addFloatRight {
+	float: right;
+	font-size: 12px;
+	padding: 0 10px 0 0;
+}
+</style>
+<title>首页</title>
+</head>
+
+<body style="background:#f1f1f1;">
+<!--头部-->
+<div class="lottery">
+  <div class="lottery_top">
+    <div class="lottery_div">
+      <div class="lottery_top_logo"> <a href=""><img src="img/kj-logo.gif"></a> </div>
+      <div class="lottery_top_search">
+        <input type="text" class="search_text" placeholder="请输入您搜索的内容">
+        <input type="button" class="search_button"/>
+      </div>
+    </div>
+  </div>
+</div>
+<!--导航-->
+<div class="lottery_nav">
+  <ul class="nav">
+    <li class="nav_on"> <a href="">主页</a> </li>
+    <li> <a href="">栏目页</a> </li>
+    <li> <a href="">内容页</a> </li>
+    <li> <a href="">开奖记录</a> </li>
+    <li> <a href="">走势图</a>
+      <div class="sub sub2" style="display: none;">
+        <div class="arrow"></div>
+        <ul>
+          <li><a href="">出号综合分析</a></li>
+          <li><a href="">六合特码走势</a></li>
+          <li><a href="">特码生肖走势</a></li>
+          <li><a href="">特码波色走势</a></li>
+          <li><a href="">特码单双走势</a></li>
+          <li><a href="">特码段位走势</a></li>
+          <li><a href="">特码头数走势</a></li>
+          <li><a href="">特码尾数走势</a></li>
+          <li><a href="">特码五行走势</a></li>
+        </ul>
+      </div>
+    </li>
+    <li> <a href="">投票</a> </li>
+    <li> <a href="">属性</a> </li>
+    <li> <a href="">开奖时间</a> </li>
+  </ul>
+</div>
+<!--头部结束 头部结束 头部结束 头部结束-->
+<div class="lottery_auto">
+	
+  <div id="twl_zodiac" style="float: left; clear: left; width: 998px; margin-top:20px;">
+    <h4> <span class="addFloatLeft">选择号码<strong>2016 第 96 期</strong></span> 
+    <div style="float:left; margin-left:15px;">
+        	<select name="">
+           	    <option>头尾</option>
+            	<option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+            <select name="">
+            	<option>尾数</option>
+            	<option>头数</option>
+            </select>
+        </div> 
+    	<span class="addFloatRight">离下次开奖时间还有：<strong id="leftTime">04:45:31</strong></span> </h4>
+    <!--推號碼-->
+    <ul class="t_num" style="float: left; clear: left;">
+      <li> <a href="javascript:;"> <span class="red_ball">0</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">1</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">2</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">3</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">4</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">5</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">6</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">7</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">8</span> </a> </li>
+      <li> <a href="javascript:;"> <span class="red_ball">9</span> </a> </li>
+    </ul>
+    <p style="display: block; padding: 10px 0 20px 0; clear: left;"> 
+    	<span class="js_notice2">您已选择了<b id="selectCount">0</b>/30个号码</span> 
+        <span class="js_notice3" style="display: block; padding: 10px 0 0 0;">
+        	 <a href="javascript:;" id="numSubmit" class="sx_submit hover">提交</a> <a href="javascript:;" class="reset">重设</a> 
+        </span> 
+   	</p>
+  </div>
+  <div class="index_bsx_left" style=" width:998px; margin-bottom:20px;">
+
+       <ul style="background:#fff;">
+         <p>为范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法范围微分法为范围服务法王菲为范围非我非潍坊潍坊无法</p>
+       </ul>
+   </div>
+</div>
+      <!--底部公用内容-->
+<div class="lottery_footer">
+    <p>六合看开奖,找www.2m.cc - 2m.cc开奖直播中心:汇集香港六合开奖网站,这里无广告,更专业,速度更快,更稳定!</p>
+    <p>与本港电视台直播开奖同步更新.更有精确的开奖记录,开奖结果,走势图对照研究.</p>
+</div>
+</body>
+</html>

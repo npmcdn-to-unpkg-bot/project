@@ -1,0 +1,31 @@
+.infos2{}
+.infos2 .inner{ background:#fff;}
+.infos2 .title{ padding:10px; height:21px; border-width:1px 1px 0; border-style:solid; border-color:#d3d3d3; background:transparent url(../image/bg-banner2.gif) repeat;}
+.infos2 .title dl{ float:left; width:978px; height:21px; overflow:hidden;}
+.infos2 .title dt{ float:left;}
+.infos2 .title dt h2{ font-size:18px;}
+.infos2 .title dd{ height:14px; padding-top:7px;}
+.infos2 .title dd.left{ float:left; padding-left:20px;}
+.infos2 .title dd.left a{ color:#999;}
+.infos2 .title dd.left label{ font-weight:bold; color:#f60;}
+.infos2 .title dd.left input{ vertical-align:middle; margin-top:-3px;}
+.infos2 .title dd.right{ float:right;font-weight:bold}
+.infos2 .title dd.right a{ font-weight:bold; color:#00f;}
+.infos2 .title dd.right a:hover{ color:#0e8a7a;}
+.infos2 .bd{ overflow:hidden;}
+.infos2 .bd p{ font-size:14px}
+.sxsx{border:1px solid #d3d3d3; padding:5px}
+.ss{border-bottom:3px #FF9900 solid; width:100px; text-align:center; line-height:30px; color:#FF9900}
+.sxdz{FONT-FAMILY: arial,sans-serif,宋体; text-align: center; height:70px; padding-top:8px; background:#FFFFCC; border-bottom: 1px #ddd dashed;}
+.sxdz li {
+	FONT-SIZE: 10pt; color:#FFF; width:16%; float:left}
+.sx{
+font-size:16px; font-weight:bold; color:#990000}
+.sx p{ padding:5px 12px; border-bottom:1px #ddd dashed;}
+.bg_blue{background-color: #0066FF}
+.bg_green{background-color: #009900}
+.bg_red{background-color: red;}
+.table4{
+    FONT-FAMILY: arial,sans-serif,宋体; color:#fff; font-size:13px; background:#FFFFCC}
+.table4 td{border:none;border-bottom: 1px #ddd dashed; line-height:28px}
+.table4 .font{text-align: center; font-size:14px; font-weight:bold}

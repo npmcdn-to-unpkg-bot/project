@@ -1,0 +1,60 @@
+@charset "utf-8";
+body, blockquote, dd, dl, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, ol, p, pre, textarea, ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px/1 "\5FAE\8F6F\96C5\9ED1";	/* 微软雅黑，也可使用“Microsoft YaHei”同样的效果 */
+	color: #666;			/* 类似这种重复的可是使用简写，例：#9966cc 可以简写为 #96c */
+	overflow-x: hidden;
+}
+h4, h5, h6, button, input, select, textarea {
+	font-size: 100%;
+}
+input, button, textarea, select, option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+address, cite, dfn, em, strong, var {
+	font-style: normal;
+}
+em, strong {
+	font-weight: normal;
+}
+ul, ol, li {
+	list-style: none;
+}
+fieldset, img, hr {
+	border: none;
+	outline: 0;
+}
+pre {
+	white-space: normal;
+}
+q:before, q:after {
+	content:'';
+}
+blockquote, q {
+    quotes: none;
+}
+sup { 
+	vertical-align:text-top; 
+}
+sub { 
+	vertical-align:text-bottom; 
+}
+textarea {
+    resize: none;
+}
+table {
+    border-collapse: collapse;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}

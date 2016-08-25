@@ -1,0 +1,44 @@
+﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{ padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline; margin:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{ display:block;}
+ol, ul{ list-style:none;}
+blockquote, q{ quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after{ content:''; content:none;}
+table{ border-collapse:collapse; border-spacing:0;}
+h1, h2, h3, h4, h5, h6{ font-weight:normal;}
+img{ -ms-interpolation-mode:bicubic; image-rendering:optimizeQuality;}
+body{ line-height:1.14;font-size:12px; color:#333; _behavior:url(csshover.htc);}
+a{ color:#000; text-decoration:none; outline:none;}
+a:hover{ color:#0e8a7a;}
+b, i, strong, em{ font-style:normal;}
+h1, h2, h3{ font-family:"微软雅黑";}
+h3, h4{ font-size:14px;}
+h2 a{ color:#333;}
+input{ font-size:12px;}
+
+.fleft{ float:left;}
+.fright{ float:right;}
+.clearfloat{ height:0; line-height:0; font-size:1px; clear:both;}
+.clearfix:after{ visibility:hidden; display:block; height:0; content:" "; font-size:0; clear:both;}
+*html .clearfix{ zoom:1;}
+*:first-child+html .clearfix { zoom:1;}
+.main{ width:1000px; overflow:hidden; margin:0 auto;}
+.padding-b1{ padding-bottom:10px;}
+.tcenter{ text-align:center;}
+.tright{ text-align:right;}
+.bg-red{ background:#f00;}
+.bg-red2{ background:#8e060f}
+.bg-red3{ background:#a200ff}
+.bg-green{ background:#090;}
+.bg-green2{ background:#35aa02;}
+.bg-green3{ background:#028662;}
+.bg-blue{ background:#00f;}
+.bg-blue2{ background:#0060ff;}
+.bg-yellow{ background:#835d01;}
+.credit{ display:inline-block; height:16px; background:transparent url(credit.gif) repeat-x}
+.credit1{ width:18px;}
+.credit2{ width:36px;}
+.credit3{ width:54px;}
+.credit4{ width:72px;}
+.credit5{ width:90px;}
+
+.header, .menu, .searchbar, .highterm, .content, .footer{ min-width:1000px;}

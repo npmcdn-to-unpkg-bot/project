@@ -1,0 +1,505 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0 none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {
+    list-style: outside none none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+img {
+    image-rendering: optimizequality;
+}
+body {
+    background: #eee none repeat scroll 0 0;
+    color: #333;
+    font-family: "宋体",Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    line-height: 1.14;
+}
+a {
+    color: #000;
+    outline: medium none;
+    text-decoration: none;
+}
+a:hover {
+    color: #0e8a7a;
+}
+b, i, strong, em {
+    font-style: normal;
+}
+h1, h2, h3 {
+    font-family: "微软雅黑";
+}
+h3, h4 {
+    font-size: 14px;
+}
+h2 a {
+    color: #333;
+}
+input {
+    font-size: 12px;
+}
+.clearfloat {
+    clear: both;
+    font-size: 1px;
+    height: 0;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+:first-child + html .clearfix {
+}
+.clearfix h2{ background: url(../../img/kcrq.png) no-repeat; width: 183px; text-align: center; height:43px;}
+#YMBG{ color:#f7ba17;}
+.main {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1000px;
+    background: #fff;
+}
+.padding-b1 {
+    padding-bottom: 1px;
+}
+.tcenter {
+    text-align: center;
+}
+.tright {
+    text-align: right;
+}
+.bg-red {
+    background: #f00 none repeat scroll 0 0;
+}
+.bg-red2 {
+    background: #8e060f none repeat scroll 0 0;
+}
+.bg-red3 {
+    background: #a200ff none repeat scroll 0 0;
+}
+.bg-green {
+    background: #090 none repeat scroll 0 0;
+}
+.bg-green2 {
+    background: #35aa02 none repeat scroll 0 0;
+}
+.bg-green3 {
+    background: #028662 none repeat scroll 0 0;
+}
+.bg-blue {
+    background: #00f none repeat scroll 0 0;
+}
+.bg-blue2 {
+    background: #0060ff none repeat scroll 0 0;
+}
+.bg-yellow {
+    background: #835d01 none repeat scroll 0 0;
+}
+.content {
+    padding-top: 10px;
+    position: relative;
+}
+.infos {
+}
+.infos .inner {
+    background: #fff none repeat scroll 0 0;
+}
+.infos .title {
+    background: url("../../img/kj_tit.png")  repeat-x;
+    border-color: #d3d3d3;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    height:43px;
+    line-height: 43px;
+}
+.infos .title dl {
+    float: left;
+    height:43px;
+    overflow: hidden;
+    width: 978px;
+}
+.infos .title dt {
+    float: left;
+}
+.infos .title dt h2 {
+    font-size: 18px;
+}
+.infos .title dd {
+}
+.infos .title dd.left {
+    float: left;
+    height: 14px;
+    padding-left: 20px;
+    padding-top: 7px;
+}
+.infos .title dd.left a {
+    color: #999;
+}
+.infos .title dd.left label {
+    color: #f60;
+    font-weight: bold;
+}
+.infos .title dd.left input {
+    margin-top: -3px;
+    vertical-align: middle;
+}
+.infos .title dd.right {
+    float: right;
+}
+.infos .title dd.right2 {
+    float: right;
+    height: 14px;
+    padding-top: 7px;
+}
+.infos .title dd.right2 a {
+    color: #00f;
+    font-weight: bold;
+}
+.infos .title dd.right2 a:hover {
+    color: #0e8a7a;
+}
+.infos .title dd.right .sokey {
+    background: #ffffff none repeat scroll 0 0;
+    border: 1px solid #ff6600;
+    color: #999999;
+    height: 19px;
+    line-height: 19px;
+    padding-left: 3px;
+    vertical-align: middle;
+    width: 160px;
+}
+.infos .title dd.right .sonav {
+    background: #ff6600 none repeat scroll 0 0;
+    color: #ffffff;
+    cursor: pointer;
+    height: 21px;
+    padding: 0 8px;
+    vertical-align: middle;
+}
+.infos .bd {
+    overflow: hidden;
+}
+.infos table {
+    font-weight: bold;
+    text-align: center;
+    width: 1000px;
+}
+.infos table th, .infos table td {
+    border: 1px solid #d3d3d3;
+    cursor: default;
+    font-family: Arial;
+}
+.infos table th {
+    background: #efefef none repeat scroll 0 0;
+    height: 39px;
+    line-height: 39px;
+    width: 30px;
+}
+.infos table td {
+    padding: 5px 0;
+    vertical-align: middle;
+}
+.infos table td.no {
+    font-weight: normal;
+}
+.infos table .min {
+    width: 47px;
+}
+.infos table .mid {
+    width: 80px;
+}
+.infos table .max {
+    width: 186px;
+}
+.infos table .mini {
+    width: 36px;
+}
+.infos table .mar {
+    width: 70px;
+}
+.infos table .bg-high1 {
+    background: #ff9 none repeat scroll 0 0;
+}
+.infos table .bg-high2 {
+    background: #ffc none repeat scroll 0 0;
+}
+.infos table .sortSize {
+    display: none;
+}
+.infos table .sortDown, .infos table .sortSize {
+    padding: 0 3px;
+}
+.infos table .p {
+    border: 1px solid #e3e3e3;
+    float: left;
+    margin: 0 2px;
+    width: 24px;
+}
+.infos table .bg-high2 .p {
+    float: none;
+    margin: 0 5px;
+}
+.infos table .hm {
+    font-family: Tahoma;
+    font-size: 14px;
+    padding: 3px 0;
+}
+.infos table .sx {
+    background: #fff none repeat scroll 0 0;
+    color: #666;
+    font-weight: normal;
+    padding: 3px 0;
+}
+.infos table .danClass {
+    color: #f0f;
+}
+.infos table .shuangClass {
+    color: #004080;
+}
+.infos table .daClass {
+    color: #f0f;
+}
+.infos table .xiaoClass {
+    color: #004080;
+}
+.infos table .redBoClass {
+    background: #f00 none repeat scroll 0 0;
+    color: #fff;
+}
+.infos table .blueBoClass {
+    background: #00f none repeat scroll 0 0;
+    color: #fff;
+}
+.infos table .greenBoClass {
+    background: #008000 none repeat scroll 0 0;
+    color: #fff;
+}
+.infos table .infos table .redClass {
+    color: #f00;
+}
+.infos table .infos table .blueClass {
+    color: #00f;
+}
+.infos table .redClass {
+    color: #f00;
+}
+.infos table .blueClass {
+    color: #00f;
+}
+.infos table .greenClass {
+    color: #008000;
+}
+.infos table .wuxingjinClass {
+    color: #f39700;
+}
+.infos table .wuxingmuClass {
+    color: #008000;
+}
+.infos table .wuxingshuiClass {
+    color: #999;
+}
+.infos table .wuxinghuoClass {
+    color: #f00;
+}
+.infos table .wuxingtuClass {
+    color: #6a3905;
+}
+.infos table .tou0Class {
+    color: #f39700;
+}
+.infos table .tou1Class {
+    color: #008000;
+}
+.infos table .tou2Class {
+    color: #999;
+}
+.infos table .tou3Class {
+    color: #f00;
+}
+.infos table .tou4Class {
+    color: #6a3905;
+}
+.infos table .menshu1Class {
+    color: #008000;
+}
+.infos table .menshu2Class {
+    color: #999;
+}
+.infos table .menshu3Class {
+    color: #009e96;
+}
+.infos table .menshu4Class {
+    color: #7d0022;
+}
+.infos table .menshu5Class {
+    color: #f39700;
+}
+.infos table .jiaClass {
+    color: #09f;
+}
+.infos table .yeClass {
+    color: #906;
+}
+.infos table .weishu0Class {
+    color: #999;
+}
+.infos table .weishu1Class {
+    color: #6a3905;
+}
+.infos table .weishu2Class {
+    color: #009e96;
+}
+.infos table .weishu3Class {
+    color: #f39700;
+}
+.infos table .yinClass {
+    color: #999;
+}
+.infos table .yangClass {
+    color: #333;
+}
+.infos table .tianClass {
+    color: #00469d;
+}
+.infos table .diClass {
+    color: #7d0022;
+}
+.infos table .jiClass {
+    color: #e60011;
+}
+.infos table .xiongClass {
+    color: #009e96;
+}
+.infos table .heiClass {
+    color: #000;
+}
+.infos table .baiClass {
+    color: #999;
+}
+.infos table .redSeXiaoClass {
+    color: #f00;
+}
+.infos table .blueSeXiaoClass {
+    color: #00f;
+}
+.infos table .greenSeXiaoClass {
+    color: #008000;
+}
+.infos table .danBiClass {
+    color: #f0f;
+}
+.infos table .shuangBiClass {
+    color: #00469d;
+}
+.infos table .duanwei1Class {
+    color: #999;
+}
+.infos table .duanwei2Class {
+    color: #009e96;
+}
+.infos table .duanwei3Class {
+    color: #f39700;
+}
+.infos table .duanwei4Class {
+    color: #00469d;
+}
+.infos table .duanwei5Class {
+    color: #920683;
+}
+.infos table .duanwei6Class {
+    color: #009944;
+}
+.infos table .duanwei7Class {
+    color: #6a3905;
+}
+.infos table .nanClass {
+    color: #06f;
+}
+.infos table .nvClass {
+    color: #f0f;
+}
+.infos .bottom {
+    padding: 10px 3px 5px;
+}
+.infos .bottom li {
+    float: left;
+    text-align: center;
+    width: 108px;
+}
+.infos .bottom li a {
+    color: #f60;
+}
+.infos .bottom li a:hover {
+    color: #0e8a7a;
+}
+.dialog {
+    display: none;
+    height: 100px;
+    position: absolute;
+    width: 108px;
+    z-index: 99;
+}
+.dialog p {
+    color: #333;
+    height: 100px;
+    line-height: 18px;
+    padding: 5px;
+    position: absolute;
+    text-align: left;
+    width: 98px;
+    z-index: 2;
+}
+
+.pages {
+    line-height: 25px;
+}
+.pages .total span {
+    background: #999999 none repeat scroll 0 0;
+    color: #ffffff;
+    margin-right: 3px;
+    padding: 2px 10px;
+}
+#topbar {
+    display: none;
+    padding-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.zstable {
+    background: #fff none repeat scroll 0 0;
+    margin: 0 auto;
+    width: 980px;
+}
+.zstable th, .zstable td {
+    border: 1px solid #ddd;
+    cursor: default;
+    font-family: Arial;
+}
+.zstable td {
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+}
