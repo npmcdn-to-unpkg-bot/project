@@ -56,6 +56,11 @@ $('.select-1').on('change',function(){
       $('.select-2').html(html);
       $('#listHtml').html(listHtml[index_1-1]);
       $('#listHtml').unbind('click');
+      if(index_1==4||index_1==8||index_1==9){
+        $('#listHtml').addClass('number');
+      }else{
+        $('#listHtml').removeClass('number');
+      }
     }
   }
 })

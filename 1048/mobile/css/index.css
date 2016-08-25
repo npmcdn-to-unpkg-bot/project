@@ -1,0 +1,50 @@
+.blolw a {
+  float:left;
+}
+#marquee_product1 img:hover {
+  border:1px solid red;
+  box-sizing: border-box;
+}
+.blolw p {
+  width:100%;
+}
+.box_gree {
+  margin-top: 5px;
+  padding: 1px;
+  background: #fff;
+}
+.guapai {
+  margin: 3px 0;
+  padding: 3px;
+  overflow:hidden;
+}
+.guapai .float_l {
+  width: 470px;
+}
+.guapai .xtsa {
+  margin: 0 2px;
+  float:left;
+  margin-right:20px;
+}
+.guapai .float_r {
+  width: 470px;
+}
+.guapai .tit {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  background:#ee7024;
+}
+.box_gree {
+  margin-top: 5px;
+  padding: 1px;
+  background: #fff;
+}
+.addFloatRight {
+  float: right;
+  font-size: 12px;
+  padding: 0 10px 0 0;
+}

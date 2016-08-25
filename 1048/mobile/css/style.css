@@ -361,8 +361,16 @@ ol{ list-style:none;}
 /*推號碼*/
 #twl_zodiac ul.t_num{padding-top:15px;_height:156px; width:100%; padding:0; }
 #twl_zodiac ul.t_num li{float:left;}
-
+#twl_zodiac .number ul.t_num li{margin: 5px 10px;}
+#twl_zodiac ul.t_num li a{
+    font-size: 1.6rem;
+    display: block;
+    border:1px solid #fff;
+}
 #twl_zodiac ul.t_num a.choose{background: url(../img/xuankuang.gif) no-repeat center; border: 1px solid #c2393a;}
+#twl_zodiac ul.t_num .on a{
+    background: url(../img/xuankuang.gif) no-repeat center; border: 1px solid #c2393a;
+}
 
 
 /*紅藍綠球樣式區間*/
@@ -371,6 +379,7 @@ ol{ list-style:none;}
 .red_ball{background-position:-36px -1px;}
 .blue_ball{background-position:-1px -1px;}
 #twl_zodiac ul.t_sx li.hover{border: 1px solid #c2393a;background: url(images/xuankuang.gif) no-repeat right bottom;cursor: pointer;}
+#twl_zodiac ul.t_sx li.on{border: 1px solid #c2393a;background: url(images/xuankuang.gif) no-repeat right bottom;cursor: pointer;}
 
 #twl_zodiac .cnmlg li{ width:20%;  float:left;}
 #twl_zodiac .cnmlg li a{border-radius:100px; width:60px; height:60px;  text-align:center; line-height:65px; display:block; font-family:"Microsoft YaHei UI", "Microsoft YaHei UI Light"; font-weight:bold; color:#fff; margin-right:5px; margin-left:5px;}
@@ -381,6 +390,7 @@ ol{ list-style:none;}
 .b4{ background:#77b02e;}
 .b5{ background:#d12811;}
 .choose1{ background:#999;}
+.on-2 a{ background:#999;}
 #twl_zodiac .choose2 span{ background: url(../img/xuankuang.gif) no-repeat center; border: 1px solid #c2393a;}
 
 

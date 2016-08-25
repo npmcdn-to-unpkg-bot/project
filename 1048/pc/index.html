@@ -69,6 +69,7 @@
             <option value="9">尾数</option>
           </select>
           <select name="" class="select-2">
+            <option value="0">请选择</option>
           </select>
         </div> 
       <span class="addFloatRight">离下次开奖时间还有：<strong id="leftTime">04:45:31</strong></span> </h4>
@@ -76,9 +77,11 @@
     <div id="listHtml">
       
     </div>
+    <!-- 隐藏域 -->
+    <input type="hidden" id="userSelect" />
 
     <p style="display: block; padding: 10px 0 20px 0; clear: left;"> 
-      <span class="js_notice2">您已选择了<b id="selectCount">0</b>/<span id="length">0</span>个号码</span> 
+      <span class="js_notice2">您已选择了<b id="selectCount">0</b>/<span id="length">0</span>个</span> 
         <span class="js_notice3" style="display: block; padding: 10px 0 0 0;">
            <a href="javascript:;" id="numSubmit" class="sx_submit hover">提交</a> <a href="javascript:;" class="reset">重设</a> 
         </span> 
@@ -100,6 +103,11 @@
 <script src="kj/js/jquery.js"></script>
 <script src="kj/js/index.js"></script>
 <script type="text/javascript">
+$(function(){
+  $('.reset').on('click',function(){
+     $('#listHtml').find('li').removeClass('on on-2 active');
+  })
+})
 // $(function(){
 //   $(".t_num li a").click(function(){
 //      $(this).toggleClass("choose")
