@@ -1,0 +1,10 @@
+
+.icon-vote{
+  @include icon('../images/vote.png',23,21);
+}
+.icon-m1{@include icon('../images/m1.png',62,62);opacity: 0.6;}
+.icon-m2{@include icon('../images/m2.png',62,62);opacity: 0.6;}
+.icon-m3{@include icon('../images/m3.png',62,62);opacity: 0.6;}
+.active .icon-m1{opacity: 1;}
+.active .icon-m2{opacity: 1;}
+.active .icon-m3{opacity: 1;}

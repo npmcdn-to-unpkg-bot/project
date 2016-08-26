@@ -216,15 +216,16 @@ img.full{
 **/
 
 .list{
-  width: rem(1054);
+  width: rem(1069);
   text-align: center;
-  height: rem(923);
+  height: rem(1269);
   background: url(../images/list.png) center no-repeat;
   background-size: 100% 100%;
   margin-top: rem(736);
   margin-left: auto;
   margin-right: auto;
   padding-top: rem(70);
+  padding-top: rem(400);
   input{
     width:rem(860);
     height: rem(117);
