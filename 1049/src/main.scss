@@ -83,20 +83,21 @@ a{
 }
 @include keyframes(pp){
   from{
-    @include transform(translate3d(-10%,20%,0));
+    @include transform(translate3d(10%,20%,0));
     opacity: 0;
   }
   50%{
     opacity: 1;
   }
   to{
-    @include transform(translate3d(10%,-20%,0));
+    @include transform(translate3d(-10%,-20%,0));
     opacity: 0.3;
   }
 }
 
 .link{
   cursor: pointer;
+  display: block;
   position: relative;
   &:before{
     content:" ";
