@@ -4,7 +4,7 @@
 
 //变量
 $primaryColor: #333;
-$bgColor:#fbd6a0;
+$bgColor:#fff;
 $baseFontSize:75;
 // pixels to rems 
 @function rem($px) {
@@ -21,6 +21,10 @@ $baseFontSize:75;
 @mixin transform($transform...){
   -webkit-transfrom:$transform;
   transform:$transform;
+}
+@mixin transition($transition...){
+  -webkit-transition:$transition;
+  transition:$transition;
 }
 @mixin animation($animation...){
   -webkit-animation:$animation;
@@ -221,6 +225,13 @@ footer{
     float: left;
     width: 44%;
   }
+  .col-48{
+    float: left;
+    width: 48%;
+    &:last-child{
+      float: right;
+    }
+  }
   .col-50{
     width: 50%;
     float: left;
@@ -228,6 +239,9 @@ footer{
   .col-56{
     width: 56%;
     float: left;
+  }
+  .col-100{
+    width: 100%;
   }
 }
 img.full{

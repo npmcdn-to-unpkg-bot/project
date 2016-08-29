@@ -29,54 +29,46 @@
   <div class="page-group">
     <div class="page">
       <div class="content">
-          <div class="content-inner">
-            <div class="banner">
-              <div class="t1"></div>
-              <div class="t2"></div>
-              <div class="t3">
-                <div class="f1">25<small>日</small></div>
-                <div class="f2">16年08月</div>
-                <div class="f3">查看往期</div>
-              </div>
-            </div>
-            <div class="title">
-              <h1>标题标题标题标题标题标题标题标题标题标题标题标题</h1>
-              <div class="t4"></div>
-            </div>
-
-            <div class="bd"></div>
-            <div class="row">
-              <div class="col-100">
-                <div class="img link img-1">
-                  <img src="images/i001.jpg" alt="">
-                </div>
-              </div>
+          <div class="content-inner" style="padding:0;">
+            <div class="home-banner">
+              <img src="images/title.png" alt="">
             </div>
             <div class="row">
-              <div class="col-48">
-                <div class="img link img-2">
-                  <img src="images/i002.jpg" alt="">
-                  <h2>房价地图</h2>
-                </div>
+              <div class="imgLst">
+                <img src="images/list.jpg" alt="">
+                <div class="bottom">2016年8月26日</div>
               </div>
-              <div class="col-48">
-                <div class="img link img-3">
-                  <img src="images/i003.jpg" alt="">
-                  <h2>成交排行</h2>
-                </div>
+              <div class="imgLst">
+                <img src="images/list.jpg" alt="">
+                <div class="bottom">2016年8月26日</div>
+              </div>
+              <div class="imgLst">
+                <img src="images/list.jpg" alt="">
+                <div class="bottom">2016年8月26日</div>
               </div>
             </div>
-
+            <div class="bd2"></div>
+            <div class="row">
+              <div class="imgLst">
+                <img src="images/list.jpg" alt="">
+                <div class="bottom">2016年8月26日</div>
+              </div>
+              <div class="imgLst">
+                <img src="images/list.jpg" alt="">
+                <div class="bottom">2016年8月26日</div>
+              </div>
+              <div class="imgLst">
+                <img src="images/list.jpg" alt="">
+                <div class="bottom">2016年8月26日</div>
+              </div>
+            </div>
           </div>
       </div>
     </div>
     <!-- 遮罩 -->
     <div id="shade" ></div>
     <!-- 弹框 -->
-    <div class="dialog">
-    </div>
-    <div class="loading">
-      <img src="images/loading.gif" alt="">
+    <div class="dialog" >
     </div>
   </div>
 <script src="src/jquery-2.2.3.min.js"></script>
@@ -95,13 +87,6 @@
       e.stopPropagation();
     })
   }
-  $(function(){
-    $('.loading').hide();
-    $('.page').css('opacity',1);
-    setTimeout(function(){
-      $('body').addClass('on');
-    },200)
-  })
 </script>
 
 </body>
