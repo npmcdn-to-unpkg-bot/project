@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- 移动端手机号码/邮箱识别 -->
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 添加到桌面图标/如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon -->
+  <link href="" rel="apple-touch-icon-precomposed">
+  <!-- 浏览器中地址栏左侧显示的图标 -->
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <meta http-equiv="widow-target" content="_blank">
+  <!-- 微信调试 取消缓存 -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">  
+  <!-- 调试 -->
+  <title>mobile</title>
+  <script>
+   !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>5400&&(a=5400*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
+  </script>
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="fullPage/dist/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+ <div id="fullpage">
+   <div class="section">
+     <img src="images/bg1.jpg" class="bg" alt="">
+     <img src="images/a1.png" class="a1" alt="">
+     <img src="images/a2.png" class="a2" alt="">
+     <img src="images/a3.png" class="a3" alt="">
+     
+     <div class="a4">
+       <img src="images/a4.png" alt="">
+       <img src="images/star.png" class="star" alt="">
+       <img src="images/star.png" class="star star-2" alt="">
+     </div>
+   </div>
+   <div class="section ">
+     <img src="images/bg2.jpg" alt="" class="bg">
+     <img src="images/b1.png" class="b1" alt="">
+     <img src="images/b2.png" class="b2" alt="">
+     <img src="images/b3.png" class="b3" alt="">
+   </div>
+   
+   <div class="section">
+     <img src="images/bg2.jpg" alt="" class="bg">
+     <img src="images/b1.png" class="b1" alt="">
+     <img src="images/b3.png" class="b3" alt="">
+     <img src="images/n1.png" class="n1" alt="">
+     <img src="images/n2.png" class="n2" alt="">
+   </div>
+   <div class="section">
+     <img src="images/bg2.jpg" alt="" class="bg">
+     <img src="images/b1.png" class="b1" alt="">
+     <img src="images/b3.png" class="b3" alt="">
+     <img src="images/n3.png" class="n3" alt="">
+     <img src="images/n4.png" class="n4" alt="">
+
+   </div>
+   <div class="section">
+     <img src="images/bg2.jpg" alt="" class="bg">
+     <img src="images/b1.png" class="b1" alt="">
+     <img src="images/b3.png" class="b3" alt="">
+     <img src="images/n5.png" class="n5" alt="">
+     <img src="images/z1.png" class="z1" alt="">
+
+   </div>
+   <div class="section ">
+     <img src="images/bg2.jpg" alt="" class="bg">
+     <img src="images/b1.png" class="b1" alt="">
+     <img src="images/b3.png" class="b3" alt="">
+     <!-- 立即参与 -->
+     <img src="images/c1.png" class="c1" alt="">
+     <table class="userlist">
+       <tbody>
+         <tr>
+           <td>经纪人姓名:</td>
+           <td><input type="text"></td>
+         </tr>
+         <tr>
+           <td>经纪人电话:</td>
+           <td><input type="number"></td>
+         </tr>
+         <tr>
+           <td>被推荐人姓名:</td>
+           <td><input type="text"></td>
+         </tr>
+         <tr>
+           <td>被推荐人电话:</td>
+           <td><input type="number"></td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+ </div>
+ <div class="pageDown"></div>
+
+
+<script src="src/jquery-2.2.3.min.js"></script>
+<script src="fullPage/dist/jquery.fullpage.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+  function defaultEvent(element){
+    if(element === undefined) return;
+    element.addEventListener("touchstart",function(e){
+      e.stopPropagation();
+    })
+    element.addEventListener("touchend",function(e){
+      e.stopPropagation();
+    })
+    element.addEventListener("touchmove",function(e){
+      // e.preventDefault();
+      e.stopPropagation();
+    })
+  }
+</script>
+<script>
+  $(function(){
+    $('#fullpage').fullpage({
+      'sectionsColor':['#d32a01','#f34230','#f34230','#f34230','#f34230','#f34230'],
+    });
+  })
+</script>
+
+</body>
+</html>

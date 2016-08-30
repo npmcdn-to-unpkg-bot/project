@@ -1,0 +1,67 @@
+/*
+* made in fanfan
+*/
+
+//变量
+$primaryColor: #333;
+$bgColor:#fff;
+$baseFontSize:75;
+$pre:1334;
+// pixels to rems 
+@function rem($px) {
+  @return $px / $baseFontSize * 1rem;
+}
+
+@function per($px) {
+  @return $px / $pre * 100%;
+}
+
+// mixin
+@mixin icon ($url,$width,$height) {
+    background: url($url) center no-repeat;
+    background-size: contain;
+    width: rem($width);
+    height: rem($height);
+    display: inline-block;
+}
+@mixin transform($transform...){
+  -webkit-transfrom:$transform;
+  transform:$transform;
+}
+@mixin transition($transition...){
+  -webkit-transition:$transition;
+  transition:$transition;
+}
+@mixin animation($animation...){
+  -webkit-animation:$animation;
+  animation:$animation;
+  -webkit-animation-fill-mode:both;
+  animation-fill-mode:both;
+}
+@mixin keyframes ($name) {
+    @keyframes #{$name}
+    {
+      @content;
+    }
+    @-webkit-keyframes #{$name} /* Safari 和 Chrome */
+    {
+      @content;
+    }
+}
+body{
+  background-color: $bgColor;
+  color:$primaryColor;
+}
+img{max-width: 100%;}
+i{font-style: normal;}
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:active {
+  color: inherit;
+}
+/*常用样式*/
+.fl{float:left;}
+.fr{float:right;}
