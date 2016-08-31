@@ -37,6 +37,7 @@
                 <span class="fa fa-upload"></span>
               </span>
             </label>
+            <button class="btn btn-primary" id="resize">设置200*100</button>
           </div>
           <div class="btn-group btn-group-crop">
             <button type="button" class="btn btn-primary" data-method="getCroppedCanvas" id="getCroppedCanvas">
@@ -44,6 +45,7 @@
                 裁剪
               </span>
             </button>
+
           </div>
         </div><!-- /.docs-buttons -->
     </div>
@@ -51,15 +53,28 @@
     <br><br>
     <div class="row">
       <div class="col-xs-12">
-        <button class="btn btn-primary" id="openCrop">截取图片</button>
+        <button class="btn btn-primary" id="openCrop_1">截取图片</button>
       </div>
     </div>
     <br>
     <div class="row">
       <div class="col-xs-12">
-        <div id="getCroppedCanvasModal"></div>
+        <div id="cav1"></div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-primary" id="openCrop_2">截取图片</button>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="cav2"></div>
+      </div>
+    </div>
+
   </div>
 
 
@@ -70,11 +85,17 @@
   <script src="js/main.js"></script>
   <script>
     $(function(){
-      $('#openCrop').on('click',function(){
+      $('#openCrop_1').on('click',function(){
         $('.dialog').addClass('show');
+        cro($('#cav1'));
+      })
+      $('#openCrop_2').on('click',function(){
+        $('.dialog').addClass('show');
+        cro($('#cav2'));
       })
       $('#getCroppedCanvas').on('click',function(){
         $('.dialog').removeClass('show');
+
       })
     })
   </script>

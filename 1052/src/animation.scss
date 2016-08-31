@@ -1,0 +1,38 @@
+.on{
+  .t1{
+    @include transition(all 800ms);
+    @include transform(scale(1));
+  }
+  .t2{
+    @include transition(all 800ms 500ms);
+    @include transform(scale(1));
+  }
+  .t3{
+    @include transition(all 800ms 700ms);
+    @include transform(translate3d(0,0,0));
+  }
+  .title{
+    h1{
+      @include transition(all 800ms 900ms);
+      @include transform(translate3d(0,0,0));
+      opacity: 1;
+    }
+  }
+  .t4{
+    @include transition(all 1300ms 1200ms);
+    @include transform(translate3d(0,0,0));
+    opacity: 1;
+  }
+  .img-1{
+    @include transition(all 1000ms 1500ms);
+    @include transform(scale(1));
+  }
+  .img-2{
+    @include transition(all 1000ms 1700ms);
+    @include transform(scale(1));
+  }
+  .img-3{
+    @include transition(all 1000ms 1900ms);
+    @include transform(scale(1));
+  }
+}
