@@ -97,6 +97,9 @@
         $('.dialog').removeClass('show');
 
       })
+      $('#resize').on('click',function(){
+        $image.cropper('setCropBoxData', {left:0,top:0,width:200,height:100});
+      })
     })
   </script>
 </body>
