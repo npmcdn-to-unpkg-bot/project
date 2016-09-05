@@ -47,17 +47,24 @@
       <div class="swiper-button-prev"></div>
     </footer>
       <div class="content">
-          <div class="content-inner home" style="height:100%;">
+          <div class="content-inner ">
             <!-- <img src="images/bg.jpg" alt="" class="bg-home"> -->
-            <img src="images/top.png" alt="" class="top-logo">
-            <img src="images/logo.png" alt="" class="logo">
+            <div class="nav-title main">
+              项目区位
+              <div class="back">返回</div>
+            </div>
+            <div class="main">
+              <img src="images/tmp03.jpg" alt="" class="full showmap">
+              <img src="images/tmp04.jpg" alt="" class="full">
+            </div>
           </div>
       </div>
     </div>
     <!-- 遮罩 -->
-    <div id="shade" ></div>
+    <div id="shade"></div>
     <!-- 弹框 -->
     <div class="dialog">
+      <img src="images/tmp5.jpg" alt="" class="closemap">
     </div>
     <div class="loading">
     </div>
@@ -79,6 +86,16 @@
       e.stopPropagation();
     })
   }
+  $(function(){
+    $('.showmap').on('click',function(){
+      $('#shade').show();
+      $('.dialog').show();
+    })
+    $('.closemap').on('click',function(){
+      $('#shade').hide();
+      $('.dialog').hide();
+    })
+  })
 </script>
 
 <script>
@@ -89,6 +106,7 @@
         // centeredSlides: true,
         paginationClickable: true,
         spaceBetween: 30,
+        initialSlide:6,
         loop:true
     });
     </script>

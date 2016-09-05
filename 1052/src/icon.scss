@@ -1,0 +1,22 @@
+.top-logo{
+  @include icons('../images/top.png',219,65);
+  position: absolute;
+  left:rem(78);
+  top:rem(88);
+}
+.logo{
+  @include icons('../images/logo.png',651,244);
+  @include center(651,294,350);
+  &.logo-t{
+    top:rem(170);
+  }
+}
+.i000{@include icon('../images/1000.png',142,142)}
+.i001{@include icon('../images/1001.png',142,142)}
+.i002{@include icon('../images/1002.png',142,142)}
+.i003{@include icon('../images/1003.png',142,142)}
+.i004{@include icon('../images/1004.png',142,142)}
+.i005{@include icon('../images/1005.png',142,142)}
+.i006{@include icon('../images/1006.png',142,142)}
+.i007{@include icon('../images/1007.png',142,142)}
+.i008{@include icon('../images/1008.png',142,142)}
