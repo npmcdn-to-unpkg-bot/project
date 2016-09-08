@@ -207,3 +207,16 @@ footer{
     height: 90%;
   }
 }
+
+.boxImg{
+  position: absolute;
+  top:rem(180);
+  left:rem(30);
+  right:rem(30);
+  bottom:rem(228);
+  -webkit-overflow-scrolling:touch;
+  overflow: scroll;
+  img{
+    border:1px solid #612e2a;
+  }
+}
