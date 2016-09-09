@@ -2,6 +2,7 @@
 header{
   height: rem(98);
   background: #fff;
+  //首页
   &.home{
     padding-left: rem(32);
     padding-right: rem(32);
@@ -22,6 +23,56 @@ header{
         background-color: transparent;
         padding-left: 1em;
       }
+    }
+  }
+  //带搜索 三栏布局
+  &.seach{
+    background: #eee;
+    .left{
+      position: absolute;
+      width: rem(92);
+      height:rem(98);
+      line-height:rem(98);
+      left:0;
+      top:0;
+    }
+    .center{
+      width: 100%;
+      height: 100%;
+      padding-left: rem(92);
+      padding-right: rem(92);
+      .title{
+        height:rem(98);
+        line-height:rem(98);
+        text-align: left;
+        font-size: rem(36);
+        color:#f75e72;
+      }
+      .iconSeach{
+        position: absolute;
+        left:rem(120);
+        top:50%;
+        @include transform(translate3d(0,-50%,0));
+      }
+      input{
+        width: 100%;
+        height: rem(78);
+        margin-top: rem(10);
+        background: #fff;
+        border-radius: rem(8);
+        outline:none;
+        border:1px solid #f75e72;
+        font-size: rem(30);
+        padding-left: rem(88);
+      }
+    }
+    .right{
+      position: absolute;
+      width: rem(92);
+      height:rem(98);
+      line-height:rem(98);
+      right:0;
+      top:0;
     }
   }
 }
@@ -68,5 +119,205 @@ footer{
     .active p{
       color:#f75e72;
     }
+  }
+  &.usershop{
+    text-align: center;
+    padding-top: rem(4);
+    font-size: 0;
+    .btn-pay,.btn-add{
+      width: rem(330);
+      height: rem(88);
+      line-height: rem(88);
+      text-align: center;
+      background: #eb526e;
+      color:#fff;
+      display: inline-block;
+      font-size: rem(36);
+      border-radius: rem(12);
+      margin-right: rem(24);
+      &:active{
+        opacity: 0.8;
+      }
+    }
+    .btn-add{
+      background: #53c0e7;
+      margin-right: 0;
+    }
+  }
+}
+//列表
+.lst{
+  &:after{
+    content:" ";
+    display: block;
+    clear: both;
+  }
+  li{
+    position: relative;
+    &:after{
+      content:" ";
+      display: block;
+      clear: both;
+    }
+  }
+  &.lst-shop{
+    li{
+      padding:rem(22) rem(32);
+      border-bottom:1px solid #eee;
+    }
+    .img{
+      float: left;
+      width: rem(220);
+      height: rem(220);
+      margin-right: rem(-220);
+      overflow: hidden;
+      border-radius: rem(12);
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .cnt{
+      margin-left: rem(245);
+      height: 100%;
+      position: relative;
+      line-height: 1em;
+      .title{
+        font-size: rem(30);
+        overflow: hidden;
+        color:#333;
+        line-height: 1.4em;
+      }
+      .sub{
+        font-size: rem(24);
+        color:#747474;
+        line-height: 1.8em;
+      }
+      .prize{
+        display: block;
+        font-size: rem(36);
+        color:#f75e72;
+        line-height: 1.8em;
+      }
+      .tip{
+        font-size: rem(24);
+        color:#7c7c7c;
+        line-height: 1.6em;
+      }
+      .icon-plus{
+        position: absolute;
+        right:0;
+        bottom:0;
+      }
+    }
+  }
+  &.lst-show{
+    padding-left: rem(32);
+    padding-right: rem(32);
+    li{
+      float: left;
+      width: rem(334);
+      height: rem(500);
+      margin-right: rem(18);
+      margin-top: rem(24);
+      background: #fff;
+      border-bottom:2px solid #f75e72;
+      &:nth-child(even){
+        margin-right: 0;
+      }
+      .img{
+        width: 100%;
+        height: rem(322);
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title{
+        padding-left: rem(8);
+        padding-right: rem(8);
+        margin-top: rem(10);
+        font-size: rem(26);
+        line-height: 1.4em;
+        color:#333;
+      }
+      .prize{
+        display: block;
+        font-size: rem(36);
+        color:#f75e72;
+        padding-left: rem(8);
+        margin-top: rem(30);
+      }
+      .icon-plus{
+        position: absolute;
+        right:rem(8);
+        bottom:rem(30);
+      }
+    }
+  }
+}
+
+//商品详细页
+.usershopnav{
+  position: fixed;
+  left:0;
+  top:0;
+  width: 100%;
+  z-index:2;
+  padding-left: rem(32);
+  padding-right: rem(32);
+  padding-top: rem(18);
+}
+//商品详细介绍
+.shopdec{
+  .title{
+    padding-left: rem(32);
+    padding-right: rem(32);
+    margin-top: rem(20);
+    font-size: rem(30);
+    color:#333;
+    line-height: 1.4em;
+  }
+  .prize{
+    display: block;
+    padding-left: rem(32);
+    font-size: rem(40);
+    color:#eb526e;
+    margin-top: 20px;
+    del{
+      font-size: rem(24);
+      color:#999;
+    }
+  }
+  .tip{
+    padding-left: rem(32);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1em;
+    font-size: rem(24);
+    color:#999;
+    span{
+      margin-right: rem(120);
+    }
+  }
+  .tag{
+    height: rem(100);
+    line-height: rem(100);
+    padding-left: rem(32);
+    background: #fef5f7;
+    font-size: rem(24);
+    color:#999999;
+    span{
+      margin-right: rem(6);
+    }
+  }
+  .shop-select{
+    height: rem(88);
+    line-height: rem(88);
+    background: #fff;
+    border:1px solid #ccc;
+    font-size: rem(30);
+    color:#333333;
+    padding-left: rem(32);
   }
 }

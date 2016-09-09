@@ -15,3 +15,23 @@
 .active .u001{@include icon('../images/u001_1.png',52,40)}
 .active .u002{@include icon('../images/u002_1.png',52,40)}
 .active .u003{@include icon('../images/u003_1.png',52,40)}
+
+.icon-back{@include icon('../images/back.png',23,44)}
+.icon-shop{@include icon('../images/shop.png',41,45)}
+.icon-plus{@include icon('../images/plus.png',48,48)}
+.icon-back-new{@include icon('../images/back-new.png',88,88)}
+.icon-shop-new{@include icon('../images/shop-new.png',88,88)}
+
+.icon-right{@include icon('../images/right.png',32,32)}
+.icon-link{@include icon('../images/link.png',18,33)}
+.link{
+  position: relative;
+  &:after{
+    content:" ";
+    position: absolute;
+    right:rem(32);
+    top:50%;
+    @include icon('../images/link.png',18,33);
+    @include transform(translate3d(0,-50%,0));
+  }
+}

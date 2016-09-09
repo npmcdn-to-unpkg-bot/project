@@ -50,7 +50,7 @@ body{
   color:$primaryColor;
 }
 img{max-width: 100%;}
-i{font-style: normal;}
+// i{font-style: normal;}
 a {
   color: #0894ec;
   text-decoration: none;
@@ -168,12 +168,12 @@ footer{
   bottom:0;
   left:0;
   width: 100%;
-  height: rem(114);
+  height: rem(100);
   // background: rgba(0,0,0,.6);
   border-top:1px solid #c7c7c7;
   z-index:10;
   & ~ .content{
-    bottom:rem(114);
+    bottom:rem(100);
   }
 }
 .content{
@@ -195,7 +195,7 @@ footer{
   -webkit-overflow-scrolling:touch;
   // overflow: scroll;
   text-align: left;
-  font-size: 0;
+  // font-size: 0;
 }
 .scroll{
   -webkit-overflow-scrolling:touch;
@@ -239,6 +239,7 @@ footer{
 }
 img.full{
   width: 100%;
+  display: block;
 }
 /*
 * 公共布局部分结束
@@ -297,4 +298,12 @@ img.full{
   // transform-origin: 50% 100%;
   -webkit-transform: scaleY(0.5);
   transform: scaleY(0.5);
+}
+//两行超出截取
+.ui-nowrap-multi {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2
 }
