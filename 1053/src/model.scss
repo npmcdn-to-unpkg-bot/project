@@ -1,0 +1,72 @@
+// 头部
+header{
+  height: rem(98);
+  background: #fff;
+  &.home{
+    padding-left: rem(32);
+    padding-right: rem(32);
+    .seachLink{
+      width: 100%;
+      height: rem(78);
+      line-height: rem(78);
+      margin-top: rem(10);
+      border-radius: rem(8);
+      background: #ececec;
+      font-size: rem(30);
+      color:#999999;
+      text-align: left;
+      padding-left: rem(26);
+      input{
+        outline: none;
+        border:none;
+        background-color: transparent;
+        padding-left: 1em;
+      }
+    }
+  }
+}
+//类目
+.home-nav{
+  width: rem(750);
+  height: rem(540);
+  background: url(../images/flower.png) center center no-repeat;
+  background-size: 100% 100%;
+  margin-top: rem(-24);
+  padding-top: rem(24);
+  position: relative;
+  z-index: 2; 
+  text-align: center;
+  font-size: rem(30);
+  color:#333;
+  p{
+    line-height: 1em;
+    margin-top: rem(16);
+    margin-bottom: rem(30);
+  }
+}
+// img link
+.imglink{
+  display: block;
+  width: rem(686);
+  font-size: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2px;
+  img{
+    width:100%;
+  }
+}
+//底部导航
+footer{
+  &.user{
+    height: rem(100);
+    text-align: center;
+    background: #fff;
+    padding-top: rem(10);
+    font-size: rem(28);
+    p{color:#312c2c;margin-top:rem(12);line-height: 1em; }
+    .active p{
+      color:#f75e72;
+    }
+  }
+}

@@ -6,7 +6,7 @@
 $primaryColor: #333;
 $bgColor:#fff;
 $baseFontSize:75;
-$pre:1334;
+$pre:1206;
 // pixels to rems 
 @function rem($px) {
   @return $px / $baseFontSize * 1rem;

@@ -18,20 +18,89 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">  
   <!-- 调试 -->
-  <title>mobile</title>
+  <title>微商城</title>
   <script>
    !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
   </script>
   <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="Swiper-3.3.1/css/swiper.min.css">
   <link rel="stylesheet" href="src/index.min.css">
 </head>
 <body>
   <div class="page-group">
     <div class="page">
-      
+      <header class="home">
+        <div class="seachLink">
+          <div class="iconSeach"></div>
+          <input type="text" placeholder="搜索">
+        </div>
+      </header>
+      <footer class="user">
+        <div class="row">
+          <a href="#" class="col-33 active">
+            <div class="u001"></div>
+            <p>首页</p>
+          </a>
+          <a href="#" class="col-33">
+            <div class="u002"></div>
+            <p>购物车</p>
+          </a>
+          <a href="#" class="col-33">
+            <div class="u003"></div>
+            <p>我</p>
+          </a>
+        </div>
+      </footer>
       <div class="content">
         <div class="content-inner">
-          
+          <!-- Swiper -->
+          <div class="swiper-container home-swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="images/banner.jpg" alt=""></div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+          </div>
+          <img src="images/t1.jpg" alt="" class="full">
+          <div class="home-nav">
+            <div class="row">
+              <div class="col-33">
+                <div class="i001"></div>
+                <p>手链</p>
+              </div>
+              <div class="col-33">
+                <div class="i002"></div>
+                <p>项链</p>
+              </div>
+              <div class="col-33">
+                <div class="i003"></div>
+                <p>耳饰</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-33">
+                <div class="i004"></div>
+                <p>戒指</p>
+              </div>
+              <div class="col-33">
+                <div class="i005"></div>
+                <p>翡翠</p>
+              </div>
+              <div class="col-33">
+                <div class="i006"></div>
+                <p>钻石</p>
+              </div>
+            </div>
+          </div>
+          <img src="images/t2.jpg" alt="" class="full">
+          <a href="" class="imglink"><img src="images/pic1.jpg" alt=""></a>
+          <a href="" class="imglink"><img src="images/pic2.jpg" alt=""></a>
+          <a href="" class="imglink"><img src="images/pic3.jpg" alt=""></a>
+          <a href="" class="imglink"><img src="images/pic4.jpg" alt=""></a>
         </div>
       </div>
     </div>
@@ -42,6 +111,7 @@
     </div>
   </div>
 <script src="src/jquery-2.2.3.min.js"></script>
+<script src="Swiper-3.3.1/js/swiper.jquery.min.js"></script>
 <script src="src/index.js"></script>
 <script>
   function defaultEvent(element){
@@ -58,6 +128,13 @@
     })
   }
 </script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    loop:true,
+});
+</script>
+
 
 </body>
 </html>

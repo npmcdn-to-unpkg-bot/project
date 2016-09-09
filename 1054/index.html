@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- 移动端手机号码/邮箱识别 -->
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 添加到桌面图标/如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon -->
+  <link href="" rel="apple-touch-icon-precomposed">
+  <!-- 浏览器中地址栏左侧显示的图标 -->
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <meta http-equiv="widow-target" content="_blank">
+  <!-- 微信调试 取消缓存 -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">  
+  <!-- 调试 -->
+  <title>左邻右里</title>
+  <script>
+   !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>5400&&(a=5400*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
+  </script>
+  <style>
+    .loading{
+      position: absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:100000;
+      background:#000;
+    }
+    .load-1,.load-2{width: 1.6rem;height: 1.6rem;background: rgba(216, 189, 51,0.6);position: absolute;top:50%;left: 50%;margin-left: -0.8rem;margin-top: -0.8rem;border-radius: 50%;}
+    .tip{
+      font-size: 0.5rem;
+      color: rgb(216, 189, 51)  ;
+      text-align: center;
+      position: absolute;
+      top:50%;
+      padding-top: 1rem;
+      left: 0;
+      width: 100%;
+    }
+    .load-1{
+      -webkit-animation: myload-1 2s infinite ease-in-out;
+    }
+    @-webkit-keyframes myload-1{
+      from {
+        -webkit-transform: scale3d(.2,.2,1);
+      }
+      50%{
+        -webkit-transform: scale3d(1,1,1);
+      }
+      to{
+        -webkit-transform: scale3d(.2,.2,1);
+      }
+    }
+    .load-2{
+      -webkit-animation: myload-2 2s infinite ease-in-out;
+    }
+    @-webkit-keyframes myload-2{
+      from {
+        -webkit-transform: scale3d(1,1,1);
+      }
+      50%{
+        -webkit-transform: scale3d(0.2,0.2,1);
+      }
+      to{
+        -webkit-transform: scale3d(1,1,1);
+      }
+    }
+  </style>
+  <script src="src/load.js"></script>
+  <script>
+    var loadListImg = ['down.png',
+          'i1006.jpg',
+          'i1303.png',
+          'i1503.png',
+          'i3002.png',
+          'i6003.png',
+          'i9001.png',
+          'i10.png',
+          'i11.png',
+          'i1401.png',
+          'i1504.png',
+          'i3003.png',
+          'i6004.png',
+          'i9002.png',
+          'i1001.jpg',
+          'i1101.png',
+          'i1402.png',
+          'i2001.png',
+          'i4.png',
+          'i6005.png',
+          'i9003.png',
+          'i1001.png',
+          'i1201.png',
+          'i1403.png',
+          'i2002.png',
+          'i5001.png',
+          'i7001.png',
+          'i1002.jpg',
+          'i1202.png',
+          'i1501.png',
+          'i2003.png',
+          'i5002.png',
+          'i7002.png',
+          'i1003.png',
+          'i1203.png',
+          'i1502-1.png',
+          'i2004.png',
+          'i5003.png',
+          'i8001.png',
+          'i1004.png',
+          'i1301.png',
+          'i1502-2.png',
+          'i2005.png',
+          'i6001.png',
+          'i8002.png',
+          'i1005.jpg',
+          'i1302.png',
+          'i1502.png',
+          'i3001.png',
+          'i6002.jpg',
+          'i8003.png'],
+        loadJS = ['src/jquery-2.2.3.min.js','fullPage/dist/jquery.fullpage.min.js','src/index.js']
+    load({
+      img : loadListImg,
+      js  : loadJS,
+      // audio :['src/bg.mp3']
+    });
+  </script>
+
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="fullPage/dist/jquery.fullpage.min.css">
+  <link rel="stylesheet" href="src/animate.min.css">
+  <link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+  <div class="loading">
+    <div class="load-1 "></div>
+    <div class="load-2"></div>
+    <div class="tip">0%</div>
+  </div>
+
+ <div id="fullpage">
+  <!-- 001 -->
+  <div class="section">
+    <img src="images/i1001.jpg" alt="" class="i1001 full" data-in="fadeIn" data-out="fadeOut">
+    <div class="parent">
+      <img src="images/i1002.jpg" alt="" class="full ">
+      <img src="images/i1003.png" alt="" class="i1003 delay-1" data-in="fadeInDown" data-out="fadeOutUp">
+      <img src="images/i1004.png" alt="" class="i1004 delay-2" data-in="fadeInUp" data-out="fadeOutDown">
+    </div>
+    <img src="images/i1005.jpg" alt="" class="i1005" data-in="bounceInLeft" data-out="bounceOutRight">
+    <img src="images/i1006.jpg" alt="" class="i1006" data-in="bounceInRight" data-out="bounceOutLeft">
+  </div>
+  <!-- 002 -->
+  <div class="section ">
+    <img src="images/i2001.png" alt="" class="full" data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i2002.png" alt="" class="full" data-in="zoomIn" data-out="zoomOut">
+    <img src="images/i2003.png" alt="" class="i2003" data-in="fadeInLeft" data-out="fadeOutRight">
+    <img src="images/i2004.png" alt="" class="i2004" data-in="zoomIn" data-out="zoomOut">
+    <img src="images/i2005.png" alt="" class="i2005" data-in="fadeInRight" data-out="fadeOutLeft">
+  </div>
+  <!-- 003 -->
+  <div class="section ">
+    <img src="images/i3001.png" alt="" class="full" data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i3002.png" alt="" class="full" data-in="zoomInLeft" data-out="zoomOutRight">
+    <img src="images/i3003.png" alt="" class="full" data-in="fadeInUp" data-out="fadeOutDown">
+  </div>
+  <!-- 004 -->
+  <div class="section ">
+    <img src="images/i4.png" alt="" class="abs i4" data-in="flipInY" data-out="flipOutY">
+  </div>
+  <!-- 005 -->
+  <div class="section ">
+    <img src="images/i5001.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i5002.png" alt="" class="full" data-in="zoomIn" data-out="zoomOut">
+    <img src="images/i5003.png" alt="" class="i5003" data-in="slideInUp" data-out="slideOutDown"> 
+  </div>
+  <!-- 006 -->
+  <div class="section ">
+    <img src="images/i6001.png" alt="" class="full i6001"  data-in="fadeInDown" data-out="fadeOutUp">
+    <div class="i6">
+      <img src="images/i6002.jpg" alt="" class="full delay-2" data-in="fadeIn" data-out="fadeOut">
+      <img src="images/i6003.png" alt="" class="i6003" data-in="fadeInRight" data-out="fadeOutRight">
+      <img src="images/i6004.png" alt="" class="i6004" data-in="fadeInLeft" data-out="fadeOutLeft">
+      <img src="images/i6005.png" alt="" class="i6005 delay-2" data-in="fadeInUp" data-out="fadeOutDown">
+    </div>
+  </div>
+  <!-- 007 -->
+  <div class="section ">
+    <img src="images/i7001.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i7002.png" alt="" class="full" data-in="flipInX" data-out="flipOutX">
+  </div>
+  <!-- 008 -->
+  <div class="section ">
+    <img src="images/i8001.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i8002.png" alt="" class="full" data-in="zoomIn" data-out="zoomOut"> 
+    <img src="images/i8003.png" alt="" class="full" data-in="fadeInLeft" data-out="fadeOutRight">
+  </div>
+  <!-- 009 -->
+  <div class="section ">
+    <img src="images/i9001.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i9002.png" alt="" class="full" data-in="flipInX" data-out="flipOutX">
+    <img src="images/i9003.png" alt="" class="full" data-in="zoomIn" data-out="zoomOut">
+  </div>
+  <!-- 010 -->
+  <div class="section ">
+    <img src="images/i1001.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i10.png" alt="" class="i10" data-in="zoomIn" data-out="zoomOut">  
+  </div>
+  <!-- 011 -->
+  <div class="section ">
+    <img src="images/i1101.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i11.png" alt="" class="i11" data-in="zoomIn" data-out="zoomOut">
+  </div>
+  <!-- 012 -->
+  <div class="section ">
+    <img src="images/i1201.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i1202.png" alt="" class="full" data-in="flipInX" data-out="flipOutX">>
+    <img src="images/i1203.png" alt="" class="i1203" data-in="zoomIn" data-out="zoomOut">
+  </div>
+  <!-- 013 -->
+  <div class="section ">
+    <img src="images/i1301.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i1302.png" alt="" class="full" data-in="flipInX" data-out="flipOutX">
+    <img src="images/i1303.png" alt="" class="i1303" data-in="flipInY" data-out="flipOutY">
+  </div>
+  <!-- 014 -->
+  <div class="section ">
+    <img src="images/i1401.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <img src="images/i1402.png" alt="" class="full" data-in="fadeInLeft" data-out="fadeOutLeft">
+    <img src="images/i1403.png" alt="" class="i1403" data-in="fadeInRight" data-out="fadeOutRight">
+  </div>
+  <!-- 015 -->
+  <div class="section ">
+    <img src="images/i1501.png" alt="" class="full"  data-in="fadeInDown" data-out="fadeOutUp">
+    <div class="i1502">
+      <div class="row">
+        <div class="col-50"><img src="images/i1502-1.png" alt="" class="i1502-1" data-in="rotateIn" data-out="rotateOut"></div> 
+        <div class="col-50"><img src="images/i1502-2.png" alt="" class="i1502-2" data-in="rotateIn" data-out="rotateOut"></div>
+      </div>
+    </div>
+    <img src="images/i1503.png" alt="" class="full" data-in="zoomInLeft" data-out="zoomOutLeft">
+    <img src="images/i1504.png" alt="" class="i1504" data-in="fadeInUp" data-out="fadeOutDown">
+  </div>
+ </div>
+ <!-- <div class="pageDown"></div> -->
+
+
+
+
+</body>
+</html>

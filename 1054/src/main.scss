@@ -1,0 +1,55 @@
+.pageDown{
+  position: absolute;
+  @include icon('../images/down.png',56,47);
+  bottom:rem(14);
+  left:50%;
+  margin-left: rem(-28);
+  @include animation(pageDown 1000ms linear infinite);
+  z-index:10;
+}
+.section{
+  overflow: hidden;
+}
+.section img{
+  @include transition(all 1000ms);
+}
+
+#fullpage{
+  font-size: 0;
+}
+.fp-tableCell{
+  vertical-align: top;
+}
+.parent{
+  position: relative;
+  overflow: hidden;
+}
+.i1003{position: absolute;left:0;top:0;width:100%;}
+.i1004{position: absolute;left:0;bottom:0;width:100%;}
+
+.i1005{position: absolute;left:rem(185);bottom:per(2);}
+.i1006{position: absolute;right:rem(185);bottom:per(2);}
+
+.i2003{position: absolute;left:0;bottom:per(10);}
+.i2004{position: absolute;left:rem(214);bottom:per(10);}
+.i2005{position: absolute;right:0;bottom:per(10);}
+.i5003{width:84%;margin-left: auto;margin-right: auto;display: block;}
+
+.i4{width:90%;left:5%;}
+.i6001{position: relative;z-index:2;background: #f3f5f7;}
+.i6{position: absolute;bottom:0;left:0;width:100%;}
+.i6003{position: absolute;right:rem(100);top:rem(80);}
+.i6004{position: absolute;left:rem(70);top:rem(80);}
+.i6005{position: absolute;left:0;bottom:0;}
+
+.i10,.i11{width:80%;margin-left: 10%;}
+.i1203{width:64%;margin-left: 18%;}
+.i1303{width:80%;margin-left: 10%;}
+.i1403{width:70%;margin-left: 15%;}
+.i1504{position: absolute;bottom:0;left:0;width: 100%;}
+.i1502{
+  width: 100%;
+  height: rem(330);
+  padding-top: rem(10);
+  text-align: center;
+}

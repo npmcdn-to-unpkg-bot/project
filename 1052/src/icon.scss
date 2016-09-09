@@ -11,6 +11,14 @@
     top:rem(170);
   }
 }
+.logo-2{
+  @include icons('../images/logo-2.png',712,188);
+  @include center(712,294,350);
+}
+.logo-3{
+  @include icons('../images/logo-2.png',713,199);
+  @include center(713,294,350);
+}
 .i000{@include icon('../images/1000.png',142,142)}
 .i001{@include icon('../images/1001.png',142,142)}
 .i002{@include icon('../images/1002.png',142,142)}

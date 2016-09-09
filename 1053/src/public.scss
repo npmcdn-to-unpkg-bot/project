@@ -17,6 +17,7 @@ $baseFontSize:75;
     width: rem($width);
     height: rem($height);
     display: inline-block;
+    vertical-align: middle;
 }
 @mixin transform($transform...){
   -webkit-transfrom:$transform;
@@ -169,7 +170,7 @@ footer{
   width: 100%;
   height: rem(114);
   // background: rgba(0,0,0,.6);
-  border-top:1px solid #703a35;
+  border-top:1px solid #c7c7c7;
   z-index:10;
   & ~ .content{
     bottom:rem(114);
@@ -208,26 +209,32 @@ footer{
   .col-20{
     width: 20%;
     float: left;
+    display: block;
   }
   .col-25{
     width: 25%;
     float: left;
+    display: block;
   }
   .col-33{
     width: 33.33%;
     float: left;
+    display: block;
   }
   .col-44{
     float: left;
     width: 44%;
+    display: block;
   }
   .col-50{
     width: 50%;
     float: left;
+    display: block;
   }
   .col-56{
     width: 56%;
     float: left;
+    display: block;
   }
 }
 img.full{
