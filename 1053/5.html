@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <!-- 删除默认的苹果工具栏和菜单栏 -->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <!-- 移动端手机号码/邮箱识别 -->
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 添加到桌面图标/如果不想系统对图标添加效果，可以用apple-touch-icon-precomposed代替apple-touch-icon -->
+  <link href="" rel="apple-touch-icon-precomposed">
+  <!-- 浏览器中地址栏左侧显示的图标 -->
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <meta http-equiv="widow-target" content="_blank">
+  <!-- 微信调试 取消缓存 -->
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">  
+  <!-- 调试 -->
+  <title>微商城</title>
+  <script>
+   !function(N,M){function L(){var a=I.getBoundingClientRect().width;a/F>540&&(a=540*F);var d=a/10;I.style.fontSize=d+"px",D.rem=N.rem=d}var K,J=N.document,I=J.documentElement,H=J.querySelector('meta[name="viewport"]'),G=J.querySelector('meta[name="flexible"]'),F=0,E=0,D=M.flexible||(M.flexible={});if(H){console.warn("将根据已有的meta标签来设置缩放比例");var C=H.getAttribute("content").match(/initial\-scale=([\d\.]+)/);C&&(E=parseFloat(C[1]),F=parseInt(1/E))}else{if(G){var B=G.getAttribute("content");if(B){var A=B.match(/initial\-dpr=([\d\.]+)/),z=B.match(/maximum\-dpr=([\d\.]+)/);A&&(F=parseFloat(A[1]),E=parseFloat((1/F).toFixed(2))),z&&(F=parseFloat(z[1]),E=parseFloat((1/F).toFixed(2)))}}}if(!F&&!E){var y=N.navigator.userAgent,x=(!!y.match(/android/gi),!!y.match(/iphone/gi)),w=x&&!!y.match(/OS 9_3/),v=N.devicePixelRatio;F=x&&!w?v>=3&&(!F||F>=3)?3:v>=2&&(!F||F>=2)?2:1:1,E=1/F}if(I.setAttribute("data-dpr",F),!H){if(H=J.createElement("meta"),H.setAttribute("name","viewport"),H.setAttribute("content","initial-scale="+E+", maximum-scale="+E+", minimum-scale="+E+", user-scalable=no"),I.firstElementChild){I.firstElementChild.appendChild(H)}else{var u=J.createElement("div");u.appendChild(H),J.write(u.innerHTML)}}N.addEventListener("resize",function(){clearTimeout(K),K=setTimeout(L,300)},!1),N.addEventListener("pageshow",function(b){b.persisted&&(clearTimeout(K),K=setTimeout(L,300))},!1),"complete"===J.readyState?J.body.style.fontSize=12*F+"px":J.addEventListener("DOMContentLoaded",function(){J.body.style.fontSize=12*F+"px"},!1),L(),D.dpr=N.dpr=F,D.refreshRem=L,D.rem2px=function(d){var c=parseFloat(d)*this.rem;return"string"==typeof d&&d.match(/rem$/)&&(c+="px"),c},D.px2rem=function(d){var c=parseFloat(d)/this.rem;return"string"==typeof d&&d.match(/px$/)&&(c+="rem"),c}}(window,window.lib||(window.lib={})); 
+  </script>
+  <link rel="stylesheet" href="src/reset.css">
+  <link rel="stylesheet" href="Swiper-3.3.1/css/swiper.min.css">
+  <link rel="stylesheet" href="src/index.min.css">
+</head>
+<body>
+  <div class="page-group">
+    <div class="page">
+      <header class="seach" style="background:#fff;border-bottom:1px solid #eee;">
+        <div class="left"><div class="icon-back"></div></div>
+        <div class="center">
+          <div class="title" style="text-align:center">购物车</div>
+        </div>
+        <div class="right"><div class="icon-del"></div></div>
+      </header>
+      <footer class="car">
+        <label for="" class="radio selectAll">
+          <input type="checkbox">
+          <span>全选</span>
+        </label>
+        <span>合计：</span><i class="prize">￥0</i>
+        <div class="btn-pay">结算</div>
+      </footer>
+      <div class="content" style="font-size:0;background:#fff;">
+        <div class="content-inner">
+          <ul class="carlist">
+            <li>
+              <label for="" class="radio"><input type="checkbox"></label>
+              <div class="img"><img src="images/tmp001.png" alt=""></div>
+              <div class="cnt">
+                <div class="title ui-nowrap-multi">
+                  范琦18K彩金项链女时玫瑰金锁骨链简约水滴形吊坠范琦18K彩金项链女时玫瑰金锁骨链简约水滴形吊坠
+                </div>
+                <div class="sub">颜色:蓝色；尺码:均码；</div>
+                <div class="prize">￥1000</div>
+                <input type="hidden" name="prize" value="1000">
+
+                <div class="numberControl control">
+                  <span class="left off">—</span>
+                  <span class="center ">0</span>
+                  <span class="right ">+</span>
+                  <input type="hidden" name="number" value="0">
+                </div>
+              </div>
+            </li>
+            <li>
+              <label for="" class="radio"><input type="checkbox"></label>
+              <div class="img"><img src="images/tmp001.png" alt=""></div>
+              <div class="cnt">
+                <div class="title ui-nowrap-multi">
+                  范琦18K彩金项链女时玫瑰金锁骨链简约水滴形吊坠范琦18K彩金项链女时玫瑰金锁骨链简约水滴形吊坠
+                </div>
+                <div class="sub">颜色:蓝色；尺码:均码；</div>
+                <div class="prize">￥1000</div>
+                <input type="hidden" name="prize" value="1000">
+
+                <div class="numberControl control">
+                  <span class="left off">—</span>
+                  <span class="center ">0</span>
+                  <span class="right ">+</span>
+                  <input type="hidden" name="number" value="0">
+                </div>
+              </div>
+            </li>
+            <li>
+              <label for="" class="radio"><input type="checkbox"></label>
+              <div class="img"><img src="images/tmp001.png" alt=""></div>
+              <div class="cnt">
+                <div class="title ui-nowrap-multi">
+                  范琦18K彩金项链女时玫瑰金锁骨链简约水滴形吊坠范琦18K彩金项链女时玫瑰金锁骨链简约水滴形吊坠
+                </div>
+                <div class="sub">颜色:蓝色；尺码:均码；</div>
+                <div class="prize">￥1000</div>
+                <input type="hidden" name="prize" value="1000">
+
+                <div class="numberControl control">
+                  <span class="left off">—</span>
+                  <span class="center ">0</span>
+                  <span class="right ">+</span>
+                  <input type="hidden" name="number" value="0">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 遮罩 -->
+    <div id="shade" ></div>
+    <!-- 弹框 -->
+    <div class="dialog" >
+    </div>
+  </div>
+<script src="src/jquery-2.2.3.min.js"></script>
+<script src="Swiper-3.3.1/js/swiper.jquery.min.js"></script>
+<script src="src/index.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    loop:true,
+});
+</script>
+<script>
+  // 统计价格
+  function countPrize(){
+    var sum = 0;
+    $('.carlist').find('input[type="checkbox"]').each(function(){
+      if($(this).is(':checked')){
+        console.log(this);
+        var prize =Number($(this).parent().parent().find('input[name="prize"]').val());
+        var number =Number($(this).parent().parent().find('input[name="number"]').val());
+        sum+=prize*number;
+      }
+    })
+    $('footer .prize').html('￥'+sum);
+  }
+
+  $(function(){
+    var min = 0,
+        max = 10,
+        number = 0;
+    $('.control').on('click','.left',function(){
+      if(number<=min){
+        $(this).addClass('off');
+        return;
+      }
+      number--;
+      $(this).parent().find('.center').html(number);
+      $(this).parent().find('input').val(number);
+      $(this).parent().find('.right').removeClass('off');
+      countPrize();
+    })
+    $('.control').on('click','.right',function(){
+      if(number>=max){
+        $(this).addClass('off');
+        return;
+      }
+      number++;
+      $(this).parent().find('.center').html(number);
+      $(this).parent().find('input').val(number);
+      $(this).parent().find('.left').removeClass('off');
+      countPrize();
+    })
+
+    //事件触发统计
+    $('.carlist .radio').find('input').on('change',countPrize);
+
+    $('.selectAll').find('input').on('change',function(){
+      if($(this).is(':checked')){
+        $('.radio').find('input').prop('checked',true);
+        countPrize();
+      }else{
+        $('.radio').find('input').prop('checked',false);
+        countPrize();
+      }
+    })
+  })
+</script>
+
+</body>
+</html>

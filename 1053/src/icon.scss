@@ -35,3 +35,5 @@
     @include transform(translate3d(0,-50%,0));
   }
 }
+.icon-close{@include icon('../images/close.png',44,44)}
+.icon-del{@include icon('../images/del.png',44,44)}

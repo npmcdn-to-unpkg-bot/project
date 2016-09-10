@@ -23,6 +23,10 @@ $baseFontSize:75;
   -webkit-transfrom:$transform;
   transform:$transform;
 }
+@mixin transition($transition...){
+  -webkit-transition:$transition;
+  transition:$transition;
+}
 @mixin animation($animation...){
   -webkit-animation:$animation;
   animation:$animation;
@@ -81,7 +85,11 @@ a:active {
   width: 100%;
   height: 100%;
   z-index: 10000;
-  display: none;
+  @include transform(translate3d(0,200%,0));
+  @include transition(all 500ms);
+  &.show{
+    @include transform(translate3d(0,0,0));
+  }
 }
 /*
 *  page  2000
@@ -156,11 +164,11 @@ header{
   top:0;
   left:0;
   width: 100%;
-  height: rem(88);
+  height: rem(98);
   // background: rgba(0,0,0,.6);
   z-index:10;
   & ~ .content{
-    top:rem(88);
+    top:rem(98);
   }
 }
 footer{

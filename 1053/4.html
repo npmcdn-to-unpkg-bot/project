@@ -70,15 +70,61 @@
             </div>
             
             <div class="shop-select link">选择颜色和尺寸</div>
+            <div class="description">
+              <img src="images/dec.jpg" alt="">
+            </div>
 
           </div>
         </div>
       </div>
-    </div>
-    <!-- 遮罩 -->
-    <div id="shade" ></div>
-    <!-- 弹框 -->
-    <div class="dialog" >
+
+      <!-- 遮罩 -->
+      <div id="shade"></div>
+      <!-- 弹框 -->
+      <div class="dialog">
+        <!-- 菜单 -->
+        <div class="memu">
+          <div class="title">
+            <div class="img"><img src="images/tmp003.png" alt=""></div>
+            <h1 class="ui-nowrap-multi">爱心白金钻石项链18k玫瑰金心形双心钻石吊坠黄金爱心白金钻石项链18k玫瑰金心形双心钻石吊坠黄金</h1>
+            <i class="prize">￥1000</i>
+            <div class="icon-close close"></div>
+          </div>
+          <div class="cnt">
+            <ul class="memu-select">
+              <li>
+                <h3>选择颜色</h3>
+                <span class="item active">白色</span>
+                <span class="item">白色</span>
+                <span class="item">白色</span>
+                <span class="item">白色</span>
+                <span class="item">白色</span>
+              </li>
+              <li>
+                <h3>选择尺寸</h3>
+                <span class="item active">均码</span>
+                <span class="item">均码</span>
+                <span class="item">均码</span>
+                <span class="item">均码</span>
+                <span class="item">均码</span>
+              </li>
+              <li>
+                <div class="number">
+                  数量
+                  <div class="numberControl control">
+                    <span class="left off">—</span>
+                    <span class="center ">0</span>
+                    <span class="right ">+</span>
+                    <input type="hidden" id="number" value="0">
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    
     </div>
   </div>
 <script src="src/jquery-2.2.3.min.js"></script>
@@ -90,7 +136,51 @@ var swiper = new Swiper('.swiper-container', {
     loop:true,
 });
 </script>
+<script>
+  $(function(){
+    var min = 0,
+        max = 10,
+        number = 0;
+    $('.control').on('click','.left',function(){
+      if(number<=min){
+        $(this).addClass('off');
+        return;
+      }
+      number--;
+      $(this).parent().find('.center').html(number);
+      $(this).parent().find('input').val(number);
+      $(this).parent().find('.right').removeClass('off');
+    })
+    $('.control').on('click','.right',function(){
+      if(number>=max){
+        $(this).addClass('off');
+        return;
+      }
+      number++;
+      $(this).parent().find('.center').html(number);
+      $(this).parent().find('input').val(number);
+      $(this).parent().find('.left').removeClass('off');
+    })
 
+    $('.item').on('click',function(){
+      $(this).addClass('active').siblings().removeClass('active');
+    })
+    $('.close').on('click',function(){
+      $('#shade').hide();
+      $('.dialog').removeClass('show');
+    })
+    $('.shop-select').on('click',function(){
+      $('#shade').show();
+      $('.dialog').addClass('show');
+    })
+    $('.btn-pay').on('click',function(){
+      $('.shop-select').trigger('click');
+    })
+    $('.btn-add').on('click',function(){
+      $('.shop-select').trigger('click');
+    })
+  })
+</script>
 
 </body>
 </html>
